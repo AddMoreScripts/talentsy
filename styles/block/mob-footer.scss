@@ -1,0 +1,129 @@
+@use '../general/mixins' as *;
+
+.mobfoot{
+  display: none;
+  @include media(s){
+    display: block;
+    padding-top: 55px;
+    position: relative;
+    max-width: 300px;
+    margin: 40px auto 35px;
+    color:#fff;
+
+    &::before{
+      content:"";
+      display: block;
+      width: 787px;
+      height: 100px;
+      background: url(/img/footer/footer-line-m.svg) 0px 0px no-repeat;
+      background-size: 750px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__title{
+    font-size: 22px;
+    line-height: 1;
+    opacity: 0.4;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  &__twocol{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__menu{
+    font-size: 16px;
+    line-height: 21px;
+    min-width: 0;
+    max-width: 120px;
+
+    li{
+      margin-bottom: 13px;
+    }
+
+    a{
+      color:#fff;
+    }
+  }
+
+  &__right{
+    min-width: 0;
+  }
+
+  &__soclink{
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color:#fff;
+    line-height: 1;
+    margin-bottom: 26px;
+  }
+
+  &__lic{
+    align-items: center;
+    font-size: 15px;
+    line-height: 20px;
+    color:#fff;
+    margin-bottom: 25px;
+
+    img{
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    span{
+      flex-grow: 1;
+    }
+  }
+
+  &__sk{
+    display: block;
+    width: 68px;
+  }
+
+  .acmarket{
+    display: inline-flex;
+    margin-bottom: 30px;
+  }
+
+  &__contacts{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    margin: 0 auto 20px;
+    min-height: 103px;
+    background: url(/img/footer/mobfoot-cont.svg) center center no-repeat;
+    background-size: contain;
+    transform: translateX(-15px);
+    padding-top: 3px;
+  }
+
+  &__phonelink{
+    display: block;
+    color:#fff;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  &__addr{
+    font-size: 15px;
+    opacity: 0.5;
+    line-height: 1;
+  }
+}

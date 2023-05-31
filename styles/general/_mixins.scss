@@ -1,0 +1,39 @@
+$media-max-width-xl: (1600px) !default;
+$media-max-width-l: (1200px) !default;
+$media-max-width-m: (992px) !default;
+$media-max-width-s: (650px) !default;
+$media-max-width-xs: (425px) !default;
+
+@mixin media($breakpoint) {
+  @if type-of($breakpoint) == number {
+    @media (max-width: $breakpoint) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $media-max-width-xl) { @content; }
+  } @else if $breakpoint == l {
+    @media (max-width: $media-max-width-l) { @content; }
+  } @else if $breakpoint == m {
+    @media (max-width: $media-max-width-m) { @content; }
+  } @else if $breakpoint == s {
+    @media (max-width: $media-max-width-s) { @content; }
+  } @else if $breakpoint == xs {
+    @media (max-width: $media-max-width-s) { @content; }
+  } @else {
+    @error "Unknown breakpoint:" $breakpoint;
+  }
+}
+
+
+@mixin gridtoflexmob(){
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-gap: 0;
+  &::after{
+    content:"";
+    display: block;
+    width: 1px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+}

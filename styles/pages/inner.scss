@@ -1,0 +1,38 @@
+@use '../general/mixins' as *;
+
+.simplepage{
+  padding-bottom: 80px;
+  border-bottom: 1px solid #f0f0f0;
+
+  @include media(s) {
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: 60px;
+
+    @include media(l) {
+      font-size: 52px;
+      margin-bottom: 40px;
+    }
+
+    @include media(m) {
+      font-size: 34px;
+      br{
+        display: none;
+      }
+    }
+
+    @include media(s) {
+      font-size: 25px;
+      margin-bottom: 30px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use './general/reset.scss';
+@use './general/base.scss';
+@use './general/wordpress.scss';
+@use './general/textcontent.scss';
+@use './block/forms.scss';
+@use './block/blog-menu.scss';
+
+
+@use './block/video-reviews.scss';
+@use './block/menu.scss';
+
+@use './pages/psychology.scss';
+@use './pages/sexolog.scss';
+@use './pages/dizayner-interyera.scss';
+@use './pages/index.scss';
+@use './pages/psychology-kid.scss';
+@use './pages/psychology-family.scss';
+
+@use './pages/blog.scss';
+@use './pages/blog-post.scss';
+
+
+
+@use './block/header.scss';
+@use './block/header-blog.scss';
+@use './block/features.scss';
+@use './block/footer.scss';
+@use './block/mob-footer.scss';
+@use './block/post-widjets.scss';
+@use './block/table-of-content.scss';

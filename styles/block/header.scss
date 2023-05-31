@@ -1,0 +1,224 @@
+@use '../general/mixins' as *;
+
+.hdr{
+  padding-top: 28px;
+  overflow: hidden;
+  font-size: 17px;
+  line-height: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 276 104'%3E%3Cpath stroke='%23000' d='M18.794 0C12.07 2.812-5.5 21.534 4.192 50.17c11.806 34.879 64.061 66.309 95.058 47.036 9.199-5.72 3.915-18.092 0-23.548-12.138-16.92-24.099-27.364-45.593-33.806-3.78-1.133-15.506-2.558-21.006 6.442s5.31 20.571 17.852 29.072C77.998 94 108.274 104.444 129.655 95 162.701 80.4 142.751 21.726 111.998 31c-9.819 2.962-15.31 23.495 4.095 41.248C135.498 90 186.914 112.506 213.18 92c8.337-6.508 15.868-13.079 13.627-27.017C224.566 51.046 217.039 36 199.216 31c-33.041-9.269-45.488 18.74-10.417 34.32 16.241 7.214 34.397 9.258 49.512 6.928 15.116-2.33 23.459-4.401 36.686-22.08'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 104px;
+  background-position: 36px 0;
+
+  @include media(xl){
+    background-size: 250px;
+    background-position: 20px 0;
+  }
+  @include media(l){
+    padding-top: 15px;
+    background: none;
+    font-size: 15px;
+  }
+  @include media(l){
+    min-height: auto;
+  }
+
+  &__wrap{
+    --logo-height: 62px;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    min-height: var(--logo-height);
+
+    @include media(xl){
+      padding: 0 20px;
+    }
+    @include media(l){
+      --logo-height: 55px;
+      height: var(--logo-height);
+    }
+    @include media(m){
+      --logo-height: 45px;
+      justify-content: space-between;
+    }
+  }
+
+  .custom-logo-link{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: var(--logo-height);
+    width: auto;
+
+    img{
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__burgerwrap{
+    flex-shrink: 0;
+    width: 240px;
+    @include media(l){
+      width: 55px;
+    }
+  }
+
+  &__burger{
+    width: 240px;
+    appearance: none;
+    background: #000;
+    padding: 0 35px 0 20px;
+    height: 55px;
+    text-align: center;
+    border:none;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 1;
+    font-family: inherit;
+    border-radius: 100px;
+    color:#fff;
+    transition: background-color 0.4s ease;
+    position: fixed;
+    top: 35px;
+    left: auto;
+    z-index: 40;
+
+    @include media(l){
+      top: 15px;
+      width: var(--logo-height);
+      height: var(--logo-height);
+      padding: 0;
+      justify-content: center;
+    }
+
+    &:hover{
+      background-color: #7835ff;
+    }
+
+    svg{
+      margin-right: 30px;
+      vertical-align: middle;
+      @include media(l){
+        margin-right: 0;
+      }
+    }
+
+    span{
+      display: inline-block;
+      vertical-align: middle;
+
+      @include media(l){
+        display: none;
+      }
+    }
+  }
+
+  &__leftmenu{
+    margin-left: 70px;
+    margin-right: auto;
+    @include media(xl){
+      margin-left: 40px;
+    }
+    @include media(l){
+      margin-left: 20px;
+    }
+    @include media(m){
+      display: none;
+    }
+
+    ul{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      li:not(:last-child){
+        margin-right: 70px;
+        @include media(xl){
+          margin-right: 40px;
+        }
+        @include media(l){
+          margin-right: 20px;
+        }
+      }
+      a{
+        display: block;
+        color:#000;
+
+        &:hover{
+          color:#888;
+        }
+      }
+    }
+  }
+
+  &__right{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    white-space: nowrap;
+
+    &>*:not(:first-child){
+      margin-left: 70px;
+
+      @include media(xl){
+        margin-left: 40px;
+      }
+      @include media(l){
+        margin-left: 20px;
+      }
+    }
+
+    a{
+      color:#000;
+      &:hover{
+        color:#888;
+      }
+      @include media(m){
+        display: none;
+      }
+    }
+  }
+
+  &__phone{
+    font-size: 17px;
+    font-weight: 700;
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__login{
+    width: 66px;
+    height: 66px;
+    flex-shrink: 0;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#fff !important;
+    border-radius: 100px;
+    padding-bottom: 3px;
+    transition: background-color 0.4s ease;
+
+    @include media(l){
+      width: var(--logo-height);
+      height: var(--logo-height);
+    }
+    @include media(m){
+      display: flex !important;
+      margin-left: 0 !important;
+      color:#000 !important;
+      font-weight: 500;
+      background: none;
+    }
+
+    &:hover{
+      color:#fff !important;
+      background-color: #7835ff;
+    }
+  }
+}

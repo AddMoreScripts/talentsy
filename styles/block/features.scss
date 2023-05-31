@@ -1,0 +1,157 @@
+@use '../general/mixins' as *;
+
+.features{
+  --gap: -80px;
+  overflow: hidden;
+
+  @media(max-width: 1400px){
+    --gap:0;
+  }
+
+  &__wrap{
+    margin-left: var(--gap);
+    margin-right: var(--gap);
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 48.5% 1fr;
+    grid-gap: 38px;
+    position: relative;
+    z-index: 3;
+
+    @include media(xl){
+      grid-template-columns: 40% 1fr;
+    }
+
+    @include media(l){
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin: 40px auto 0;
+    }
+
+    @include media(m){
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__left{
+    min-width: 0;
+
+    video{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__leftimg{
+    display: block;
+    width: 100%;
+  }
+
+  &__right{
+    min-width: 0;
+    padding-top: 0;
+  }
+
+  &__subtitle{
+    opacity: 0.65;
+    font-size: 26px;
+    line-height: 31px;
+
+    @include media(l){
+      font-size: 22px;
+      font-weight: 500;
+      br:not(.mobbr){
+        display: none;
+      }
+    }
+
+    @include media(m){
+      font-size: 20px;
+      line-height: 24px;
+      opacity: 1;
+    }
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 38px;
+    padding-top: 90px;
+
+    @include media(xl){
+      padding-top: 40px;
+    }
+    @include media(m){
+      grid-gap: 30px;
+      padding-top: 30px;
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item{
+    min-width: 0;
+    font-size: 20px;
+    line-height: 25px;
+    color:#858585;
+    position: relative;
+
+    @include media(l){
+      font-size: 16px;
+    }
+
+    @include media(m){
+      border-radius: 14px;
+      padding: 0;
+      line-height: 22px;
+      font-size: 16px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: start;
+      justify-content: space-between;
+      padding-left: 90px;
+      min-height: 72px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: stretch;
+      justify-content: center;
+
+      br{
+        display: none;
+      }
+    }
+
+    b{
+      color:#000;
+      font-weight: 400;
+    }
+
+    img{
+      display: block;
+      height: var(--iconsize);
+      width: auto;
+      border-radius: 72px;
+      margin-bottom: 20px;
+
+      @include media(m){
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__mobtxt{
+    display: none;
+
+    @include media(m){
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@use '../general/mixins' as *;
+
+.reviewsslider {
+  background: #f0f0f0;
+  padding: 100px 0 45px;
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  .title {
+    padding: 0 15px;
+  }
+
+  @include media(m) {
+    padding-top: 40px;
+    margin-bottom: var(--blockspace);
+  }
+
+  &__wrap {
+    position: relative;
+    margin-top: 50px;
+
+    @include media(l) {
+      margin-top: 30px;
+    }
+  }
+
+  &__cont {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1530px;
+    width: calc(100% - 200px);
+
+    @include media(s) {
+      width: calc(100% - 30px);
+
+      .swiper {
+        overflow: visible;
+      }
+      .swiper-slide {
+        width: 200px;
+      }
+    }
+  }
+
+  .ctrl {
+    position: absolute;
+    top: calc(50% - 28px);
+    left: 30px;
+
+    @include media(xl) {
+      left: 15px;
+    }
+    @include media(s) {
+      display: none;
+    }
+  }
+  .ctrl--next {
+    right: 30px;
+    left: auto;
+    @include media(xl) {
+      right: 15px;
+    }
+  }
+
+  &__videowrap {
+    padding-bottom: 173.5%;
+  }
+
+  &__screen {
+    border-radius: 28px;
+
+    @include media(m) {
+      border-radius: 15px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    top: auto;
+    z-index: 20;
+    color: rgba(14, 18, 33, 1);
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 50%;
+    will-change: transform;
+    transition: transform 0.4s ease;
+
+    @include media(m) {
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      height: 35px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

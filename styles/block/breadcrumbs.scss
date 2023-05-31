@@ -1,0 +1,74 @@
+@import "../general/_mixins";
+
+.woocommerce-breadcrumb{
+  display: block;
+  color:#000;
+  font-size: 14px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+  font-weight: 700;
+
+  @include media(xl) {
+    margin-bottom: 40px;
+  }
+
+  @include media(l) {
+    margin-bottom: 25px;
+  }
+
+  @include media(m) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+    padding: 10px 0 0;
+    font-size: 12px;
+  }
+
+  a{
+    display: block;
+    padding-right: 30px;
+    position: relative;
+    max-width: calc(100%);
+    color:#000;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media(s){
+      padding-right: 20px;
+    }
+
+    &:hover{
+      color:#444;
+      text-decoration: underline;
+    }
+
+    &::after{
+      content:"";
+      display: block;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 5 7'%3E%3Cpath fill='%23000' d='M4.306 3.308 1.074.076a.27.27 0 0 0-.38.38l3.041 3.042L.693 6.54a.27.27 0 0 0 .381.381L4.306 3.69a.27.27 0 0 0 0-.381Z' opacity='.34'/%3E%3C/svg%3E");
+      width: 30px;
+      background-size: 7px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      text-align: center;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-repeat: no-repeat;
+
+      @include media(s){
+        width: 20px;
+      }
+    }
+  }
+}

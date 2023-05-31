@@ -1,0 +1,179 @@
+@use '../general/mixins' as *;
+
+
+.hystmodal{
+  grid-template-columns: 100%;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+}
+.hystmodal__window{
+  min-width: 0;
+}
+.hystmodal__wrap{
+  min-width: 0;
+}
+
+.ordermodal{
+  width: 1170px;
+  background: url(/img/b15-bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  border-radius: 35px;
+  color:#fff;
+  position: relative;
+  overflow: hidden;
+
+  @include media(m){
+    border-radius: 15px;
+    width: 400px;
+  }
+
+  .hystmodal__close{
+    filter: invert(1);
+    width: 20px;
+    height: 20px;
+    right: 25px;
+    top: 25px;
+    outline: none !important;
+
+    @include media(s){
+      top: 15px;
+      right: 15px;
+    }
+  }
+
+  &__spec{
+    position: absolute;
+    right: 38px;
+    bottom: 0;
+
+    @include media(l){
+      right: 0;
+      width: 400px;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__specfio{
+    z-index: 10;
+    position: absolute;
+    right: 180px;
+    bottom: 74px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    @include media(l){
+      right: 80px;
+    }
+    @include media(m){
+      display: none;
+    }
+
+    mark, p{
+      display: block;
+      color:#fff;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 17px;
+      height: 39px;
+      border-radius: 10px;
+      border: solid 0 #000;
+      background-color: #ff542f;
+      padding: 0 18px;
+    }
+
+    p{
+      color:#000;
+      font-size: 15px;
+      background: #fff;
+      margin-left: 9px;
+    }
+  }
+
+  &__main{
+    min-height: 600px;
+    padding: 40px 0 40px;
+    margin-left: 85px;
+    max-width: 518px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 1.6;
+
+    @include media(l){
+      min-height: auto;
+      max-width: 450px;
+      font-size: 17px;
+    }
+    @include media(m){
+      max-width: none;
+      margin-left: 0;
+      padding: 40px 20px;
+      font-size: 15px;
+
+      br{
+        display: none;
+      }
+    }
+
+    p{
+      margin-bottom: 6px;
+
+      small{
+        font-size: 90%;
+      }
+    }
+
+    a{
+      color:#fff;
+      text-decoration: underline;
+
+      &:hover{
+        color:#fff;
+      }
+    }
+  }
+
+  &__h1{
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1.23;
+    margin-bottom: 20px;
+
+    @include media(l){
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    @include media(m){
+      font-size: 30px;
+    }
+
+    .ordermodal__main--long &{
+      width: 640px;
+      @include media(m){
+        width: auto;
+      }
+    }
+  }
+
+  &__form{
+    margin-top: 20px;
+    form{
+      margin-bottom: 30px;
+      @include media(l){
+        margin-bottom: 20px;
+      }
+    }
+    .button{
+      width: 100%;
+    }
+  }
+}

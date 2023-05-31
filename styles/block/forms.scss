@@ -1,0 +1,247 @@
+@use "../general/_mixins" as *;
+
+.formvkbutton {
+  position: absolute;
+  appearance: none;
+  border:none;
+  top: 15px;
+  left: 35px;
+  z-index: 10;
+  border-radius: 10px;
+  background-color: #03a3ff;
+  appearance: none;
+  cursor: pointer;
+  color: #fff;
+  height: 46px;
+  padding: 0 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+
+  @include media(l) {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: inline-flex;
+    margin-bottom: 25px;
+    font-size: 16px;
+    height: 36px;
+    padding: 0 15px;
+    border-radius: 5px;
+  }
+  @include media(m) {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: hsl(202, 100%, 45%);
+  }
+  img {
+    flex-shrink: 0;
+    width: 28px;
+    margin-right: 10px;
+
+    @include media(l) {
+      width: 20px;
+    }
+  }
+}
+
+.phoneinp {
+  align-items: center;
+  border-bottom: 1px solid #000;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    border: none !important;
+  }
+
+  &__country {
+    font-size: 0;
+    appearance: none;
+    border: none;
+    height: 40px;
+    padding: 0 3px 0 10px;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    @include media(l) {
+      padding-left: 0;
+    }
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 15px;
+      height: 20px;
+      margin-left: 5px;
+      flex-shrink: 0;
+      background: url(/img/ui/chevron-down.svg) no-repeat;
+      background-size: contain;
+      background-position: 50% 75%;
+    }
+
+    img {
+      display: inline-block;
+      width: 18px;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.05);
+    }
+  }
+
+  &__code {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-left: 5px;
+    margin-right: 6px;
+
+    @include media(l) {
+      font-size: 16px;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+}
+
+.accept {
+  font-size: 15px;
+  line-height: 19px;
+  color: #000;
+  opacity: 0.4;
+  margin-top: 30px;
+
+  &--mob {
+    display: none;
+  }
+
+  @include media(l) {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  @include media(m) {
+    display: none;
+    &--mob {
+      display: block;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: #000;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.promobox {
+  height: 44px;
+  margin-top: 15px;
+  position: relative;
+  margin-bottom: -10px;
+
+  @include media(s) {
+    margin-top: 20px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000;
+    text-decoration: underline;
+
+    @include media(s) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.promoform {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(20px);
+  pointer-events: none;
+  will-change: transform;
+  align-items: stretch;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  @include media(s) {
+    width: 100%;
+  }
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    width: 230px;
+    border-radius: 6px;
+    padding: 0 20px;
+    box-shadow: none !important;
+
+    @include media(s) {
+      width: 50%;
+      flex-grow: 1;
+    }
+  }
+  &__button {
+    color: #ffffff;
+    background-color: #000;
+    font-weight: 600;
+    width: 220px;
+    border: 1px solid #000;
+    margin-left: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    @include media(s) {
+      margin-left: 5px;
+      width: calc(40% - 5px);
+      line-height: 1.1;
+    }
+  }
+}
+
+.promobox.is-active {
+  .promobox__link {
+    display: none;
+  }
+  .promoform {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+.jsVKAuthTopBlock,
+.jsVKAuthBlock iframe {
+  display: none;
+}
+
+.jsVKAuthCustom {
+  cursor: pointer;
+}

@@ -1,0 +1,209 @@
+@use '../general/mixins' as *;
+
+
+.blogheader {
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 60px;
+
+  &--meny{
+    margin-bottom: 40px;
+  }
+
+  @include media(l){
+    padding-top: 24px;
+    margin-bottom: 40px;
+  }
+  @include media(m){
+    margin-bottom: 34px;
+  }
+
+  &__wrap {
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    height: 90px;
+    padding: 0 24px;
+
+    @include media(l){
+      height: auto;
+      align-items: center;
+    }
+    @include media(m){
+      padding: 0 20px;
+    }
+  }
+
+  .custom-logo-link{
+    display: block;
+    width: 155px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    @include media(l){
+      width: 110px;
+      position: relative;
+      left: auto;
+      transform: none;
+      bottom: auto;
+      align-self: center;
+    }
+
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__left {
+    align-items: center;
+    min-height: 66px;
+
+    @include media(l){
+      min-height: auto;
+    }
+  }
+
+  &__burger {
+    width: 64px;
+    height: 55px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    background: #000;
+    border-radius: 100px;
+    border:none;
+    margin-right: 50px;
+    transition: opacity 0.4s ease;
+
+    @include media(l){
+      margin-right: 20px;
+      height: 55px;
+      width: 60px;
+    }
+    @include media(m){
+      width: 52px;
+      height: 40px;
+    }
+
+    img{
+      display: block;
+      margin: auto;
+      transition: transform 0.4s ease;
+
+      @include media(m){
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover{
+      opacity: 0.8;
+
+      img{
+        transform: rotate(-5deg);
+      }
+    }
+  }
+
+  &__links {
+    align-items: center;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+
+    @include media(m){
+      display: none;
+    }
+
+
+    a{
+      color:#000;
+      margin-right: 33px;
+
+      @include media(l){
+        font-size: 15px;
+        margin-right: 20px;
+      }
+
+      &:hover{
+        opacity: 0.6;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__right {
+    min-height: 66px;
+    align-items: center;
+
+    @include media(l){
+      min-height: auto;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__login {
+    margin-left: 34px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 66px;
+    height: 66px;
+    color:#fff;
+    border-radius: 100px;
+    background: #000;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 23px;
+
+    @include media(l){
+      width: 55px;
+      height: 55px;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    &:hover{
+      color:#fff;
+      opacity: 0.8;
+    }
+  }
+
+  &__mobsearch{
+    display: none;
+    width: 52px;
+    height: 40px;
+    border:none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+
+    @include media(m){
+      display: block;
+    }
+
+    img{
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+}
+
+#menuSearchModal .blogheader__mobsearch{
+  opacity: 0;
+  pointer-events: none;
+}

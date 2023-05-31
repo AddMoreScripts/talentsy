@@ -1,0 +1,439 @@
+@use "../general/mixins" as *;
+
+#menuModal{
+  --hystmodal-speed: 0.5s;
+}
+.menuwindow__wrap{
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  transform: translateY(-100%);
+  opacity: 1;
+}
+
+.menuwindow {
+  background: #fff;
+
+  &__closer,
+  &__tabclose{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 66px;
+    height: 55px;
+    border-radius: 100px;
+    background-color: #f1f1f1;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    z-index: 6;
+
+    @include media(l){
+      top: 15px;
+    }
+    @include media(m){
+      left: 15px;
+      top: 15px;
+    }
+
+    &:hover {
+      background-color: #dfdfdf;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  &__tabclose{
+    display: none;
+    z-index: 10;
+    @include media(m){
+      display: block;
+    }
+  }
+
+  &__nav {
+    padding-top: 26px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+
+    @include media(l){
+      padding-top: 15px;
+    }
+    @include media(m){
+      margin-bottom: 45px;
+    }
+
+    .hdr__login {
+      display: flex;
+      margin-right: 0;
+
+      @include media(l){
+        width: 65px;
+        height: 65px;
+      }
+      @include media(m){
+        display: none !important;
+      }
+    }
+  }
+
+  &__navlink {
+    font-size: 17px;
+    margin-right: 90px;
+    display: block;
+    transition: opacity 0.2s ease-in-out;
+
+    @include media(l){
+      margin-right: 55px;
+    }
+    @include media(m){
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__phone {
+    font-weight: 700;
+    margin-right: 90px;
+
+    @include media(l){
+      margin-right: 55px;
+    }
+    @include media(m){
+      margin-right: 0;
+      margin-top: 15px;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__main {
+    position: relative;
+    min-height: 465px;
+  }
+
+  &__aside {
+    width: calc(100% / 3 + 15px);
+    flex-shrink: 0;
+
+    @include media(l){
+      width: 30%;
+      margin-right: 40px;
+    }
+    @include media(m){
+      width: 100%;
+      margin-right: 0;
+      position: relative;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__h1 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    opacity: 0.5;
+
+    @include media(m){
+      max-width: 300px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1;
+    }
+  }
+
+  &__facultet {
+    @include media(m){
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      position: relative;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      &::after{
+        content:"";
+        display: block;
+        position: absolute;
+        width: 1073px;
+        height: 153px;
+        bottom: 0;
+        left: 0;
+        background: url(/img/menu/mob-line.svg) 50% 50% no-repeat;
+        pointer-events: none;
+      }
+    }
+
+    li {
+      margin-bottom: 35px;
+
+      @include media(l){
+        margin-bottom: 25px;
+      }
+      @include media(m){
+        margin-bottom: 25px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      font-size: 28px;
+      line-height: 32px;
+      transition: color 0.2s ease-in-out;
+
+      @include media(l){
+        font-size: 24px;
+      }
+      @include media(m){
+        font-size: 22px;
+        line-height: 1.4;
+
+        br{
+          display: none;
+        }
+      }
+
+      &:hover,
+      &.is-active {
+        color: #7835ff;
+      }
+    }
+  }
+
+  &__mobbot{
+    display: none;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    li{
+      margin-bottom: 35px;
+    }
+
+    a{
+      display: block;
+      font-size: 17px;
+      line-height: 1;
+    }
+
+    @include media(m){
+      display: block;
+    }
+  }
+
+
+
+  &__tabs{
+    position: relative;
+    flex-grow: 1;
+
+    @include media(m){
+      width: 0;
+      min-width: 0;
+    }
+  }
+
+  &__tab {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: #fff;
+
+    @include media(m){
+      width: 100vw;
+      top: 0;
+      height: calc(100vh - 0px);
+      transform: translateX(100%);
+      position: fixed;
+      overflow: auto;
+      z-index: 20;
+    }
+
+    &.is-active{
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__tabgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px 50px;
+    position: relative;
+
+    @include media(l){
+      grid-gap: 50px;
+    }
+    @include media(m){
+      grid-template-columns: 1fr;
+      width: 300px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+  }
+
+  &__col {
+    min-width: 0;
+  }
+
+  &__mobtitle{
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: -20px;
+    display: none;
+
+    @include media(m){
+      display: block;
+    }
+  }
+
+  &__h2 {
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 15px;
+    &:hover {
+      opacity: 0.5;
+      @include media(m){
+        opacity: 1;
+      }
+    }
+  }
+
+  &__sub {
+    font-size: 15px;
+    line-height: 21px;
+    opacity: 0.5;
+    min-height: 95px;
+
+    @include media(m){
+      font-size: 13px;
+      line-height: 18px;
+      min-height: auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__submenu {
+    font-size: 17px;
+    line-height: 26px;
+
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: block;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__col--last {
+    position: relative;
+  }
+
+  &__circlebutton {
+    position: absolute;
+    top: 270px;
+    right: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 184px;
+    height: 184px;
+    border-radius: 200px;
+    background: #b1fdeb;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    will-change: transform;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+
+    @include media(m) {
+      width: 180px;
+      height: 180px;
+      font-size: 18px;
+      display: none;
+    }
+
+
+    &:hover {
+      background: #92fce3;
+      transform: scale(1.02);
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      width: 56px;
+      height: 55px;
+      background: url(/img/menu/tape-left.png) no-repeat;
+      background-size: contain;
+      z-index: 10;
+    }
+
+    &::before {
+      background-image: url(/img/menu/tape-right.png);
+      left: auto;
+      right: 0px;
+      top: -8px;
+      width: 68px;
+      height: 55px;
+    }
+  }
+
+
+  &__mobcircle{
+    @include media(m){
+      display: flex;
+      position: relative;
+      right: auto;
+      top: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,262 @@
+@use "./mixins" as *;
+
+.textcontent {
+  line-height: 1.7;
+  --vertical: 20px;
+
+  p:not(:last-child) {
+    margin-bottom: var(--vertical);
+  }
+  strong {
+    font-weight: 700;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    line-height: 1;
+    margin-top: var(--rythm-lg, 48px);
+    margin-bottom: var(--rythm, 36px);
+
+    @include media(m){
+      line-height: 1.2;
+    }
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 118%;
+
+    @include media(m){
+      font-size: 26px;
+      line-height: 1.2;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+
+    @include media(m){
+      font-size: 26px;
+    }
+  }
+  h3 {
+    font-size: 28px;
+
+    @include media(m){
+      font-size: 24px;
+    }
+  }
+  h4 {
+    font-size: 24px;
+
+    @include media(m){
+      font-size: 20px;
+    }
+  }
+  h5 {
+    font-size: 20px;
+
+    @include media(m){
+      font-size: 18px;
+    }
+  }
+  small,
+  .text_small {
+    font-size: 0.889em;
+  }
+}
+
+.textcontent {
+  & > :last-child {
+    margin-bottom: 0 !important;
+    &:not(.video) {
+      padding-bottom: 0 !important;
+    }
+  }
+  & > :first-child {
+    margin-top: 0 !important;
+  }
+
+  p a,
+  li a {
+    text-decoration: underline;
+    color: #0faa58;
+    &:hover {
+      color: #0c8d48;
+    }
+  }
+
+  a.button {
+    display: inline-flex;
+    padding: 0 38px;
+    height: 60px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .wp-block-image {
+    margin: var(--rythm, 36px) 0;
+    display: block;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto var(--rythm, 36px);
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    figcaption {
+      font-size: 15px;
+      line-height: 150%;
+      color: #7a7978;
+    }
+  }
+
+  ul {
+    margin-bottom: var(--rythm, 36px);
+    list-style: none;
+    li {
+      display: block;
+      padding-left: 38px;
+      position: relative;
+      margin-bottom: 16px;
+
+      @include media(m){
+        padding-left: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin: 16px 0 0;
+
+        li{
+          @include media(m){
+            padding-left: 20px;
+            &::before{
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  ul li:before {
+    position: absolute;
+    content: "";
+    top: 11px;
+    left: 10px;
+    width: 9px;
+    height: 9px;
+    background: none;
+    border-radius: 10px;
+    border: 2px solid #000;
+
+    @include media(m){
+      top: 8px;
+      left: 0;
+    }
+  }
+
+  ol {
+    margin-bottom: var(--rythm, 36px);
+    ::marker {
+      font-weight: 700;
+      color: #000;
+    }
+    li {
+      margin-bottom: 16px;
+    }
+    ul {
+      margin: 16px 0 0;
+    }
+  }
+}
+
+.maxline2 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+.maxline3 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+.maxline4 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.gallery {
+  margin: var(--rythm, 36px) 0;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 22px;
+
+  a {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-icon a {
+    display: block;
+    height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .wp-caption-text {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+    opacity: 0.8;
+  }
+
+  &-columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media(m) {
+    grid-template-columns: 1fr;
+  }
+}

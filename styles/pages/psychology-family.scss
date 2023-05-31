@@ -1,0 +1,63 @@
+@use "../general/mixins" as *;
+
+.page-template-page-psy-family{
+  --psy-accent: #3cc4ff;
+  --darkbg-accent: #3cc4ff;
+
+
+
+
+  .hero--family{
+    margin-top: 30px;
+    padding-bottom: 15px;
+
+    @include media(m){
+      padding-bottom: 60px;
+    }
+
+    .hero__small{
+      margin-bottom: 0px;
+
+      @include media(m){
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .priceblock__greenprice{
+    color:#3cc4ff;
+  }
+
+  .progrmsummary__plus{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%233cc4ff' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .progrmsummary__head:hover .progrmsummary__plus{
+    background-color: #3cc4ff;
+
+    @include media(m) {
+      background-color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+}
+
+
+
+img.psy-family-catalog{
+  top: -110px;
+  right: 14px;
+  width: 327px;
+
+  @include media(l){
+    width: 220px;
+    top: -60px;
+  }
+  @include media(m){
+    top: 100px;
+    width: 160px;
+    right: calc(50% - 80px);
+  }
+  @include media(s){
+    top: 135px;
+  }
+}
