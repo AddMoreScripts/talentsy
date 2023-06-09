@@ -564,6 +564,7 @@
     }
     @include media(m) {
       @include gridtoflexmob();
+      align-items: stretch;
     }
   }
 
@@ -762,6 +763,16 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+
+  &__icon--wide{
+    width: 260px;
+
+    @include media(m){
+      width: var(--iconsize);
+      height: var(--iconsize);
+      object-fit: cover;
     }
   }
   &__complex {

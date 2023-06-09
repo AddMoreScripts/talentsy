@@ -264,7 +264,7 @@ get_header();
       </div>
     </div>
 
-    <?php get_template_part('inc/_diz_mentors_data'); ?>
+    <?php include(locate_template('inc/_diz_mentors_data.php')); ?>
     <div class="teamblock flexi">
       <div class="teamblock__nav jbm teamblock__nav--left">
         <?php foreach ($mentorsLeft as $key => $mentor) : ?>

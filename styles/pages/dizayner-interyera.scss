@@ -120,7 +120,7 @@
       grid-gap: 30px;
     }
 
-    &::after{
+    &:not(.disint2__grid--nobotline)::after{
       content:"";
       position: absolute;
       left: 0;
@@ -129,7 +129,7 @@
       height: 1px;
       background: #000;
     }
-    &::before{
+    &:not(.disint2__grid--nobotline)::before{
       content:"";
       position: absolute;
       left: 0;
@@ -144,6 +144,21 @@
 
   &__item{
     position: relative;
+
+    &--lined::before{
+      content:"";
+      display: block;
+      position: absolute;
+      left: -24px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #000;
+
+      @include media(m){
+        display: none;
+      }
+    }
 
     @include media(m) {
       padding-left: calc(var(--iconsize) + 20px);

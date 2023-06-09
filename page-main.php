@@ -431,7 +431,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="https://talentsy.ru/interior-decorator" class="frontfacultet">
+              <a href="/interior-decorator" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img data-src="<?= imgs(); ?>/frontpage/proff/009.png" alt="" class="frontfacultet__pic lazy">
                 </div>
