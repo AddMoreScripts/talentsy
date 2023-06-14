@@ -335,7 +335,8 @@
     }
   }
 
-  &__propicon--text{
+  &__propicon--text,
+  &__counter{
     width: var(--iconsize);
     height: var(--iconsize);
     border:1px solid var(--psy-accent);
@@ -345,7 +346,7 @@
     justify-content: center;
     color:var(--psy-accent);
     border-radius: 200px;
-    font-size: 40px;
+    font-size: 38px;
     line-height: 1;
 
     @include media(l){
@@ -354,6 +355,11 @@
     @include media(m){
       font-size: 20px;
     }
+  }
+
+  &__counter{
+    border:1px solid #000;
+    color:#000;
   }
 
   &__proptitle {
@@ -640,6 +646,13 @@
     }
   }
 
+  .minmargin &__iconwrap{
+    margin-bottom: 20px;
+    @include media(m) {
+      margin-bottom: 15px;
+    }
+  }
+
   &__heart{
     position: absolute;
     object-fit: contain;
@@ -699,8 +712,51 @@
 
 
 
+.dreamsltitle{
+  &__min{
+    margin-top: 10px;
+    display: block;
+    opacity: 0.6;
+    font-size: 20px;
+
+    @include media(m){
+      font-size: 85%;
+    }
+  }
+}
 
 
+.dreams--abs{
+  .dreams__item{
+    min-height: 335px;
+
+    @include media(m){
+      width: 300px;
+    }
+  }
+  .dreams__iconwrap:not(.dreams__item--bg .dreams__iconwrap){
+    position: absolute;
+    right: 35px;
+    top: auto;
+
+    @include media(m){
+      position: relative;
+      right: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .dreamsltitle{
+    margin-top: auto;
+
+    p{
+      max-width: calc(100% - 145px);
+
+      @include media(m){
+        max-width: none;
+      }
+    }
+  }
+}
 
 
 
@@ -1979,6 +2035,11 @@
     padding: 35px;
     min-height: 260px;
 
+
+    &--col2{
+      grid-column: span 2;
+    }
+
     @include media(l) {
       font-size: 18px;
       padding: 25px;
@@ -2051,6 +2112,15 @@
 
       dt {
         color: #000;
+      }
+    }
+
+    &--fashion{
+      background-color: #182e69;
+      color:#fff;
+
+      dt{
+        color:#eac335;
       }
     }
   }
@@ -2527,7 +2597,7 @@
 }
 
 .talentsyabout {
-  background: #001427;
+  background: var(--bg, #001427);
   color: #fff;
   padding-top: 145px;
   padding-bottom: 50px;

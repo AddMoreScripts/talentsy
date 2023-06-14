@@ -125,7 +125,7 @@ get_header();
           <p>Под руководством наставника, который выстроит индивидуальную траекторию для каждого студента, ответит на вопросы и напомнит о занятиях</p>
         </div>
         <div class="iphone__prop">
-          <div class="iphone__counter jbm flexi">100+</div>
+          <div class="iphone__propicon iphone__counter jbm flexi">100+</div>
           <div class="iphone__proptitle">Часов практики</div>
           <p>Семинары и практические занятия под руководством практикующих декораторов с опытом от 10 лет</p>
         </div>

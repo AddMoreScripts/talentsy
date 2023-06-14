@@ -109,7 +109,7 @@ get_header();
           <p>Создаст индивидуальную образовательную траекторию для каждого студента, поможет выстроить гибкое расписание, ответит на вопросы и напомнит о занятиях</p>
         </div>
         <div class="iphone__prop">
-          <div class="iphone__counter jbm flexi">100+</div>
+          <div class="iphone__propicon iphone__counter jbm flexi">100+</div>
           <div class="iphone__proptitle">Часов практики</div>
           <p>Семинары и практические занятия в мини-группах под руководством практикующих дизайнеров с опытом от 10 лет</p>
         </div>

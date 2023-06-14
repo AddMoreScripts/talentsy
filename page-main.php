@@ -392,7 +392,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="https://talentsy.ru/professiya-fashion-dizayner" class="frontfacultet">
+              <a href="/professiya-fashion-dizayner/" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img data-src="<?= imgs(); ?>/frontpage/proff/006.png" alt="" class="frontfacultet__pic lazy">
                 </div>
@@ -418,7 +418,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="https://talentsy.ru/professiya-stilist" class="frontfacultet">
+              <a href="/professiya-stilist" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img data-src="<?= imgs(); ?>/frontpage/proff/008.png" alt="" class="frontfacultet__pic lazy">
                 </div>

@@ -218,28 +218,6 @@
     padding-bottom: var(--blockspace);
   }
 
-  .iphone__counter{
-    width: var(--iconsize);
-    height: var(--iconsize);
-    border-radius: 100px;
-    border:1px solid #000;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 38px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    @include media(l) {
-      margin-bottom: 10px;
-    }
-    @include media(m){
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 20px;
-    }
-  }
-
   .iphone__grid{
     grid-gap: 55px 30px;
     @include media(m){
@@ -1153,10 +1131,6 @@
 
   .statistic__item.statistic__item--verborder{
     background-color: transparent;
-  }
-
-  .statistic__item--col2{
-    grid-column: span 2;
   }
 
   .statistic__item.statistic__item--veryellow{

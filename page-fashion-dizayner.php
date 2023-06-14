@@ -30,7 +30,7 @@ $pics = imgs() . '/fashion-dizayner';
 <div class="disint2">
   <div class="container">
     <div class="title">и не важно:</div>
-    <div class="disint2__grid grid3 disint2__grid--nobotline">
+    <div class="disint2__grid grid3">
       <div class="grid-item disint2__item">
         <div class="disint2__picwrap">
           <img src="<?= $pics; ?>/b2-1.png" alt="" class="js-slide-opac">
@@ -76,7 +76,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="iphone disint-iphone">
+<section class="iphone iphone--fashion">
   <div class="container">
     <h2 class="title js-slide-bot">
       Мы создали <i class="title-dot">i</i>Phone на рынке <br><b>обучения дизайну одежды </b>
@@ -117,7 +117,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="programfromlead disint4">
+<section class="programfromlead programfromlead--fashion">
   <div class="container">
     <h2 class="title">
       Получить полную<br> <b>программу курса</b>
@@ -129,12 +129,12 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="dreams disint5">
+<section class="dreams dreams--fashion minmargin">
   <div class="container">
     <h2 class="title">Мы знаем, о чем ты мечтаешь, <br><b>и поможем тебе этого добиться</b></h2>
     <div class="grid-mob-scroll">
       <div class="dreams__grid">
-        <div class="dreams__item">
+        <div class="dreams__item dreams__item--border">
           <div class="dreams__iconwrap">
             <img data-src="<?= $pics; ?>/b5-1.png" alt="" class="lazy js-slide-opac">
           </div>
@@ -160,7 +160,7 @@ $pics = imgs() . '/fashion-dizayner';
             Научиться продавать одежду <br>через интернет
           </div>
         </div>
-        <div class="dreams__item  dreams__item--nobg">
+        <div class="dreams__item dreams__item--nobg">
           <div class="dreams__iconwrap">
             <img data-src="<?= $pics; ?>/b5-4.svg" alt="" class="lazy js-slide-opac">
           </div>
@@ -194,9 +194,9 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="mentors disint-mentors">
+<section class="mentors mentors--fashion">
   <div class="container">
-    <h2 class="title">Ты будешь учиться <span>у&nbsp;</span><b>10+ лучших <br class="mobbr">специалистов</b> <span>со
+    <h2 class="title">Ты будешь учиться <span>у&nbsp;</span><b>11 лучших <br class="mobbr">специалистов</b> <span>со
         всей страны</span></h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
@@ -222,7 +222,7 @@ $pics = imgs() . '/fashion-dizayner';
       </div>
     </div>
 
-    <?php include(locate_template('inc/_decorator_mentors_data.php')); ?>
+    <?php include(locate_template('inc/_fashion_mentors_data.php')); ?>
     <div class="teamblock flexi">
       <div class="teamblock__nav jbm teamblock__nav--left">
         <?php foreach ($mentorsLeft as $key => $mentor) : ?>
@@ -242,7 +242,7 @@ $pics = imgs() . '/fashion-dizayner';
           <?php foreach ($mentorsLeft as $key => $mentor) : ?>
             <article class="swiper-slide teamslider__slide">
               <div class="teamslider__item">
-                <img src="<?= imgs(); ?>/dizayner-interyera/mentors/<?= $mentor['img']; ?>.webp" alt="" class="teamslider__photo">
+                <img src="<?= $pics; ?>/mentors/<?= $mentor['img']; ?>.webp" alt="" class="teamslider__photo">
                 <h3 class="teamslider__name"><?= $mentor['title']; ?></h3>
                 <div class="teamslider__content">
                   <?= $mentor['text']; ?>
@@ -253,7 +253,7 @@ $pics = imgs() . '/fashion-dizayner';
           <?php foreach ($mentorsRight as $key => $mentor) : ?>
             <article class="swiper-slide teamslider__slide">
               <div class="teamslider__item">
-                <img src="<?= imgs(); ?>/dizayner-interyera/mentors/<?= $mentor['img']; ?>.webp" alt="" class="teamslider__photo">
+                <img src="<?= $pics; ?>/mentors/<?= $mentor['img']; ?>.webp" alt="" class="teamslider__photo">
                 <h3 class="teamslider__name"><?= $mentor['title']; ?></h3>
                 <div class="teamslider__content">
                   <?= $mentor['text']; ?>
@@ -272,7 +272,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="features decorator9">
+<section class="features features--fashion1">
   <div class="container">
     <h2 class="title">Тебя ждет <b>фундаментальная, <br>глубокая</b> и <b>подробная</b> <br><span>программа <br class="mobbr">обучения</span></h2>
     <div class="features__wrap">
@@ -295,7 +295,7 @@ $pics = imgs() . '/fashion-dizayner';
             <p>Программа соответствует <br><b>профессиональным стандартам</b></p>
           </div>
           <div class="features__item">
-            <img data-src="<?= $pics; ?>/b8-2.png" alt="" class="lazy js-slide-opac">
+            <img data-src="<?= $pics; ?>/b8-2.png" alt="" class="lazy js-slide-opac radius0">
             <p>Студенты обучаются <b>современному программному обеспечению</b></p>
           </div>
           <div class="features__item">
@@ -338,13 +338,13 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="guideform">
+<section class="guideform guideform--fashion">
   <div class="container">
     <h3 class="guideform__title title js-slide-bot">
-      <span>Получите гайд</span>
+      <span>Получи <b>гайд</b></span>
       <span>по профессии</span>
       <span><b>Дизайнер одежды</b></span>
-      <img src="<?= $pics; ?>/b9-catalog.png" alt="">
+      <img src="<?= $pics; ?>/b9-catalog.png" alt="" class="fashion-catalog">
     </h3>
     <?php get_template_part('inc/leadform', null, [
       'formClassName' => 'programfromlead__formwrap--yellow',
@@ -356,9 +356,9 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="features">
+<section class="features features--fashion2">
   <div class="container">
-    <h2 class="title">Тебя ждут практические <br>занятия в&nbsp;<b>мини-группах</b></h2>
+    <h2 class="title">Тебя ждут практические <br>занятия в&nbsp;<b>мини-группах <br>на 10 человек</b></h2>
     <div class="features__wrap">
       <div class="features__left js-slide-bot">
         <video preload="auto" playsinline autoplay loop muted class="lazy">
@@ -394,7 +394,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="reviewsslider js-review-slider decorator7">
+<section class="reviewsslider js-review-slider mb-0">
   <h2 class="title">Посмотрите <b>отзывы</b> наших <br><b>студентов</b></h2>
   <div class="reviewsslider__wrap">
     <button class="ctrl ctrl--prev"><img src="<?= imgs(); ?>/ui/slider-ctrl.svg" alt=""></button>
@@ -420,14 +420,14 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="timeslot timeslot--disint">
+<section class="timeslot timeslot--fashion">
   <div class="container">
     <h2 class="title">
       Научим <b>продавать одежду</b><br>
       через <b>интернет </b>
     </h2>
     <div class="timeslot__box">
-      <img src="<?= imgs(); ?>/psychology/b19-bg.svg" alt="" class="timeslot__bg">
+      <img src="<?= $pics; ?>/timeslot-bg.svg" alt="" class="timeslot__bg">
       <div class="timeslot__over flexi">
         <div class="timeslot__text">
           <p>С вами работает специалист <br>по продвижению и привлечению <br>клиентов</p>
@@ -445,7 +445,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="diplomblock">
+<section class="diplomblock diplomblock--fashion">
   <div class="container">
     <h2 class="title">
       <b>Ты получишь диплом <br>установленного образца</b> <br>
@@ -488,47 +488,45 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<div class="disint21">
-  <section class="statistic container">
-    <h2 class="title">Поговорим о цифрах</h2>
-    <div class="statistic__grid">
-      <dl class="statistic__item statistic__item--verbg">
-        <dt>11<img src="<?= imgs(); ?>/psychology/b20-star.svg" alt="" class="statistic__star"></dt>
-        <dd>Топ <br>преподавателей</dd>
-      </dl>
-      <dl class="statistic__item statistic__item--verborder">
-        <dt class="js-slide-opac">50</dt>
-        <dd>Недель обучения</dd>
-      </dl>
-      <dl class="statistic__item statistic__item--col2">
-        <dt class="js-slide-opac">350+</dt>
-        <dd>Видеоуроков в HD</dd>
-      </dl>
-      <dl class="statistic__item">
-        <dt class="js-slide-opac">78+</dt>
-        <dd>Часов воркшопов <br>и мастермайндов</dd>
-      </dl>
-      <dl class="statistic__item">
-        <dt class="js-slide-opac">847</dt>
-        <dd>Академических <br>часов</dd>
-      </dl>
-      <dl class="statistic__item statistic__item--short">
-        <dt class="js-slide-opac">30+</dt>
-        <dd>Документов, <br>шаблонов и схем</dd>
-      </dl>
-      <dl class="statistic__item  statistic__item--veryellow">
-        <dt class="js-slide-opac">12/7</dt>
-        <dd>Поддержка студентов во время обучения</dd>
-      </dl>
-    </div>
-  </section>
-</div>
+<section class="statistic container statistic--fashion">
+  <h2 class="title">Поговорим о&nbsp;цифрах</h2>
+  <div class="statistic__grid">
+    <dl class="statistic__item statistic__item--verbg">
+      <dt>11<img src="<?= imgs(); ?>/psychology/b20-star.svg" alt="" class="statistic__star"></dt>
+      <dd>Топ <br>преподавателей</dd>
+    </dl>
+    <dl class="statistic__item statistic__item--verborder">
+      <dt class="js-slide-opac">50</dt>
+      <dd>Недель обучения</dd>
+    </dl>
+    <dl class="statistic__item statistic__item--col2">
+      <dt class="js-slide-opac">350+</dt>
+      <dd>Видеоуроков в HD</dd>
+    </dl>
+    <dl class="statistic__item">
+      <dt class="js-slide-opac">78+</dt>
+      <dd>Часов воркшопов <br>и мастермайндов</dd>
+    </dl>
+    <dl class="statistic__item">
+      <dt class="js-slide-opac">847</dt>
+      <dd>Академических <br>часов</dd>
+    </dl>
+    <dl class="statistic__item statistic__item--short">
+      <dt class="js-slide-opac">30+</dt>
+      <dd>Документов, <br>шаблонов и схем</dd>
+    </dl>
+    <dl class="statistic__item  statistic__item--fashion">
+      <dt class="js-slide-opac">12/7</dt>
+      <dd>Поддержка студентов во время обучения</dd>
+    </dl>
+  </div>
+</section>
 
 
 
 
 
-<section class="quizlink quizlink--decorator">
+<section class="quizlink quizlink--fashion">
   <div class="container">
     <h2 class="title">Подходит ли тебе профессия <br><b>дизайнер одежды?</b></h2>
     <div class="quizlink__box flexi js-slide-opac">
@@ -550,9 +548,13 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="dreams disint5">
+<section class="dreams dreams--abs dreams--fashion2">
   <div class="container">
-    <h2 class="title">Мы знаем, о чем ты мечтаешь, <br><b>и поможем тебе этого добиться</b></h2>
+    <h2 class="title">
+      <b>ты получишь все необходимое
+      <br>для старта</b> и&nbsp;развития карьеры
+      <br>в&nbsp;модной индустрии
+    </h2>
     <div class="grid-mob-scroll">
       <div class="dreams__grid">
         <div class="dreams__item">
@@ -560,16 +562,16 @@ $pics = imgs() . '/fashion-dizayner';
             <img data-src="<?= $pics; ?>/b17-1.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Сможешь разбираться в истории моды, анализировать и прогнозировать модные тренды.
+            <p>Сможешь разбираться в&nbsp;истории моды, анализировать и&nbsp;прогнозировать модные тренды.</p>
             <small class="dreamsltitle__min">Узнаете структуру модной индустрии и как работают производственные циклы.</small>
           </div>
         </div>
         <div class="dreams__item">
-          <div class="dreams__iconwrap dreams__iconwrap--wide">
+          <div class="dreams__iconwrap">
             <img data-src="<?= $pics; ?>/b17-2.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Будешь учиться анализировать рынок и работать с портретами целевой аудитории.
+            <p>Будешь учиться анализировать рынок и&nbsp;работать с портретами целевой аудитории.</p>
             <small class="dreamsltitle__min">Сможешь сформировать ДНК бренда и составить ассортиментную матрицу.</small>
           </div>
 
@@ -588,60 +590,60 @@ $pics = imgs() . '/fashion-dizayner';
             <img data-src="<?= $pics; ?>/b17-4.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Будешь учиться рисовать fashion-скетчи на бумаге и оцифровывать их с помощью Adobe Photoshop.
+            <p>Будешь учиться рисовать fashion-скетчи на бумаге и&nbsp;оцифровывать их с&nbsp;помощью Adobe Photoshop.</p>
             <small class="dreamsltitle__min">Сразу увидишь, как будет выглядеть одежда вашей коллекции, и сможешь презентовать её</small>
+          </div>
+        </div>
+        <div class="dreams__item dreams__item--nobg">
+          <div class="dreams__iconwrap dreams__iconwrap--wide">
+            <img data-src="<?= $pics; ?>/b17-5.png" alt="" class="lazy js-slide-opac">
+          </div>
+          <div class="dreamsltitle">
+            <p>Узнаешь как проектировать одежду, пользоваться швейной машинкой и оверлоком.</p>
+            <small class="dreamsltitle__min">Cнимать мерки, делать выкройки и обрабатывать изделия. Сможешь сшить любую вещь: от платья до пальто.</small>
+          </div>
+        </div>
+        <div class="dreams__item  dreams__item--border dreams__item--nobg">
+          <div class="dreams__iconwrap">
+            <img data-src="<?= $pics; ?>/b17-6.png" alt="" class="lazy js-slide-opac radius0">
+          </div>
+          <div class="dreamsltitle">
+            <p>Познакомишься с видами и свойствами тканей и их значением для создания коллекции.</p>
+            <small class="dreamsltitle__min">Узнаешь, как и где искать ткани: сможете работать с выставками и с поставщиками.</small>
           </div>
         </div>
         <div class="dreams__item">
           <div class="dreams__iconwrap">
-            <img data-src="<?= $pics; ?>/b17-5.png" alt="" class="lazy js-slide-opac">
-          </div>
-          <div class="dreamsltitle">
-            Узнаешь как проектировать одежду, пользоваться швейной машинкой и оверлоком.
-            <small class="dreamsltitle__min">Cнимать мерки, делать выкройки и обрабатывать изделия. Сможешь сшить любую вещь: от платья до пальто.</small>
-          </div>
-        </div>
-        <div class="dreams__item  dreams__item--border">
-          <div class="dreams__iconwrap dreams__iconwrap--wide">
-            <img data-src="<?= $pics; ?>/b17-6.png" alt="" class="lazy js-slide-opac">
-          </div>
-          <div class="dreamsltitle">
-            Познакомишься с видами и свойствами тканей и их значением для создания коллекции.
-            <small class="dreamsltitle__min">Узнаешь, как и где искать ткани: сможете работать с выставками и с поставщиками.</small>
-          </div>
-        </div>
-        <div class="dreams__item  dreams__item--border">
-          <div class="dreams__iconwrap dreams__iconwrap--wide">
             <img data-src="<?= $pics; ?>/b17-7.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Узнаешь как проектировать одежду, пользоваться швейной машинкой и оверлоком.
-            <small class="dreamsltitle__min">Cнимать мерки, делать выкройки и обрабатывать изделия. Сможешь сшить любую вещь: от платья до пальто.</small>
+            <p>Сможешь презентовать свою коллекцию.</p>
+            <small class="dreamsltitle__min">Узнаешь секреты организации показов, фотосессий и пресс-завтраков.</small>
           </div>
         </div>
-        <div class="dreams__item  dreams__item--border">
+        <div class="dreams__item">
           <div class="dreams__iconwrap dreams__iconwrap--wide">
             <img data-src="<?= $pics; ?>/b17-8.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Познакомишься с видами и свойствами тканей и их значением для создания коллекции.
-            <small class="dreamsltitle__min">Узнаешь, как и где искать ткани: сможете работать с выставками и с поставщиками.</small>
+            <p>Познакомишься с основами маркетинга модных коллекций.</p>
+            <small class="dreamsltitle__min">Получишь готовые рецепты продвижения личного бренда дизайнера одежды в социальных сетях.</small>
           </div>
         </div>
-        <div class="dreams__item  dreams__item--border">
-          <div class="dreams__iconwrap dreams__iconwrap--wide">
+        <div class="dreams__item dreams__item--nobg dreams__item--border">
+          <div class="dreams__iconwrap">
             <img data-src="<?= $pics; ?>/b17-9.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Узнаешь как планировать производственную цепочку, запускать пошив, следить за качеством готовых изделий и работать с браком.
+            <p>Узнаешь как планировать производственную цепочку, запускать пошив, следить за качеством готовых изделий и&nbsp;работать с браком.</p>
           </div>
         </div>
-        <div class="dreams__item  dreams__item--border">
+        <div class="dreams__item">
           <div class="dreams__iconwrap dreams__iconwrap--wide">
             <img data-src="<?= $pics; ?>/b17-10.png" alt="" class="lazy js-slide-opac">
           </div>
           <div class="dreamsltitle">
-            Узнаешь, как проходят байерские сессии, как работать с оптовыми заказчиками, маркетплейсами и собственной розницой.
+            <p>Узнаешь, как проходят байерские сессии, как работать с оптовыми заказчиками, маркетплейсами и&nbsp;собственной розницой.</p>
           </div>
         </div>
       </div>
@@ -668,7 +670,7 @@ $pics = imgs() . '/fashion-dizayner';
       <p>Первый платеж через 2 месяца.</p>
     </div>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => 'programfromlead__formwrap--yellow',
+      'formClassName' => '',
       'isPromoForm' => true,
     ]); ?>
   </div>
@@ -958,7 +960,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="talentsyabout talentsyabout--disint">
+<section class="talentsyabout talentsyabout--black">
   <div class="talentsyabout__topbg">
     <div class="container">
       <img src="<?= imgs(); ?>/footer/logo-white.svg" alt="" class="talentsyabout__logo js-slide-opac">
@@ -992,14 +994,55 @@ $pics = imgs() . '/fashion-dizayner';
       </div>
     </div>
   </div>
+
   <div class="container">
     <div class="talentsyabout__tags" data-hidewrap="tags">
-      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Дизайн интерьера</a>
-      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Ландшафтный <br>дизайн</a>
-      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Графический дизайн</a>
-      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Стилизации <br>интерьеров</a>
-      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Декорирование <br>интерьера</a>
+      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Макетирование <br>одежды</a>
+      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курс онлайн <br>Fashion-скетчинг</a>
+      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Конструирование <br>женской одежды</a>
+      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Технология  <br>швейных <br>изделий</a>
+      <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курс онлайн <br>Fashion-брендинг</a>
+
+      <div data-hidebox="tags" class="talentsyabout__more">
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Обучение дизайнера- <br>модельера <br>дистанционно</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Онлайн курс <br>fashion-иллюстрации</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Онлайн курс по <br>моделированию одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Конструирование <br>и моделирование одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Цены на онлайн курсы <br>дизайнера модельера</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курс дизайна <br>для профессионалов</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Как создать свой <br>fashion-бренд?</a>
+
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Длительность онлайн <br>курса для модельеров</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Как создать первую <br>коллекцию одежды?</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Технология изготовления <br>швейных изделий</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Пройти обучение <br>по курсу пошива одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Дизайн и <br>моделирование одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Цена дистанционного <br>обучения на курсах дизайнера</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курсы для <br>практикующих дизайнеров</a>
+
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курс по <br>конструированию одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Профессия <br>fashion-дизайнер</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курсы по моделированию <br>и пошиву одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Обучение с нуля <br>на курсе дизайна</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Онлайн-курс <br>дизайна</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Профессиональные <br>курсы для дизайнеров</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Цена обучения <br>дизайнера одежды</a>
+
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Как освоить <br>новую профессию?</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Дизайнер <br>одежды с нуля</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Школа дизайна <br>одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Дизайнер <br>одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Дизайнер <br>одежды обучение</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Профессия <br>дизайнер одежды</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Образование <br>дизайнера</a>
+        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Программа обучения</a>
+      </div>
     </div>
+    <div class="talentsyabout__action">
+      <button data-hideopen="tags"><span>Показать еще</span><i>Cкрыть</i></button>
+    </div>
+
+
 </section><!-- //talentsyabout -->
 
 

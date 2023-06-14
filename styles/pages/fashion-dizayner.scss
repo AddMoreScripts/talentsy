@@ -1,0 +1,264 @@
+@use "../general/mixins" as *;
+
+
+
+.page-template-page-fashion-dizayner{
+  --psy-accent: #00865a;
+  --darkbg-accent: #00865a;
+
+}
+
+
+.hero-fashion{
+  margin-top: 10px;
+
+  @include media(m){
+    padding-top: 40px;
+
+    .hero__videobox{
+      padding-bottom: 90%;
+    }
+    .hero__overbutton{
+      margin-top: -100px;
+    }
+  }
+
+  .hero__h1{
+    @media(min-width:1199px){
+      font-size: 66px;
+      line-height: 1;
+      margin-bottom: -35px;
+    }
+  }
+}
+
+
+
+.disint2{
+  @include media(m){
+    margin-top: 0;
+  }
+}
+
+
+
+.iphone--fashion{
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding-top: 145px;
+  padding-bottom: 165px;
+  margin-bottom: 0;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+  @include media(m){
+    margin-bottom: var(--blockspace);
+  }
+}
+
+
+.programfromlead--fashion{
+  background-color: #fff;
+  margin-bottom: 0;
+
+}
+
+
+
+.dreams--fashion{
+  background-color: #f0f0f0;
+  padding-top: 150px;
+  margin-bottom: 0;
+  padding-bottom: 145px;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+
+  .title{
+    text-align: center;
+  }
+}
+
+
+.mentors--fashion{
+  background-color: #182e69;
+}
+
+
+
+.features--fashion1{
+  padding-top: 145px;
+  padding-bottom: 145px;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+}
+
+
+
+.guideform--fashion{
+  margin-bottom: 125px;
+
+  @include media(l){
+    margin-bottom: var(--blockspace);
+  }
+}
+
+
+img.fashion-catalog{
+  right: 73px;
+  top: -148px;
+  transform: rotate(0deg);
+
+  @include media(m){
+    top: 100px;
+  }
+}
+
+
+.features--fashion2{
+  padding-bottom: 145px;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+  }
+
+  .features__wrap{
+    margin-top: 40px;
+  }
+}
+
+
+.timeslot--fashion{
+  padding-bottom: 180px;
+  background-color: #182e69;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+  }
+
+  .timeslot__box{
+    margin-top: 125px;
+
+    @include media(m){
+      margin-top: 30px;
+    }
+  }
+  .timeslot__text small{
+    margin-top: 15px;
+    opacity: 0.65;
+  }
+  .timeslot__box::before{
+    background-color: #fff;
+    opacity: 0.3;
+  }
+}
+
+
+
+.diplomblock--fashion{
+  .diplomblock__pic{
+    margin-top: 30px;
+  }
+  .diplomblock__footer{
+    margin-top: 35px;
+  }
+}
+
+
+
+.statistic--fashion{
+  padding-top: 145px;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+  }
+  @include media(m){
+    margin-bottom: 0;
+  }
+
+  .statistic__star{
+    filter: grayscale(1);
+  }
+
+  @include media(m){
+    .statistic__item--fashion{
+      grid-column: span 2;
+    }
+  }
+}
+
+
+
+.quizlink--fashion{
+  padding-top: 140px;
+  margin-bottom: 0;
+  padding-bottom: 140px;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+}
+
+
+
+.dreams--fashion2{
+  padding-top: 130px;
+  padding-bottom: 120px;
+  margin-bottom: 145px;
+  background-color: #182e69;
+  color:#fff;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+
+  @include media(m){
+    margin-bottom: 0;
+  }
+
+  .title{
+    text-align: center;
+
+    b{
+      color:#eac335;
+    }
+  }
+
+  .dreams__item{
+    background-color: #293f7a;
+  }
+
+  .dreams__item--nobg{
+    background: none;
+  }
+  .dreams__item--border{
+    border-color: #516aaf;
+  }
+
+  .dreamsltitle__min{
+    margin-top: 15px;
+  }
+}
+
+
+
+.talentsyabout--black{
+  background: #000;
+
+  .talentsyabout__prop{
+    background-color: #282828;
+  }
+  .talentsyabout__prop--yellow{
+    color:#fff;
+    background-color: #00865a;
+  }
+}
