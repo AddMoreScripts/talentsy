@@ -89,6 +89,8 @@ export const initSliders = () => {
         slidesPerView: 3,
       },
     },
+    lazy: true,
+    lazyPreloadPrevNext: 2,
   });
 
   //блог - похожие статьи

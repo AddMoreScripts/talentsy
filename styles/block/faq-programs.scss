@@ -1,0 +1,236 @@
+@import "../general/_mixins";
+
+
+.progrmsummary {
+  margin-bottom: 145px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media(l) {
+    margin-bottom: var(--blockspace);
+  }
+  &__wrap {
+    margin-top: 56px;
+
+    @include media(m) {
+      margin-top: 25px;
+    }
+  }
+
+  &__h2{
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+
+    @include media(m){
+      font-size: 24px;
+      padding-left: 20px;
+    }
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  &__plus {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: calc(50% - 20px);
+    right: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%2327b783' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    font-size: 0;
+    background-color: transparent;
+    transition: all 0.4s ease;
+    will-change: transform;
+    border-radius: 100px;
+    cursor: pointer;
+    appearance: none;
+
+    @include media(l) {
+      width: 30px;
+      height: 30px;
+      right: 15px;
+      top: calc(50% - 15px);
+      background-size: 18px;
+    }
+
+    @include media(s) {
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+      right: 12px;
+      top: calc(50% - 10px);
+    }
+  }
+
+  &__head {
+    font-size: 22px;
+    line-height: 30px;
+    padding: 24px 30px;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+
+    @include media(l) {
+      padding: 16px 20px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    @include media(m) {
+      padding-right: 40px;
+      font-size: 22px;
+      line-height: 1.27;
+    }
+    @include media(s) {
+      padding: 12px 50px 18px 20px;
+    }
+
+    &:hover .progrmsummary__plus {
+      background-color: #27b783;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+
+      @include media(m) {
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%2327b783' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 6px;
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.34;
+
+    @include media(s) {
+      border-radius: 10px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 20px;
+      @include media(l) {
+        margin-bottom: 10px;
+      }
+    }
+
+    h3 {
+      font-weight: 800;
+      font-size: 22px;
+
+      @include media(l) {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
+    }
+
+    h4 {
+      font-weight: 800;
+      font-size: 18px;
+      @include media(l) {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__contentwrap {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+  }
+
+  &__content {
+    padding: 0 30px 40px;
+    line-height: 1.4;
+    --vertical: 10px;
+
+    @include media(l) {
+      padding: 10px 15px 30px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    a{
+      color:var(--psy-accent);
+      text-decoration: underline;
+    }
+
+    ul{
+      margin: 15px 0;
+
+      li{
+        padding-left: 20px;
+        position: relative;
+
+        &::before{
+          display: block;
+          position: absolute;
+          left: 5px;
+          top: 11px;
+          content:'';
+          width: 4px;
+          height: 4px;
+          background: #000;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .is-opened &__contentwrap {
+    height: auto;
+  }
+
+  .is-opened &__plus {
+    transform: rotate(45deg);
+  }
+}
+
+
+
+
+
+.faqblock {
+  background-color: #ededed;
+  padding-top: 145px;
+  padding-bottom: 95px;
+
+  @include media(l) {
+    padding-top: var(--blockspace);
+  }
+
+  &__wrap {
+    margin-top: 60px;
+
+    @include media(l) {
+      margin-top: 40px;
+    }
+  }
+
+  .progrmsummary__item {
+    margin-bottom: 6px;
+    background: #fff;
+    margin-bottom: 4px;
+    color: #000;
+  }
+
+  .progrmsummary__head{
+    @include media(m){
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .progrmsummary__head strong {
+    font-weight: 800;
+  }
+}

@@ -329,7 +329,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/dizayner-interyera/" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/001.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/001.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет дизайна</div>
                 <div class="frontfacultet__title">Профессия «Дизайнер интерьера»</div>
@@ -342,7 +343,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/psychology/" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/002.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/002.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет психологии</div>
                 <div class="frontfacultet__title">Профессия «Психолог консультант»</div>
@@ -355,7 +357,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/seksolog/" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/003.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/003.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет психологии</div>
                 <div class="frontfacultet__title">Профессия «Консультант в сфере сексуальных отношений»</div>
@@ -368,7 +371,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/psychology-kid" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/004.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/004.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет психологии</div>
                 <div class="frontfacultet__title">Профессия «Детский психолог-консультант»</div>
@@ -381,7 +385,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/professiya-family-psikholog" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/005.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/005.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет психологии</div>
                 <div class="frontfacultet__title">Профессия «Семейный психолог-консультант»</div>
@@ -394,7 +399,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/professiya-fashion-dizayner/" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/006.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/006.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет моды и стиля</div>
                 <div class="frontfacultet__title">Профессия «Дизайнер одежды»</div>
@@ -407,7 +413,8 @@ get_header();
             <div class="swiper-slide">
               <a href="https://talentsy.ru/professiya-astrolog" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/007.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/007.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет астрологии</div>
                 <div class="frontfacultet__title">Профессия <br>«Астролог»</div>
@@ -420,7 +427,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/professiya-stilist" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/008.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/008.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет моды и стиля</div>
                 <div class="frontfacultet__title">Профессия «Стилист-имиджмейкер»</div>
@@ -433,7 +441,8 @@ get_header();
             <div class="swiper-slide">
               <a href="/interior-decorator" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/009.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/009.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет дизайна</div>
                 <div class="frontfacultet__title">Профессия «Дизайнер-декоратор»</div>
@@ -446,7 +455,8 @@ get_header();
             <div class="swiper-slide">
               <a href="https://talentsy.ru/dizayner-ukrasheniy" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/010.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/010.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет современного искусства</div>
                 <div class="frontfacultet__title">Профессия «Дизайнер украшений»</div>
@@ -459,7 +469,8 @@ get_header();
             <div class="swiper-slide">
               <a href="https://talentsy.ru/professiya-florist" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/011.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/011.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет современного искусства</div>
                 <div class="frontfacultet__title">Профессия <br>«Флорист»</div>
@@ -472,7 +483,8 @@ get_header();
             <div class="swiper-slide">
               <a href="https://talentsy.ru/professiya-nutriciolog" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
-                  <img data-src="<?= imgs(); ?>/frontpage/proff/012.png" alt="" class="frontfacultet__pic lazy">
+                  <img src="<?= imgs(); ?>/frontpage/proff/012.png" alt="" class="frontfacultet__pic" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="frontfacultet__tag">Факультет нутрициологии</div>
                 <div class="frontfacultet__title">Профессия <br>«Интегративный нутрициолог»</div>

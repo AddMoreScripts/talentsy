@@ -1,0 +1,292 @@
+@use "../general/mixins" as *;
+
+
+.talentsyabout {
+  background: var(--bg, #001427);
+  color: #fff;
+  padding-top: 145px;
+  padding-bottom: 50px;
+  overflow: hidden;
+
+  @include media(l) {
+    padding-top: var(--blockspace);
+  }
+
+  &__logo {
+    display: block;
+    width: 228px;
+    margin-bottom: 50px;
+
+    @include media(l) {
+      width: 200px;
+    }
+    @include media(m) {
+      width: 140px;
+      margin: 0;
+    }
+  }
+
+  &__line1 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 50px;
+
+    @include media(l) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    @include media(m) {
+      flex-flow: column nowrap;
+      position: relative;
+      font-size: 14px;
+      line-height: 1.6;
+      padding-top: 20px;
+    }
+
+    dt {
+      font-size: 26px;
+      line-height: 29px;
+      flex-shrink: 0;
+      margin-right: 175px;
+
+      @include media(l) {
+        margin-right: 100px;
+        font-size: 23px;
+      }
+      @include media(m) {
+        position: absolute;
+        bottom: calc(100% + 5px);
+        left: 170px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @include media(s) {
+        margin-right: 0;
+      }
+    }
+    dt {
+      flex-grow: 1;
+    }
+  }
+
+  &__props {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+    margin-bottom: 225px;
+
+    @include media(l) {
+      grid-gap: 15px;
+      margin-bottom: var(--blockspace);
+    }
+
+    @include media(m) {
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__prop {
+    min-width: 0;
+    min-height: 260px;
+    border-radius: 20px;
+    background-color: #33475b;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 55px 35px 35px;
+    font-size: 20px;
+    line-height: 25px;
+
+    @include media(l) {
+      padding: 30px 20px;
+      min-height: 220px;
+      font-size: 17px;
+    }
+
+    @include media(m) {
+      padding: 20px 15px;
+      min-height: auto;
+      border-radius: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    dt {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 600;
+      font-size: 66px;
+      line-height: 1;
+      margin-bottom: auto;
+      white-space: nowrap;
+
+      @include media(l) {
+        font-size: 50px;
+      }
+      @include media(m) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--yellow {
+      background-color: #ffc800;
+      color: #000;
+    }
+  }
+
+  @keyframes heartpulse {
+    0% {
+      transform: scale(1.15);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  &__heart {
+    width: 48px;
+    display: inline-block;
+    height: auto;
+    margin-left: 10px;
+    animation: heartpulse 1.6s infinite linear;
+
+    @include media(l) {
+      width: 30px;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    align-content: flex-start;
+
+    @include media(m) {
+      flex-flow: column nowrap;
+      align-items: stretch;
+    }
+  }
+
+  &__more {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    align-content: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+
+    @include media(m) {
+      flex-flow: column nowrap;
+      align-items: stretch;
+    }
+  }
+
+  .is-opened &__more {
+    height: auto;
+  }
+
+  &__tag {
+    min-height: 80px;
+    border-radius: 20px;
+    background-color: #0c1f31;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 17px 15px 20px;
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.4s ease;
+    font-size: 16px;
+    line-height: 21px;
+
+    @include media(l) {
+      font-size: 13px;
+      border-radius: 10px;
+      line-height: 1.3;
+      padding: 10px 15px;
+      min-height: 70px;
+      flex-grow: 1;
+    }
+    @include media(m) {
+      flex-grow: 0;
+      margin-right: 0;
+      min-height: 50px;
+      padding: 5px 15px;
+      justify-content: space-between;
+
+      br {
+        display: none;
+      }
+    }
+
+    &::after {
+      width: 40px;
+      height: 40px;
+      border-radius: 100px;
+      flex-shrink: 0;
+      content: "";
+      display: block;
+      background-color: #1d354d;
+      margin-left: 8px;
+      background: url(/img/psychology/b25-arrow.svg) no-repeat;
+      background-size: contain;
+
+      @include media(l) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #0f273e;
+    }
+  }
+
+  &__action {
+    margin-top: 35px;
+    text-align: center;
+
+    @include media(l) {
+      margin-top: 20px;
+    }
+
+    button {
+      appearance: none;
+      background: none;
+      cursor: pointer;
+      color: #32475a;
+      font-weight: 600;
+      font-family: inherit;
+      line-height: 1;
+      font-size: 17px;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        color: #fff;
+      }
+
+      i {
+        font-style: normal;
+        display: none;
+      }
+    }
+  }
+
+  .is-opened + &__action {
+    button i {
+      display: block;
+    }
+    button span {
+      display: none;
+    }
+  }
+}
