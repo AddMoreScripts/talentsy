@@ -113,6 +113,10 @@
 .mentors--stylist{
   background-color: #2b3f58;
   color:#fff;
+
+  .title b{
+    color:#f8e1a9;
+  }
 }
 
 
@@ -186,7 +190,7 @@ img.stylist-catalog{
   }
 
   .timeslot__box{
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .timeslot__box::before{
@@ -195,7 +199,8 @@ img.stylist-catalog{
   }
 
   .timeslot__text{
-    margin-top: 70px;
+    margin-top: 50px;
+    color:#fff;
 
     @include media(m){
       margin-top: 0px;
@@ -220,15 +225,16 @@ img.stylist-catalog{
   .features__wrap{
     margin-top: 0px;
   }
+
+  .features__subtitle{
+    color:#000;
+  }
+
   .features__grid{
     padding-top: 190px;
 
     @include media(l){
       padding-top: 40px;
-
-      .features__subtitle{
-        color:#000;
-      }
     }
   }
 }

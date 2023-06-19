@@ -102,6 +102,13 @@
     position: relative;
     z-index: 5;
 
+    @media(min-width:1199px){
+      &.font66{
+        font-size: 66px;
+      }
+    }
+
+
     @include media(l) {
       font-size: 50px;
       line-height: 1.1;

@@ -17,21 +17,17 @@ $buttonTxt = isset($args['buttonTxt']) ? $args['buttonTxt'] : 'Получить 
       <div class="programfromlead__grid">
         <div class="programfromlead__col">
           <label for="username1">Имя</label>
-          <input type="text" name="Name" placeholder="Алиса" id="username1">
+          <input type="text" name="Name" placeholder="Алиса" id="username1" required>
         </div>
         <div class="programfromlead__col">
           <label for="phone1">Телефон</label>
           <div class="phoneinp flexi">
-            <!-- <button class="phoneinp__country" type="button">
-              <img src="/img/ui/flag-ru.svg" alt="">
-            </button>
-            <div class="phoneinp__code">+7</div> -->
-            <input type="tel" name="Phone" placeholder="+7 999 999-99-99" id="phone1" data-mask="tel">
+            <input type="tel" name="Phone" placeholder="+7 999 999-99-99" id="phone1" data-mask="tel" required>
           </div>
         </div>
         <div class="programfromlead__col">
           <label for="email1">Почта</label>
-          <input type="email" name="Email" placeholder="hello@mail.ru" id="email1">
+          <input type="email" name="Email" placeholder="hello@mail.ru" id="email1" required>
         </div>
       </div>
 
