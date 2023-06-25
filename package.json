@@ -7,8 +7,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4",
+    "bricks.js": "^1.8.0",
     "hystmodal": "1.0.0-beta.4",
     "imask": "^6",
+    "masonry-layout": "^4.2.2",
     "scrollreveal": "^4.0.9",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^9",

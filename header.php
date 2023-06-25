@@ -53,7 +53,7 @@
           <a href="/blog/">Журнал</a>
         </li>
         <li>
-          <a href="https://talentsy.ru/otzyvy">Отзывы</a>
+          <a href="<?=get_permalink(150); ?>">Отзывы</a>
         </li>
       </ul>
     </nav>

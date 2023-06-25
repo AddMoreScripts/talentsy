@@ -1,0 +1,155 @@
+@use "../general/mixins" as *;
+
+
+.page-template-page-reviews{
+  background-color: #e7e2ff;
+}
+
+
+
+.reviewpage{
+  overflow: hidden;
+  &__h1{
+    text-align: center;
+    margin-bottom: 55px;
+    margin-top: 70px;
+    font-size: 44px;
+    line-height: 1;
+
+    @include media(m){
+      font-size: 33px;
+      line-height: 36px;
+      margin: 40px 0 30px;
+    }
+  }
+
+  &__youtgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    margin-bottom: 65px;
+
+    @include media(m){
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  &__screens{
+    display: block;
+    position: relative;
+    margin: 0 -10px 60px;
+
+    @include media(m){
+      margin: 0 -5px 40px;
+    }
+  }
+
+  &__screenlink{
+    display: block;
+    width: calc(100% / 3);
+
+    @include media(m){
+      width: 50%;
+    }
+
+    &:hover{
+      opacity: 0.8;
+    }
+
+    img{
+      display: block;
+      width: calc(100% - 20px);
+      margin: 0 10px 20px;
+      height: auto;
+      border-radius: 19px;
+
+      @include media(m){
+        border-radius: 5px;
+        width: calc(100% - 10px);
+        margin: 0 5px 10px;
+      }
+    }
+  }
+
+  &__texts{
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    grid-auto-rows: auto;
+
+    @include media(l){
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+    @include media(m){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__textbox{
+    min-width: 0;
+    padding: 30px 30px 40px;
+    background-color: #fff;
+    border-radius: 19px;
+    font-size: 16px;
+    line-height: 1.55;
+
+    @include media(m){
+      padding: 20px 15px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+}
+
+
+
+
+.revyoutube{
+  padding-bottom: calc((9 / 16) * 100%);
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+
+  iframe{
+    border:none;
+    border-radius: 5px;
+  }
+
+  &::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.2;
+    border-radius: 5px;
+  }
+
+  &__play{
+    width: 64px;
+    height: 48px;
+    z-index: 20;
+    display: block;
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 32px);
+  }
+
+  &.is-opened{
+    background-color: #000;
+  }
+  &.is-opened::after{
+    display: none;
+  }
+  &.is-opened &__play{
+    display: none;
+  }
+}

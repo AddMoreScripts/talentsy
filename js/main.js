@@ -15,6 +15,7 @@ import { initFrontpage } from './components/frontpage';
 import { startTabs } from './components/tabs';
 import '../styles/app.scss';
 import { initBlog } from './components/blog';
+import Masonry from 'masonry-layout';
 
 
 initSliders();
@@ -130,3 +131,41 @@ function articleTableOfContent(){
   });
 }
 articleTableOfContent();
+
+
+
+
+
+
+function changeYoutubeIframe(){
+  document.addEventListener('click', (e) => {
+    const youtube = e.target.closest('.js-changeiframe');
+    if(!youtube) return;
+    e.preventDefault();
+    const iframe = `<iframe src="https://www.youtube.com/embed/${youtube.dataset.link}?enablejsapi=1&rel=0&showinfo=0" class="square__img" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen width="400" height="400"></iframe>`;
+    youtube.classList.add('is-opened');
+    youtube.innerHTML = iframe;
+    const youtubePlayer = youtube.querySelector('iframe');
+    setTimeout(() => {
+      console.log('Пытаемся');
+      youtubePlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }, 1000);
+  });
+}
+changeYoutubeIframe();
+
+
+
+
+
+
+function startBricks(){
+  var grid = document.querySelector('.reviewpage__screens');
+  var msnry = new Masonry( grid, {
+    itemSelector: '.reviewpage__screenlink',
+    columnWidth: '.reviewpage__screenlink',
+    percentPosition: true,
+    horizontalOrder: false,
+  });
+}
+startBricks();
