@@ -37,7 +37,7 @@
       <a href="/" class="menubloglink">На главную Talentsy</a>
 
       <footer class="menublogfoot">
-        <a href="/">Журнал</a>
+        <a href="/blog/">Журнал</a>
         <a href="/">О Talentsy</a>
         <a href="tel:88007753768">8 800 775 37 68</a>
         <a href="#" class="blogheader__login">Вход</a>
