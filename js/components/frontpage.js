@@ -115,3 +115,24 @@ export const initFrontpage = () => {
     }
   });
 };
+
+
+
+
+
+function animateAstrolog(){
+  const astroblock = document.querySelector('.astroabout__sideblock');
+  if(!astroblock || window.innerWidth < 1000) return;
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".astroabout__wrap",
+      pin: ".astroabout__sideblock",
+      start: "310 center",
+      end:"bottom +=620",
+      scrub: 1,
+      markers: false,
+    }
+  });
+}
+animateAstrolog();

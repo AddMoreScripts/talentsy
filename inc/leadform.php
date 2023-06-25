@@ -46,7 +46,7 @@ $buttonTxt = isset($args['buttonTxt']) ? $args['buttonTxt'] : 'Получить 
     </div><!-- //programfromlead__left -->
     <div class="programfromlead__right">
       <button class="programfromlead__submit circlebutton">
-        <?=$buttonTxt; ?>
+        <span><?=$buttonTxt; ?></span>
       </button>
       <div class="accept accept--mob">Отправляя данную форму вы соглашаетесь с условиями <a href="#">оферты</a> и
         политикой <a href="#">обработки персональных данных</a></div>

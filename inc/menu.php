@@ -64,9 +64,9 @@
                   <a href="#" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/professiya-fashion-dizayner">Дизайнер одежды</a></li>
-                    <li><a href="/professiya-stilist">Стилист-имиджмейкер</a></li>
-                    <li><a href="/fashion-style">Fashion-стилист</a></li>
+                    <li><a href="<?=get_permalink(143); ?>">Дизайнер одежды</a></li>
+                    <li><a href="<?=get_permalink(144); ?>">Стилист-имиджмейкер</a></li>
+                    <li><a href="<?=get_permalink(146); ?>">Fashion-стилист</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -130,10 +130,10 @@
                   <a href="#" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/professiya-psikholog">Психолог-консультант</a></li>
-                    <li><a href="/seksolog">Консультант в сфере <br>сексуальных отношений</a></li>
-                    <li><a href="/psychology-kid">Детский психолог-консультант</a></li>
-                    <li><a href="/professiya-family-psikholog">Семейный психолог-консультант</a></li>
+                    <li><a href="<?=get_permalink(132); ?>">Психолог-консультант</a></li>
+                    <li><a href="<?=get_permalink(133); ?>">Консультант в сфере <br>сексуальных отношений</a></li>
+                    <li><a href="<?=get_permalink(134); ?>">Детский психолог-консультант</a></li>
+                    <li><a href="<?=get_permalink(138); ?>">Семейный психолог-консультант</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -151,8 +151,8 @@
                   <a href="#" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/dizayner-interyera" style="color: inherit">Дизайнер Интерьера</a></li>
-                    <li><a href="/interior-decorator" style="color: inherit">Декоратор Интерьера</a></li>
+                    <li><a href="<?=get_permalink(136); ?>" style="color: inherit">Дизайнер Интерьера</a></li>
+                    <li><a href="<?=get_permalink(140); ?>" style="color: inherit">Декоратор Интерьера</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -182,7 +182,7 @@
                   <a href="#" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/professiya-astrolog" style="color: inherit">Профессия Астролог</a></li>
+                    <li><a href="<?=get_permalink(148); ?>" style="color: inherit">Профессия Астролог</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -201,7 +201,7 @@
                   <a href="#" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/professiya-nutriciolog" style="color: inherit">Профессия Нутрициолог</a></li>
+                    <li><a href="<?=get_permalink(149); ?>" style="color: inherit">Профессия Нутрициолог</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">

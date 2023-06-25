@@ -1,0 +1,1883 @@
+@use "../general/mixins" as *;
+
+.page-template-page-astrolog{
+  background-color: #100721;
+  color:#fff;
+  --accolor: #b4a3fd;
+  --psy-accent: #f1a17c;
+  --darkbg-accent: #5c467a;
+
+  .hdr{
+    z-index: 50;
+    position: relative;
+  }
+  .hdr__leftmenu ul a,
+  .hdr__right a{
+    color:#fff;
+  }
+  .hdr__burger,
+  .hdr__login {
+    border:1px solid var(--accolor);
+
+    @include media(m){
+      border:none;
+      color:#fff !important;
+    }
+  }
+
+  .progrmsummary__plus{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%235c467a' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #fff;
+  }
+
+  .progrmsummary__head:hover .progrmsummary__plus{
+    background-color: var(--darkbg-accent);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+.astrohero {
+  position: relative;
+  overflow: hidden;
+  min-height: 800px;
+  margin-top: -100px;
+
+  @include media(m){
+    margin-top: -60px;
+    padding-top: 60px;
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+
+  &__vidwrap{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1280px;
+    max-width: 100%;
+
+    @include media(m){
+      left: 0;
+      top: 0;
+      transform: none;
+      width: 100%;
+      height: 600px;
+    }
+
+    &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      content:"";
+      background-image: radial-gradient(rgba(16,7,33,0) 0%, rgba(16,7,33,1) 100%);
+    }
+  }
+  &__bgvidep {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include media(m){
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+
+  &__cont {
+    position: relative;
+
+    @include media(m){
+      padding-left: 20px;
+      padding-right: 20px;
+      z-index: 10;
+    }
+  }
+
+  &__girl {
+    position: absolute;
+    top: 40px;
+    right: 65px;
+    width: 577px;
+    display: block;
+    height: auto;
+
+    @include media(l){
+      right: -130px;
+    }
+    @include media(m){
+      width: 266px;
+      height: 348px;
+      right: -6px;
+      top: 35px;
+    }
+  }
+
+  &__overgirl {
+    position: absolute;
+    top:130px;
+    right: -33px;
+
+    @include media(l){
+      right: -228px;
+    }
+    @include media(m){
+      height: 292px;
+      right: -53px;
+      top: 76px;
+    }
+  }
+
+  &__main {
+    position: relative;
+    color:#fff;
+    padding-top: 165px;
+
+    @include media(m){
+      padding-top: 20px;
+    }
+  }
+
+  &__h1 {
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 66px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: center;
+    max-width: 495px;
+    position: relative;
+
+    @include media(m){
+      font-size: 30px;
+      line-height: 1;
+      text-align: left;
+    }
+
+    i{
+      font-style: normal;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none'%3E%3Cpath fill='%23B4A3FD' d='m7 0 1.287 5.713L14 7 8.287 8.287 7 14 5.713 8.287 0 7l5.713-1.287L7 0Z'/%3E%3C/svg%3E");
+      background-size: 14px;
+      background-repeat: no-repeat;
+      background-position: 50% 48%;
+
+      @include media(m){
+        background-size: 10px;
+      }
+    }
+
+    b{
+      color:var(--accolor);
+      font-weight: 600;
+    }
+  }
+
+  &__gridtxt {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    max-width: 510px;
+    grid-gap: 58px 0px;
+    position: relative;
+
+    @include media(m){
+      margin: 330px auto 0;
+    }
+
+    &::after, &::before, .astrohero__decor{
+      content:"";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath stroke='%23B4A3FD' d='m8 1 1.287 5.713L15 8 9.287 9.287 8 15 6.713 9.287 1 8l5.713-1.287L8 1Z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 5;
+    }
+    &::after{
+      top: 37%;
+      left: 21%;
+    }
+    &::before{
+      top: 37%;
+      right: 23%;
+    }
+    .astrohero__decor{
+      background: none;
+      top:36%;
+      width: 22px;
+      height: 23px;
+      left: 47%;
+    }
+
+  }
+
+  &__griditem {
+    min-width: 0;
+    font-size: 20px;
+    line-height: 25px;
+    color:var(--accolor);
+    text-align: center;
+
+    @include media(m){
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    b{
+      color:#fff;
+      font-weight: 400;
+    }
+  }
+
+  &__button {
+    width: 160px;
+    height: 160px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    padding-bottom: 35px;
+    font-size: 18px;
+    padding-left: 32px;
+    color:#000;
+    background: none;
+
+    @include media(m){
+      width: 140px;
+      height: 140px;
+      margin-top: -10px;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+
+    span{
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before{
+      content:"";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none'%3E%3Ccircle cx='80' cy='80' r='80' fill='url(%23a)'/%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='rotate(140.928 54.436 40.144) scale(130.096)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F1A17C'/%3E%3Cstop offset='1' stop-color='%23B4A3FD'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform-origin: 50% 50%;
+      transition: transform 0.4s ease-out;
+    }
+
+    &::after{
+      width: 35px;
+      right: 30px;
+      top: 35px;
+      filter: invert(1);
+    }
+
+    &:hover{
+      color:#000;
+
+      &::before{
+        transform: scale(1.05);
+      }
+      &::after{
+        transform: none;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+.astro2 {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  @include media(m){
+    padding-top: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='509' height='52' fill='none'%3E%3Cpath stroke='%23B4A3FD' stroke-linecap='round' d='M508 6.674C300-17.933 239 51.216 1 51.216'/%3E%3C/svg%3E");
+    background-position: 50% 0;
+    background-size: 509px auto;
+    background-repeat: no-repeat;
+    padding-bottom: var(--blockspace);
+    margin-bottom: 0;
+  }
+
+  &__wrap {
+    justify-content: space-between;
+
+    @include media(m){
+      flex-flow: column nowrap;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    width: calc(100% / 3 - 15px);
+    flex-shrink: 0;
+
+    @include media(m){
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__picwrap {
+    display: block;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    height: 175px;
+
+    @include media(m){
+      height: 100px;
+    }
+  }
+
+  &__pic {
+    display: block;
+    width: auto;
+
+    @include media(m){
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: 400;
+    margin-bottom: 15px;
+
+    @include media(l){
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+
+  &__descr {
+    font-size: 20px;
+    line-height: 25px;
+    color:var(--accolor);
+
+    @include media(l){
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+
+
+
+
+.astroform{
+  background-color: #100721;
+  position: relative;
+  padding-bottom: 160px;
+
+  @include media(m){
+    padding-bottom: var(--blockspace);
+  }
+
+  .container{
+    position: relative;
+  }
+  .title{
+    @include media(m){
+      text-align: left;
+    }
+    b{
+      color:#fff;
+    }
+  }
+
+  &__bg{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-45%);
+
+    @include media(m){
+      height: 250px;
+      left: 0;
+    }
+  }
+  .stepform__vector{
+    margin-top: 55px;
+
+    @include media(m){
+      margin-top: 30px;
+    }
+  }
+  .programfromlead__formwrap{
+    margin-top: 45px;
+    color:#000;
+  }
+}
+
+
+
+
+.astrologformbox.programfromlead__formwrap{
+  color:#000;
+  margin-top: 50px;
+  border:1px solid #000;
+  background-color: var(--psy-accent);
+  --bg:var(--psy-accent);
+}
+.withastrobutton .circlebutton{
+  background: none;
+  color:#fff;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.2);
+
+  span{
+    position: relative;
+    z-index: 10;
+  }
+  @keyframes circlepulse {
+    0% {
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.06);
+    }
+  }
+  &::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none'%3E%3Ccircle cx='80' cy='80' r='80' fill='url(%23a)'/%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='rotate(140.928 54.436 40.144) scale(130.096)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F1A17C'/%3E%3Cstop offset='1' stop-color='%23B4A3FD'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: 50% 50%;
+    transition: transform 0.4s ease-out;
+    animation: circlepulse 1s ease-in-out 0s infinite alternate;
+
+    @include media(m){
+      border-radius: 0;
+      background-position: 50%;
+      animation:none;
+      background-size: 110%;
+      border-radius: 200px;
+    }
+  }
+}
+
+
+
+
+@keyframes rounding {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.astroplanets {
+  position: relative;
+  overflow: hidden;
+  background-color: #b4a3fd;
+  padding-bottom: 145px;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+  }
+
+  &__circlebg {
+    display: block;
+    position: absolute;
+    width: 2970px;
+    height: auto;
+    top: 90px;
+    left: calc(50% - 2970px / 2);
+    animation: rounding 90s linear 0s infinite reverse;
+
+    @include media(m){
+      top: 60px;
+      width: 2200px;
+      left: calc(50% - 2200px / 2);
+    }
+  }
+
+  &__middle {
+    position: relative;
+    width: 605px;
+    margin: 200px auto 0;
+    z-index: 10;
+
+    @include media(m){
+      width: 100%;
+      margin-top: 150px;
+    }
+  }
+
+  &__midleft {
+    display: block;
+    position: absolute;
+    width: 258px;
+    height: 258px;
+    object-fit: contain;
+    left: 0;
+    top: 190px;
+    transform: translateX(-370px);
+
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__midright {
+    display: block;
+    position: absolute;
+    width: 258px;
+    height: 258px;
+    object-fit: contain;
+    right: 0;
+    top: 190px;
+    transform: translateX(370px);
+
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__roundbg{
+    --size:553px;
+    display: block;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border:1px solid #000;
+    left: calc(50% - var(--size) / 2);
+    top: calc(50% - var(--size) / 2 + 15px);
+    border-radius: 1000px;
+    z-index: 1;
+    pointer-events: none;
+
+    @include media(m){
+      --size: 365px;
+      transform: translate(0px, -25px);
+    }
+  }
+
+  &__middleblock {
+    height: 605px;
+    background: url(/img/astrolog/b4-center3.svg) 50% 50% no-repeat;
+    width: 100%;
+    position: relative;
+    background-size: 445px;
+    z-index: 30;
+
+    @include media(m){
+      width: 360px;
+      height: 360px;
+      margin: 0 auto;
+      background-size: 300px;
+    }
+
+    &::after{
+      content:"";
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(/img/astrolog/b4-center2.svg) 50% 50% no-repeat;
+      background-size: 605px;
+      z-index: 2;
+      pointer-events: none;
+
+      @include media(m){
+        display: none;
+      }
+    }
+
+    &::before{
+      content:"";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(/img/astrolog/b4-center1.svg) 50% 100% no-repeat;
+      background-size: 448px 512px;
+      z-index: 3;
+      pointer-events: none;
+
+      @include media(m){
+        background-size: 300px;
+      }
+    }
+  }
+
+  &__middlebg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 129px;
+    background-color: #f1a17c;
+    border:1px solid #000;
+    min-height: 259px;
+    width: 505px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    color:#000;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+    z-index: 30;
+
+    @include media(m){
+      width: 100%;
+      font-size: 16px;
+      line-height: 20px;
+      min-height: 200px;
+      margin-top: -12px;
+    }
+
+    b{
+      font-weight: 800;
+    }
+  }
+
+  &__bot {
+    width: 800px;
+    max-width: 100%;
+    position: relative;
+    margin: 70px auto 0;
+
+    @include media(m){
+      padding-bottom: 40px;
+    }
+  }
+
+  &__botleft {
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    object-position: 50%;
+    left: -220px;
+    top: -20px;
+    animation: rounding 70s linear 0s infinite reverse;
+
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__botright {
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    object-position: 50%;
+    right: -205px;
+    top: -20px;
+    animation: rounding 70s linear 0s infinite reverse;
+
+    @include media(m){
+      right: 10%;
+      bottom: -40px;
+      top: auto;
+      width: 76px;
+      height: 76px;
+    }
+  }
+
+  &__botblock {
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#000;
+    font-size: 26px;
+    line-height: 31px;
+
+    @include media(m){
+      font-size: 16px;
+      line-height: 19px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__bottitlepic {
+    display: block;
+    margin: 0 auto 30px;
+
+    @include media(m){
+      width: 220px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.sex6--astro{
+  background-color: #100721;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  position: relative;
+  padding-bottom: 130px;
+
+  @include media(l){
+    padding: var(--blockspace) 0;
+  }
+
+  .sex6-butter,
+  .sex6-butte2{
+    display: block;
+    position: absolute;
+    bottom: 46px;
+    left: calc(50% + 75px);
+    width: 307px;
+    transform: rotate(5deg);
+
+    @include media(m){
+      width: 100px;
+      bottom: auto;
+      top: calc(var(--blockspace) + 410px);
+      right: 24px;
+      left: auto;
+      transform: rotate(70deg);
+    }
+  }
+  .sex6-butte2{
+    bottom: 120px;
+    left: calc(50% + 280px);
+    width: 200px;
+    transform: rotate(65deg);
+
+    @include media(m){
+      display: none;
+    }
+  }
+
+  .title{
+    b{
+      color:#b4a3fd;
+
+      @include media(m){
+        display: block;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .sex6__calc {
+    margin-top: 120px;
+
+    @include media(m){
+      margin-top: 30px;
+    }
+  }
+  .sex6dl--bg{
+    background-color: #f1a17c;
+    border-color:#f1a17c;
+  }
+  .sex6dl--border{
+    border-color:#f1a17c;
+  }
+  .sex6dl--white{
+    color:#000;
+  }
+}
+
+
+
+
+
+.guideform--astrolog{
+  overflow: hidden;
+  position: relative;
+  background-color: #b4a3fd;
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  @include media(m){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+  }
+
+  .title{
+    padding-left: 0;
+
+    @include media(m){
+      margin-bottom: 170px;
+    }
+  }
+  .title b{
+    color:#000;
+  }
+  .guideform__title span:nth-child(2){
+    margin-left: 0;
+  }
+  .guideform__title img{
+    width: 308px;
+    display: block;
+
+    @include media(m){
+      width: 250px;
+    }
+  }
+  .astrolog-catalog{
+    transform: none;
+    right: 50px;
+    top: -60px;
+
+    @include media(m){
+      top: 80px;
+      left: calc(50% - 120px) !important;
+    }
+  }
+}
+
+
+
+
+
+.astrophotoblock {
+  position: relative;
+  height: 929px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  @include media(l){
+    height: 800px;
+  }
+  @include media(m){
+    height: 610px;
+  }
+
+
+  .container{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    @include media(l){
+      padding-bottom: var(--blockspace);
+      padding-top: var(--blockspace);
+    }
+
+    @include media(m){
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  &__both1 {
+    color: #b4a3fd;
+    font-size: 66px;
+    line-height: 1;
+    margin-top: auto;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include media(l){
+      font-size: 50px;
+    }
+    @include media(m){
+      font-size: 28px;
+      line-height: 1;
+    }
+  }
+
+  &__pic1,
+  &__pic2,
+  &__pic3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    display: block;
+    pointer-events: none;
+  }
+  &__pic1{
+    top: 26%;
+    left: 25%;
+    @include media(m){
+      width: 100px;
+      height: auto;
+      left: 63%;
+    }
+  }
+  &__pic2{
+    top: 30%;
+    left: 63%;
+    @include media(m){
+      width: 100px;
+      height: auto;
+      left: 60%;
+      top: 43%;
+    }
+  }
+  &__pic3{
+    top: 44%;
+    left: 15%;
+    @include media(m){
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.iphone-astrolog{
+  background-color: #b4a3fd;
+  padding: 140px 0;
+  overflow: hidden;
+  color:#000;
+  margin-bottom: 0;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+    margin-bottom: var(--blockspace);
+  }
+
+  .title{
+    color:#000;
+    --psy-accent:#fff;
+  }
+
+  @include media(m){
+    .title-dot::after{
+      display: none;
+    }
+    .iphone__propicon{
+      height: var(--iconsize);
+      object-fit: cover;
+      border-radius: 100px;
+    }
+  }
+
+  .iphone__propicon.round{
+    border-radius: 200px;
+    width: var(--iconsize);
+    object-fit: cover;
+  }
+  .iphone__counter{
+    color:#fff;
+    border-color:#fff;
+    font-weight: 800;
+  }
+  .iphone__grid{
+    grid-gap: 60px 20px;
+
+    @include media(m){
+      order:-10;
+      margin-bottom: 40px;
+    }
+  }
+}
+.iphone__icongrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 3px;
+  width: var(--iconsize);
+  height: var(--iconsize);
+  margin-bottom: 20px;
+
+  @include media(m){
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.iphone__avatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  min-width: 0;
+}
+.iphone__avanum{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color:#fff;
+  border:1px solid #fff;
+  border-radius: 100px;
+}
+
+
+
+.mentors--astro{
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+
+  @include media(m){
+    background-image: none !important;
+    .mentorsfeat__icon{
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .title b{
+    color:#ffda6b;
+  }
+  .mentorsfeat{
+    margin-bottom: 80px;
+  }
+}
+
+
+
+
+
+.features--astrolog{
+  background-color: #b4a3fd;
+  padding: 120px 0 0;
+  overflow: hidden;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+  }
+
+  .title{
+    color:#000;
+    --psy-accent: #fff;
+  }
+  .features__wrap{
+    margin-top: 40px;
+  }
+  .features__subtitle{
+    color:#000;
+  }
+  .features__grid{
+    padding-top: 45px;
+  }
+  .features__item{
+    color:#000;
+    font-size: 22px;
+    line-height: 27px;
+
+    @include media(m){
+      font-size: 17px;
+      line-height: 1.4;
+    }
+  }
+}
+
+
+
+.astroform--violet{
+  background-color: #b4a3fd;
+  overflow: hidden;
+
+  @include media(m){
+    padding-top: var(--blockspace);
+  }
+}
+
+
+
+
+
+
+
+.astroprocessor {
+  background-position: 50%;
+  background-size: cover;
+  padding: 50px 0;
+  overflow: hidden;
+
+  @include media(m){
+    padding: var(--blockspace) 0 120px;
+  }
+
+  .container{
+    position: relative;
+  }
+
+  .title{
+    color:var(--psy-accent);
+
+    @include media(m){
+      font-size: 28px;
+      line-height: 1;
+    }
+  }
+
+  &__left {
+    position: absolute;
+    display: block;
+    top: -10px;
+    left: -120px;
+    z-index: 1;
+
+    @include media(l){
+      width: 300px;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__center {
+    position: absolute;
+    bottom: -140px;
+    display: block;
+    left: calc(50% - 360px);
+    z-index: 1;
+
+    @include media(l){
+      width: 300px;
+    }
+    @include media(m){
+      width: 483px;
+      top: 30px;
+      left: calc(50% - 250px);
+      bottom: auto;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    bottom: -100px;
+    display: block;
+    right: -240px;
+    z-index: 1;
+
+    @include media(l){
+      width: 300px;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__over {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+  }
+
+  &__descr {
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    max-width: 570px;
+    margin: 15px auto 0;
+    position: relative;
+    z-index: 10;
+
+    @include media(m){
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__lead {
+    display: block;
+    margin: -30px auto 0;
+
+    @include media(m){
+      width: 400px;
+      height: auto;
+      margin: 50px 0 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+
+
+
+.timeslot--atro{
+  background-color: #b4a3fd;
+
+  .title{
+    color:#fff;
+    b{
+      color:#000;
+    }
+  }
+  .timeslot__box{
+    color:#000;
+  }
+}
+
+
+
+
+
+.statistic--astro{
+  overflow: hidden;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 145px;
+  padding-bottom: 145px;
+  color:#fff;
+  --psy-accent: #856bff;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+  }
+
+  .statistic__item{
+    background-color: #fff;
+    color:#000;
+  }
+
+  .statistic__item--verbg{
+    background-color: var(--psy-accent);
+  }
+
+  .statistic__item--verborder{
+    background: transparent;
+    color:#f1a17c;
+    border-color:#f1a17c;
+    --psy-accent: #f1a17c;
+  }
+
+  .statistic__item--verorange{
+    background-color: #f1a17c;
+    color:#000;
+    --psy-accent: #000;
+  }
+}
+
+
+
+
+
+
+
+.astroabout {
+  overflow: hidden;
+  background-color: #b4a3fd;
+  color:#000;
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 80px;
+
+    @include media(m){
+      flex-flow: column nowrap;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  &__sidebar {
+    flex-shrink: 0;
+    width: 395px;
+    position: relative;
+    align-self: flex-start;
+
+    @include media(l){
+      width: 250px;
+    }
+    @include media(m){
+      width: 100%;
+      order:10;
+    }
+  }
+
+  &__sideblock {
+    width: 100%;
+    height: 600px;
+    position: relative;
+
+    @include media(m){
+      height: auto;
+      margin-top: 40px;
+    }
+
+    &::after{
+      content:"";
+      position: absolute;
+      z-index: 2;
+      width: 680px;
+      height: 200px;
+      background: red;
+      display: block;
+      bottom: 0;
+      right: -71px;
+      bottom: -37px;
+      background: linear-gradient(180deg, rgba(180, 163, 253, 0) 0%, rgba(180, 163, 253, 0.8) 40%, #b4a3fd 70%);
+    }
+  }
+
+  &__girl {
+    display: block;
+    width: 666px;
+    height: auto;
+    right: -70px;
+    position: absolute;
+    bottom: -35px;
+    z-index: 1;
+
+    @include media(l){
+      width: 550px;
+      right: -120px;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  .button {
+    background-color: #f1a17c;
+    border:1px solid #000;
+    width: 300px;
+    height: 75px;
+    color:#000;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include media(l){
+      width: 100%;
+    }
+
+    @include media(m){
+      position: relative;
+      bottom: auto;
+      left: auto;
+      font-size: 18px;
+    }
+
+    &:hover{
+      background-color: #f5bda3;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 20px;
+    line-height: 35px;
+    padding-left: 55px;
+    padding-top: 5px;
+    margin-bottom: 46px;
+
+    @include media(l){
+      font-size: 17px;
+      line-height: 1.8;
+      padding-top: 0;
+      padding-left: 30px;
+    }
+    @include media(m){
+      padding-left: 0;
+      font-size: 15px;
+      line-height: 26px;
+      margin-bottom: 70px;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    max-width: 40px;
+    object-fit: contain;
+
+    @include media(l){
+      top: auto;
+      left: auto;
+      width: 30px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    @include media(m){
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+  }
+
+  &__h3 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    @include media(l){
+      font-size: 30px;
+      line-height: 1;
+    }
+    @include media(m){
+      padding-left: 50px;
+      font-size: 24px;
+    }
+  }
+
+  &__abs {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: auto;
+  }
+
+  &__abs1 {
+    top: 85px;
+    right: 7px;
+
+    @include media(m){
+      width: 63px;
+      height: auto;
+      top: 135px;
+      right: -10px;
+    }
+  }
+
+  &__abs2 {
+    top: 300px;
+    right: 156px;
+
+    @include media(m){
+      right: -15px;
+      top: 350px;
+    }
+  }
+
+  &__abs3 {
+    top: -21px;
+    right: -153px;
+
+    @include media(m){
+      width: 93px;
+      height: 93px;
+      right: -50px;
+      top: auto;
+      bottom: -60px;
+    }
+  }
+
+  &__abs4 {
+    right: 114px;
+    top: 149px;
+
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__abs5 {
+    top: 130px;
+    right: 22px;
+
+    @include media(m){
+      width: 80px;
+      height: 80px;
+      top: auto;
+      bottom: -70px;
+      right: -80px;
+    }
+  }
+
+  &__abs6 {
+    top: 66px;
+    right: 30px;
+
+    @include media(m){
+      bottom: -50px;
+      right: -15px;
+      top: auto;
+    }
+  }
+}
+
+
+
+
+
+
+
+.quizlink--astro{
+  padding: 70px 0 170px;
+  color:#000;
+  position: relative;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+  }
+
+  .title{
+    color:#fff;
+    text-align: left;
+  }
+
+  @include media(m){
+    .quizlink__box{
+      background-color: #fff;
+      padding:20px 15px;
+      display: grid;
+      grid-template-columns: min-content min-content;
+      white-space: nowrap;
+      justify-content: space-between;
+    }
+    .quizlink__action{
+      grid-column: span 2;
+    }
+    dl{
+      margin-right: 0;
+      padding-right: 0;
+      min-width: 0;
+
+      &::after{
+        display: none !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.astrononwork {
+  position: relative;
+  overflow: hidden;
+  padding: 200px 0 160px;
+  background-position: 50%;
+  background-size: cover;
+
+  @include media(l){
+    padding-bottom: var(--blockspace);
+    padding-top: var(--blockspace);
+  }
+
+  &__planet1 {
+    position: absolute;
+    left: -107px;
+    top: 6%;
+    display: block;
+
+    @include media(l){
+      width: 200px;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__planet2 {
+    position: absolute;
+    right: -73px;
+    top: 9%;
+    display: block;
+
+    @include media(l){
+      width: 200px;
+      right: -120px;
+    }
+    @include media(m){
+      display: none;
+    }
+  }
+
+  &__sub {
+    padding-top: 25px;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+
+    @include media(m){
+      font-size: 16px;
+      line-height: 19px;
+
+      br{
+        display: none;
+      }
+    }
+  }
+
+  &__grid {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+
+    @include media(l){
+      grid-gap: 20px;
+    }
+
+    @include media(m){
+      margin-top: 30px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    min-width: 0;
+  }
+
+  &__picwrap {
+    height: 120px;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media(m){
+      height: 100px;
+    }
+  }
+
+  &__item:nth-child(3) &__picwrap{
+    margin-left: -20px;
+  }
+
+  &__icon {
+    display: block;
+
+    @include media(m){
+      transform: scale(0.8);
+      transform-origin: 0 50%;
+    }
+  }
+
+  &__txt {
+    font-size: 16px;
+    line-height: 24px;
+
+    @include media(l){
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    @include media(m){
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+
+
+
+
+.priceblock--astro{
+  background-color: #b4a3fd;
+  padding: 145px 0;
+  overflow: hidden;
+  color:#000;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+
+  .priceblock__price{
+    color:#fff;
+  }
+  .priceblock__descr{
+    margin-left: auto;
+
+    @include media(l){
+      margin-left: 0;
+    }
+  }
+  .priceblock__greenprice{
+    color:#fff;
+  }
+}
+
+
+
+
+.astropartners {
+  padding-top: 105px;
+  padding-bottom: 150px;
+  background-color: #1f1f1f;
+
+  @include media(l){
+    padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
+  }
+
+  .title{
+    font-size: 52px;
+    line-height: 64px;
+
+    @include media(l){
+      font-size: 50px;
+      line-height: 1;
+    }
+    @include media(m){
+      font-size: 30px;
+    }
+  }
+
+  &__block {
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+
+    @include media(l){
+      margin-top: 60px;
+    }
+    @include media(m){
+      margin-top: 40px;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 220px;
+    flex-shrink: 0;
+    margin-left: 25px;
+
+    @include media(m){
+      width: 200px;
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 670px;
+    margin-left: 80px;
+
+    @include media(m){
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.45;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    p:not(:last-child){
+      margin-bottom: 20px;
+    }
+
+    a{
+      color:#fff;
+      text-decoration: underline;
+    }
+
+    p > a:first-child{
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+
+  &__link {
+    color:#fff;
+    text-decoration: underline;
+    font-size: 22px;
+    line-height: 1.35;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+}
+
+
+
+
+
+
+
+.faqblock--astro{
+  color:#000;
+}
+
+.talentsyabout--astro{
+  padding-top: 60px;
+  padding-bottom: 0px;
+
+  .talentsyabout__tag{
+    flex-grow: 1;
+  }
+}

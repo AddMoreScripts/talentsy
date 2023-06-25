@@ -30,7 +30,13 @@
   <div class="hdr__wrap flexi">
 
     <!-- Стандартный вывод логотипа WordPress ф-ей the_custom_logo() -->
-    <?php the_custom_logo(); ?>
+    <?php
+      if(isset($args['white']) && $args['white']){
+        echo "<a href='/' class='custom-logo-link'><img src='". imgs() . "/logo-white.svg' alt=''></a>";
+      } else {
+        the_custom_logo();
+      }
+     ?>
 
     <div class="hdr__burgerwrap">
       <button class="hdr__burger" data-hystmodal="#menuModal">

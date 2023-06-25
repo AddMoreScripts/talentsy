@@ -63,8 +63,8 @@
     @include media(s) {
       width: 24px;
       height: 24px;
-      background-size: contain;
-      right: 12px;
+      background-size: 18px;
+      right: 10px;
       top: calc(50% - 10px);
     }
   }
@@ -158,6 +158,11 @@
       font-size: 17px;
       line-height: 24px;
     }
+    @include media(m) {
+      font-size: 16px;
+      line-height: 1.4;
+      padding-top: 0;
+    }
 
     a{
       color:var(--psy-accent);
@@ -206,6 +211,7 @@
 
   @include media(l) {
     padding-top: var(--blockspace);
+    padding-bottom: var(--blockspace);
   }
 
   &__wrap {
@@ -225,8 +231,8 @@
 
   .progrmsummary__head{
     @include media(m){
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 17px;
+      line-height: 22px;
     }
   }
 

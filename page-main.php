@@ -327,7 +327,7 @@ get_header();
         <div class="frontcatalog__slider swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="/dizayner-interyera/" class="frontfacultet">
+              <a href="<?=get_permalink(136); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/001.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -341,7 +341,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/psychology/" class="frontfacultet">
+              <a href="<?=get_permalink(132); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/002.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -355,7 +355,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/seksolog/" class="frontfacultet">
+              <a href="<?=get_permalink(133); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/003.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -369,7 +369,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/psychology-kid" class="frontfacultet">
+              <a href="<?=get_permalink(134); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/004.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -383,7 +383,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/professiya-family-psikholog" class="frontfacultet">
+              <a href="<?=get_permalink(138); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/005.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -397,7 +397,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/professiya-fashion-dizayner/" class="frontfacultet">
+              <a href="<?=get_permalink(143); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/006.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -411,7 +411,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="https://talentsy.ru/professiya-astrolog" class="frontfacultet">
+              <a href="<?=get_permalink(148); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/007.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -425,7 +425,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/professiya-stilist" class="frontfacultet">
+              <a href="<?=get_permalink(144); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/008.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -439,7 +439,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="/interior-decorator" class="frontfacultet">
+              <a href="<?=get_permalink(140); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/009.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>
@@ -481,7 +481,7 @@ get_header();
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="https://talentsy.ru/professiya-nutriciolog" class="frontfacultet">
+              <a href="<?=get_permalink(149); ?>" class="frontfacultet">
                 <div class="frontfacultet__picwrap">
                   <img src="<?= imgs(); ?>/frontpage/proff/012.png" alt="" class="frontfacultet__pic" loading="lazy">
                   <div class="swiper-lazy-preloader"></div>

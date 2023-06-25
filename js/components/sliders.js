@@ -38,6 +38,8 @@ export const initSliders = () => {
     navigation: false,
     pagination: false,
     autoHeight: false,
+    lazy: true,
+    lazyPreloadPrevNext: 2,
     breakpoints: {
       992: {
         slidesPerView: 1,
@@ -139,6 +141,21 @@ export const initSliders = () => {
       1300: {
         spaceBetween: 30,
         slidesPerView: 4,
+      },
+    },
+  });
+
+
+  //ЗОЖ слайдер 1
+  new Swiper('.nutri18__swiper', {
+    loop: false,
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+    navigation: false,
+    pagination: false,
+    breakpoints: {
+      992: {
+        spaceBetween: 40,
       },
     },
   });
