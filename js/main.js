@@ -81,7 +81,7 @@ const promocodeLink = () => {
 promocodeLink();
 
 
-if(document.querySelector('.page-template-page-main')) initFrontpage();
+if(document.querySelector('.js-need-gsap')) initFrontpage();
 
 
 
@@ -161,6 +161,7 @@ changeYoutubeIframe();
 
 function startBricks(){
   var grid = document.querySelector('.reviewpage__screens');
+  if(!grid) return;
   var msnry = new Masonry( grid, {
     itemSelector: '.reviewpage__screenlink',
     columnWidth: '.reviewpage__screenlink',

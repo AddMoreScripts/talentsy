@@ -10,6 +10,8 @@
   background-size: contain;
   min-height: 104px;
   background-position: 36px 0;
+  z-index: 40;
+  position: relative;
 
   @include media(xl){
     background-size: 250px;

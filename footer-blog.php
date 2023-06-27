@@ -45,10 +45,10 @@
                 <a href="">Проекты студентов</a>
               </li>
               <li>
-                <a href="">О компании</a>
+                <a href="<?=get_permalink(204); ?>">О Talentsy</a>
               </li>
               <li>
-                <a href="">Отзывы</a>
+                <a href="<?=get_permalink(150); ?>">Отзывы</a>
               </li>
               <li>
                 <a href="">Вакансии</a>
@@ -94,13 +94,13 @@
       <div class="mobfoot__menu">
         <ul>
           <li>
-            <a href="#">О компании</a>
+            <a href="<?=get_permalink(204); ?>">О Talentsy</a>
           </li>
           <li>
             <a href="#">Проекты студентов</a>
           </li>
           <li>
-            <a href="#">Отзывы</a>
+            <a href="<?=get_permalink(150); ?>">Отзывы</a>
           </li>
           <li>
             <a href="#">Вакансии</a>

@@ -59,7 +59,7 @@
     </nav>
 
     <aside class="hdr__right flexi">
-      <a href="https://talentsy.ru/o-talentsy">О Talentsy</a>
+      <a href="<?=get_permalink(204); ?>">О Talentsy</a>
       <a href="tel:88007753768" class="hdr__phone">8 800 775 37 68</a>
       <a href="https://lk.talentsy.ru/" class="hdr__login flexi">Вход</a>
     </aside>

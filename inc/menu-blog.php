@@ -38,9 +38,9 @@
 
       <footer class="menublogfoot">
         <a href="/blog/">Журнал</a>
-        <a href="/">О Talentsy</a>
+        <a href="<?=get_permalink(204); ?>">О Talentsy</a>
         <a href="tel:88007753768">8 800 775 37 68</a>
-        <a href="#" class="blogheader__login">Вход</a>
+        <a href="https://lk.talentsy.ru/" class="blogheader__login">Вход</a>
       </footer>
     </div>
 

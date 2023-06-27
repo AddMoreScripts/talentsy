@@ -12,6 +12,7 @@ function addmorescripts_setup()
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support('woocommerce');
+  add_theme_support('widgets-block-editor');
 
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus(
@@ -97,3 +98,6 @@ if (function_exists('acf_add_options_page')) {
 
 
 remove_filter( 'the_content', 'wpautop' );
+
+
+add_filter( 'custom_permalinks_path_info', '__return_true' );

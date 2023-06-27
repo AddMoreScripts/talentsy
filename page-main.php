@@ -5,7 +5,7 @@ Template name: Шаблон: Главная
 get_header();
 ?>
 
-<div class="smooth-wrapper">
+<div class="smooth-wrapper js-need-gsap">
   <div class="smooth-content">
 
     <div class="frontlead">

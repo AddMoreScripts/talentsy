@@ -4,11 +4,11 @@
       <button class="menuwindow__closer" data-hystclose><img src="<?=imgs();?>/menu/icon-close.svg" alt=""></button>
       <div class="container">
         <div class="menuwindow__nav flexi">
-          <a href="/o-talentsy" class="menuwindow__navlink">О Talentsy</a>
-          <a href="/otzyvy" class="menuwindow__navlink">Отзывы</a>
+          <a href="<?=get_permalink(204); ?>" class="menuwindow__navlink">О Talentsy</a>
+          <a href="<?=get_permalink(150); ?>" class="menuwindow__navlink">Отзывы</a>
           <a href="/blog/" class="menuwindow__navlink">Журнал</a>
           <a href="tel:+78007753768" class="menuwindow__phone">8 800 775 37 68</a>
-          <a href="https://lms.talentsy.ru/" class="hdr__login flexi">Вход</a>
+          <a href="https://lk.talentsy.ru/" class="hdr__login flexi">Вход</a>
         </div>
 
         <div class="menuwindow__main flexi" data-tabwrap>
@@ -40,7 +40,7 @@
                 <a href="/Proyekty-studentov">Проекты студентов</a>
               </li>
               <li>
-                <a class="tn-atom" href="/o-talentsy">О Talentsy</a>
+                <a class="tn-atom" href="<?=get_permalink(204); ?>">О Talentsy</a>
               </li>
               <li>
                 <a class="tn-atom" href="/blog/">Журнал</a>
