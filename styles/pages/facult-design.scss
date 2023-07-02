@@ -1,0 +1,116 @@
+@use '../general/mixins' as *;
+
+.facdesign-cartina,
+.facdesign-cartina-m{
+  width: 254px;
+  z-index: 5;
+  left: 21.5%;
+  top: 150px;
+  @include media(m){
+    width: 128px;
+    top: 250px;
+    left: calc(50% + 20px);
+    display: none;
+  }
+}
+.facdesign-cartina-m{
+  display: none;
+  @include media(m){
+    display: block;
+  }
+}
+.facdesign-left{
+  width: 538px;
+  z-index: 10;
+  left: 13.5%;
+  top: 256px;
+  @include media(m){
+    width: 238px;
+    top: 230px;
+    left: calc(50% - 170px);
+  }
+}
+.facdesign-right{
+  width: 297px;
+  right: 21%;
+  top: -125px;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+.facdesign-mid{
+  width: 503px;
+  right: 18%;
+  top: 580px;
+  z-index: 5;
+  @include media(m){
+    width: 238px;
+    top: 600px;
+    right: 5%;
+  }
+}
+.facdesign-text1{
+  width: 105px;
+  z-index: 10;
+  right: 0;
+  right: 17%;
+  top: 175px;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+
+
+
+
+
+
+.facproff-dis1{
+  margin: 40px 18px 0;
+
+  @include media(l){
+    margin-top: 0;
+  }
+  @include media(m){
+    margin: 0 -10px 20px;
+  }
+
+  .facproff__picwrap{
+    height: 150px;
+  }
+  .facproff__ava{
+    left: 35px;
+    top: -20px;
+
+    @include media(m){
+      left: 0px;
+      top: -40px;
+      width: 140px;
+    }
+  }
+}
+
+.facproff-dis2{
+  margin: -5px 18px 0;
+
+  @include media(l){
+    margin-top: 0;
+  }
+  @include media(m){
+    margin: 0 -10px;
+  }
+
+  .facproff__picwrap{
+    height: 145px;
+  }
+  .facproff__ava{
+    left: 20px;
+    top: -30px;
+
+    @include media(m){
+      width: 100px;
+    }
+  }
+}

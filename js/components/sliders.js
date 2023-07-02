@@ -159,4 +159,25 @@ export const initSliders = () => {
       },
     },
   });
+
+
+    //Слайдер портфолио факультетов
+    new Swiper('.js-facult-projects', {
+      loop: true,
+      spaceBetween: 40,
+      slidesPerView: 'auto',
+      navigation: false,
+      pagination: {
+        el: '.facultportfolio__pag',
+        type: 'bullets',
+        dynamicBullets: true,
+        dynamicMainBullets: 15,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        992: {
+          spaceBetween: 100,
+        },
+      },
+    });
 };

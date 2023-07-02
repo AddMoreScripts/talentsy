@@ -1,0 +1,112 @@
+@use '../general/mixins' as *;
+
+.facastro-left{
+  width: 1224px;
+  z-index: 3;
+  left: -6.8%;
+  top: 64px;
+  @include media(m){
+    width: 653px;
+    left: -250px;
+    top: 130px;
+  }
+}
+.facastro-right{
+  z-index: 5;
+  width: 1271px;
+  right: -5%;
+  top: 25px;
+  @include media(m){
+    width: 676px;
+    right: -230px;
+    top: 130px;
+  }
+}
+.facastro-text1{
+  z-index: 6;
+  width: 84px;
+  left: 33.7%;
+  top: -6px;
+  @include media(m){
+    display: none;
+  }
+}
+.facastro-text2{
+  z-index: 6;
+  width: 85px;
+  right: 31.8%;
+  top: 175px;
+  @include media(m){
+    display: none;
+  }
+}
+
+
+
+
+
+.facproff-astro1{
+  .facproff__picwrap{
+    height: 145px;
+  }
+  .facproff__ava{
+    right: 0;
+    top: -40px;
+    @include media(m){
+      width: 130px;
+      right: 0px;
+    }
+  }
+}
+
+
+
+.abs1-astro{
+  width: 97px;
+  transform: rotate(345deg);
+  top: -86px;
+  left: -74px;
+
+  @include media(m){
+    width: 54px;
+    top: auto;
+    bottom: -70px;
+    left: 40px;
+  }
+}
+.abs2-astro{
+  width: 74px;
+  transform: rotate(20deg);
+  right: -59px;
+  top: -50px;
+
+  @include media(m){
+    width: 64px;
+    right: 0px;
+    top: -65px;
+  }
+}
+.abs3-astro{
+  width: 218px;
+  bottom: -166px;
+  left: -74px;
+
+  @include media(m){
+    width: 176px;
+    bottom: auto;
+    top: 50px;
+    left: -130px;
+  }
+
+}
+.abs4-astro{
+  width: 598px;
+  bottom: -193px;
+  right: -163px;
+
+  @include media(m){
+    width: 500px;
+    right: -220px;
+    bottom: -160px;
+  }
+}

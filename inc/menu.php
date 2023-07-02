@@ -31,7 +31,7 @@
                 <a href="#" data-tablink="astro">Астрология</a>
               </li>
               <li>
-                <a href="#" data-tablink="zog">ЗОЖ</a>
+                <a href="<?=get_permalink(205); ?>" data-tablink="zog">ЗОЖ</a>
               </li>
             </ul>
 
@@ -198,14 +198,14 @@
               <div class="menuwindow__tabgrid">
                 <div class="menuwindow__mobtitle druk">ЗОЖ</div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Профессии</a>
+                  <a href="<?=get_permalink(205); ?>" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
                     <li><a href="<?=get_permalink(149); ?>" style="color: inherit">Профессия Нутрициолог</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">О факультете</a>
+                  <a href="<?=get_permalink(205); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                 </div>
               </div>

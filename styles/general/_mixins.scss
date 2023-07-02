@@ -37,3 +37,16 @@ $media-max-width-xs: (425px) !default;
     flex-shrink: 0;
   }
 }
+
+
+// Размещает контент первого экрана под меню,
+// и адаптирует отступы при адаптиве.
+@mixin undermenu(){
+  position: relative;
+  overflow: hidden;
+  margin-top: -105px;
+  z-index: 10;
+  @include media(m){
+    margin-top: -60px;
+  }
+}

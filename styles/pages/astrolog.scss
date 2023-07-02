@@ -37,13 +37,9 @@
 }
 
 .astrohero {
-  position: relative;
-  overflow: hidden;
   min-height: 800px;
-  margin-top: -105px;
-
+  @include undermenu();
   @include media(m){
-    margin-top: -60px;
     padding-top: 60px;
     min-height: auto;
     margin-bottom: 40px;

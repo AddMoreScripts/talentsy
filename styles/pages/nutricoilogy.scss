@@ -34,15 +34,12 @@
 
 
 .nutrihero {
-  position: relative;
-  overflow: hidden;
-  margin-top: -105px;
   background: #282828;
   color:#B4B4B4;
   padding-bottom: 60px;
 
+  @include undermenu();
   @include media(m){
-    margin-top: -60px;
     padding-top: 60px;
   }
   &__wrap {

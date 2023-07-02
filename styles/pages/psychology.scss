@@ -576,7 +576,9 @@
 }
 
 .grid-mob-scroll {
+  display: contents;
   @include media(m) {
+    display: block;
     margin-left: -30px;
     margin-right: -30px;
     overflow-x: auto;

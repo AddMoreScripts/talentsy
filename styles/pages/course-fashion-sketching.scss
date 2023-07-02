@@ -1,0 +1,137 @@
+@use "../general/mixins" as *;
+
+.comingsoonform {
+    background-color: #F5EEE6;
+    min-height: var(--app-height);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    @include undermenu();
+    padding-top: 105px;
+
+    @include media(m){
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+  &__h1 {
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    @include media(m){
+      font-size: 33px;
+      line-height: 36px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sub {
+    font-size: 22px;
+    line-height: 31px;
+    @include media(m){
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+
+  &__form {
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 45px;
+
+    @include media(m){
+      flex-flow: column nowrap;
+      align-items: stretch;
+      padding: 0 20px;
+    }
+  }
+
+  &__col {
+    margin: 0 10px;
+    width: 300px;
+    position: relative;
+    z-index: 10;
+    @include media(l){
+      width: 200px;
+    }
+    @include media(m){
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__submit {
+    --butsize: 200px;
+    width: var(--butsize);
+    min-width: 0;
+    position: relative;
+    height: 60px;
+    margin-left: 10px;
+    z-index: 5;
+
+    @include media(l){
+      --butsize: 180px;
+    }
+    @include media(m){
+      width: 100%;
+      height: 180px;
+      margin-top: -60px;
+      margin-left: 0;
+    }
+
+    .button{
+      position: absolute;
+      z-index: 10;
+      left: calc(50% - var(--butsize) / 2);
+      top: calc(50% - var(--butsize) / 2);
+      width: var(--butsize);
+      height: var(--butsize);
+      border-radius: var(--butsize);
+      background-color: #7835ff;
+      font-size: 18px;
+    }
+
+    img{
+      position: absolute;
+      width: 340px;
+      z-index: 4;
+      left: calc(50% - 170px);
+      bottom: -170px;
+
+      @include media(l){
+        width: 280px;
+        left: calc(50% - 140px);
+        bottom: -140px;
+      }
+      @include media(m){
+        bottom: -90px;
+      }
+    }
+  }
+
+  &__accept {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 23px;
+    color:#7f7f7f;
+
+    @include media(l){
+      padding-right: 200px;
+    }
+    @include media(m){
+      width: 100%;
+      padding: 0;
+      padding-top: 110px;
+    }
+
+    a{
+      color:#7835ff;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

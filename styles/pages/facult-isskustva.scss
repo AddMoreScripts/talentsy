@@ -1,0 +1,163 @@
+@use '../general/mixins' as *;
+
+.facisscus-left{
+  width: 423px;
+  height: auto;
+  top: 21px;
+  left: 14.5%;
+  display: block;
+  z-index: 5;
+
+  @include media(m){
+    width: 208px;
+    left: -23px;
+    top: 170px;
+  }
+}
+.facisscus-right{
+  width: 412px;
+  height: auto;
+  top: 3px;
+  right: 15%;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    width: 196px;
+    right: -16px;
+    top: 170px;
+  }
+}
+.facisscus-mid{
+  width: 324px;
+  height: auto;
+  bottom: -200px;
+  left: calc(50% - 167px);
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+.facisscus-text1{
+  width: 34px;
+  top: 42px;
+  left: 34%;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+.facisscus-text2{
+  width: 102px;
+  top: 210px;
+  right: 34.5%;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+
+
+
+
+
+.facultmentors{
+  .abs3--bot{
+    top: 250px;
+
+    @include media(l){
+      top: 300px;
+    }
+
+    @include media(m){
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+.facproff-issku1{
+  margin-top: -120px;
+  @include media(l){
+    margin-top: 0;
+  }
+
+  .facproff__ava{
+    position: absolute;
+    position: absolute;
+    right: 18px;
+    bottom: 5px;
+
+    @include media(m){
+      width: 125px;
+      right: 0px;
+      bottom: 50px;
+    }
+  }
+}
+
+.facproff-issku2{
+  margin-top: 20px;
+  @include media(l){
+    margin-top: 0;
+  }
+
+  .facproff__ava{
+    position: absolute;
+    position: absolute;
+    right: 48px;
+    bottom: 8px;
+
+    @include media(m){
+      width: 125px;
+      right: 0px;
+      bottom: 40px;
+    }
+  }
+}
+
+.facproff-issku3{
+  margin-top: 95px;
+  @include media(l){
+    margin-top: 0;
+  }
+
+  .facproff__ava{
+    position: absolute;
+    position: absolute;
+    right: -50px;
+    bottom: 8px;
+
+    @include media(m){
+      width: 200px;
+      right: -100px;
+      bottom: 50px;
+    }
+  }
+}
+
+
+.facproff-issku4{
+  margin-top: -85px;
+  @include media(l){
+    margin-top: 0;
+  }
+
+  .facproff__ava{
+    position: absolute;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+
+    @include media(m){
+      width: 125px;
+      right: 0px;
+      bottom: 50px;
+    }
+  }
+}

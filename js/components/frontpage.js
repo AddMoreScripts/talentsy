@@ -237,3 +237,57 @@ function animateAbout(){
   }
 }
 animateAbout();
+
+
+
+
+
+
+
+function animanteFacultets(){
+  const hero = document.querySelector('.faculthero');
+  if(!hero) return;
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: hero,
+      start: "top top",
+      end: "+=600",
+      markers: false,
+      scrub: 0,
+    },
+  });
+  tl.to('.faculthero__bgbutton', {
+    scale: 26,
+  });
+  tl.to('.faculthero__button', {
+    'color': '#000',
+    duration: 0.1,
+  }, '<');
+  tl.to('.faculthero__button', {
+    scale: 0,
+    duration:0.2,
+  }, '<');
+
+  hero.querySelectorAll('[data-x]').forEach((elem) => {
+    tl.to(elem, {
+      scale: parseFloat(elem.dataset.scale),
+      x: parseFloat(elem.dataset.x),
+      y: parseFloat(elem.dataset.y),
+    }, '<');
+  });
+
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.facultprogs',
+      start: "top top",
+      end: "+=1",
+      markers: false,
+      scrub: 0.1,
+    },
+  });
+  tl2.to('.faculthero__buttonwrap', {
+    'display': 'none',
+    duration:0.2,
+  });
+}
+animanteFacultets();

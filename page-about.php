@@ -318,7 +318,7 @@ $pics = imgs() . '/about';
     ],
     [
       'title' => 'ЗОЖ',
-      'link' => 'https://talentsy.ru/fakultet-zozh',
+      'link' => get_permalink(205),
       'line' => '/img/frontpage/b3-line6.svg',
       'line-mob' => '/img/frontpage/b3-line6-m.svg',
       'bg' => '/img/frontpage/b3-6.png',

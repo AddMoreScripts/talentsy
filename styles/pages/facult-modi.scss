@@ -1,0 +1,194 @@
+@use '../general/mixins' as *;
+
+.facmodi-left{
+  width: 388px;
+  height: auto;
+  top: 0;
+  left: 18.5%;
+  display: block;
+  z-index: 5;
+
+  @include media(m){
+    width: 228px;
+    left: -36px;
+    top: 119px;
+  }
+}
+.facmodi-right{
+  width: 526px;
+  height: auto;
+  top: -14px;
+  right: 17%;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    width: 346px;
+    right: -84px;
+    top: 96px;
+  }
+}
+.faczozh-text1{
+  width: 52px;
+  top: 74px;
+  left: 18.5%;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+.faczozh-text2{
+  width: 58px;
+  top: 143px;
+  right: 18.5%;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+.facultprogs__modigroup1{
+  margin-top: -160px;
+  @include media(l){
+    margin-top: 0;
+    display: contents;
+  }
+}
+.facultprogs__modigroup2{
+  margin-top: -85px;
+  @include media(l){
+    margin-top: 0;
+    display: contents;
+  }
+}
+
+.facproff-modi1{
+  margin-bottom: 140px;
+
+  @include media(l){
+    margin-bottom: 0;
+  }
+  .facproff__ava{
+    position: absolute;
+    right: -44px;
+    bottom: -9px;
+
+    @include media(m){
+      width: 161px;
+      bottom: auto;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}
+.facproff-modi2{
+  .facproff__picwrap{
+    height: 93px;
+  }
+  .facproff__ava{
+    position: absolute;
+    right: -6px;
+    bottom: -7px;
+
+    @include media(m){
+      width: 150px;
+      bottom: auto;
+      top: -30px;
+      right: -30px;
+    }
+  }
+}
+.facproff-modi3{
+  margin-top: 30px;
+
+  @include media(l){
+    margin-top: 0;
+  }
+
+  .facproff__picwrap{
+    height: 148px;
+  }
+  .facproff__ava{
+    position: absolute;
+    right: 14px;
+    bottom: 7px;
+
+    @include media(m){
+      width: 120px;
+      bottom: auto;
+      top: -30px;
+      right: 0px;
+    }
+  }
+}
+.facproff-modi4{
+  margin-top: 180px;
+
+  @include media(l){
+    margin-top: 0;
+  }
+
+  .facproff__picwrap{
+    height: 146px;
+  }
+  .facproff__ava{
+    position: absolute;
+    right: -41px;
+    bottom: 11px;
+
+    @include media(l){
+      height: 180px;
+    }
+    @include media(m){
+      right: -50px;
+      height: auto;
+      width: 160px;
+      bottom: auto;
+      top: -30px;
+    }
+  }
+
+}
+.facproff-modi5{
+  margin-bottom: 45px;
+
+  @include media(l){
+    margin-bottom: 0;
+  }
+
+  .facproff__ava{
+    position: absolute;
+    position: absolute;
+    right: 8px;
+    bottom: -95px;
+
+    @include media(m){
+      width: 75px;
+      right: 40px;
+      bottom: -20px;
+    }
+  }
+}
+.facproff-modi6{
+  color:#fff;
+  .facproff__ava{
+    position: absolute;
+    right: 6px;
+    bottom: 13px;
+
+    @include media(m){
+      width: 120px;
+      bottom: auto;
+      top: -25px;
+      right: -5px;
+    }
+  }
+}

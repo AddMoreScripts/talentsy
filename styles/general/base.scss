@@ -44,6 +44,13 @@ body {
   font-family: "Talentsy-web", 'Arial', sans-serif;
 }
 
+.mobbr{
+  display: none;
+  @include media(m){
+    display: block;
+  }
+}
+
 .pagewrap,
 .pagemain {
   display: flex;

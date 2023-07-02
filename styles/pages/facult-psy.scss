@@ -1,0 +1,140 @@
+@use '../general/mixins' as *;
+
+.facpsy-left{
+  width: 422px;
+  left: 16%;
+  top: 32px;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    top: 160px;
+    width: 178px;
+    left: -10px;
+  }
+}
+.facpsy-right{
+  top: 0;
+  right: 16%;
+  width: 413px;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    top: 160px;
+    width: 176px;
+    right: -10px;
+  }
+}
+.facpsy-text1{
+  left: 34%;
+  top: 17px;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+.facpsy-text2{
+  right: 38.2%;
+  top: 228px;
+  display: block;
+  z-index: 5;
+  @include media(m){
+    display: none;
+  }
+}
+
+
+.facultprogs__psygroup1{
+  margin-top: -20px;
+  @include media(l){
+    display: contents;
+  }
+}
+.facultprogs__psygroup2{
+  @include media(l){
+    display: contents;
+  }
+}
+
+
+
+.facproff-psy1{
+  margin-bottom: 60px;
+  @include media(l){
+    margin-bottom: 0;
+  }
+  .facproff__ava{
+    top: -21px;
+    right: 20px;
+
+    @include media(m){
+      width: 120px;
+      right: -30px;
+      top: -30px;
+    }
+  }
+}
+
+.facproff-psy2{
+  margin-top: 40px;
+  @include media(l){
+    margin-top: 0;
+  }
+  .facproff__ava{
+    right: 24px;
+    top: -18px;
+    @include media(m){
+      width: 100px;
+      right: -60px;
+      top: -10px;
+    }
+  }
+}
+
+.facproff-psy3{
+  margin-bottom: 55px;
+  @include media(l){
+    margin-bottom: 0;
+  }
+  .facproff__ava{
+    top: -62px;
+    right: 20px;
+    @include media(m){
+      width: 110px;
+      right: -40px;
+      top: -40px;
+    }
+  }
+}
+
+.facproff-psy4{
+  @include media(m){
+    order:4;
+  }
+  .facproff__ava{
+    right: 16px;
+    top: -40px;
+    @include media(m){
+      width: 100px;
+      right: -30px;
+      top: -20px;
+    }
+  }
+}
+
+.facproff-psy5{
+  .facproff__ava{
+    right: 14px;
+    top: -30px;
+    @include media(m){
+      width: 130px;
+      right: -10px;
+      top: -10px;
+    }
+  }
+}
+
+
+.facultmentors .abs2--psy{
+  right: 10%;
+}
