@@ -29,7 +29,7 @@ $pics = imgs() . '/facult-isskustva';
     <div class="container">
       <h2 class="facultprogs__title druk js-slide-bot">Выбери <br>программу <br>обучения</h2>
       <div class="facultprogs__wrap facultprogs--grid4">
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-issku1" style="--bgcolor: #D3E8E1;">
+        <a href="https://talentsy.ru/professiya-florist" class="facproff facproff-issku1" style="--bgcolor: #D3E8E1;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff1.svg" alt="" class="facproff__ava" width="142">
           </div>
@@ -38,7 +38,7 @@ $pics = imgs() . '/facult-isskustva';
           <div class="facproff__time">8 месяцев</div>
           <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
         </a>
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-issku2" style="--bgcolor: #FDF1E3;">
+        <a href="https://talentsy.ru/dizayner-ukrasheniy" class="facproff facproff-issku2" style="--bgcolor: #FDF1E3;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff2.svg" alt="" class="facproff__ava" width="182">
           </div>
@@ -47,7 +47,7 @@ $pics = imgs() . '/facult-isskustva';
           <div class="facproff__time">5 месяцев</div>
           <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
         </a>
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-issku3" style="--bgcolor: #F8EBEE;">
+        <a href="https://talentsy.ru/form-osnovy-floristiki" class="facproff facproff-issku3" style="--bgcolor: #F8EBEE;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff3.svg" alt="" class="facproff__ava" width="282">
           </div>
@@ -56,7 +56,7 @@ $pics = imgs() . '/facult-isskustva';
           <div class="facproff__time">2 месяца</div>
           <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
         </a>
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-issku4" style="--bgcolor: #D8F4F7;">
+        <a href="/" class="facproff facproff-issku4" style="--bgcolor: #D8F4F7;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff4.svg" alt="" class="facproff__ava" width="164">
           </div>

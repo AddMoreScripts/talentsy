@@ -39,7 +39,7 @@
       </div>
       <div class="footermiddle flexi">
         <section class="footermiddle1">
-          <a href="#" class="footermiddle__phone">8 800 775—3768</a>
+          <a href="tel:88007753768" class="footermiddle__phone">8 800 775—3768</a>
           <div class="footermiddle__addr">Москва, Ащеулов пер, д.9</div>
           <a href="https://islod.obrnadzor.gov.ru/rlic/details/6fe5bf26-59b9-9ba3-c6bb-1c51f27dacd7/" class="footermiddle__licence" target="_blank">
             <img src="<?=imgs();?>/footer/licence.jpg" alt="">
@@ -52,22 +52,22 @@
           <div class="footermenu">
             <ul>
               <li>
-                <a href="">Моды и стиля</a>
+                <a href="<?=get_permalink(207); ?>">Моды и стиля</a>
               </li>
               <li>
-                <a href="">Современное искусство</a>
+                <a href="<?=get_permalink(208); ?>">Современное искусство</a>
               </li>
               <li>
-                <a href="">Психология</a>
+                <a href="<?=get_permalink(209); ?>">Психология</a>
               </li>
               <li>
-                <a href="">Дизайн интерьера</a>
+                <a href="<?=get_permalink(210); ?>">Дизайн интерьера</a>
               </li>
               <li>
-                <a href="">Астрология</a>
+                <a href="<?=get_permalink(211); ?>">Астрология</a>
               </li>
               <li>
-                <a href="">ЗОЖ</a>
+                <a href="<?=get_permalink(205); ?>">ЗОЖ</a>
               </li>
             </ul>
           </div>
@@ -204,7 +204,7 @@
     <div class="footerbot__links flexi">
       <a href="#">Договор <br class="mobbr">оферты</a>
       <a href="#">Реквизиты <br class="mobbr">и оплата</a>
-      <a href="#">Политика конфиденциальности</a>
+      <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">Политика конфиденциальности</a>
       <a href="#">Документы образовательной организации</a>
       <div>Talentsy 2023</div>
     </div>

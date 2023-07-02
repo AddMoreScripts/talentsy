@@ -114,7 +114,7 @@ get_header();
     $front3data = [
       [
         'title' => 'Мода и стиль',
-        'link' => 'https://talentsy.ru/fakultet-mody-i-stilya',
+        'link' => get_permalink(207),
         'line' => '/img/frontpage/b3-line1.svg',
         'line-mob' => '/img/frontpage/b3-line1-m.svg',
         'bg' => '/img/frontpage/b3-1.png',
@@ -123,7 +123,7 @@ get_header();
       ],
       [
         'title' => 'Современное искусство',
-        'link' => 'https://talentsy.ru/fakultet-sovremennogo-iskusstva',
+        'link' => get_permalink(208),
         'line' => '/img/frontpage/b3-line2.svg',
         'line-mob' => '/img/frontpage/b3-line2-m.svg',
         'bg' => '/img/frontpage/b3-2.png',
@@ -132,7 +132,7 @@ get_header();
       ],
       [
         'title' => 'Психология',
-        'link' => '/psychology/',
+        'link' => get_permalink(209),
         'line' => '/img/frontpage/b3-line3.svg',
         'line-mob' => '/img/frontpage/b3-line3-m.svg',
         'bg' => '/img/frontpage/b3-3.png',
@@ -141,7 +141,7 @@ get_header();
       ],
       [
         'title' => 'Дизайн интерьера',
-        'link' => '/dizayner-interyera/',
+        'link' => get_permalink(210),
         'line' => '/img/frontpage/b3-line4.svg',
         'line-mob' => '/img/frontpage/b3-line4-m.svg',
         'bg' => '/img/frontpage/b3-4.png',
@@ -150,7 +150,7 @@ get_header();
       ],
       [
         'title' => 'Астрология',
-        'link' => 'https://talentsy.ru/fakultet-astrologii',
+        'link' => get_permalink(211),
         'line' => '/img/frontpage/b3-line5.svg',
         'line-mob' => '/img/frontpage/b3-line5-m.svg',
         'bg' => '/img/frontpage/b3-5.png',

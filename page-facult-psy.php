@@ -30,7 +30,7 @@ $pics = imgs() . '/facult-psy';
       <div class="facultprogs__wrap facultprogs--grid3">
 
         <div class="facultprogs__groups facultprogs__psygroup1">
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-psy1" style="--bgcolor: #e7e2ff;">
+          <a href="<?=get_permalink(132); ?>" class="facproff facproff-psy1" style="--bgcolor: #e7e2ff;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff1.svg" alt="" class="facproff__ava" width="153">
             </div>
@@ -39,7 +39,7 @@ $pics = imgs() . '/facult-psy';
             <div class="facproff__time">12 месяцев</div>
             <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
           </a>
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-psy4" style="--bgcolor: #7661ff;">
+          <a href="<?=get_permalink(148); ?>" class="facproff facproff-psy4" style="--bgcolor: #7661ff;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff4.svg" alt="" class="facproff__ava" width="153">
             </div>
@@ -50,7 +50,7 @@ $pics = imgs() . '/facult-psy';
           </a>
         </div>
 
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-psy2" style="--bgcolor: #fff5d2;">
+        <a href="<?=get_permalink(133); ?>" class="facproff facproff-psy2" style="--bgcolor: #fff5d2;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff2.svg" alt="" class="facproff__ava" width="153">
           </div>
@@ -62,7 +62,7 @@ $pics = imgs() . '/facult-psy';
 
 
         <div class="facultprogs__groups facultprogs__psygroup2">
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-psy3" style="--bgcolor: #8ad8fc;">
+          <a href="<?=get_permalink(138); ?>" class="facproff facproff-psy3" style="--bgcolor: #8ad8fc;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff3.svg" alt="" class="facproff__ava" width="153">
             </div>
@@ -71,7 +71,7 @@ $pics = imgs() . '/facult-psy';
             <div class="facproff__time">18 месяцев</div>
             <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
           </a>
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-psy5" style="--bgcolor: #61ffc8;">
+          <a href="<?=get_permalink(134); ?>" class="facproff facproff-psy5" style="--bgcolor: #61ffc8;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff5.svg" alt="" class="facproff__ava" width="168">
             </div>

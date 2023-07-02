@@ -30,7 +30,7 @@ $pics = imgs() . '/facult-design';
     <div class="container">
       <h2 class="facultprogs__title druk js-slide-bot">Программа <br>обучения</h2>
       <div class="facultprogs__wrap flexi">
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-dis1" style="--bgcolor: #f5eee6;">
+        <a href="<?=get_permalink(136); ?>" class="facproff facproff-dis1" style="--bgcolor: #f5eee6;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff1.svg" alt="" class="facproff__ava" width="161">
           </div>
@@ -39,7 +39,7 @@ $pics = imgs() . '/facult-design';
           <div class="facproff__time">12 месяцев</div>
           <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
         </a>
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-dis2" style="--bgcolor: #f5eee6;">
+        <a href="<?=get_permalink(140); ?>" class="facproff facproff-dis2" style="--bgcolor: #f5eee6;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff2.png" alt="" class="facproff__ava" width="121">
           </div>

@@ -25,7 +25,7 @@ $pics = imgs() . '/facult-astro';
     <div class="container">
       <h2 class="facultprogs__title druk js-slide-bot">Программа <br>обучения</h2>
       <div class="facultprogs__wrap flexi">
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-astro1" style="--bgcolor: #fff0de;">
+        <a href="<?=get_permalink(148); ?>" class="facproff facproff-astro1" style="--bgcolor: #fff0de;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff1.svg" alt="" class="facproff__ava" width="167">
           </div>

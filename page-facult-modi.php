@@ -30,7 +30,7 @@ $pics = imgs() . '/facult-modi';
       <h2 class="facultprogs__title druk js-slide-bot">Выбери <br>программу <br>обучения</h2>
       <div class="facultprogs__wrap facultprogs--grid4">
         <div class="facultprogs__groups facultprogs__modigroup1">
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-modi1" style="--bgcolor: #FFE3D9;">
+          <a href="<?=get_permalink(143); ?>" class="facproff facproff-modi1" style="--bgcolor: #FFE3D9;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff1.svg" alt="" class="facproff__ava" width="244">
             </div>
@@ -39,7 +39,7 @@ $pics = imgs() . '/facult-modi';
             <div class="facproff__time">8 месяцев</div>
             <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
           </a>
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-modi2" style="--bgcolor: #B1FDEB;">
+          <a href="<?=get_permalink(212); ?>" class="facproff facproff-modi2" style="--bgcolor: #B1FDEB;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff2.svg" alt="" class="facproff__ava"  width="227">
             </div>
@@ -50,7 +50,7 @@ $pics = imgs() . '/facult-modi';
           </a>
         </div>
 
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-modi3" style="--bgcolor: #E3E3E3;">
+        <a href="<?=get_permalink(212); ?>" class="facproff facproff-modi3" style="--bgcolor: #E3E3E3;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff3.svg" alt="" class="facproff__ava"  width="143">
           </div>
@@ -61,7 +61,7 @@ $pics = imgs() . '/facult-modi';
         </a>
 
 
-        <a href="<?=get_permalink(149); ?>" class="facproff facproff-modi4" style="--bgcolor: #E7E2FF;">
+        <a href="<?=get_permalink(144); ?>" class="facproff facproff-modi4" style="--bgcolor: #E7E2FF;">
           <div class="facproff__picwrap">
             <img src="<?=$pics; ?>/proff4.svg" alt="" class="facproff__ava" width="267">
           </div>
@@ -72,7 +72,7 @@ $pics = imgs() . '/facult-modi';
         </a>
 
         <div class="facultprogs__groups facultprogs__modigroup2">
-          <a href="<?=get_permalink(149); ?>" class="facproff facproff-modi5" style="--bgcolor: #D2EEFF;">
+          <a href="/404/" class="facproff facproff-modi5" style="--bgcolor: #D2EEFF;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff5.svg" alt="" class="facproff__ava" width="112">
             </div>
@@ -81,7 +81,7 @@ $pics = imgs() . '/facult-modi';
             <div class="facproff__time">4 месяца</div>
             <img src="<?=$pics; ?>/button.svg" alt="" class="facproff__arrow">
           </a>
-          <a href="<?=get_permalink(149); ?>" class="facproff is-white facproff-modi6" style="--bgcolor: #FF8795;">
+          <a href="<?=get_permalink(146); ?>" class="facproff is-white facproff-modi6" style="--bgcolor: #FF8795;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff6.png" alt="" class="facproff__ava" width="162">
             </div>

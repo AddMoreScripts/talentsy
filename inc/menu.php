@@ -16,19 +16,19 @@
             <div class="menuwindow__h1">Факультеты</div>
             <ul class="menuwindow__facultet druk">
               <li>
-                <a href="#" data-tablink="moda" class="is-active">Мода и стиль</a>
+                <a href="<?=get_permalink(207); ?>" data-tablink="moda" class="is-active">Мода и стиль</a>
               </li>
               <li>
-                <a href="#" data-tablink="iskus">Современное <br>искусство</a>
+                <a href="<?=get_permalink(208); ?>" data-tablink="iskus">Современное <br>искусство</a>
               </li>
               <li>
-                <a href="#" data-tablink="psy">Психология</a>
+                <a href="<?=get_permalink(209); ?>" data-tablink="psy">Психология</a>
               </li>
               <li>
-                <a href="#" data-tablink="design">Дизайн <br>интерьера</a>
+                <a href="<?=get_permalink(210); ?>" data-tablink="design">Дизайн <br>интерьера</a>
               </li>
               <li>
-                <a href="#" data-tablink="astro">Астрология</a>
+                <a href="<?=get_permalink(211); ?>" data-tablink="astro">Астрология</a>
               </li>
               <li>
                 <a href="<?=get_permalink(205); ?>" data-tablink="zog">ЗОЖ</a>
@@ -61,7 +61,7 @@
               <div class="menuwindow__tabgrid">
                 <div class="menuwindow__mobtitle druk">Мода и стиль</div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Профессии</a>
+                  <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
                     <li><a href="<?=get_permalink(143); ?>">Дизайнер одежды</a></li>
@@ -70,19 +70,19 @@
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Онлайн-курсы</a>
+                  <span class="menuwindow__h2">Онлайн-курсы</span>
                   <div class="menuwindow__sub">
                     Короткие программы, которые помогут<br>
                     погрузиться в творческую среду<br>
                     и приобрести новый навык
                   </div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/form-fashion-sketching">Fashion-скетчинг</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Fashion-скетчинг</a></li>
                     <li><a href="/painting_on_clothes">Рисунок на ткани</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">О факультете</a>
+                  <a href="<?=get_permalink(207); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
               <div class="menuwindow__tabgrid">
                 <div class="menuwindow__mobtitle druk">Современное <br>искусство</div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Профессии</a>
+                  <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
                     <li><a href="/professiya-florist">Флорист</a></li>
@@ -103,7 +103,7 @@
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Онлайн-курсы</a>
+                  <span class="menuwindow__h2">Онлайн-курсы</span>
                   <div class="menuwindow__sub">
                     Короткие программы, которые помогут<br>
                     погрузиться в творческую среду<br>
@@ -115,7 +115,7 @@
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">О факультете</a>
+                  <a href="<?=get_permalink(208); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                 </div>
               </div>
@@ -127,7 +127,7 @@
               <div class="menuwindow__tabgrid">
                 <div class="menuwindow__mobtitle druk">Психология</div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Профессии</a>
+                  <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
                     <li><a href="<?=get_permalink(132); ?>">Психолог-консультант</a></li>
@@ -137,7 +137,7 @@
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">О факультете</a>
+                  <a href="<?=get_permalink(209); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                 </div>
               </div>
@@ -148,7 +148,7 @@
               <div class="menuwindow__tabgrid">
                 <div class="menuwindow__mobtitle druk">Дизайн <br>интерьера</div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Профессии</a>
+                  <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
                     <li><a href="<?=get_permalink(136); ?>" style="color: inherit">Дизайнер Интерьера</a></li>
@@ -156,7 +156,7 @@
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Онлайн-курсы</a>
+                  <span class="menuwindow__h2">Онлайн-курсы</span>
                   <div class="menuwindow__sub">
                     Короткие программы, которые помогут<br>
                     погрузиться в творческую среду<br>
@@ -167,7 +167,7 @@
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">О факультете</a>
+                  <a href="<?=get_permalink(210); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                 </div>
               </div>
@@ -179,14 +179,14 @@
               <div class="menuwindow__tabgrid">
                 <div class="menuwindow__mobtitle druk">Астрология</div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">Профессии</a>
+                  <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
                     <li><a href="<?=get_permalink(148); ?>" style="color: inherit">Профессия Астролог</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
-                  <a href="#" class="menuwindow__h2">О факультете</a>
+                  <a href="<?=get_permalink(211); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                 </div>
               </div>

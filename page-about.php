@@ -270,62 +270,62 @@ $pics = imgs() . '/about';
 
 
   <?php
-  $front3data = [
-    [
-      'title' => 'Мода и стиль',
-      'link' => 'https://talentsy.ru/fakultet-mody-i-stilya',
-      'line' => '/img/frontpage/b3-line1.svg',
-      'line-mob' => '/img/frontpage/b3-line1-m.svg',
-      'bg' => '/img/frontpage/b3-1.png',
-      'bgcolor' => '#b1fdeb',
-      'linepos' => 'top:100%',
-    ],
-    [
-      'title' => 'Современное искусство',
-      'link' => 'https://talentsy.ru/fakultet-sovremennogo-iskusstva',
-      'line' => '/img/frontpage/b3-line2.svg',
-      'line-mob' => '/img/frontpage/b3-line2-m.svg',
-      'bg' => '/img/frontpage/b3-2.png',
-      'bgcolor' => '#d8f7ff',
-      'linepos' => 'bottom:0;',
-    ],
-    [
-      'title' => 'Психология',
-      'link' => '/psychology/',
-      'line' => '/img/frontpage/b3-line3.svg',
-      'line-mob' => '/img/frontpage/b3-line3-m.svg',
-      'bg' => '/img/frontpage/b3-3.png',
-      'bgcolor' => '#e7e2ff',
-      'linepos' => 'top:100%;',
-    ],
-    [
-      'title' => 'Дизайн интерьера',
-      'link' => '/dizayner-interyera/',
-      'line' => '/img/frontpage/b3-line4.svg',
-      'line-mob' => '/img/frontpage/b3-line4-m.svg',
-      'bg' => '/img/frontpage/b3-4.png',
-      'bgcolor' => '#f5eee6',
-      'linepos' => 'top;0;',
-    ],
-    [
-      'title' => 'Астрология',
-      'link' => 'https://talentsy.ru/fakultet-astrologii',
-      'line' => '/img/frontpage/b3-line5.svg',
-      'line-mob' => '/img/frontpage/b3-line5-m.svg',
-      'bg' => '/img/frontpage/b3-5.png',
-      'bgcolor' => '#f8f0e3',
-      'linepos' => 'bottom:0;',
-    ],
-    [
-      'title' => 'ЗОЖ',
-      'link' => get_permalink(205),
-      'line' => '/img/frontpage/b3-line6.svg',
-      'line-mob' => '/img/frontpage/b3-line6-m.svg',
-      'bg' => '/img/frontpage/b3-6.png',
-      'bgcolor' => '#b0daea',
-      'linepos' => 'top:100%;',
-    ],
-  ];
+    $front3data = [
+      [
+        'title' => 'Мода и стиль',
+        'link' => get_permalink(207),
+        'line' => '/img/frontpage/b3-line1.svg',
+        'line-mob' => '/img/frontpage/b3-line1-m.svg',
+        'bg' => '/img/frontpage/b3-1.png',
+        'bgcolor' => '#b1fdeb',
+        'linepos' => 'top:100%',
+      ],
+      [
+        'title' => 'Современное искусство',
+        'link' => get_permalink(208),
+        'line' => '/img/frontpage/b3-line2.svg',
+        'line-mob' => '/img/frontpage/b3-line2-m.svg',
+        'bg' => '/img/frontpage/b3-2.png',
+        'bgcolor' => '#d8f7ff',
+        'linepos' => 'bottom:0;',
+      ],
+      [
+        'title' => 'Психология',
+        'link' => get_permalink(209),
+        'line' => '/img/frontpage/b3-line3.svg',
+        'line-mob' => '/img/frontpage/b3-line3-m.svg',
+        'bg' => '/img/frontpage/b3-3.png',
+        'bgcolor' => '#e7e2ff',
+        'linepos' => 'top:100%;',
+      ],
+      [
+        'title' => 'Дизайн интерьера',
+        'link' => get_permalink(210),
+        'line' => '/img/frontpage/b3-line4.svg',
+        'line-mob' => '/img/frontpage/b3-line4-m.svg',
+        'bg' => '/img/frontpage/b3-4.png',
+        'bgcolor' => '#f5eee6',
+        'linepos' => 'top;0;',
+      ],
+      [
+        'title' => 'Астрология',
+        'link' => get_permalink(211),
+        'line' => '/img/frontpage/b3-line5.svg',
+        'line-mob' => '/img/frontpage/b3-line5-m.svg',
+        'bg' => '/img/frontpage/b3-5.png',
+        'bgcolor' => '#f8f0e3',
+        'linepos' => 'bottom:0;',
+      ],
+      [
+        'title' => 'ЗОЖ',
+        'link' => get_permalink(205),
+        'line' => '/img/frontpage/b3-line6.svg',
+        'line-mob' => '/img/frontpage/b3-line6-m.svg',
+        'bg' => '/img/frontpage/b3-6.png',
+        'bgcolor' => '#b0daea',
+        'linepos' => 'top:100%;',
+      ],
+    ];
   ?>
   <section class="front3 druk">
     <div class="front3__spaces">
