@@ -108,15 +108,20 @@
 
     img {
       display: block;
-      margin: 0 auto var(--rythm, 36px);
+      margin: 0 auto;
       max-width: 100%;
       height: auto;
       border-radius: 8px;
     }
     figcaption {
+      margin-top: 15px;
       font-size: 15px;
       line-height: 150%;
       color: #7a7978;
+
+      @include media(m){
+        margin-top: 10px;
+      }
     }
   }
 

@@ -18,7 +18,9 @@ get_header('blog');
         <div class="blogpost__meta flexi">
           <div class="blogpost__cats flexi">
             <?php foreach (get_the_category() as $category) : ?>
-              <a href="<?= get_term_link($category->term_id); ?>" style="--bgcolor:#0FAA58;">
+              <a href="<?= get_term_link($category->term_id); ?>"
+              style="--bgcolor:<?=get_field('color', $category); ?>; color: <?=get_field('textcolor', $category) ? get_field('textcolor', $category) : 'white'; ?>"
+              >
                 <span><?= $category->name; ?></span>
               </a>
             <?php endforeach; ?>
@@ -32,11 +34,11 @@ get_header('blog');
           </div>
           <i class="idot"></i>
           <div class="blogpost__date"><?= get_the_date(); ?></div>
-          <span class="mobbrake"></span>
+          <!-- <span class="mobbrake"></span> -->
           <i class="idot"></i>
-          <div class="blogpost__comments">11</div>
-          <i class="idot"></i>
-          <div class="blogpost__viewed">586</div>
+          <!-- <div class="blogpost__comments">11</div> -->
+          <!-- <i class="idot"></i> -->
+          <div class="blogpost__viewed"><?=function_exists('pvc_get_post_views') ? pvc_get_post_views(get_the_ID()) : '666'; ?></div>
           <div class="blogpost__share" data-hidewrap="sharebutton" data-hideclick="yes">
             <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebutton">
               <span>Поделиться</span>
@@ -78,11 +80,13 @@ get_header('blog');
           </div>
         <?php endif; ?>
 
-        <?php if(get_field('topbanner-ison')): ?>
+        <?php if(get_field('top-banner')): $bannerTopId = get_field('top-banner'); ?>
         <div class="postprofbanner flexi">
-          <img src="<?=wp_get_attachment_image_url(get_field('topbanner-img'), 'large'); ?>" alt="" class="postprofbanner__img">
-          <div class="postprofbanner__text"><?=get_field('topbanner-txt'); ?></div>
-          <a href="<?=get_field('topbanner-link'); ?>" class="postprofbanner__link button button--blog">Подробнее</a>
+          <img src="<?=get_field('banner-pic', $bannerTopId); ?>" alt="" class="postprofbanner__img">
+          <div class="postprofbanner__text"><?=get_field('banner-title', $bannerTopId); ?></div>
+          <a href="<?=get_field('banner-link', $bannerTopId); ?>" class="postprofbanner__link button button--blog">
+            <?=get_field('banner-button', $bannerTopId); ?>
+          </a>
         </div>
         <?php endif; ?>
 
@@ -120,7 +124,7 @@ get_header('blog');
 
           <div class="blogpost__mobprepost">
             <div class="articleauthor flexi">
-              <img src="<?= imgs(); ?>/blog/article/user-ava.png" alt="" class="articleauthor__ava">
+              <img src="<?= imgs(); ?>/blog/article/user-ava.svg" alt="" class="articleauthor__ava">
               <div class="articleauthor__right">
                 <div class="articleauthor__name"><?= get_the_author_meta('display_name'); ?></div>
                 <?= get_the_author_meta('description'); ?>
@@ -133,21 +137,14 @@ get_header('blog');
           endwhile;
           ?>
         </div>
-
+        <script>
+          window.postId = <?=get_the_ID(); ?>;
+        </script>
         <footer class="postfooter flexi">
-          <fieldset class="rating">
-            <legend class="rating__caption">Оцените статью</legend>
-            <div class="rating__group">
-              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
-              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
-              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
-              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
-              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
-            </div>
-          </fieldset>
-          <div class="postfooter__rate"><b>4,8</b> из 5</div>
-          <i class="idot"></i>
-          <div class="postfooter__counter">8 голосов</div>
+          <div class="js-postfooter-wrap" style="display: contents;">
+            <?php get_template_part('inc/blog-post-rating', null, ['postId' => get_the_ID()]); ?>
+          </div>
+
           <div class="blogpost__share" data-hidewrap="sharebuttonbot" data-hideclick="yes">
             <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebuttonbot">
               <span>Поделиться</span>
@@ -182,15 +179,17 @@ get_header('blog');
           </div>
         </footer>
 
-        <?php if(get_field('botbanner-ison')): ?>
+        <?php if(get_field('bottom-banner')): $bannerBotId = get_field('bottom-banner'); ?>
         <aside class="relateproffbanner flexi">
           <div class="relateproffbanner__left">
-            <div class="relateproffbanner__title"><?=get_field('botbanner-title'); ?></div>
-            <p><?=get_field('botbanner-descr'); ?></p>
-            <a href="<?=get_field('botbanner-link'); ?>" class="button relateproffbanner__button"><?=get_field('botbanner-label'); ?></a>
+            <div class="relateproffbanner__title"><?=get_field('banner-title', $bannerBotId); ?></div>
+            <p><?=get_field('banner-text', $bannerBotId); ?></p>
+            <a href="<?=get_field('banner-link', $bannerBotId); ?>" class="button relateproffbanner__button">
+              <?=get_field('banner-button', $bannerBotId); ?>
+            </a>
           </div>
-          <div class="relateproffbanner__right" style="background-color: <?=get_field('botbanner-bgcolor'); ?>;">
-            <img src="<?=get_field('botbanner-img'); ?>" alt="" class="relateproffbanner__pic">
+          <div class="relateproffbanner__right">
+            <img src="<?=get_field('banner-pic', $bannerBotId); ?>" alt="" class="relateproffbanner__pic">
           </div>
         </aside>
         <?php endif; ?>
@@ -198,7 +197,7 @@ get_header('blog');
       </div>
       <aside class="blogpost__sider">
         <div class="articleauthor flexi">
-          <img src="<?= imgs(); ?>/blog/article/user-ava.png" alt="" class="articleauthor__ava">
+          <img src="<?= imgs(); ?>/blog/article/user-ava.svg" alt="" class="articleauthor__ava">
           <div class="articleauthor__right">
             <div class="articleauthor__name"><?= get_the_author_meta('display_name'); ?></div>
             <?= get_the_author_meta('description'); ?>

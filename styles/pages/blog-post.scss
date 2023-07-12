@@ -64,7 +64,7 @@
     margin-bottom: var(--header-gap);
 
     @include media(m){
-      font-size: 32px;
+      font-size: 27px;
       line-height: 1.2;
     }
   }
@@ -280,8 +280,9 @@
 
   &__sider {
     width: 410px;
+    width: 360px;
     flex-shrink: 0;
-    margin-left: 30px;
+    margin-left: 80px;
     min-width: 0;
 
     @media(max-width: 1320px){

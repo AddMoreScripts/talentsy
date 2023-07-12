@@ -8,7 +8,8 @@
   <div class="blogteaser__meta flexi">
     <div class="blogpost__cats flexi">
       <?php foreach (get_the_category($postId) as $category) : ?>
-        <a href="<?= get_term_link($category->term_id); ?>" style="--bgcolor:<?=get_field('color', $category); ?>">
+        <a href="<?= get_term_link($category->term_id); ?>"
+        style="--bgcolor:<?=get_field('color', $category); ?>; color: <?=get_field('textcolor', $category) ? get_field('textcolor', $category) : 'white'; ?>">
           <span><?= $category->name; ?></span>
         </a>
       <?php endforeach; ?>

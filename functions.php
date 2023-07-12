@@ -85,16 +85,23 @@ if (function_exists('acf_add_options_page')) {
 
 
 /**
- * AJAX запрос переключения категорий готовых решений
+ * AJAX запрос изменения рейтинга статьи
  */
-// add_action('wp_ajax_readyPacks', 'readyPacks_load_func');
-// add_action('wp_ajax_nopriv_readyPacks', 'readyPacks_load_func');
-// function readyPacks_load_func()
-// {
-//   $subject = filter_input(INPUT_POST, 'catid', FILTER_SANITIZE_SPECIAL_CHARS);
-//   get_template_part('inc/readypack-cat', "", ['catId' => $subject]);
-//   die;
-// }
+add_action('wp_ajax_ratepost', 'ratepost_load_func');
+add_action('wp_ajax_nopriv_ratepost', 'ratepost_load_func');
+function ratepost_load_func()
+{
+  $rating = intval(filter_input(INPUT_POST, 'rate', FILTER_SANITIZE_SPECIAL_CHARS));
+  $postId = intval(filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_SPECIAL_CHARS));
+  $post = get_post(intval($postId));
+  if(!$post) die('Ошибка. Пост не найден');
+  if(!in_array($rating, [1,2,3,4,5]))  die('Ошибка. Оценка не верна');
+
+  $oldRate = intval(get_field('star-' . $rating, $postId));
+  update_field('star-' . $rating, $oldRate + 1, $postId);
+  get_template_part('inc/blog-post-rating', "", ['postId' => $postId]);
+  die;
+}
 
 
 remove_filter( 'the_content', 'wpautop' );
