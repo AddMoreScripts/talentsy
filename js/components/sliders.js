@@ -50,7 +50,7 @@ export const initSliders = () => {
   });
 
   const diplom = new Swiper(".js-diplomblock-slider", {
-    loop: false,
+    loop: true,
     spaceBetween: 15,
     slidesPerView: 1,
     navigation: {

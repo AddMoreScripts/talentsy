@@ -2,7 +2,7 @@
 
 .page-template-page-fashion-style{
   --psy-accent: #ff3850;
-  --darkbg-accent: #5d6d96;
+  --darkbg-accent: #FFDA6B;
   .talentsyabout__tag{
     flex-grow: 1;
   }
@@ -15,6 +15,11 @@
   .progrmsummary__head:hover .progrmsummary__plus{
     background-color: var(--psy-accent);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+
+  .teamslider__name{
+    color:var(--darkbg-accent);
   }
 
 }

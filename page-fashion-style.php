@@ -403,7 +403,7 @@ $pics = imgs() . '/fashion-style';
 
 
 
-<section class="guideform mb-0">
+<section class="guideform mb-0" style="background-color: #f7f1e2;">
   <div class="container">
     <h3 class="guideform__title title js-slide-bot">
       <span>Получи <b>гайд</b></span>
@@ -412,7 +412,7 @@ $pics = imgs() . '/fashion-style';
       <img src="<?= $pics; ?>/b11-catalog.webp" alt="" class="stylist-catalog">
     </h3>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => '',
+      'bg' => '#fff',
       'buttonTxt' => 'Получить гайд',
     ]); ?>
   </div>
@@ -623,7 +623,7 @@ $pics = imgs() . '/fashion-style';
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию']); ?>
+    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию', 'bg' => '#fff']); ?>
   </div>
 </section><!-- //stepform -->
 
@@ -668,7 +668,7 @@ $pics = imgs() . '/fashion-style';
 </section>
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink quizlink--stylist">
   <div class="container">
     <h2 class="title">Подходит ли тебе профессия <br><b>fashion-стилист?</b></h2>
@@ -687,7 +687,7 @@ $pics = imgs() . '/fashion-style';
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 <section class="dreams dreams--abs dreams--stylist dreams--fashstyle2">
@@ -805,10 +805,11 @@ $pics = imgs() . '/fashion-style';
         Беспроцентная рассрочка <br>на&nbsp;24 месяца
       </div>
     </div>
-    <div class="stylistsubprice__bot">Скидка до 14 июня</div>
+    <div class="stylistsubprice__bot">Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></div>
     <?php get_template_part('inc/leadform', null, [
       'formClassName' => '',
       'isPromoForm' => true,
+      'showTopTxt' => true
     ]); ?>
   </div>
 </section><!-- //priceblock -->

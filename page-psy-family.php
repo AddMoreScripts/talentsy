@@ -9,7 +9,7 @@ get_header();
 <section class="hero hero--family">
     <h2 class="hero__small">Курсы семейная психология</h2>
     <div class="hero__h1 jbm">
-      За 1,5 года сделаем <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt=""> из вас <br>
+      За 1,5 года <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt="" class="hero-mob-img"> сделаем <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt=""> из вас <br>
       <b>успешного семейного психолога-<br>
         консультанта</b> и&nbsp;поможем запустить<br>
       свою частную практику
@@ -654,7 +654,7 @@ get_header();
         <span><b>психолог-консультант</b></span>
         <img src="<?=imgs(); ?>/psychology-family/b15-cat.webp" alt="" class="psy-family-catalog">
       </h3>
-      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить гайд']); ?>
+      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить гайд', 'bg' => '#fff']); ?>
     </div>
   </section><!-- //guideform -->
 
@@ -786,7 +786,7 @@ get_header();
             о&nbsp;начале учебы на&nbsp;курсе</p>
         </div>
       </div>
-      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Сделать выбор']); ?>
+      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию', 'bg' => '#fff']); ?>
     </div>
   </section><!-- //stepform -->
 
@@ -929,7 +929,7 @@ get_header();
 
 
 
-
+  <?php if(get_field('is-show_quiz')): ?>
   <section class="quizlink">
     <div class="container">
       <h2 class="title">Подходит ли вам профессия <br><b>детский психолог-консультант?</b></h2>
@@ -948,7 +948,7 @@ get_header();
       </div>
     </div>
   </section><!-- //quizlink -->
-
+  <?php endif; ?>
 
 
 
@@ -962,13 +962,15 @@ get_header();
           <p>Первый платеж через 2 месяца.</p>
         </div>
       </div>
-      <div class="priceblock__greenprice jbm"><span>От</span> <span>9000</span> <span>₽/МЕС</span> <small>Скидка <b>до
-            31 мая</b></small></div>
+      <div class="priceblock__greenprice jbm">
+        <span>От</span> <span>9000</span> <span>₽/МЕС</span>
+        <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
+      </div>
       <div class="priceblock__mobdescr">
         <p>Беспроцентная рассрочка на 24 месяца.</p>
         <p>Первый платеж через 2 месяца.</p>
       </div>
-      <?php get_template_part('inc/leadform', null, ['isPromoForm' => true]); ?>
+      <?php get_template_part('inc/leadform', null, ['isPromoForm' => true, 'showTopTxt' => true]); ?>
     </div>
   </section><!-- //priceblock -->
 

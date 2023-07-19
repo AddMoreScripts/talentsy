@@ -2,7 +2,7 @@ $media-max-width-xl: (1600px) !default;
 $media-max-width-l: (1200px) !default;
 $media-max-width-m: (992px) !default;
 $media-max-width-s: (650px) !default;
-$media-max-width-xs: (425px) !default;
+$media-max-width-xs: (359px) !default;
 
 @mixin media($breakpoint) {
   @if type-of($breakpoint) == number {
@@ -16,7 +16,7 @@ $media-max-width-xs: (425px) !default;
   } @else if $breakpoint == s {
     @media (max-width: $media-max-width-s) { @content; }
   } @else if $breakpoint == xs {
-    @media (max-width: $media-max-width-s) { @content; }
+    @media (max-width: $media-max-width-xs) { @content; }
   } @else {
     @error "Unknown breakpoint:" $breakpoint;
   }

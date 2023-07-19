@@ -121,22 +121,28 @@
       display: none;
     }
 
-
-    a{
-      color:#000;
+    li{
       margin-right: 33px;
-
       @include media(l){
-        font-size: 15px;
         margin-right: 20px;
-      }
-
-      &:hover{
-        opacity: 0.6;
       }
 
       &:last-child{
         margin-right: 0;
+      }
+    }
+
+
+    a{
+      color:#000;
+      display: block;
+
+      @include media(l){
+        font-size: 15px;
+      }
+
+      &:hover{
+        opacity: 0.6;
       }
     }
   }

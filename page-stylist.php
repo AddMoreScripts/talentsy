@@ -7,7 +7,7 @@ $pics = imgs() . '/stylist';
 ?>
 
 <section class="hero hero-stylist">
-  <div class="hero__h1 jbm js-slide-bot">
+  <div class="hero__h1 jbm js-slide-bot font66">
     За 6 месяцев <img src="<?= $pics; ?>/b1-sm.webp" alt=""> сделаем
     <br>из тебя <b>успешного стилиста-
       <br>имиджмейкера</b> и изменим твою жизнь
@@ -317,7 +317,7 @@ $pics = imgs() . '/stylist';
       <img src="<?= $pics; ?>/b8-catalog.webp" alt="" class="stylist-catalog">
     </h3>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => '',
+      'bg' => '#fff',
       'buttonTxt' => 'Получить гайд',
     ]); ?>
   </div>
@@ -478,7 +478,7 @@ $pics = imgs() . '/stylist';
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию']); ?>
+    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию', 'bg' => "#fff"]); ?>
   </div>
 </section><!-- //stepform -->
 
@@ -523,7 +523,7 @@ $pics = imgs() . '/stylist';
 </section>
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink quizlink--stylist">
   <div class="container">
     <h2 class="title">Подходит ли тебе профессия <br><b>стилист-имиджмейкер?</b></h2>
@@ -542,7 +542,7 @@ $pics = imgs() . '/stylist';
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 <section class="dreams dreams--abs dreams--stylist dreams--stylist2">
@@ -644,10 +644,11 @@ $pics = imgs() . '/stylist';
         Беспроцентная рассрочка <br>на&nbsp;24 месяца
       </div>
     </div>
-    <div class="stylistsubprice__bot">Скидка до 14 июня</div>
+    <div class="stylistsubprice__bot">Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></div>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => '',
+      'bg' => '#f7f1e2',
       'isPromoForm' => true,
+      'showTopTxt' => true
     ]); ?>
   </div>
 </section><!-- //priceblock -->

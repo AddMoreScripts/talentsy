@@ -130,7 +130,7 @@
       font-weight: 400;
     }
 
-    img{
+    img, picture{
       display: block;
       height: var(--iconsize);
       width: auto;
@@ -145,6 +145,11 @@
         left: 0;
         top: 0;
       }
+    }
+
+    picture img{
+      position: relative;
+      display: block;
     }
   }
 

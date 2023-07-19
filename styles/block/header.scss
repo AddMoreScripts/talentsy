@@ -163,7 +163,7 @@
     align-items: center;
     white-space: nowrap;
 
-    &>*:not(:first-child){
+    li:not(:first-child), .hdr__login{
       margin-left: 70px;
 
       @include media(xl){
@@ -182,14 +182,6 @@
       @include media(m){
         display: none;
       }
-    }
-  }
-
-  &__phone{
-    font-size: 17px;
-    font-weight: 700;
-    @include media(m){
-      display: none;
     }
   }
 

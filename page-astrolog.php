@@ -90,7 +90,10 @@ $pics = imgs() . '/astrolog';
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить программу', 'formClassName' => 'withastrobutton']); ?>
+    <?php get_template_part('inc/leadform', null, [
+      'buttonTxt' => 'Получить программу',
+      'formClassName' => 'withastrobutton',
+      'bg' => "#fff"]); ?>
   </div>
 </section><!-- //programfromlead -->
 
@@ -264,7 +267,7 @@ $pics = imgs() . '/astrolog';
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию', 'formClassName' => 'withastrobutton']); ?>
+    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию', 'formClassName' => 'withastrobutton', 'bg' => '#fff']); ?>
   </div>
 </section><!-- //programfromlead -->
 
@@ -401,7 +404,10 @@ $pics = imgs() . '/astrolog';
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить программу', 'formClassName' => 'astrologformbox']); ?>
+    <?php get_template_part('inc/leadform', null, [
+      'buttonTxt' => 'Получить программу',
+      'formClassName' => 'astrologformbox',
+    ]); ?>
   </div>
 </section><!-- //programfromlead -->
 
@@ -538,7 +544,7 @@ $pics = imgs() . '/astrolog';
 
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink quizlink--astro withastrobutton mb-0">
   <img src="<?=$pics; ?>/b3-lines.svg" alt="" class="astroform__bg">
   <div class="container">
@@ -558,7 +564,7 @@ $pics = imgs() . '/astrolog';
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 

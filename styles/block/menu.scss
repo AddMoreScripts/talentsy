@@ -14,6 +14,7 @@
 
 .menuwindow {
   background: #fff;
+  color:#000;
 
   &__closer,
   &__tabclose{
@@ -298,6 +299,7 @@
       width: 300px;
       margin: 0 auto;
       padding-top: 100px;
+      padding-bottom: 60px;
     }
   }
 
@@ -368,8 +370,8 @@
 
   &__circlebutton {
     position: absolute;
-    top: 270px;
-    right: 0;
+    top: 330px;
+    right: 30px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

@@ -94,8 +94,8 @@ function ratepost_load_func()
   $rating = intval(filter_input(INPUT_POST, 'rate', FILTER_SANITIZE_SPECIAL_CHARS));
   $postId = intval(filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_SPECIAL_CHARS));
   $post = get_post(intval($postId));
-  if(!$post) die('Ошибка. Пост не найден');
-  if(!in_array($rating, [1,2,3,4,5]))  die('Ошибка. Оценка не верна');
+  if (!$post) die('Ошибка. Пост не найден');
+  if (!in_array($rating, [1, 2, 3, 4, 5]))  die('Ошибка. Оценка не верна');
 
   $oldRate = intval(get_field('star-' . $rating, $postId));
   update_field('star-' . $rating, $oldRate + 1, $postId);
@@ -104,7 +104,29 @@ function ratepost_load_func()
 }
 
 
-remove_filter( 'the_content', 'wpautop' );
+remove_filter('the_content', 'wpautop');
 
 
-add_filter( 'custom_permalinks_path_info', '__return_true' );
+add_filter('custom_permalinks_path_info', '__return_true');
+
+
+
+function getTomorow()
+{
+  $now = new \DateTimeImmutable();
+  $month = [
+    '1' => 'января',
+    '2' => 'февраля',
+    "3" => 'марта',
+    '4' => 'апреля',
+    '5' => 'мая',
+    '6' => 'июня',
+    '7' => 'июля',
+    '8' => 'августа',
+    '9' => 'сенября',
+    '10' => 'октября',
+    '11' => 'ноября',
+    '12' => 'декабря'
+  ];
+  return (intval($now->format('d')) + 1) . ' ' . $month[$now->format('n')];
+}

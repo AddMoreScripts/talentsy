@@ -3,7 +3,7 @@
 
 .page-template-page-stylist{
   --psy-accent: #b52e3b;
-  --darkbg-accent: #5d6d96;
+  --darkbg-accent: #FFDA6B;
 
   .progrmsummary__plus{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23b52e3b' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
@@ -14,28 +14,31 @@
     background-color: var(--psy-accent);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='2'%3E%3Cpath d='M1 12h22M12 1v22'/%3E%3C/g%3E%3C/svg%3E");
   }
+
+
+  .teamslider__name{
+    color:var(--darkbg-accent);
+  }
 }
 
 
 
 .hero-stylist{
-  margin-top: 30px;
-
   @media(min-width:1199px){
     margin-bottom: 90px;
-    .hero__h1{
-      font-size: 66px;
-    }
   }
-
-  @include media(m){
-    .hero__h1{
-      padding-top: 24px;
-    }
-  }
-
   .hero__videowrap{
     margin-top: -50px;
+  }
+
+  @include media(s){
+    padding-bottom: 40px;
+    .hero__videobox{
+      padding-bottom: 90%;
+    }
+    .hero__overbutton{
+      margin-top: -100px;
+    }
   }
 }
 
@@ -114,6 +117,9 @@
   background-color: #2b3f58;
   color:#fff;
 
+  .title span{
+    color:#f8e1a9;
+  }
   .title b{
     color:#f8e1a9;
   }
@@ -312,6 +318,10 @@ img.stylist-catalog{
 
 .priceblock--stylist{
   padding-top: 115px;
+
+  @include media(l){
+    padding-top: 0;
+  }
 
   .priceblock__row{
     margin-top: 60px;

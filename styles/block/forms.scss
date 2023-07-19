@@ -1,12 +1,11 @@
 @use "../general/_mixins" as *;
 
 .formvkbutton {
-  position: absolute;
+  position: relative;
   appearance: none;
   border:none;
-  top: 15px;
-  left: 35px;
   z-index: 10;
+  margin-bottom: 15px;
   border-radius: 10px;
   background-color: #03a3ff;
   appearance: none;

@@ -4,9 +4,17 @@
   line-height: 1.7;
   --vertical: 20px;
 
-  p:not(:last-child) {
+  p:not(:last-child){
     margin-bottom: var(--vertical);
   }
+
+  .wp-block-separator{
+    margin-bottom: var(--vertical);
+    display: block;
+    border:none;
+    border-bottom: 1px solid #ccc;
+  }
+
   strong {
     font-weight: 700;
   }
@@ -89,6 +97,7 @@
       color: #0c8d48;
     }
   }
+
 
   a.button {
     display: inline-flex;
@@ -264,4 +273,208 @@
   @include media(m) {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+.wp-block-columns{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 60px;
+
+  @include media(m){
+    gap: 15px;
+    flex-flow: column nowrap;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    align-items: stretch;
+  }
+
+  img{
+    width: 100% !important;
+  }
+
+  &.are-vertically-aligned-center{
+    align-items: center;
+  }
+}
+
+
+
+.is-layout-flex{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap:40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include media(l){
+    gap:30px;
+  }
+  @include media(m){
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap:20px;
+  }
+
+  .wp-block-group{
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 0;
+  }
+}
+
+
+
+
+
+
+
+.wp-block-gallery{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px !important;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include media(m){
+    grid-gap: 10px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &.columns-4{
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px !important;
+
+    @include media(l){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &.columns-3{
+    grid-template-columns: repeat(3, 1fr);
+
+    @include media(m){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &.columns-5{
+    grid-template-columns: repeat(5, 1fr);
+    @include media(m){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &.columns-6{
+    grid-template-columns: repeat(6, 1fr);
+    @include media(l){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include media(m){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &.columns-7,
+  &.a4-gallery{
+    grid-template-columns: repeat(7, 1fr);
+    @include media(l){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include media(m){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &.columns-2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &.columns-1{
+    grid-template-columns:1fr;
+  }
+
+  &.a4-gallery{
+    grid-gap: 10px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .wp-block-image{
+      padding-bottom: calc(297px / 210px * 100%);
+      overflow: hidden;
+      border:1px solid #ddd;
+      border-radius: 7px;
+      margin: 0;
+
+      img{
+        border-radius: 7px;
+        max-width: calc(100% - 8px);
+        max-height: calc(100% - 8px);
+        left: 4px;
+        top: 4px;
+      }
+    }
+
+    .wp-element-caption{
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: none;
+      width: 100%;
+      border-radius: 5px;
+      background-color: rgba(0,0,0,0.5);
+      color:#fff;
+      line-height: 1.4;
+      font-size: 12px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s ease;
+      pointer-events: none;
+
+      @include media(m){
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .wp-block-image:hover .wp-element-caption{
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  a{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wp-block-image{
+    position: relative;
+    padding-bottom: 75%;
+    width: 100%;
+    margin: 0;
+
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+
+      @include media(m){
+        border-radius: 8px;
+      }
+    }
+  }
+
+
 }

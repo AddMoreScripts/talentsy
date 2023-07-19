@@ -741,7 +741,7 @@ $pics = imgs() . '/nutriciolog';
 </section>
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink quizlink--nutri mb-0">
   <!-- <img src="<?=$pics; ?>/b3-lines.svg" alt="" class="astroform__bg"> -->
   <div class="container">
@@ -761,7 +761,7 @@ $pics = imgs() . '/nutriciolog';
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 

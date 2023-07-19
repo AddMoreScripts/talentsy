@@ -2,7 +2,7 @@
 
 .page-template-page-interior-decorator{
   --psy-accent: #be2b00;
-  --darkbg-accent: #368048;
+  --darkbg-accent: #FFDA6B;
 
 
   .progrmsummary__plus{
@@ -24,6 +24,12 @@
 
   .disint22 .dreamsltitle{
     color:#fff;
+  }
+
+  .teamslider__name{
+    @include media(s){
+      color:var(--darkbg-accent);
+    }
   }
 }
 
@@ -216,4 +222,9 @@
 
 .quizlink--decorator{
   padding-top: 140px;
+}
+
+
+.decorator-programs .disint-programs__linegrid{
+  max-width: 500px;
 }

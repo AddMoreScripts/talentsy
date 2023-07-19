@@ -67,6 +67,12 @@ window.modalInstance = new HystModal({
  * см. https://github.com/verlok/vanilla-lazyload
  */
 new LazyLoad();
+var myLazyLoad2 = new LazyLoad({
+  container: document.querySelector(".reviewsslider__cont")
+});
+document.querySelectorAll('.grid-mob-scroll').forEach(el => {
+  new LazyLoad({ container: el });
+})
 
 
 

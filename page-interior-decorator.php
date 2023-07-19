@@ -5,15 +5,7 @@ Template name: Шаблон: Декоратор интерьера
 get_header();
 ?>
 
-<nav class="breadcrumbs container jbm">
-  <a href="/">Главная</a>
-  <a href="#">Факультет дизайна иинтерьера</a>
-  <span>Курс декоратора интерьера</span>
-</nav>
-
-
 <section class="hero hero-interior">
-  <h2 class="hero__small">Курс декоратора интерьера</h2>
   <div class="hero__h1 jbm js-slide-bot">
     За 6 месяцев сделаем из тебя <br>
     <b>успешного декоратора <br>
@@ -426,8 +418,8 @@ get_header();
       <img src="<?= imgs(); ?>/interior-decorator/b12-catalog.webp" alt="">
     </h3>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => 'programfromlead__formwrap--yellow',
       'buttonTxt' => 'Получить гайд',
+      'bg' => '#ffda6b',
     ]); ?>
   </div>
 </section><!-- //disint-guideform -->
@@ -479,8 +471,8 @@ get_header();
     </h2>
     <div class="disint-programs__sub">А также уроки <br>скетчинга <br>от руки</div>
     <div class="disint10__line"></div>
-    <div class="disint-programs__linegrid grid3">
-      <div class="grid-item">
+    <div class="disint-programs__linegrid grid2">
+      <div class="grid-item ">
         <div class="disint-program">
           <img src="<?= imgs(); ?>/dizayner-interyera/b14-1.webp" alt="" class="disint-program__logo js-slide-opac">
           <div class="disint-program__title">Рабочие чертежи</div>
@@ -599,7 +591,7 @@ get_header();
       </div>
     </div>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => 'programfromlead__formwrap--yellow',
+      'bg' => '#ffda6b',
       'buttonTxt' => 'Сделать выбор',
     ]); ?>
   </div>
@@ -633,7 +625,7 @@ get_header();
         <dd>Документов, <br>шаблонов и схем</dd>
       </dl>
       <dl class="statistic__item  statistic__item--veryellow">
-        <dt class="js-slide-opac">12/7</dt>
+        <dt class="js-slide-opac" style="color:#be2b00;">12/7</dt>
         <dd>Поддержка студентов во время обучения</dd>
       </dl>
     </div>
@@ -722,7 +714,7 @@ get_header();
 
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink quizlink--decorator">
   <div class="container">
     <h2 class="title">Подходит ли вам профессия <br><b>декоратор интерьера?</b></h2>
@@ -741,7 +733,7 @@ get_header();
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 
@@ -755,15 +747,18 @@ get_header();
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm"><span>От</span> <span>5000</span> <span>₽/МЕС</span> <small>Скидка <b>до
-          24 марта</b></small></div>
+    <div class="priceblock__greenprice jbm">
+      <span>От</span> <span>5000</span> <span>₽/МЕС</span>
+      <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
+    </div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>
       <p>Первый платеж через 2 месяца.</p>
     </div>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => 'programfromlead__formwrap--yellow',
       'isPromoForm' => true,
+      'bg' => '#ffda6b',
+      'showTopTxt' => true,
     ]); ?>
   </div>
 </section><!-- //priceblock -->

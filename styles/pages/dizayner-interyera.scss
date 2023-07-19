@@ -3,6 +3,7 @@
 .page-template-page-design{
   --psy-accent: #537aff;
   --white-accent:#fe846b;
+  --darkbg-accent: #ffc800;
   --goldleft: 35px;
   --goldwidth: 1420px;
 
@@ -18,16 +19,12 @@
   }
 
   .hero{
-    margin-top: 60px;
     margin-bottom: 0;
     padding-bottom: 0;
 
     @include media(s) {
       padding-bottom: 40px;
     }
-  }
-  .hero__small{
-    margin-bottom: 40px;
   }
   .hero__h1{
     margin-bottom: -40px;
@@ -456,18 +453,6 @@
 
 
 
-.programfromlead__formwrap--yellow{
-  background-color: #ffda6b !important;
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    box-shadow: inset 0 0 0 100px #ffda6b;
-  }
-}
-
-
-
 
 .disint10{
   overflow: hidden;
@@ -678,11 +663,12 @@
 
   &__sub{
     position: relative;
-    left: 47%;
+    left: 50%;
     opacity: 0.5;
     font-size: 26px;
     line-height: 1.11;
     margin-top: 10px;
+    width: 40%;
 
     @include media(m){
       left: 0;
@@ -1156,7 +1142,7 @@
 
     @include media(m){
       height: auto;
-      width: 300px;
+      width: 270px;
       padding-bottom: 30px;
     }
   }
@@ -1220,6 +1206,8 @@
 
 
 .disint24{
+  margin-top: var(--blockspace);
+  padding-top: 0;
   .priceblock__greenprice{
     color:#368048;
   }

@@ -10,16 +10,25 @@
 
 
 .hero-fashion{
-  margin-top: 10px;
 
-  @include media(m){
-    padding-top: 40px;
-
+  @include media(s){
+    padding-bottom: 40px;
     .hero__videobox{
       padding-bottom: 90%;
     }
     .hero__overbutton{
       margin-top: -100px;
+    }
+  }
+  @include media(xs){
+    .hero__overbutton{
+      width: 160px;
+      height: 160px;
+      padding: 0 0 40px;
+
+      &::after{
+        top: 40px;
+      }
     }
   }
 
@@ -86,6 +95,10 @@
 
 .mentors--fashion{
   background-color: #182e69;
+
+  .teamslider__name{
+    color:#FFDA6B;
+  }
 }
 
 
@@ -179,15 +192,12 @@ img.fashion-catalog{
   @include media(l){
     padding-top: var(--blockspace);
   }
-  @include media(m){
-    margin-bottom: 0;
-  }
 
   .statistic__star{
     filter: grayscale(1);
   }
 
-  @include media(m){
+  @include media(s){
     .statistic__item--fashion{
       grid-column: span 2;
     }

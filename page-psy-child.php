@@ -8,7 +8,7 @@ get_header();
 
 <section class="hero hero--kids">
     <div class="hero__h1 jbm">
-      За 1,5 года сделаем <img src="<?=imgs(); ?>/psychology-kid/b1-sm.webp" alt=""> из вас <br>
+      За 1,5 года <img src="<?=imgs(); ?>/psychology-kid/b1-sm.webp" alt="" class="hero-mob-img"><div></div>сделаем <img src="<?=imgs(); ?>/psychology-kid/b1-sm.webp" alt=""> из вас <br>
       <b>успешного детского психолога-<br>
         консультанта</b> и&nbsp;поможем запустить<br>
       свою частную практику или<br>
@@ -29,7 +29,7 @@ get_header();
   </section>
 
 
-  <section class="iphone">
+  <section class="iphone mb-s-0">
     <div class="container">
       <h2 class="title js-slide-bot">
         Мы создали <span style="white-space: nowrap;"><i class="title-dot">i</i>Phone</span> на рынке <br>обучения детской дошкольной <br>психологии
@@ -119,7 +119,7 @@ get_header();
           </div>
           <div class="dreams__item">
             <div class="dreams__iconwrap">
-              <img data-src="<?=imgs(); ?>/psychology/b4-5.png" alt="" class="lazy js-slide-opac">
+              <img data-src="<?=imgs(); ?>/psychology-kid/b4-5.webp" alt="" class="lazy js-slide-opac">
             </div>
             <div class="dreamsltitle">
               Работать на себя и ни от кого <br>не зависеть или устроиться на работу <br>своей мечты
@@ -127,7 +127,7 @@ get_header();
           </div>
           <div class="dreams__item  dreams__item--border dreams__item--light">
             <div class="dreams__iconwrap dreams__iconwrap--wide">
-              <img data-src="<?=imgs(); ?>/psychology/b4-6.jpg" alt="" class="lazy js-slide-opac">
+              <img data-src="<?=imgs(); ?>/psychology-kid/b4-6.webp" alt="" class="lazy js-slide-opac">
             </div>
             <div class="dreamsltitle">
               Изменить качество <br>своей жизни
@@ -210,38 +210,36 @@ get_header();
         специальности детский <br>
         психолог-консультант?
       </h2>
-      <div class="grid-mob-scroll">
-        <div class="kidgrid__grid">
-          <div class="kidgrid__item">
-            <div class="kidgrid__picwrap js-slide-opac">
-              <img src="<?=imgs(); ?>/psychology-kid/b7-1.webp" alt="">
-            </div>
-            <div class="kidgrid__text">Детский развивающий центр</div>
+      <div class="kidgrid__grid">
+        <div class="kidgrid__item">
+          <div class="kidgrid__picwrap js-slide-opac">
+            <img src="<?=imgs(); ?>/psychology-kid/b7-1.webp" alt="">
           </div>
-          <div class="kidgrid__item">
-            <div class="kidgrid__picwrap js-slide-opac">
-              <img src="<?=imgs(); ?>/psychology-kid/b7-2.webp" alt="">
-            </div>
-            <div class="kidgrid__text">Детский сад</div>
+          <div class="kidgrid__text">Детский развивающий центр</div>
+        </div>
+        <div class="kidgrid__item">
+          <div class="kidgrid__picwrap js-slide-opac">
+            <img src="<?=imgs(); ?>/psychology-kid/b7-2.webp" alt="">
           </div>
-          <div class="kidgrid__item kidgrid__item--big">
-            <div class="kidgrid__picwrap js-slide-opac">
-              <img src="<?=imgs(); ?>/psychology-kid/b7-3.webp" alt="">
-            </div>
-            <div class="kidgrid__text">Или открыть свою частную практику</div>
+          <div class="kidgrid__text">Детский сад</div>
+        </div>
+        <div class="kidgrid__item kidgrid__item--big">
+          <div class="kidgrid__picwrap js-slide-opac">
+            <img src="<?=imgs(); ?>/psychology-kid/b7-3.webp" alt="">
           </div>
-          <div class="kidgrid__item">
-            <div class="kidgrid__picwrap js-slide-opac">
-              <img src="<?=imgs(); ?>/psychology-kid/b7-4.webp" alt="">
-            </div>
-            <div class="kidgrid__text">Социальные учреждения</div>
+          <div class="kidgrid__text">Или открыть свою частную практику</div>
+        </div>
+        <div class="kidgrid__item">
+          <div class="kidgrid__picwrap js-slide-opac">
+            <img src="<?=imgs(); ?>/psychology-kid/b7-4.webp" alt="">
           </div>
-          <div class="kidgrid__item">
-            <div class="kidgrid__picwrap js-slide-opac">
-              <img src="<?=imgs(); ?>/psychology-kid/b7-5.webp" alt="">
-            </div>
-            <div class="kidgrid__text">Психологический центр</div>
+          <div class="kidgrid__text">Социальные учреждения</div>
+        </div>
+        <div class="kidgrid__item">
+          <div class="kidgrid__picwrap js-slide-opac">
+            <img src="<?=imgs(); ?>/psychology-kid/b7-5.webp" alt="">
           </div>
+          <div class="kidgrid__text">Психологический центр</div>
         </div>
       </div>
     </div>
@@ -712,7 +710,7 @@ get_header();
         <span><b>детский психолог-<br>консультант</b></span>
         <img src="<?=imgs(); ?>/psychology-kid/b15-catalog.webp" alt="" class="psy-kid-catalog">
       </h3>
-      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить гайд']); ?>
+      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить гайд', 'bg' => '#fff']); ?>
     </div>
   </section><!-- //guideform -->
 
@@ -844,7 +842,7 @@ get_header();
             о&nbsp;начале учебы на&nbsp;курсе</p>
         </div>
       </div>
-      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Сделать выбор']); ?>
+      <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Сделать выбор', 'bg' => '#fff']); ?>
     </div>
   </section><!-- //stepform -->
 
@@ -987,7 +985,7 @@ get_header();
 
 
 
-
+  <?php if(get_field('is-show_quiz')): ?>
   <section class="quizlink">
     <div class="container">
       <h2 class="title">Подходит ли вам профессия <br><b>детский психолог-консультант?</b></h2>
@@ -1006,7 +1004,7 @@ get_header();
       </div>
     </div>
   </section><!-- //quizlink -->
-
+  <?php endif; ?>
 
 
 
@@ -1020,13 +1018,15 @@ get_header();
           <p>Первый платеж через 2 месяца.</p>
         </div>
       </div>
-      <div class="priceblock__greenprice jbm"><span>От</span> <span>9000</span> <span>₽/МЕС</span> <small>Скидка <b>до
-            24 марта</b></small></div>
+      <div class="priceblock__greenprice jbm">
+        <span>От</span> <span>9000</span> <span>₽/МЕС</span>
+        <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
+      </div>
       <div class="priceblock__mobdescr">
         <p>Беспроцентная рассрочка на 24 месяца.</p>
         <p>Первый платеж через 2 месяца.</p>
       </div>
-      <?php get_template_part('inc/leadform', null, ['isPromoForm' => true]); ?>
+      <?php get_template_part('inc/leadform', null, ['isPromoForm' => true, 'showTopTxt' => true]); ?>
     </div>
   </section><!-- //priceblock -->
 

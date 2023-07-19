@@ -1,0 +1,33 @@
+@use '../general/mixins' as *;
+
+
+.simplepage{
+  padding: var(--blockspace) 0;
+
+  @include media(s){
+    padding-top: 40px;
+  }
+
+  &__header{
+    margin-bottom: calc(var(--blockspace) / 2);
+
+    @include media(s){
+      margin-bottom: 20px;
+    }
+  }
+  &__title{
+    text-align: left;
+    font-size: 48px;
+    line-height: 1.2;
+
+    @include media(m){
+      font-size: 36px;
+    }
+    @include media(s){
+      font-size: 28px;
+    }
+  }
+  &__content{
+    max-width: 900px;
+  }
+}

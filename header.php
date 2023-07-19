@@ -47,20 +47,22 @@
       </button>
     </div>
 
-    <nav class="hdr__leftmenu">
-      <ul>
-        <li>
-          <a href="/blog/">Журнал</a>
-        </li>
-        <li>
-          <a href="<?=get_permalink(150); ?>">Отзывы</a>
-        </li>
-      </ul>
-    </nav>
+    <?php wp_nav_menu([
+      'menu' => 'Верхнее меню сайт',
+      'menu_class' => '',
+      'container' => 'nav',
+      'container_class' => 'hdr__leftmenu',
+    ]); ?>
 
     <aside class="hdr__right flexi">
-      <a href="<?=get_permalink(204); ?>">О Talentsy</a>
-      <a href="tel:88007753768" class="hdr__phone">8 800 775 37 68</a>
+      <?php wp_nav_menu([
+        'menu' => 'Верхнее меню сайт - справа',
+        'menu_class' => 'flexi',
+        'container' => 'nav',
+        'container_class' => '',
+      ]); ?>
+      <!-- <a href="<?=get_permalink(204); ?>">О Talentsy</a>
+      <a href="tel:88007753768" class="hdr__phone">8 800 775 37 68</a> -->
       <a href="https://lk.talentsy.ru/" class="hdr__login flexi">Вход</a>
     </aside>
 

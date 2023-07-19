@@ -76,7 +76,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-<section class="iphone iphone--fashion">
+<section class="iphone iphone--fashion mb-s-0">
   <div class="container">
     <h2 class="title js-slide-bot">
       Мы создали <i class="title-dot">i</i>Phone на рынке <br><b>обучения дизайну одежды </b>
@@ -347,7 +347,7 @@ $pics = imgs() . '/fashion-dizayner';
       <img src="<?= $pics; ?>/b9-catalog.png" alt="" class="fashion-catalog">
     </h3>
     <?php get_template_part('inc/leadform', null, [
-      'formClassName' => 'programfromlead__formwrap--yellow',
+      'bg' => '#ffda6b',
       'buttonTxt' => 'Получить гайд',
     ]); ?>
   </div>
@@ -480,7 +480,10 @@ $pics = imgs() . '/fashion-dizayner';
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию']); ?>
+    <?php get_template_part('inc/leadform', null, [
+      'buttonTxt' => 'Получить консультацию',
+      'bg' => '#fff',
+    ]); ?>
   </div>
 </section><!-- //stepform -->
 
@@ -505,7 +508,7 @@ $pics = imgs() . '/fashion-dizayner';
     </dl>
     <dl class="statistic__item">
       <dt class="js-slide-opac">78+</dt>
-      <dd>Часов воркшопов <br>и мастермайндов</dd>
+      <dd>Часов воркшопов <br>и&nbsp;мастермайндов</dd>
     </dl>
     <dl class="statistic__item">
       <dt class="js-slide-opac">847</dt>
@@ -525,7 +528,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-
+<?php if(get_field('is-show_quiz') && 1): ?>
 <section class="quizlink quizlink--fashion">
   <div class="container">
     <h2 class="title">Подходит ли тебе профессия <br><b>дизайнер одежды?</b></h2>
@@ -544,7 +547,7 @@ $pics = imgs() . '/fashion-dizayner';
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 
@@ -663,8 +666,10 @@ $pics = imgs() . '/fashion-dizayner';
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm"><span>От</span> <span>6250</span> <span>₽/МЕС</span> <small>Скидка <b>до
-          24 марта</b></small></div>
+    <div class="priceblock__greenprice jbm">
+      <span>От</span> <span>6250</span> <span>₽/МЕС</span>
+      <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
+    </div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>
       <p>Первый платеж через 2 месяца.</p>
@@ -672,6 +677,7 @@ $pics = imgs() . '/fashion-dizayner';
     <?php get_template_part('inc/leadform', null, [
       'formClassName' => '',
       'isPromoForm' => true,
+      'showTopTxt' => true
     ]); ?>
   </div>
 </section><!-- //priceblock -->

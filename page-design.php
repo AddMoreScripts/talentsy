@@ -5,16 +5,7 @@ Template name: Шаблон: Дизайнер интерьера
 get_header();
 ?>
 
-<nav class="breadcrumbs container jbm">
-  <a href="/">Главная</a>
-  <a href="">Факультет дизайна иинтерьера</a>
-  <span>Дизайнер интерьера</span>
-</nav>
-
-
-
 <section class="hero hero--disint">
-  <h2 class="hero__small">Курс дизайнера интерьера</h2>
   <div class="hero__h1 jbm js-slide-bot">
     За 1 год <img src="<?=imgs(); ?>/dizayner-interyera/b1-sm.webp" alt=""> сделаем из тебя <br>
     <b>успешного дизайнера интерьера</b> <br>
@@ -403,7 +394,7 @@ get_header();
 <section class="disint10">
   <div class="container">
     <h2 class="title">
-      мы Пригласили <b>БОЛЕЕ 100 ПАРТНЕРОВ-ПРОИЗВОДИТЕЛЕЙ МЕБЕЛИ</b><br>И ТЕХНИКИ
+      мы Пригласили <b>БОЛЕЕ 100 ПАРТНЕРОВ-ПРОИЗВОДИТЕЛЕЙ МЕБЕЛИ</b> <br>И ТЕХНИКИ
     </h2>
     <video preload="auto" playsinline autoplay loop muted class="lazy disint10__video">
       <source data-src="<?=imgs(); ?>/dizayner-interyera/b10-video.mp4">
@@ -790,7 +781,7 @@ get_header();
         </div>
         <div class="dreams__item">
           <div class="dreams__iconwrap">
-            <img src="<?=imgs(); ?>/dizayner-interyera/b22-5.webp" alt="" class="js-slide-opac">
+            <img src="<?=imgs(); ?>/dizayner-interyera/b22-5.webp" alt="" class="js-slide-opac radius0">
           </div>
           <div class="dreamsltitle">
             <span>Проектирование <br>жилых интерьеров</span>
@@ -801,7 +792,7 @@ get_header();
         </div>
         <div class="dreams__item">
           <div class="dreams__iconwrap">
-            <img src="<?=imgs(); ?>/dizayner-interyera/b22-6.webp" alt="" class="js-slide-opac">
+            <img src="<?=imgs(); ?>/dizayner-interyera/b22-6.webp" alt="" class="js-slide-opac radius0">
           </div>
           <div class="dreamsltitle">
             <span>Проектирование <br>коммерческих интерьеров</span>
@@ -883,7 +874,7 @@ get_header();
 </section><!-- //disint22 -->
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink disint23">
   <div class="container">
     <h2 class="title">Подходит ли тебе профессия <br><b>дизайнера интерьера?</b></h2>
@@ -902,7 +893,7 @@ get_header();
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 
@@ -916,8 +907,8 @@ get_header();
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm"><span>От</span> <span>6250</span> <span>₽/МЕС</span> <small>Скидка <b>до
-          24 марта</b></small></div>
+    <div class="priceblock__greenprice jbm"><span>От</span> <span>6250</span> <span>₽/МЕС</span>
+    <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small></div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>
       <p>Первый платеж через 2 месяца.</p>
@@ -925,6 +916,7 @@ get_header();
     <?php get_template_part('inc/leadform', null, [
       'formClassName' => 'programfromlead__formwrap--yellow',
       'isPromoForm' => true,
+      'showTopTxt' => true,
     ]); ?>
   </div>
 </section><!-- //priceblock -->

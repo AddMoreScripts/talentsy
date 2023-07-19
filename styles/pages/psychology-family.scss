@@ -11,8 +11,21 @@
     margin-top: 30px;
     padding-bottom: 15px;
 
-    @include media(m){
+    .hero__h1{
+      line-height: 1.1;
+    }
+    @include media(s){
+      margin-top: 0;
       padding-bottom: 60px;
+
+      .hero__h1{
+        font-size: 26px;
+        line-height: 1.05;
+
+        img:not(.hero-mob-img){
+          display: none;
+        }
+      }
     }
 
     .hero__small{

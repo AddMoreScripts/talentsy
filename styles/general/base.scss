@@ -159,7 +159,7 @@ body {
   pointer-events: none;
   width: 50px;
   height: 50px;
-  background: var(--psy-accent, #27b783);
+  background: #000;
   border-radius: 50%;
   position: fixed;
   opacity: 0;
@@ -293,7 +293,8 @@ body {
     background-size: contain;
 
     @include media(l){
-      right: calc(50% - 31px);
+      right: 36px;
+      top: 36px;
     }
     @include media(m){
       top: 40px;
@@ -336,6 +337,10 @@ body {
     br:not(.mobbr){
       display: none;
     }
+  }
+  @include media(xs){
+    font-size: 26px;
+    line-height: 1.15;
   }
 
   i{
@@ -390,6 +395,11 @@ body {
 
 .mb-0{
   margin-bottom: 0 !important;
+}
+.mb-s-0{
+  @include media(s){
+    margin-bottom: 0 !important;
+  }
 }
 
 .iconmobauto img{

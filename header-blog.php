@@ -21,18 +21,23 @@
       <button class="blogheader__burger" data-hystmodal="#menuBlogModal">
         <img src="<?=imgs();?>/blog/icon-burger.svg" alt="">
       </button>
-      <div class="blogheader__links flexi">
-        <a href="/">На главную</a>
-        <a href="<?=get_permalink(150); ?>">Отзывы</a>
-      </div>
+
+      <?php wp_nav_menu([
+        'menu' => 'Верхнее меню блог',
+        'menu_class' => 'flexi',
+        'container' => 'nav',
+        'container_class' => 'blogheader__links',
+      ]); ?>
+
     </div>
     <?php the_custom_logo(); ?>
     <div class="blogheader__right flexi">
-      <div class="blogheader__links flexi">
-        <a href="/blog/">Журнал</a>
-        <a href="<?=get_permalink(204); ?>">О Talentsy</a>
-        <a href="tel:88007753768">8 800 775 37 68</a>
-      </div>
+      <?php wp_nav_menu([
+        'menu' => 'Верхнее меню блог - справа',
+        'menu_class' => 'flexi',
+        'container' => 'nav',
+        'container_class' => 'blogheader__links',
+      ]); ?>
       <a href="https://lk.talentsy.ru/" class="blogheader__login">Вход</a>
     </div>
     <button class="blogheader__mobsearch" data-hystmodal="#menuSearchModal">

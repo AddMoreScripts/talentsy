@@ -5,16 +5,8 @@ Template name: Шаблон: Профессия психолог
 get_header();
 ?>
 
-
-<nav class="breadcrumbs container jbm">
-  <a href="/">Главная</a>
-  <a href="">Факультет психологии</a>
-  <span>Обучение на психолога</span>
-</nav>
-
-
 <section class="hero">
-  <h2 class="hero__small">Курсы по психологии</h2>
+  <!-- <h2 class="hero__small">Курсы по психологии</h2> -->
   <div class="hero__h1 jbm">
     За 1 год сделаем <img src="<?=imgs(); ?>/psychology/b1-sm.png" alt=""> из вас <br>
     <b>успешного психолога-консультанта</b><br>
@@ -76,7 +68,7 @@ get_header();
   </div>
 </section>
 
-<section class="programfromlead">
+<section class="programfromlead ptm0">
   <div class="container">
     <h2 class="title">
       Получить полную<br> <b>программу курса</b>
@@ -562,7 +554,7 @@ get_header();
         <p class="js-slide-interval">Даст подробную информацию <br>о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить программу']); ?>
+    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить консультацию']); ?>
   </div>
 </section><!-- //stepform -->
 
@@ -987,7 +979,7 @@ get_header();
       <span><b>психолог-консультант</b></span>
       <img src="<?=imgs(); ?>/psychology/b14-book.png" alt="">
     </h3>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить гайд']); ?>
+    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Получить гайд', 'bg' => "#fff"]); ?>
   </div>
 </section><!-- //guideform -->
 
@@ -1111,7 +1103,7 @@ get_header();
           о&nbsp;начале учебы на&nbsp;курсе</p>
       </div>
     </div>
-    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Сделать выбор']); ?>
+    <?php get_template_part('inc/leadform', null, ['buttonTxt' => 'Сделать выбор', 'bg' => "#fff"]); ?>
   </div>
 </section><!-- //stepform -->
 
@@ -1250,7 +1242,7 @@ get_header();
 
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink">
   <div class="container">
     <h2 class="title">Подходит ли вам профессия <br><b>Психолог-консультант?</b></h2>
@@ -1269,7 +1261,7 @@ get_header();
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 
@@ -1283,13 +1275,15 @@ get_header();
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm"><span>От</span> <span>6250</span> <span>₽/МЕС</span> <small>Скидка <b>до
-          24 марта</b></small></div>
+    <div class="priceblock__greenprice jbm">
+      <span>От</span> <span>6250</span> <span>₽/МЕС</span>
+      <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
+    </div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>
       <p>Первый платеж через 2 месяца.</p>
     </div>
-    <?php get_template_part('inc/leadform', null, ['isPromoForm' => true]); ?>
+    <?php get_template_part('inc/leadform', null, ['isPromoForm' => true, 'showTopTxt' => true]); ?>
   </div>
 </section><!-- //priceblock -->
 

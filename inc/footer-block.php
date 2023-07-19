@@ -49,60 +49,31 @@
         </section>
         <section class="footermiddle2">
           <h4 class="footermiddle__title">Факультеты</h4>
-          <div class="footermenu">
-            <ul>
-              <li>
-                <a href="<?=get_permalink(207); ?>">Моды и стиля</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(208); ?>">Современное искусство</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(209); ?>">Психология</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(210); ?>">Дизайн интерьера</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(211); ?>">Астрология</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(205); ?>">ЗОЖ</a>
-              </li>
-            </ul>
-          </div>
+          <?php wp_nav_menu([
+            'menu' => 'Подвал - факультеты',
+            'menu_class' => '',
+            'container' => 'nav',
+            'container_class' => 'footermenu',
+          ]); ?>
         </section>
         <section class="footermiddle3">
           <h4 class="footermiddle__title">О Talentsy</h4>
-          <div class="footermenu">
-            <ul>
-              <li>
-                <a href="">Проекты студентов</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(204); ?>">О Talentsy</a>
-              </li>
-              <li>
-                <a href="<?=get_permalink(150); ?>">Отзывы</a>
-              </li>
-              <li>
-                <a href="">Вакансии</a>
-              </li>
-              <li>
-                <a href="">Контакты</a>
-              </li>
-              <li>
-                <a href="">Партнерская программа</a>
-              </li>
-              <li><a href="">Программа лояльности</a></li>
-            </ul>
-          </div>
+          <?php wp_nav_menu([
+            'menu' => 'Подвал - о Talentsy',
+            'menu_class' => '',
+            'container' => 'nav',
+            'container_class' => 'footermenu',
+          ]); ?>
         </section>
         <section class="footermiddle4">
-          <a href="https://vk.com/talentsyofficial" class="footersoclink" target="_blank">Вконтакте</a>
-          <a href="https://www.youtube.com/channel/UCZCFFjqhDwfI7Bmn7Z_jD0w?view_as=subscriber" class="footersoclink" target="_blank">Ютюб</a>
-          <a href="https://pin.it/64rsuUj" class="footersoclink" target="_blank">Pinterest</a>
+          <?php wp_nav_menu([
+            'menu' => 'Подвал - соцсети',
+            'menu_class' => '',
+            'container' => 'nav',
+            'container_class' => '',
+          ]); ?>
 
+          <?php if(0): ?>
           <a href="https://academy-market.com/school-reviews/talentsy" target="_blank" class="acmarket flexi">
             <div class="acmarket__balls flexi">4.5</div>
             <div class="acmarket__descr">
@@ -115,6 +86,8 @@
               </div>
             </div>
           </a>
+          <?php endif; ?>
+
         </section>
       </div><!-- //footermiddle -->
     </div>
@@ -126,35 +99,20 @@
   <div class="mobfoot">
     <div class="mobfoot__title">О Talentsy</div>
     <div class="mobfoot__twocol">
-      <div class="mobfoot__menu">
-        <ul>
-          <li>
-            <a href="<?=get_permalink(204); ?>">О Talentsy</a>
-          </li>
-          <li>
-            <a href="#">Проекты студентов</a>
-          </li>
-          <li>
-            <a href="<?=get_permalink(150); ?>">Отзывы</a>
-          </li>
-          <li>
-            <a href="#">Вакансии</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-          <li>
-            <a href="#">Партнерская программа</a>
-          </li>
-          <li>
-            <a href="#">Программа лояльности</a>
-          </li>
-        </ul>
-      </div>
+      <?php wp_nav_menu([
+        'menu' => 'Подвал - о Talentsy',
+        'menu_class' => '',
+        'container' => 'nav',
+        'container_class' => 'mobfoot__menu',
+      ]); ?>
+
       <div class="mobfoot__right">
-        <a href="https://vk.com/talentsyofficial" class="mobfoot__soclink" target="_blank">Вконтакте</a>
-        <a href="https://www.youtube.com/channel/UCZCFFjqhDwfI7Bmn7Z_jD0w?view_as=subscriber" class="mobfoot__soclink" target="_blank">Ютюб</a>
-        <a href="https://pin.it/64rsuUj" class="mobfoot__soclink" target="_blank">Pinterest</a>
+        <?php wp_nav_menu([
+          'menu' => 'Подвал - соцсети',
+          'menu_class' => '',
+          'container' => 'nav',
+          'container_class' => '',
+        ]); ?>
         <a href="https://islod.obrnadzor.gov.ru/rlic/details/6fe5bf26-59b9-9ba3-c6bb-1c51f27dacd7/" target="_blank" class="mobfoot__lic flexi">
           <img src="<?=imgs();?>/footer/licence.jpg" alt="">
           <span>Государ-ственная лицензия</span>
@@ -162,6 +120,8 @@
         <img src="<?=imgs();?>/footer/sk.png" alt="" class="mobfoot__sk">
       </div>
     </div><!-- //mobfoot__twocol -->
+
+    <?php if(0): ?>
     <a href="https://academy-market.com/school-reviews/talentsy" target="_blank" class="acmarket flexi">
       <div class="acmarket__balls flexi">4.5</div>
       <div class="acmarket__descr">
@@ -174,6 +134,10 @@
         </div>
       </div>
     </a>
+    <?php endif; ?>
+
+    <div style="height:40px;"></div>
+
     <div class="mobfoot__contacts">
       <a href="tel:+78007753768" class="mobfoot__phonelink">8 800 775-3768</a>
       <div class="mobfoot__addr">Москва, Ащеулов пер, д.9</div>
@@ -202,10 +166,11 @@
       </dl>
     </div>
     <div class="footerbot__links flexi">
-      <a href="#">Договор <br class="mobbr">оферты</a>
-      <a href="#">Реквизиты <br class="mobbr">и оплата</a>
+      <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">Договор <br class="mobbr">оферты</a>
+      <a href="https://talentsy.ru/sposoby-oplaty" target="_blank">Реквизиты <br class="mobbr">и оплата</a>
+      <a href="https://host.talentsy.ru/legal/agreement_PD_15.03.23.pdf" target="_blank">Согласие на обработку <br>персональных данных</a>
       <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">Политика конфиденциальности</a>
-      <a href="#">Документы образовательной организации</a>
+      <a href="https://talentsy.ru/docymenty_organizatcii" target="_blank">Документы образовательной организации</a>
       <div>Talentsy 2023</div>
     </div>
   </div><!-- //footerbot -->

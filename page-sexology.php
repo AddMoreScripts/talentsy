@@ -5,17 +5,8 @@ Template name: Шаблон: Профессия сексолог
 get_header();
 ?>
 
-<nav class="breadcrumbs container jbm">
-  <a href="/">Главная</a>
-  <a href="">Факультет психологии</a>
-  <span>Консультант в сфере сексуальных отношений</span>
-</nav>
-
-
-
 <section class="hero hero--sex">
-  <h2 class="hero__small">Сексолог</h2>
-  <div class="hero__h1 jbm">
+  <div class="hero__h1 font66 jbm">
     Профессия «Консультант<br>
     <b>в сфере сексуальных</b> <br>
     отношений»
@@ -704,7 +695,7 @@ get_header();
       <b>Вы получаете диплом <br>установленного образца</b> <br>
       о профессиональной переподготовке
     </h2>
-    <div class="diplomblock__sub js-slide-opac">А так же два международных диплома</div>
+    <div class="diplomblock__sub js-slide-opac">А также два международных диплома</div>
     <div class="swiper js-diplomblock-slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -1058,7 +1049,7 @@ get_header();
 </div>
 
 
-
+<?php if(get_field('is-show_quiz')): ?>
 <section class="quizlink">
   <div class="container">
     <h2 class="title">Подходит ли вам профессия <br>Сексолог-консультант?</h2>
@@ -1077,7 +1068,7 @@ get_header();
     </div>
   </div>
 </section><!-- //quizlink -->
-
+<?php endif; ?>
 
 
 
@@ -1143,7 +1134,7 @@ get_header();
         </div>
         <div class="dreams__item dreams__item--border dreams__item--extra">
           <div class="dreams__iconwrap dreams__iconwrap--wide">
-            <img src="<?= imgs(); ?>/sexolog/b23-6.png" alt="" class="js-slide-opac">
+            <img src="<?= imgs(); ?>/sexolog/b23-6.png" alt="" class="js-slide-opac radius0">
           </div>
           <div class="dreamsltitle">
             Получать оргазм во время интимной<br>
@@ -1181,7 +1172,7 @@ get_header();
       </div>
     </div>
 
-    <h2 class="title">
+    <h2 class="title sex23__bottitle">
       а также <b>Консультировать <br>родителей</b> по вопросам детской<br>и подростковой сексуальности
     </h2>
   </div>
@@ -1242,15 +1233,15 @@ get_header();
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm"><span>От</span> <span>5000</span> <span>₽/МЕС</span> <small>Скидка <b>до
-          7 апреля</b></small></div>
+    <div class="priceblock__greenprice jbm"><span>От</span> <span>5000</span> <span>₽/МЕС</span>
+    <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small></div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>
       <p>Первый платеж через 2 месяца.</p>
     </div>
     <?php get_template_part('inc/leadform', null, [
       'formClassName' => 'programfromlead__formwrap--red',
-      'buttonTxt' => 'Получить гайд',
+      'showTopTxt' => true,
       'isPromoForm' => true,
     ]); ?>
   </div>

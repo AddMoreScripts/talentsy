@@ -28,9 +28,6 @@
                 <a href="<?=get_permalink(210); ?>" data-tablink="design">Дизайн <br>интерьера</a>
               </li>
               <li>
-                <a href="<?=get_permalink(211); ?>" data-tablink="astro">Астрология</a>
-              </li>
-              <li>
                 <a href="<?=get_permalink(205); ?>" data-tablink="zog">ЗОЖ</a>
               </li>
             </ul>
@@ -134,11 +131,17 @@
                     <li><a href="<?=get_permalink(133); ?>">Консультант в сфере <br>сексуальных отношений</a></li>
                     <li><a href="<?=get_permalink(134); ?>">Детский психолог-консультант</a></li>
                     <li><a href="<?=get_permalink(138); ?>">Семейный психолог-консультант</a></li>
+                    <li><a href="<?=get_permalink(148); ?>">Профессия Астролог</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
                   <a href="<?=get_permalink(209); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
+                  <ul class="menuwindow__submenu">
+                    <li><a href="https://talentsy.ru/psychology_orkt">Ориентированная на решение <br>краткосрочная терапия</a></li>
+                    <li><a href="https://talentsy.ru/psychology_ppks">Кризисное консультирование</a></li>
+                    <li><a href="https://talentsy.ru/psychology_rpck">Работа со сложными клиентами</a></li>
+                  </ul>
                 </div>
               </div>
             </div><!-- //menuwindow__tab -->
@@ -151,8 +154,8 @@
                   <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="<?=get_permalink(136); ?>" style="color: inherit">Дизайнер Интерьера</a></li>
-                    <li><a href="<?=get_permalink(140); ?>" style="color: inherit">Декоратор Интерьера</a></li>
+                    <li><a href="<?=get_permalink(136); ?>" >Дизайнер Интерьера</a></li>
+                    <li><a href="<?=get_permalink(140); ?>" >Декоратор Интерьера</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -163,7 +166,7 @@
                     и приобрести новый навык
                   </div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/interior_scatch" style="color: inherit">Интерьерный скетчинг</a></li>
+                    <li><a href="/interior_scatch" >Интерьерный скетчинг</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -174,6 +177,7 @@
             </div><!-- //menuwindow__tab -->
 
 
+            <?php if(0): ?>
             <div class="menuwindow__tab" data-tab="astro">
               <button class="menuwindow__tabclose" data-tablink="none"><img src="<?=imgs(); ?>/menu/icon-arrow.svg" alt=""></button>
               <div class="menuwindow__tabgrid">
@@ -182,7 +186,7 @@
                   <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="<?=get_permalink(148); ?>" style="color: inherit">Профессия Астролог</a></li>
+                    <li><a href="<?=get_permalink(148); ?>" >Профессия Астролог</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -191,6 +195,7 @@
                 </div>
               </div>
             </div><!-- //menuwindow__tab -->
+            <?php endif; ?>
 
 
             <div class="menuwindow__tab" data-tab="zog">
@@ -201,7 +206,8 @@
                   <a href="<?=get_permalink(205); ?>" class="menuwindow__h2">Профессии</a>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="<?=get_permalink(149); ?>" style="color: inherit">Профессия Нутрициолог</a></li>
+                    <li><a href="<?=get_permalink(149); ?>">Профессия Нутрициолог</a></li>
+                    <li><a href="https://talentsy.ru/health-ra">Расшифровка анализов</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
