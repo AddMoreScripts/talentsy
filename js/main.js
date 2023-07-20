@@ -67,9 +67,12 @@ window.modalInstance = new HystModal({
  * см. https://github.com/verlok/vanilla-lazyload
  */
 new LazyLoad();
-var myLazyLoad2 = new LazyLoad({
-  container: document.querySelector(".reviewsslider__cont")
-});
+const reviewSliderCont = document.querySelector(".reviewsslider__cont");
+if(reviewSliderCont){
+  const myLazyLoad2 = new LazyLoad({
+    container: reviewSliderCont
+  });
+}
 document.querySelectorAll('.grid-mob-scroll').forEach(el => {
   new LazyLoad({ container: el });
 })
@@ -176,3 +179,26 @@ function startBricks(){
   });
 }
 startBricks();
+
+
+
+
+function startFileInput(){
+  document.addEventListener('change', (e) => {
+    const fileInp = e.target.closest('.fileinput input');
+    if(!fileInp) return;
+    const infoElem = fileInp.parentElement.querySelector('.fileinput__info');
+
+    const newFile = e.target.files[0];
+    if (newFile.size > 10485760) {
+      alert("Ошибка. Файл больше 10 МБ!");
+      fileInp.value = "";
+      infoElem.innerHTML = '';
+      return;
+    }
+
+    infoElem.innerHTML = newFile.name;
+    return;
+  });
+}
+startFileInput();

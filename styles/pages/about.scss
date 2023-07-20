@@ -2,13 +2,10 @@
 
 
 .page-template-page-about{
-  .front3__bg::before{
-    background: linear-gradient(to top, var(--bgcolor) 0%, rgb(245, 238, 230) 100%);
-  }
 
   .front6--about{
     padding-top: 0;
-    height: 400px;
+    // height: 400px;
 
     @include media(m){
       height: 50px;
@@ -109,6 +106,17 @@
       width: 100vw;
       height: 100vh;
     }
+  }
+
+  &__opacitystart{
+    position: absolute;
+    top: 550px;
+    left: 0;
+    background: none;
+    pointer-events: none;
+    height: 100px;
+    width: 100%;
+    z-index: 20;
   }
 }
 
@@ -340,6 +348,7 @@
 
 
 .abouttab1 {
+  margin-bottom: 115px;
   &__nums {
     margin-top: 55px;
     margin-bottom: 55px;
@@ -639,6 +648,7 @@
 .abouttab3 {
   padding-top: 40px;
   padding-bottom: 120px;
+  margin-bottom: 100px;
 
   @include media(m){
     padding-bottom: 50px;
@@ -805,4 +815,22 @@
   *:not(:placeholder-shown) + label{
     transform: translateY(-18px) scale(.7);
   }
+}
+
+
+
+.front5--about{
+  background-color: #e7e2ff;
+  padding-top: 200px;
+}
+
+.aboutscrollpixs{
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 100;
+  height: 1250px;
 }

@@ -917,7 +917,10 @@ $pics = imgs() . '/nutriciolog';
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm js-slide-bot"><span>От</span> <span>5000</span> <span>₽/МЕС</span> <small>Скидка 40% <b>до 24 марта</b></small></div>
+    <div class="priceblock__greenprice jbm js-slide-bot">
+      <span>От</span> <span>5000</span> <span>₽/МЕС</span>
+      <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
+    </div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>
       <p>Первый платеж через 2 месяца.</p>

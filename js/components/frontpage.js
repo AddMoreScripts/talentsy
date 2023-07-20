@@ -1,21 +1,5 @@
 export const initFrontpage = () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-  if(document.querySelector('.smooth-wrapper')){
-    let isSmoothrKilled = true;
-    let smoother = null;
-
-    if(window.innerWidth > 990){
-      smoother = ScrollSmoother.create({
-        wrapper: '.smooth-wrapper',
-        content: '.smooth-content',
-        smooth: 1,
-        effects: true,
-        normalizeScroll: true,
-      });
-      isSmoothrKilled = false;
-    }
-  }
+  gsap.registerPlugin(ScrollTrigger);
 
 
   if(document.querySelector('.front2')){
@@ -28,10 +12,40 @@ export const initFrontpage = () => {
         scrub: true
       }
     });
+
+
+    if( window.innerWidth > 1000){
+      const pinTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.front2',
+          start: "top bottom",
+          end: 'bottom top',
+          scrub: true,
+          markers: false,
+          pin: false,
+        }
+      });
+      pinTimeline.to('.front2--0', {
+        y: -400,
+        ease: 'linear',
+      }, 'anim2');
+      pinTimeline.to('.front2--1', {
+        y: -100,
+        ease: 'linear',
+      }, 'anim2');
+      pinTimeline.to('.front2--2', {
+        y: -250,
+        ease: 'linear',
+      }, 'anim2');
+      pinTimeline.to('.front2--3', {
+        y: -500,
+        ease: 'linear',
+      }, 'anim2');
+    }
   }
 
   if(document.querySelector('.front4')){
-    gsap.fromTo('body', { 'background-color': '#ffffff' }, {
+    gsap.to('body', {
       'background-color': 'rgb(231, 226, 255)',
       scrollTrigger: {
         trigger: '.front4',
@@ -44,44 +58,58 @@ export const initFrontpage = () => {
 
 
   if(document.querySelector('.js-front5-title')){
-    const offsetElem = document.querySelector('.front5__titlewrap');
+    const picswrap = document.querySelector('.aboutscrollpixs');
 
     const pinTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.js-front5-title',
         start: "center center",
-        endTrigger: '.front6',
-        end: `-${(offsetElem.scrollHeight / 2)}px center`,
+        end: '2500px',
         scrub: true,
         markers: false,
         pin: true,
-        pinSpacing: false,
       }
     });
+
+    if(document.querySelector('.front5--about')){
+      pinTimeline.to('.front5--about', {
+        'background-color': 'rgba(255, 255, 255, 0)',
+        duration: 5,
+        ease: Expo.easeIn,
+      }, 'myLabel');
+    }
+
+    if(document.querySelector('.front5--front')){
+      pinTimeline.to('body', {
+        'background-color': 'rgb(245, 238, 230)',
+        duration: 5,
+        ease: Expo.easeIn,
+      }, 'myLabel');
+    }
+
+    pinTimeline.to(picswrap, {
+      y: `-${picswrap.scrollHeight + window.innerHeight}`,
+      ease: "linear",
+      duration: 5,
+    }, 'myLabel');
+
 
     pinTimeline.to('.front5__pic2', {
-      y: '-250',
-    });
+      y: '-600',
+      ease: "linear",
+      duration: 5,
+    }, 'myLabel');
 
-    const animateIn = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.js-opacstart',
-        start: "top center",
-        markers: false,
-        end: `+=10`,
-        toggleActions: "play none none reverse",
-        ease: 'none',
-      }
-    });
-    animateIn.fromTo('.front5__sub', {
-      scale: '1',
+    pinTimeline.fromTo('.front5__sub', {
+      scale: 0.95,
       opacity: '0',
+      ease: "linear",
+      duration: 1,
     }, {
       scale: '1',
       opacity: '1',
-    });
-    animateIn.to('body', {
-      'background-color': 'rgb(245, 238, 230)',
+      ease: "linear",
+      duration: 1,
     });
   }
 
@@ -115,6 +143,10 @@ export const initFrontpage = () => {
           }
         });
         return;
+      } else {
+        bgsFront3.forEach((bg, index) => {
+          bg.classList.remove('is-active');
+        })
       }
     });
   }
@@ -158,27 +190,41 @@ function animateAbout(){
       pin: ".aboutloader",
       start: "top top",
       end:"bottom top",
-      scrub: 1,
+      scrub: true,
       markers: false,
     }
   });
 
   timeline.to(about1logo, {
     scale: 6,
-  });
-  timeline.to(about1logo, {
-    opacity: 0,
-  }, '<');
+    ease: 'linear',
+  }, 'aboutlabel');
   timeline.to(about1bg, {
     scale: 1.1,
-  }, '<');
+    ease: 'linear',
+  }, 'aboutlabel');
+
+
+  const timelineOpac = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".aboutloader__opacitystart",
+      start: "top top",
+      end:"400px",
+      scrub: true,
+      markers: false,
+    }
+  });
+  timelineOpac.to(about1logo, {
+    opacity: 0,
+  });
+
 
   const timeline2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".about2",
       start: "top bottom",
       end: "+=500",
-      scrub: 1,
+      scrub: true,
       markers: false,
     }
   });

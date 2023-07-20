@@ -10,7 +10,7 @@
 
   <script src="<?=get_template_directory_uri(); ?>/js/custom/gsap.min.js"></script>
   <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollTrigger.min.js"></script>
-  <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollSmoother.min.js"></script>
+  <!-- <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollSmoother.min.js"></script> -->
   <?= vite('js/main.js') ?>
 </head>
 

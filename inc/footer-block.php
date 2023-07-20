@@ -19,7 +19,7 @@
             <input type="email" placeholder="Почта" name="mail">
           </div>
         </div>
-        <div class="footerform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="#">персональных
+        <div class="footerform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=personal_link(); ?>" target="_blank">персональных
             данных</a></div>
       </div>
       <div class="footerform__right">
@@ -166,9 +166,9 @@
       </dl>
     </div>
     <div class="footerbot__links flexi">
-      <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">Договор <br class="mobbr">оферты</a>
+      <a href="<?=get_permalink(342); ?>">Договор <br class="mobbr">оферты</a>
       <a href="https://talentsy.ru/sposoby-oplaty" target="_blank">Реквизиты <br class="mobbr">и оплата</a>
-      <a href="https://host.talentsy.ru/legal/agreement_PD_15.03.23.pdf" target="_blank">Согласие на обработку <br>персональных данных</a>
+      <!-- <a href="https://host.talentsy.ru/legal/agreement_PD_15.03.23.pdf" target="_blank">Согласие на обработку <br>персональных данных</a> -->
       <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">Политика конфиденциальности</a>
       <a href="https://talentsy.ru/docymenty_organizatcii" target="_blank">Документы образовательной организации</a>
       <div>Talentsy 2023</div>

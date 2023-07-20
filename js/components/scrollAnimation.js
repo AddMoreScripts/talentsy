@@ -80,6 +80,38 @@ function initScrollAnimation() {
       top: 100,
     },
   });
+
+  ScrollReveal().reveal(document.querySelectorAll(".js-slide-spin"), {
+    rotate: {
+      z: -30
+    },
+    duration: 600,
+    useDelay: "always",
+    origin: "bottom",
+    interval: 300,
+    reset: false,
+    mobile: false,
+    viewOffset: {
+      bottom: 100,
+      top: 100,
+    },
+  });
+
+  ScrollReveal().reveal(document.querySelectorAll(".js-slide-spinrev"), {
+    rotate: {
+      z: 30
+    },
+    duration: 800,
+    useDelay: "always",
+    origin: "bottom",
+    interval: 300,
+    reset: false,
+    mobile: false,
+    viewOffset: {
+      bottom: 100,
+      top: 100,
+    },
+  });
 }
 
 export default initScrollAnimation;

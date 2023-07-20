@@ -17,7 +17,7 @@ $pics = imgs() . '/facult-design';
       <img src="<?=$pics; ?>/b1-left.png" alt="" class="facdesign-left" data-x="-40" data-y="-20" data-scale="1.1">
       <img src="<?=$pics; ?>/b1-right.png" alt="" class="facdesign-right" data-x="40" data-y="-20" data-scale="1.1">
       <img src="<?=$pics; ?>/b1-kreslo.png" alt="" class="facdesign-mid" data-x="40" data-y="-20" data-scale="1.1">
-      <img src="<?=$pics; ?>/b1-text.svg" alt="" class="facdesign-text1">
+      <img src="<?=$pics; ?>/b1-text.svg" alt="" class="facdesign-text1 js-slide-spinrev">
     </div>
     <div class="faculthero__buttonwrap">
       <div class="faculthero__bgbutton"></div>

@@ -15,8 +15,8 @@ $pics = imgs() . '/facult-isskustva';
       <img src="<?=$pics; ?>/b1-left.png" alt="" class="facisscus-left" data-x="-40" data-y="-20" data-scale="1.1">
       <img src="<?=$pics; ?>/b1-right.png" alt="" class="facisscus-right" data-x="40" data-y="-20" data-scale="1.1">
       <img src="<?=$pics; ?>/b1-middle.png" alt="" class="facisscus-mid" data-scale="1.1">
-      <img src="<?=$pics; ?>/b1-text1.svg" alt="" class="facisscus-text1">
-      <img src="<?=$pics; ?>/b1-text2.svg" alt="" class="facisscus-text2">
+      <img src="<?=$pics; ?>/b1-text1.svg" alt="" class="facisscus-text1 js-slide-spin">
+      <img src="<?=$pics; ?>/b1-text2.svg" alt="" class="facisscus-text2 js-slide-spin">
     </div>
     <div class="faculthero__buttonwrap">
       <div class="faculthero__bgbutton"></div>

@@ -29,8 +29,8 @@ $pics = imgs() . '/facult-zozh';
       <img src="<?=$pics; ?>/icon-6.png" alt="" class="faczozh-abs6"  data-x="-50" data-y="-40" data-scale="1.2">
       <img src="<?=$pics; ?>/icon-7.png" alt="" class="faczozh-abs7"  data-x="-50" data-y="-40" data-scale="1.2">
       <img src="<?=$pics; ?>/icon-8.png" alt="" class="faczozh-abs8"  data-x="-50" data-y="-40" data-scale="1.2">
-      <img src="<?=$pics; ?>/text-1.png" alt="" class="faczozh-text1">
-      <img src="<?=$pics; ?>/text-2.png" alt="" class="faczozh-text2">
+      <img src="<?=$pics; ?>/text-1.png" alt="" class="faczozh-text1 js-slide-spin">
+      <img src="<?=$pics; ?>/text-2.png" alt="" class="faczozh-text2 js-slide-spin">
     </div>
     <div class="faculthero__buttonwrap">
       <div class="faculthero__bgbutton"></div>

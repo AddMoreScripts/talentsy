@@ -2022,6 +2022,9 @@
           display: none;
         }
       }
+      @include media(s) {
+        margin-top: 15px;
+      }
     }
 
     &--verbg {

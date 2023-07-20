@@ -130,3 +130,9 @@ function getTomorow()
   ];
   return (intval($now->format('d')) + 1) . ' ' . $month[$now->format('n')];
 }
+
+
+
+function personal_link(){
+  return 'https://host.talentsy.ru/legal/agreement_PD_15.03.23.pdf';
+}

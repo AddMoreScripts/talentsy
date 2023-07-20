@@ -59,14 +59,14 @@ $bg = isset($args['bg']) ? $args['bg'] : false;
           <div class="programfromlead__promoformwrap"></div>
         <?php endif; ?>
 
-        <div class="accept">Отправляя данную форму вы соглашаетесь с условиями <a href="<?=get_privacy_policy_url(); ?>">оферты</a> и политикой <a href="/wp-content/uploads/2023/07/privacy_policy_15.03.23.pdf" target="_blank">обработки персональных данных</a></div>
+        <div class="accept">Отправляя данную форму вы соглашаетесь с условиями <a href="<?=get_privacy_policy_url(); ?>" target="_blank">оферты</a> и политикой <a href="<?=personal_link(); ?>" target="_blank">обработки персональных данных</a></div>
       </div><!-- //programfromlead__left -->
       <div class="programfromlead__right">
         <button class="programfromlead__submit circlebutton">
           <span><?=$buttonTxt; ?></span>
         </button>
-        <div class="accept accept--mob">Отправляя данную форму вы соглашаетесь с условиями <a href="<?=get_privacy_policy_url(); ?>">оферты</a> и
-          политикой <a href="/wp-content/uploads/2023/07/privacy_policy_15.03.23.pdf" target="_blank">обработки персональных данных</a></div>
+        <div class="accept accept--mob">Отправляя данную форму вы соглашаетесь с условиями <a href="<?=get_privacy_policy_url(); ?>" target="_blank">оферты</a> и
+          политикой <a href="<?=personal_link(); ?>" target="_blank">обработки персональных данных</a></div>
       </div>
     </div>
   </div>

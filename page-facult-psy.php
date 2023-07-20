@@ -14,8 +14,8 @@ $pics = imgs() . '/facult-psy';
       </div>
       <img src="<?=$pics; ?>/b1-left.png" alt="" class="facpsy-left" data-x="-40" data-y="-20" data-scale="1.1">
       <img src="<?=$pics; ?>/b1-right.png" alt="" class="facpsy-right" data-x="40" data-y="-20" data-scale="1.1">
-      <img src="<?=$pics; ?>/b1-text1.svg" alt="" class="facpsy-text1">
-      <img src="<?=$pics; ?>/b1-text2.svg" alt="" class="facpsy-text2">
+      <img src="<?=$pics; ?>/b1-text1.svg" alt="" class="facpsy-text1 js-slide-spin">
+      <img src="<?=$pics; ?>/b1-text2.svg" alt="" class="facpsy-text2 js-slide-spin">
     </div>
     <div class="faculthero__buttonwrap">
       <div class="faculthero__bgbutton"></div>

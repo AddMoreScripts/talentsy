@@ -20,7 +20,7 @@
     height: 1500px;
 
     @include media(m){
-      height: 565px;
+      height: 520px;
     }
   }
 
@@ -36,10 +36,10 @@
       padding-top: 130px;
     }
     @include media(m){
-      height: 565px;
-      // background: url(/img/frontpage/mobbg.gif) center bottom no-repeat;
+      height: 520px;
       padding-top: 115px;
     }
+    @include media(s){}
   }
 
   &__title {
@@ -128,7 +128,11 @@
       top: 90px;
     }
     @include media(m){
-      width: 550px;
+      width: 100%;
+      min-width: 550px;
+      height: calc(100% + 50px);
+      object-position: center 60%;
+      object-fit: cover;
       top: -50px;
     }
   }
@@ -151,15 +155,22 @@
 .front2 {
   position: relative;
   z-index: 5;
+  margin-bottom: 100px;
+
+  @include media(s){
+    margin-bottom: 0;
+  }
+
   &__wrap {
     justify-content: space-between;
     margin-top: -130px;
+    margin-top: 0;
 
     @include media(l){
       margin-top: 0;
     }
     @include media(m){
-      margin-top: 40px;
+      margin-top: 45px;
       flex-flow: column nowrap;
     }
   }
@@ -358,11 +369,11 @@
 
 
 .front3 {
-  margin-top: -210px;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  --spaces: 300px;
+  --spaces: 600px;
+  margin-top: calc(0px - var(--spaces));
   padding: var(--spaces) 0;
 
   @include media(l){
@@ -592,13 +603,13 @@
   padding-top: 200px;
   position: relative;
   overflow: hidden;
-  padding-bottom: 1000px;
+  // padding-bottom: 1000px;
 
   @include media(l){
   }
   @include media(m){
     padding-top: 120px;
-    padding-bottom: 600px;
+    // padding-bottom: 600px;
   }
 
   &__titlewrap{
@@ -651,6 +662,10 @@
       text-align: center;
       width: 100%;
     }
+    @include media(s){
+      font-size: 15px;
+      line-height: 1.4;
+    }
   }
 
   &__pics{
@@ -681,7 +696,8 @@
   &__pic2{
     display: block;
     position: absolute;
-    top: -160px;
+    // top: -160px;
+    top: 0;
     left: 30px;
     max-width: 100%;
     width: 1100px;
@@ -749,7 +765,7 @@
   }
 }
 .front6{
-  padding-top: 300px;
+  padding-top: 150px;
   overflow: hidden;
   margin-bottom: 70px;
 

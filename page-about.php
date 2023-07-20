@@ -14,6 +14,7 @@ $pics = imgs() . '/about';
   <div class="aboutloader">
     <img src="<?= $pics; ?>/loader-2.svg" alt="" class="aboutloader__pre">
   </div>
+  <div class="aboutloader__opacitystart"></div>
 
   <section class="about2">
     <div class="about2__title druk">
@@ -189,7 +190,7 @@ $pics = imgs() . '/about';
       <div class="about3__tab abouttab4" data-tab="about4">
         <div class="container">
           <div class="abouttab2__title druk">Свяжитесь с нами</div>
-          <form action="/" class="abloutform">
+          <form action="/" class="abloutform" method="post" enctype="multipart/form-data">
             <img src="<?= $pics; ?>/tab4-leftline.svg" alt="" class="abloutform__abs">
             <img src="<?= $pics; ?>/tab4-rightline.svg" alt="" class="abloutform__abs2">
             <div class="floatinp">
@@ -220,10 +221,17 @@ $pics = imgs() . '/about';
               <textarea name="Textarea" id="Textarea"  class="floatinp__textarea" placeholder=" "></textarea>
               <label for="Textarea">Комментарий</label>
             </div>
+            <div class="fileinput flexi">
+              <label for="fileInput" class="fileinput__label flexi">Загрузить файл</label>
+              <input type="file" name="file" id="fileInput" accept=".png, .jpg, .jpeg, .pdf, .doc, .docx">
+              <div class="fileinput__info"></div>
+            </div>
+
             <div class="abloutform__submit">
               <button class="button" type="submit">Отправить</button>
               <img src="<?=$pics; ?>/tab4-buttonbg.svg" alt="">
             </div>
+
             <div class="abloutform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="https://talentsy.ru/politika-obrabotki-personalnykh-dannykh" target="_blank">персональных данных</a></div>
           </form>
         </div>
@@ -238,7 +246,7 @@ $pics = imgs() . '/about';
 
 
 <?php if (1) : ?>
-  <div class="front5">
+  <div class="front5 front5--about">
     <div class="container">
       <div class="js-start-pin"></div>
       <div class="front5__titlewrap js-front5-title">
@@ -247,31 +255,34 @@ $pics = imgs() . '/about';
           Согласно разным исследованиям больше половины людей не любят то дело, которым они вынуждены заниматься. Вы способны осуществить свои мечты и&nbsp;подарить себе интересную, полную смысла жизнь. Мы помогаем людям найти любимое дело и начать на этом зарабатывать. Превратите своё увлечение в профессию!
         </div>
       </div>
-      <div class="front5__pics">
-        <picture class="front5__pic1">
-          <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-1.png">
-          <img src="<?= imgs(); ?>/frontpage/b5-1-mob.png" alt="">
-        </picture>
-        <picture class="front5__pic2" data-speed="1.3">
-          <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-2.png">
-          <img src="<?= imgs(); ?>/frontpage/b5-2-mob.png" alt="">
-        </picture>
-        <picture class="front5__picover">
-          <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-over.svg">
-          <img src="<?= imgs(); ?>/frontpage/b5-over-mob.svg" alt="">
-        </picture>
+      <div class="front5__pics aboutscrollpixs">
+        <div class="container">
+          <picture class="front5__pic1">
+            <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-1.png">
+            <img src="<?= imgs(); ?>/frontpage/b5-1-mob.png" alt="">
+          </picture>
+          <picture class="front5__pic2">
+            <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-2.png">
+            <img src="<?= imgs(); ?>/frontpage/b5-2-mob.png" alt="">
+          </picture>
+          <picture class="front5__picover">
+            <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-over.svg">
+            <img src="<?= imgs(); ?>/frontpage/b5-over-mob.svg" alt="">
+          </picture>
+        </div>
       </div>
       <div class="js-opacstart"></div>
     </div>
   </div>
 
-  <div class="front6 front6--about"></div>
+  <!-- <div class="front6 front6--about"></div> -->
 
 
 
   <?php
     $front3data = [
       [
+        'number' => 0,
         'title' => 'Мода и стиль',
         'link' => get_permalink(207),
         'line' => '/img/frontpage/b3-line1.svg',
@@ -281,6 +292,7 @@ $pics = imgs() . '/about';
         'linepos' => 'top:100%',
       ],
       [
+        'number' => 1,
         'title' => 'Современное искусство',
         'link' => get_permalink(208),
         'line' => '/img/frontpage/b3-line2.svg',
@@ -290,6 +302,7 @@ $pics = imgs() . '/about';
         'linepos' => 'bottom:0;',
       ],
       [
+        'number' => 2,
         'title' => 'Психология',
         'link' => get_permalink(209),
         'line' => '/img/frontpage/b3-line3.svg',
@@ -299,6 +312,7 @@ $pics = imgs() . '/about';
         'linepos' => 'top:100%;',
       ],
       [
+        'number' => 3,
         'title' => 'Дизайн интерьера',
         'link' => get_permalink(210),
         'line' => '/img/frontpage/b3-line4.svg',
@@ -307,16 +321,18 @@ $pics = imgs() . '/about';
         'bgcolor' => '#f5eee6',
         'linepos' => 'top;0;',
       ],
+      // [
+        // 'number' => 4,
+      //   'title' => 'Астрология',
+      //   'link' => get_permalink(211),
+      //   'line' => '/img/frontpage/b3-line5.svg',
+      //   'line-mob' => '/img/frontpage/b3-line5-m.svg',
+      //   'bg' => '/img/frontpage/b3-5.png',
+      //   'bgcolor' => '#f8f0e3',
+      //   'linepos' => 'bottom:0;',
+      // ],
       [
-        'title' => 'Астрология',
-        'link' => get_permalink(211),
-        'line' => '/img/frontpage/b3-line5.svg',
-        'line-mob' => '/img/frontpage/b3-line5-m.svg',
-        'bg' => '/img/frontpage/b3-5.png',
-        'bgcolor' => '#f8f0e3',
-        'linepos' => 'bottom:0;',
-      ],
-      [
+        'number' => 5,
         'title' => 'ЗОЖ',
         'link' => get_permalink(205),
         'line' => '/img/frontpage/b3-line6.svg',
@@ -347,7 +363,7 @@ $pics = imgs() . '/about';
                 <a href="<?= $data['link']; ?>" class="front3__link js-front3-link" data-bgnum="<?= $key; ?>"><?= $data['title']; ?></a>
                 <picture class="front3__linepic">
                   <source srcset="<?= get_template_directory_uri(); ?><?= $data['line']; ?>" media="(min-width:992px)">
-                  <img src="<?= get_template_directory_uri(); ?><?= $data['line-mob']; ?>" style="<?= $data['linepos']; ?>" alt="" class="front3__line front3__line--<?= $key; ?>">
+                  <img src="<?= get_template_directory_uri(); ?><?= $data['line-mob']; ?>" style="<?= $data['linepos']; ?>" alt="" class="front3__line front3__line--<?= $data['number']; ?>">
                 </picture>
               </div>
             <?php endforeach; ?>

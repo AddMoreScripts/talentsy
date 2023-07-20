@@ -15,8 +15,8 @@ $pics = imgs() . '/facult-modi';
       </div>
       <img src="<?=$pics; ?>/b1-left.png" alt="" class="facmodi-left" data-x="-40" data-y="-20" data-scale="1.1">
       <img src="<?=$pics; ?>/b1-right.png" alt="" class="facmodi-right" data-x="40" data-y="-20" data-scale="1.1">
-      <img src="<?=$pics; ?>/b1-text1.svg" alt="" class="faczozh-text1">
-      <img src="<?=$pics; ?>/b1-text2.svg" alt="" class="faczozh-text2">
+      <img src="<?=$pics; ?>/b1-text1.svg" alt="" class="facmodi-text1 js-slide-spin">
+      <img src="<?=$pics; ?>/b1-text2.svg" alt="" class="facmodi-text2 js-slide-spin">
     </div>
     <div class="faculthero__buttonwrap">
       <div class="faculthero__bgbutton"></div>
@@ -72,7 +72,7 @@ $pics = imgs() . '/facult-modi';
         </a>
 
         <div class="facultprogs__groups facultprogs__modigroup2">
-          <a href="/404/" class="facproff facproff-modi5" style="--bgcolor: #D2EEFF;">
+          <a href="<?=get_permalink(212); ?>" class="facproff facproff-modi5" style="--bgcolor: #D2EEFF;">
             <div class="facproff__picwrap">
               <img src="<?=$pics; ?>/proff5.svg" alt="" class="facproff__ava" width="112">
             </div>

@@ -4,10 +4,7 @@ Template name: Шаблон: Главная
 */
 get_header();
 ?>
-
-<div class="smooth-wrapper js-need-gsap">
-  <div class="smooth-content">
-
+    <div class="js-need-gsap"></div>
     <div class="frontlead">
       <div class="frontlead__bgs js-frontlead-bgs">
         <div class="frontleadbg is-active">
@@ -93,7 +90,7 @@ get_header();
       <div class="container">
         <div class="front2__wrap flexi">
           <?php foreach ($front2data as $key => $data) : ?>
-            <div class="front2__item" data-speed="<?= $data['speed']; ?>">
+            <div class="front2__item front2--<?=$key; ?>" data-speed="<?= $data['speed']; ?>">
               <div class="front2__picwrap">
                 <picture class="front2__pic front2__pic--<?= $key + 1; ?>">
                   <img src="<?= imgs(); ?>/frontpage/b2-<?= $key + 1; ?>.svg" alt="">
@@ -113,6 +110,7 @@ get_header();
     <?php
     $front3data = [
       [
+        'number' => 0,
         'title' => 'Мода и стиль',
         'link' => get_permalink(207),
         'line' => '/img/frontpage/b3-line1.svg',
@@ -122,6 +120,7 @@ get_header();
         'linepos' => 'top:100%',
       ],
       [
+        'number' => 1,
         'title' => 'Современное искусство',
         'link' => get_permalink(208),
         'line' => '/img/frontpage/b3-line2.svg',
@@ -131,6 +130,7 @@ get_header();
         'linepos' => 'bottom:0;',
       ],
       [
+        'number' => 2,
         'title' => 'Психология',
         'link' => get_permalink(209),
         'line' => '/img/frontpage/b3-line3.svg',
@@ -140,6 +140,7 @@ get_header();
         'linepos' => 'top:100%;',
       ],
       [
+        'number' => 3,
         'title' => 'Дизайн интерьера',
         'link' => get_permalink(210),
         'line' => '/img/frontpage/b3-line4.svg',
@@ -149,6 +150,7 @@ get_header();
         'linepos' => 'top;0;',
       ],
       // [
+        // 'number' => 4,
       //   'title' => 'Астрология',
       //   'link' => get_permalink(211),
       //   'line' => '/img/frontpage/b3-line5.svg',
@@ -158,6 +160,7 @@ get_header();
       //   'linepos' => 'bottom:0;',
       // ],
       [
+        'number' => 5,
         'title' => 'ЗОЖ',
         'link' => get_permalink(205),
         'line' => '/img/frontpage/b3-line6.svg',
@@ -188,7 +191,7 @@ get_header();
                   <a href="<?= $data['link']; ?>" class="front3__link js-front3-link" data-bgnum="<?= $key; ?>"><?= $data['title']; ?></a>
                   <picture class="front3__linepic">
                     <source srcset="<?= get_template_directory_uri(); ?><?= $data['line']; ?>" media="(min-width:992px)">
-                    <img src="<?= get_template_directory_uri(); ?><?= $data['line-mob']; ?>" style="<?= $data['linepos']; ?>" alt="" class="front3__line front3__line--<?= $key; ?>">
+                    <img src="<?= get_template_directory_uri(); ?><?= $data['line-mob']; ?>" style="<?= $data['linepos']; ?>" alt="" class="front3__line front3__line--<?= $data['number']; ?>">
                   </picture>
                 </div>
               <?php endforeach; ?>
@@ -227,7 +230,7 @@ get_header();
 
 
 
-    <div class="front5">
+    <div class="front5 front5--front">
       <div class="container">
         <div class="js-start-pin"></div>
         <div class="front5__titlewrap js-front5-title">
@@ -236,19 +239,21 @@ get_header();
             Согласно разным исследованиям больше половины людей не любят то дело, которым они вынуждены заниматься. Вы способны осуществить свои мечты и&nbsp;подарить себе интересную, полную смысла жизнь. Мы помогаем людям найти любимое дело и начать на этом зарабатывать. Превратите своё увлечение в профессию!
           </div>
         </div>
-        <div class="front5__pics">
-          <picture class="front5__pic1">
-            <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-1.png">
-            <img src="<?= imgs(); ?>/frontpage/b5-1-mob.png" alt="">
-          </picture>
-          <picture class="front5__pic2" data-speed="1.3">
-            <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-2.png">
-            <img src="<?= imgs(); ?>/frontpage/b5-2-mob.png" alt="">
-          </picture>
-          <picture class="front5__picover">
-            <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-over.svg">
-            <img src="<?= imgs(); ?>/frontpage/b5-over-mob.svg" alt="">
-          </picture>
+        <div class="front5__pics aboutscrollpixs">
+          <div class="container">
+            <picture class="front5__pic1">
+              <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-1.png">
+              <img src="<?= imgs(); ?>/frontpage/b5-1-mob.png" alt="">
+            </picture>
+            <picture class="front5__pic2" data-speed="1.3">
+              <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-2.png">
+              <img src="<?= imgs(); ?>/frontpage/b5-2-mob.png" alt="">
+            </picture>
+            <picture class="front5__picover">
+              <source media="(min-width: 992px)" srcset="<?= imgs(); ?>/frontpage/b5-over.svg">
+              <img src="<?= imgs(); ?>/frontpage/b5-over-mob.svg" alt="">
+            </picture>
+          </div>
         </div>
         <div class="js-opacstart"></div>
       </div>
@@ -501,8 +506,6 @@ get_header();
 
     <?php get_template_part('inc/footer-block'); ?>
 
-  </div>
-</div>
 
 <a class="scrollTop" href="#">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
