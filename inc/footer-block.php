@@ -165,13 +165,16 @@
         <dd>Лицензия ЦБ РФ №1481 от 11.08.2015</dd>
       </dl>
     </div>
-    <div class="footerbot__links flexi">
-      <a href="<?=get_permalink(342); ?>">Договор <br class="mobbr">оферты</a>
-      <a href="https://talentsy.ru/sposoby-oplaty" target="_blank">Реквизиты <br class="mobbr">и оплата</a>
-      <!-- <a href="https://host.talentsy.ru/legal/agreement_PD_15.03.23.pdf" target="_blank">Согласие на обработку <br>персональных данных</a> -->
-      <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">Политика конфиденциальности</a>
-      <a href="https://talentsy.ru/docymenty_organizatcii" target="_blank">Документы образовательной организации</a>
-      <div>Talentsy 2023</div>
+    <div class="footerbot__linkwrap flexi">
+      <div class="footerbot__links">
+        <a href="<?=get_permalink(342); ?>">Договор оферты</a>
+        <a href="<?=get_permalink(389); ?>">Реквизиты и оплата</a>
+        <a href="/wp-content/uploads/2023/07/privacy_policy_15.03.23.pdf" target="_blank">Политика конфиденциальности</a>
+        <a href="<?=get_permalink(396); ?>">Документы образовательной организации</a>
+        <a href="/wp-content/uploads/2023/07/agreement_pd_15.03.23.pdf" target="_blank">Согласие на обработку персональных данных</a>
+        <a href="/wp-content/uploads/2023/07/agreement_mailing_15.03.23.pdf" target="_blank" style="margin-left: -11px;">Согласие на рассылку</a>
+      </div>
+      <aside class="footerbot__copy">Talentsy&nbsp;<?=(new \DateTimeImmutable())->format('Y'); ?></aside>
     </div>
   </div><!-- //footerbot -->
 </footer>

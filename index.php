@@ -2,11 +2,11 @@
 get_header();
 ?>
 
-<main class="simplepage">
+<main class="simplepage" style="overflow: hidden;">
   <div class="container">
 
     <div class="simplepage__header">
-      <h1 class="simplepage__title title"><?= get_the_title(); ?></h1>
+      <h1 class="simplepage__title druk"><?= get_the_title(); ?></h1>
     </div>
 
     <div class="simplepage__content textcontent">

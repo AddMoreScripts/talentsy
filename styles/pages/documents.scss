@@ -1,0 +1,84 @@
+@use '../general/mixins' as *;
+
+
+.documentspage{
+  @include undermenu();
+  background-color: #efefef;
+  padding-top: 125px;
+  padding-bottom: 75px;
+
+  @include media(s){
+    padding-top: 100px;
+  }
+
+  .simplepage__title{
+    text-align: center;
+  }
+
+  &__grid{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+
+    @include media(l){
+      grid-gap: 30px;
+    }
+    @include media(m){
+      margin-top: 60px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media(s){
+      margin-top: 30px;
+      grid-gap: 15px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.documentsquare{
+  min-width: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 30px 30px 20px;
+  color:#000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+
+  @include media(s){
+    padding: 25px 20px 20px;
+  }
+
+  &:hover{
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title{
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 700;
+    padding-bottom: 40px;
+    margin-bottom: auto;
+
+    @include media(l){
+      font-size: 18px;
+    }
+    @include media(s){
+      font-size: 16px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__link{
+    font-size: 16px;
+    display: block;
+    color: #ff8562;
+    font-weight: 400;
+    line-height: 1.55;
+    margin-top: auto;
+  }
+}

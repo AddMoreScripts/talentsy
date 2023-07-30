@@ -93,7 +93,7 @@ $pics = imgs() . '/about';
             <div class="abouttab1__blockmain">
               <h3>Учитесь <br>у лучших</h3>
               <p>Мы приглашаем лучших специалистов со всей страны в качестве преподавателей наших образовательных программ. Это специалисты высочайшего класса и опыта, которые ведут активную профессиональную практику и следят за актуальными мировыми трендами.</p>
-              <a href="#" class="button abouttab1__button">
+              <a href="<?=get_permalink(403); ?>" class="button abouttab1__button">
                 <img src="<?= imgs(); ?>/nutriciolog/b1-button-arrow.svg" alt="">
                 <span>Стать преподавателем</span>
               </a>
@@ -127,7 +127,7 @@ $pics = imgs() . '/about';
             <div class="abouttab1__blockmain">
               <h3>Обучение на <br>360 градусов</h3>
               <p>Мы понимаем, что для того, чтобы стать успешным, недостаточно только освоить навыки профессии. Необходимо также развивать надпрофессиональные навыки (Soft Skills), которые помогают решать жизненные задачи и работать с другими людьми. Самопрезентация, ведение переговоров, креативность, коммуникация — всё это вы освоите, обучаясь навыкам профессии.</p>
-              <a href="#" class="button abouttab1__button">
+              <a href="<?=get_permalink(404); ?>" class="button abouttab1__button">
                 <img src="<?= imgs(); ?>/nutriciolog/b1-button-arrow.svg" alt="">
                 <span>Стать партнером</span>
               </a>
@@ -232,7 +232,7 @@ $pics = imgs() . '/about';
               <img src="<?=$pics; ?>/tab4-buttonbg.svg" alt="">
             </div>
 
-            <div class="abloutform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="https://talentsy.ru/politika-obrabotki-personalnykh-dannykh" target="_blank">персональных данных</a></div>
+            <div class="abloutform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=personal_link(); ?>" target="_blank">персональных данных</a></div>
           </form>
         </div>
       </div><!-- //abouttab2 -->
@@ -350,6 +350,12 @@ $pics = imgs() . '/about';
           <div class="front3__bg" style="--bgcolor: <?= $data['bgcolor']; ?>;" data-bgnum="<?= $key; ?>">
             <div class="container">
               <img src="<?= get_template_directory_uri(); ?><?= $data['bg']; ?>" alt="" class="front3__bgimg">
+              <?php if($data['title'] === 'ЗОЖ'): ?>
+                <img src="<?=imgs(); ?>/frontpage/zog-frut-1.webp" alt="" class="front-zog-frut1">
+                <img src="<?=imgs(); ?>/frontpage/zog-frut-2.webp" alt="" class="front-zog-frut2">
+                <img src="<?=imgs(); ?>/frontpage/zog-frut-3.webp" alt="" class="front-zog-frut3">
+                <img src="<?=imgs(); ?>/frontpage/zog-frut-4.webp" alt="" class="front-zog-frut4">
+              <?php endif; ?>
             </div>
           </div>
         <?php endforeach; ?>

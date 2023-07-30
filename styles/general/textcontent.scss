@@ -3,6 +3,11 @@
 .textcontent {
   line-height: 1.7;
   --vertical: 20px;
+  --rythm: 36px;
+
+  @include media(s){
+    --rythm: 20px;
+  }
 
   p:not(:last-child){
     margin-bottom: var(--vertical);
@@ -27,7 +32,7 @@
   h6 {
     font-weight: 700;
     line-height: 1;
-    margin-top: var(--rythm-lg, 48px);
+    margin-top: var(--rythm, 36px);
     margin-bottom: var(--rythm, 36px);
 
     @include media(m){
@@ -122,6 +127,11 @@
       height: auto;
       border-radius: 8px;
     }
+
+    &.img-left img{
+      margin-left: 0;
+      margin-right: 0;
+    }
     figcaption {
       margin-top: 15px;
       font-size: 15px;
@@ -194,6 +204,20 @@
     ul {
       margin: 16px 0 0;
     }
+  }
+
+  *.mb-1{
+    margin-bottom: calc(var(--rythm) / 2);
+  }
+  *.mt-1{
+    margin-top: calc(var(--rythm) / 2);
+  }
+
+  *.mb-2{
+    margin-bottom: calc(var(--rythm) * 2 / 3);
+  }
+  *.mt-2{
+    margin-top: calc(var(--rythm) * 2 / 3);
   }
 }
 
@@ -314,13 +338,19 @@
   margin-top: 20px;
   margin-bottom: 20px;
 
+  .wp-block-image{
+    margin: 0;
+  }
+
+  img{
+    border-radius: 0 !important;
+  }
+
   @include media(l){
     gap:30px;
   }
   @include media(m){
-    flex-flow: column nowrap;
-    align-items: stretch;
-    justify-content: flex-start;
+    flex-flow: row wrap;
     gap:20px;
   }
 

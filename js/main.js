@@ -171,11 +171,14 @@ changeYoutubeIframe();
 function startBricks(){
   var grid = document.querySelector('.reviewpage__screens');
   if(!grid) return;
-  var msnry = new Masonry( grid, {
-    itemSelector: '.reviewpage__screenlink',
-    columnWidth: '.reviewpage__screenlink',
-    percentPosition: true,
-    horizontalOrder: false,
+  window.addEventListener('load', () => {
+    window.msnry = new Masonry( grid, {
+      itemSelector: '.reviewpage__screenlink',
+      columnWidth: '.reviewpage__screenlink',
+      percentPosition: true,
+      horizontalOrder: false,
+      transitionDuration: 0,
+    });
   });
 }
 startBricks();

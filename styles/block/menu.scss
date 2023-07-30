@@ -28,7 +28,7 @@
     appearance: none;
     cursor: pointer;
     border: none;
-    z-index: 6;
+    z-index: 16;
 
     @include media(l){
       top: 15px;
@@ -58,11 +58,11 @@
     }
   }
 
-  &__nav {
+  &__nav{
     padding-top: 26px;
-    align-items: center;
-    justify-content: flex-end;
     margin-bottom: 60px;
+    position: relative;
+    z-index: 10;
 
     @include media(l){
       padding-top: 15px;
@@ -71,7 +71,34 @@
       margin-bottom: 45px;
     }
 
-    .hdr__login {
+    ul{
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 17px;
+      line-height: 1;
+
+      li:not(.hdr__login){
+        margin-right: 90px;
+
+        @include media(l){
+          margin-right: 55px;
+        }
+        @include media(m){
+          display: none;
+        }
+      }
+
+      a:not(.hdr__login a){
+        display: block;
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .hdr__login a{
       display: flex;
       margin-right: 0;
 
@@ -85,34 +112,14 @@
     }
   }
 
-  &__navlink {
-    font-size: 17px;
-    margin-right: 90px;
-    display: block;
-    transition: opacity 0.2s ease-in-out;
-
-    @include media(l){
-      margin-right: 55px;
-    }
-    @include media(m){
-      display: none;
-    }
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
   &__phone {
     font-weight: 700;
-    margin-right: 90px;
-
     @include media(l){
-      margin-right: 55px;
+      display: block !important;
     }
     @include media(m){
-      margin-right: 0;
-      margin-top: 15px;
+      margin-right: 0 !important;
+      margin-top: 20px;
       font-size: 17px;
       font-weight: 800;
     }

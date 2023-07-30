@@ -14,6 +14,7 @@ export const initCookieTabs = (tabName, wrapper) => {
   wrapper.querySelectorAll('[data-tablink]').forEach((button) => {
     button.classList.toggle('is-active', button.dataset.tablink === tabName);
   });
+  window.msnry?.layout();
   ScrollTrigger.refresh();
 };
 

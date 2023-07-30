@@ -134,5 +134,5 @@ function getTomorow()
 
 
 function personal_link(){
-  return 'https://host.talentsy.ru/legal/agreement_PD_15.03.23.pdf';
+  return '/wp-content/uploads/2023/07/agreement_pd_15.03.23.pdf';
 }

@@ -294,50 +294,7 @@ get_header();
       </div>
     </div>
 
-    <?php include(locate_template('inc/_decorator_mentors_data.php')); ?>
-    <div class="teamblock flexi">
-      <div class="teamblock__nav jbm teamblock__nav--left">
-        <?php foreach ($mentorsLeft as $key => $mentor) : ?>
-          <a href="#" class="teamblock__navlink <?= $key == 0 ? 'is-active' : ''; ?>" data-slide="<?= $key; ?>"><?= $mentor['name']; ?></a>
-        <?php endforeach; ?>
-      </div>
-      <div class="teamblock__nav jbm teamblock__nav--right">
-        <?php foreach ($mentorsRight as $key => $mentor) : ?>
-          <a href="#" class="teamblock__navlink" data-slide="<?= $key + count($mentorsLeft); ?>"><?= $mentor['name']; ?></a>
-        <?php endforeach; ?>
-      </div>
-
-      <div class="swiper teamslider js-team-slider">
-        <div class="swiper-wrapper">
-
-          <!-- Слайдер менторов -->
-          <?php foreach ($mentorsLeft as $key => $mentor) : ?>
-            <article class="swiper-slide teamslider__slide">
-              <div class="teamslider__item">
-                <img src="<?= imgs(); ?>/dizayner-interyera/mentors/<?= $mentor['img']; ?>.webp" alt="" class="teamslider__photo">
-                <h3 class="teamslider__name"><?= $mentor['title']; ?></h3>
-                <div class="teamslider__content">
-                  <?= $mentor['text']; ?>
-                </div>
-              </div>
-            </article>
-          <?php endforeach; ?>
-          <?php foreach ($mentorsRight as $key => $mentor) : ?>
-            <article class="swiper-slide teamslider__slide">
-              <div class="teamslider__item">
-                <img src="<?= imgs(); ?>/dizayner-interyera/mentors/<?= $mentor['img']; ?>.webp" alt="" class="teamslider__photo">
-                <h3 class="teamslider__name"><?= $mentor['title']; ?></h3>
-                <div class="teamslider__content">
-                  <?= $mentor['text']; ?>
-                </div>
-              </div>
-            </article>
-          <?php endforeach; ?>
-          <!-- конец: Слайдер менторов -->
-        </div>
-      </div>
-
-    </div><!-- //teamblock -->
+    <?php get_template_part('inc/mentors-block'); ?>
   </div>
 </section><!-- //mentors -->
 

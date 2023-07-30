@@ -88,7 +88,7 @@ export const initFrontpage = () => {
     }
 
     pinTimeline.to(picswrap, {
-      y: `-${picswrap.scrollHeight + window.innerHeight}`,
+      y: `-${picswrap.scrollHeight + window.innerHeight + 200}`,
       ease: "linear",
       duration: 5,
     }, 'myLabel');

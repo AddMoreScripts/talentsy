@@ -3,13 +3,19 @@
     <section class="menuwindow">
       <button class="menuwindow__closer" data-hystclose><img src="<?=imgs();?>/menu/icon-close.svg" alt=""></button>
       <div class="container">
-        <div class="menuwindow__nav flexi">
+          <?php wp_nav_menu([
+          'menu' => 'Меню в поп-апе',
+          'menu_class' => 'flexi',
+          'container' => 'nav',
+          'container_class' => 'menuwindow__nav',
+        ]); ?>
+        <!-- <div class="menuwindow__nav flexi">
           <a href="<?=get_permalink(204); ?>" class="menuwindow__navlink">О Talentsy</a>
           <a href="<?=get_permalink(150); ?>" class="menuwindow__navlink">Отзывы</a>
           <a href="/blog/" class="menuwindow__navlink">Журнал</a>
           <a href="tel:+78007753768" class="menuwindow__phone">8 800 775 37 68</a>
           <a href="https://lk.talentsy.ru/" class="hdr__login flexi">Вход</a>
-        </div>
+        </div> -->
 
         <div class="menuwindow__main flexi" data-tabwrap>
           <div class="menuwindow__aside">
@@ -75,7 +81,7 @@
                   </div>
                   <ul class="menuwindow__submenu">
                     <li><a href="<?=get_permalink(212); ?>">Fashion-скетчинг</a></li>
-                    <li><a href="/painting_on_clothes">Рисунок на ткани</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Рисунок на ткани</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -95,8 +101,8 @@
                   <span class="menuwindow__h2">Профессии</span>
                   <div class="menuwindow__sub">Большие образовательные программы, которые помогут получить новую специальность</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/professiya-florist">Флорист</a></li>
-                    <li><a href="/dizayner-ukrasheniy">Дизайнер украшений</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Флорист</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Дизайнер украшений</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -107,8 +113,8 @@
                     и приобрести новый навык
                   </div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/wedding-florist">Свадебная флористика</a></li>
-                    <li><a href="/osnovy-floristiki">Основы флористики</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Свадебная флористика</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Основы флористики</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">
@@ -138,9 +144,9 @@
                   <a href="<?=get_permalink(209); ?>" class="menuwindow__h2">О факультете</a>
                   <div class="menuwindow__sub">Узнать больше о факультете, преподавателях и&nbsp;программах</div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="https://talentsy.ru/psychology_orkt">Ориентированная на решение <br>краткосрочная терапия</a></li>
-                    <li><a href="https://talentsy.ru/psychology_ppks">Кризисное консультирование</a></li>
-                    <li><a href="https://talentsy.ru/psychology_rpck">Работа со сложными клиентами</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Ориентированная на решение <br>краткосрочная терапия</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Кризисное консультирование</a></li>
+                    <li><a href="<?=get_permalink(212); ?>">Работа со сложными клиентами</a></li>
                   </ul>
                 </div>
               </div>
@@ -166,7 +172,7 @@
                     и приобрести новый навык
                   </div>
                   <ul class="menuwindow__submenu">
-                    <li><a href="/interior_scatch" >Интерьерный скетчинг</a></li>
+                    <li><a href="<?=get_permalink(212); ?>" >Интерьерный скетчинг</a></li>
                   </ul>
                 </div>
                 <div class="menuwindow__col">

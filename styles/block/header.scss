@@ -185,12 +185,13 @@
     }
   }
 
-  &__login{
+  &__login, &__login > a{
     width: 66px;
     height: 66px;
     flex-shrink: 0;
     background: #000;
     align-items: center;
+    display: flex;
     justify-content: center;
     text-align: center;
     color:#fff !important;

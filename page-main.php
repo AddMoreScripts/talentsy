@@ -175,9 +175,15 @@ get_header();
       <div class="front3__spaces">
         <div class="front3__bgs">
           <?php foreach ($front3data as $key => $data) : ?>
-            <div class="front3__bg" style="--bgcolor: <?= $data['bgcolor']; ?>;" data-bgnum="<?= $key; ?>">
+            <div class="front3__bg" style="--bgcolor: <?= $data['bgcolor']; ?>;" data-bgnum="<?= $key; ?>" >
               <div class="container">
                 <img src="<?= get_template_directory_uri(); ?><?= $data['bg']; ?>" alt="" class="front3__bgimg">
+                <?php if($data['title'] === 'ЗОЖ'): ?>
+                  <img src="<?=imgs(); ?>/frontpage/zog-frut-1.webp" alt="" class="front-zog-frut1">
+                  <img src="<?=imgs(); ?>/frontpage/zog-frut-2.webp" alt="" class="front-zog-frut2">
+                  <img src="<?=imgs(); ?>/frontpage/zog-frut-3.webp" alt="" class="front-zog-frut3">
+                  <img src="<?=imgs(); ?>/frontpage/zog-frut-4.webp" alt="" class="front-zog-frut4">
+                <?php endif; ?>
               </div>
             </div>
           <?php endforeach; ?>

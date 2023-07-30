@@ -10,7 +10,7 @@ get_header();
 <div class="comingsoonform">
   <div class="comingsoonform__h1 druk js-slide-bot">Курс фешн-скетчинг</div>
   <div class="comingsoonform__sub  js-slide-bot">Мы еще работаем над формированием курса. <br>Оставьте заявку и мы вас уведомим, когда <br>начнется курс.</div>
-  <form action="" class="" method="post">
+  <form action="/" class="" method="post">
     <div class="comingsoonform__form flexi js-slide-bot">
       <div class="comingsoonform__col">
         <div class="floatinp">
@@ -35,7 +35,7 @@ get_header();
         <img src="<?=imgs(); ?>/about/tab4-buttonbg.svg" alt="">
       </div>
     </div>
-    <div class="comingsoonform__accept  js-slide-bot">Нажимая "Отправить" вы соглашаетесь на обработку <a href="https://talentsy.ru/politika-obrabotki-personalnykh-dannykh" target="_blank">персональных данных</a></div>
+    <div class="comingsoonform__accept  js-slide-bot">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=personal_link(); ?>" target="_blank">персональных данных</a></div>
   </form>
 </div>
 
