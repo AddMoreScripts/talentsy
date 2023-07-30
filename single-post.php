@@ -39,6 +39,18 @@ get_header('blog');
           <!-- <div class="blogpost__comments">11</div> -->
           <!-- <i class="idot"></i> -->
           <div class="blogpost__viewed"><?=function_exists('pvc_get_post_views') ? pvc_get_post_views(get_the_ID()) : '666'; ?></div>
+
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2 blogpost__share"
+            data-curtain
+            data-size="m"
+            data-shape="round"
+            data-limit="0"
+            data-image="<?=get_the_post_thumbnail_url(); ?>"
+            data-more-button-type="long"
+            data-services="vkontakte,telegram,twitter">
+          </div>
+            <?php if(0): ?>
           <div class="blogpost__share" data-hidewrap="sharebutton" data-hideclick="yes">
             <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebutton">
               <span>Поделиться</span>
@@ -71,6 +83,7 @@ get_header('blog');
               </li>
             </ul>
           </div>
+          <?php endif; ?>
         </div><!-- //blogpost__meta -->
 
 
@@ -145,6 +158,17 @@ get_header('blog');
             <?php get_template_part('inc/blog-post-rating', null, ['postId' => get_the_ID()]); ?>
           </div>
 
+          <div class="ya-share2 blogpost__share"
+            data-curtain
+            data-size="m"
+            data-shape="round"
+            data-limit="0"
+            data-image="<?=get_the_post_thumbnail_url(); ?>"
+            data-more-button-type="long"
+            data-services="vkontakte,telegram,twitter">
+          </div>
+
+          <?php if(0): ?>
           <div class="blogpost__share" data-hidewrap="sharebuttonbot" data-hideclick="yes">
             <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebuttonbot">
               <span>Поделиться</span>
@@ -177,6 +201,7 @@ get_header('blog');
               </li>
             </ul>
           </div>
+          <?php endif; ?>
         </footer>
 
         <?php if(get_field('bottom-banner')): $bannerBotId = get_field('bottom-banner'); ?>
