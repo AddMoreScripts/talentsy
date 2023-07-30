@@ -16,6 +16,7 @@ import { startTabs } from './components/tabs';
 import '../styles/app.scss';
 import { initBlog } from './components/blog';
 import Masonry from 'masonry-layout';
+import { initBlogPagination } from './components/blogPagination';
 
 
 initSliders();
@@ -27,6 +28,7 @@ initScrollAnimation();
 startInputMask();
 startTabs();
 initBlog();
+initBlogPagination();
 
 
 /**
@@ -58,6 +60,14 @@ window.modalInstance = new HystModal({
   linkAttributeName: "data-hystmodal",
   waitTransitions: true,
   catchFocus:false,
+
+  beforeOpen: (instance) => {
+    if(instance.element.id === 'menuSearchModal'){
+      setTimeout(() => {
+        instance.element.querySelector('input[type="search"]').focus();
+      }, 200);
+    }
+  }
 });
 
 
@@ -109,7 +119,7 @@ function articleTableOfContent(){
   if (!wrap) return;
   const box = wrap.querySelector('.js-togbox');
   wrap.addEventListener('click', (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     const longer = e.target.closest('.js-longer');
     if (longer) {
       box.style.height = `${box.scrollHeight}px`;

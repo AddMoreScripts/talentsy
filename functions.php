@@ -104,6 +104,30 @@ function ratepost_load_func()
 }
 
 
+
+/**
+ * Обработка AJAX пагинация блога
+ */
+add_action('wp_ajax_catalog', 'cat_load_func');
+add_action('wp_ajax_nopriv_catalog', 'cat_load_func');
+
+function cat_load_func()
+{
+  $catIds = json_decode($_POST['catlist']);
+  $pageNum = intval($_POST['page_num']);
+  $perPage = intval($_POST['per_page']) ? intval($_POST['per_page']) : 12;
+  $exclude = $_POST['exclude'] ? json_decode($_POST['exclude'], true) : [];
+  get_template_part('inc/ajax-blog-posts', null, [
+    'cats' => $catIds,
+    'page_num' => $pageNum,
+    'per_page' => $perPage,
+    'exclude' => $exclude,
+  ]);
+  die;
+}
+
+
+
 remove_filter('the_content', 'wpautop');
 
 
@@ -133,6 +157,17 @@ function getTomorow()
 
 
 
-function personal_link(){
+function personal_link()
+{
   return '/wp-content/uploads/2023/07/agreement_pd_15.03.23.pdf';
 }
+
+
+function filter_search_post_type($query)
+{
+  if ($query->is_search && empty($_GET['search_post_type'])) {
+    $query->set('post_type', 'post');
+  }
+  return $query;
+}
+add_filter('pre_get_posts', 'filter_search_post_type');

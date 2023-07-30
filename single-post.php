@@ -225,8 +225,12 @@ get_header('blog');
 
 
     <?php
+      $postCats = array_map(fn($cat) => $cat->term_id, get_the_category());
       $postsRelations = get_posts([
-        'post_type'   => 'post',
+        'numberposts' => 9,
+        'post_type' => 'post',
+        'category' => $postCats,
+        'exclude' => get_the_ID(),
       ]);
     ?>
     <aside class="blogrelations js-relations-posts">

@@ -1,7 +1,7 @@
 <?php
   $postId = isset($args['post_id']) ? $args['post_id'] : null;
 ?>
-<article class="blogteaser grid-item">
+<article class="blogteaser grid-item js-item">
   <a href="<?= get_permalink($postId); ?>" class="blogteaser__picwrap square">
     <img src="<?= get_the_post_thumbnail_url($postId, 'large'); ?>" alt="" class="square__img">
   </a>

@@ -1,6 +1,14 @@
 <?php
-get_header('blog');
+
+  get_header('blog');
+  $currentCat = 0;
+  $current = get_queried_object();
+  if ($current instanceof WP_Term) $currentCat = $current->term_id;
+
 ?>
+
+
+<template class="is-active" data-catid="<?=$currentCat; ?>"></template>
 
 <main class="blogcategory">
   <div class="container">
@@ -9,15 +17,14 @@ get_header('blog');
       <span>Назад</span>
     </a>
     <div class="blogcategory__label">Категория</div>
-    <h1 class="blogcategory__title"><?=get_the_archive_title(); ?></h1>
-    <?php if(!have_posts()): ?>
-      <div class="blogcategory__empty">Результатов не найдено</div>
-    <?php endif; ?>
-    <div class="blogcategory__grid">
-    <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('inc/post-teaser', null, ['post_id' => get_the_ID()]); ?>
-    <?php endwhile; ?>
+    <h1 class="blogcategory__title"><?= get_the_archive_title(); ?></h1>
+    <div class="js-catalog" data-actionname="catalog">
+      <?php get_template_part('inc/ajax-blog-posts', null, ['cats' => [$currentCat], 'page_num' => 1]); ?>
     </div>
+    <nav class="navigation pagination" aria-label="Записи">
+      <div class="js-pagination-wrap catalog-pagination">
+      </div>
+    </nav>
   </div>
 </main>
 

@@ -35,7 +35,7 @@ $catlist = get_terms([
 <?php
 $frontPosts = get_posts([
   'post_type' => 'post',
-  'numberposts' => 14,
+  'numberposts' => 20,
 ]);
 $firstPost = $frontPosts[0];
 ?>
@@ -119,8 +119,7 @@ $firstPost = $frontPosts[0];
 
 
 <?php
-$postId = $frontPosts[4];
-$firstPost = $frontPosts[4];
+$firstPost = $frontPosts[7];
 ?>
 
 <section class="bloglead bloglead--alt">
@@ -170,18 +169,19 @@ $firstPost = $frontPosts[4];
 </section>
 
 
-
+<?php
+  $excludes = [];
+  $excludes[] = $frontPosts[0]->ID;
+  $excludes[] = $frontPosts[1]->ID;
+?>
 <div class="container container--1300">
-  <div class="blogcategory__grid blogroot__grid">
-    <?php foreach ($frontPosts as $key => $postId):
-      if($key === 0) continue;
-      if($key > 6) break;
-      get_template_part('inc/post-teaser', null, ['post_id' => $postId]);
-    endforeach; ?>
+  <div class="js-catalog" data-actionname="catalog">
+    <?php get_template_part('inc/ajax-blog-posts', null, ['cats' => [], 'page_num' => 2, 'per_page' => 6, 'exclude' => $excludes]); ?>
   </div>
-  <div class="blogcategory__moreplace"></div>
-  <div class="blogcategory__moreloader js-loader-blogposts"></div>
-  <button class="blogcategory__morelink js-load-blogposts">Ещё</button>
+  <nav class="navigation pagination" aria-label="Записи">
+    <div class="js-pagination-wrap catalog-pagination">
+    </div>
+  </nav>
 </div>
 
 

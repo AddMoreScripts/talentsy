@@ -37,9 +37,13 @@
       <a href="/" class="menubloglink">На главную Talentsy</a>
 
       <footer class="menublogfoot">
-        <a href="/blog/">Журнал</a>
-        <a href="<?=get_permalink(204); ?>">О Talentsy</a>
-        <a href="tel:88007753768">8 800 775 37 68</a>
+        <?php wp_nav_menu([
+          'menu' => 'Верхнее меню блог - справа',
+          'menu_class' => 'flexi',
+          'container' => 'nav',
+          'container_class' => 'blogheader__links',
+        ]); ?>
+        <a href="https://lk.talentsy.ru/" class="blogheader__login">Вход</a>
         <a href="https://lk.talentsy.ru/" class="blogheader__login">Вход</a>
       </footer>
     </div>
