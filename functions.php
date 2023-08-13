@@ -2,8 +2,6 @@
 
 require_once __DIR__ . '/inc/helpers.php';
 
-define('ACF_PRO_LICENSE', 'b3JkZXJfaWQ9MzQ3NTJ8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTE0IDE5OjU3OjM0');
-
 function addmorescripts_setup()
 {
 
@@ -231,7 +229,7 @@ function rest_gateway_create_lead($data){
         curl_setopt($curl, CURLOPT_POSTFIELDS, ['data' => json_encode($data)]);
         $res = curl_exec($curl);
     curl_close($curl);
-    
+
     return $res;
 }
 
@@ -267,23 +265,23 @@ function axFormRequest(){
     endif;
 
     if( $form['special'] == 'about' ):
-      
+
     endif;
 
     if( $form['special'] == 'wait-fashion' ):
-      
+
     endif;
 
     if( $form['special'] == 'hr' ):
-      
+
     endif;
 
     if( $form['special'] == 'partner' ):
-      
+
     endif;
 
     if( $form['special'] == 'teacher' ):
-      
+
     endif;
   else:
     $sendData['formName'] = get_field('amo_form_name', $pageID) ?? 'Неизвестная форма';
