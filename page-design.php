@@ -864,7 +864,7 @@ get_header();
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
-    <div class="priceblock__greenprice jbm"><span>От</span> <span>6250</span> <span>₽/МЕС</span>
+    <div class="priceblock__greenprice jbm"><span>От</span> <span class="jsPPSumm">6250</span> <span>₽/МЕС</span>
     <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small></div>
     <div class="priceblock__mobdescr">
       <p>Беспроцентная рассрочка на 24 месяца.</p>

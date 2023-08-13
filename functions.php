@@ -157,9 +157,8 @@ function getTomorow()
 
 
 
-function personal_link()
-{
-  return '/wp-content/uploads/2023/07/agreement_pd_15.03.23.pdf';
+function personal_link(){
+  return ldocslink('agree');
 }
 
 
@@ -171,3 +170,134 @@ function filter_search_post_type($query)
   return $query;
 }
 add_filter('pre_get_posts', 'filter_search_post_type');
+
+
+// sombra 08-2023
+// удаляем лишние стили
+function disable_trash_scripts(){
+  if( !is_admin() ):
+    wp_dequeue_style('post-views-counter-frontend');
+    wp_dequeue_style('dashicons');
+    wp_dequeue_style('classic-theme-styles');
+
+    // перезадаем jQuery без плагина
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', (get_template_directory_uri() .'/dist/jquery-3.5.1.min.js'), false, '3.5.1');
+    wp_enqueue_script('jquery');
+  endif;
+}
+add_action('wp_enqueue_scripts', 'disable_trash_scripts', 99);
+
+// Отключаем REST API
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
+add_filter('rest_enabled', '__return_false');
+// add_filter('rest_authentication_errors', function( $result ){
+//   return new WP_Error('functionality disabled', 'Sorry, rest API is disabled.', ['status' => 401]);
+// });
+
+// добавляем нормальные размеры для фоток в блоге
+add_image_size('blog-s', 410, 280, true);
+add_image_size('blog-m', 520, 360, true);
+
+// юридические документы вывел в опции, возвращаю по запросу
+function ldocslink($type){
+  return get_field('docs_'. $type, 'options');
+}
+
+// print_it
+function print_it($a, $return = false){
+  if( $return ):
+    return '<pre>'. print_r($a, true) .'</pre>';
+  else:
+    echo '<pre>';
+      print_r($a);
+    echo '</pre>';
+  endif;
+}
+
+// очищает значение от недопустимых в json символов
+function clearValue($value){
+  return trim(str_replace(['"', '\\', "{", "}"], '', $value));
+}
+
+// REST запрос к шлюзу на создание заявки
+function rest_gateway_create_lead($data){
+    $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://gateway.talentsy.ru/wp-content/themes/clear/inc/gateway.php?service=html-site');
+        curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, ['data' => json_encode($data)]);
+        $res = curl_exec($curl);
+    curl_close($curl);
+    
+    return $res;
+}
+
+// преобразует куки переданные от JS единым полем в массив
+function getJSCookiesAsArray($cookies){
+  $return = [];
+
+  foreach(explode('; ', $cookies) as $k => $s):
+    $co = explode('=', $s, 2);
+    $return[ $co[0] ] = clearValue($co[1]);
+  endforeach;
+
+  return $return;
+}
+
+// отправляет формы в шлюз
+function axFormRequest(){
+  parse_str($_POST['form'], $form);
+  $cookies  = $_POST['cookies'];
+  $urlfull  = $_POST['urlfull'];
+  $pageID   = (int)$_POST['pageID'];
+  $result   = ['form' => $form, 'urlfull' => $urlfull, 'pageID' => $pageID, 'cookies' => $cookies, 'jsData' => []];
+
+  $sendData = [
+    'cookies' => getJSCookiesAsArray($cookies),
+    'url'     => $urlfull,
+    'other'   => []
+  ];
+
+  if( isset($form['special']) ):
+    if( $form['special'] == 'footer' ):
+
+    endif;
+
+    if( $form['special'] == 'about' ):
+      
+    endif;
+
+    if( $form['special'] == 'wait-fashion' ):
+      
+    endif;
+
+    if( $form['special'] == 'hr' ):
+      
+    endif;
+
+    if( $form['special'] == 'partner' ):
+      
+    endif;
+
+    if( $form['special'] == 'teacher' ):
+      
+    endif;
+  else:
+    $sendData['formName'] = get_field('amo_form_name', $pageID) ?? 'Неизвестная форма';
+    $sendData['uData']    = [
+      'name'    => $form['Name'],
+      'email'   => $form['Email'],
+      'phone'   => $form['Phone'],
+    ];
+    $result['gleadid']  = rest_gateway_create_lead($sendData);
+    $result['jsData'][] = 'location = '. (get_field('redirect_form_link', $pageID) ?? get_permalink(99)) .';';
+  endif;
+
+  $result['jsData'] = implode('', $result['jsData']);
+  die(json_encode($result));
+}
+add_action('wp_ajax_axFormRequest', 'axFormRequest');
+add_action('wp_ajax_nopriv_axFormRequest', 'axFormRequest');

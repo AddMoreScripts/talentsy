@@ -6,27 +6,28 @@
       выбрать, оставьте свой номер: мы позвоним, чтобы <br>
       ответить на все ваши вопросы
     </div>
-    <form action="#" class="footerform__form flexi">
+    <form action="#" class="footerform__form flexi ajaxForm" data-target="axFormRequest">
       <div class="footerform__formleft">
         <div class="footerform__forminputs">
           <div class="footerform__col">
-            <input type="text" placeholder="Имя" name="name">
+            <input type="text" placeholder="Имя" name="Name">
           </div>
           <div class="footerform__col">
-            <input type="tel" placeholder="Телефон" name="phone" data-mask="tel">
+            <input type="tel" placeholder="Телефон" name="Phone" data-mask="tel">
           </div>
           <div class="footerform__col">
-            <input type="email" placeholder="Почта" name="mail">
+            <input type="email" placeholder="Почта" name="Email">
           </div>
         </div>
-        <div class="footerform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=personal_link(); ?>" target="_blank">персональных
+        <div class="footerform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?= ldocslink('agree'); ?>" target="_blank">персональных
             данных</a></div>
       </div>
       <div class="footerform__right">
         <button class="footerform__submit">Отправить</button>
-        <div class="footerform__accept footerform__accept--mob">Нажимая "Отправить" вы соглашаетесь на обработку <a href="#">персональных
+        <div class="footerform__accept footerform__accept--mob">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?= ldocslink('agree'); ?>">персональных
             данных</a></div>
       </div>
+      <input type="hidden" name="special" value="footer">
     </form>
   </div><!-- //footerform -->
 
@@ -169,12 +170,12 @@
       <div class="footerbot__links">
         <a href="<?=get_permalink(342); ?>">Договор оферты</a>
         <a href="<?=get_permalink(389); ?>">Реквизиты и оплата</a>
-        <a href="/wp-content/uploads/2023/07/privacy_policy_15.03.23.pdf" target="_blank">Политика конфиденциальности</a>
+        <a href="<?= ldocslink('private'); ?>" target="_blank">Политика конфиденциальности</a>
         <a href="<?=get_permalink(396); ?>">Документы образовательной организации</a>
-        <a href="/wp-content/uploads/2023/07/agreement_pd_15.03.23.pdf" target="_blank">Согласие на обработку персональных данных</a>
-        <a href="/wp-content/uploads/2023/07/agreement_mailing_15.03.23.pdf" target="_blank" style="margin-left: -11px;">Согласие на рассылку</a>
+        <a href="<?= ldocslink('agree'); ?>" target="_blank">Согласие на обработку персональных данных</a>
+        <a href="<?= ldocslink('email'); ?>" target="_blank" style="margin-left: -11px;">Согласие на рассылку</a>
       </div>
-      <aside class="footerbot__copy">Talentsy&nbsp;<?=(new \DateTimeImmutable())->format('Y'); ?></aside>
+      <aside class="footerbot__copy">Talentsy&nbsp;<?= date('Y'); ?></aside>
     </div>
   </div><!-- //footerbot -->
 </footer>

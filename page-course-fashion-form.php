@@ -10,11 +10,12 @@ get_header();
 <div class="comingsoonform">
   <div class="comingsoonform__h1 druk js-slide-bot">Курс фешн-скетчинг</div>
   <div class="comingsoonform__sub  js-slide-bot">Мы еще работаем над формированием курса. <br>Оставьте заявку и мы вас уведомим, когда <br>начнется курс.</div>
-  <form action="/" class="" method="post">
+  
+  <form class="ajaxForm" data-target="axFormRequest">
     <div class="comingsoonform__form flexi js-slide-bot">
       <div class="comingsoonform__col">
         <div class="floatinp">
-          <input type="text" id="inpname" name="name" required class="floatinp__input" placeholder=" ">
+          <input type="text" id="inpname" name="Name" required class="floatinp__input" placeholder=" ">
           <label for="inpname">Имя</label>
         </div>
       </div>
@@ -35,7 +36,8 @@ get_header();
         <img src="<?=imgs(); ?>/about/tab4-buttonbg.svg" alt="">
       </div>
     </div>
-    <div class="comingsoonform__accept  js-slide-bot">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=personal_link(); ?>" target="_blank">персональных данных</a></div>
+    <div class="comingsoonform__accept  js-slide-bot">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=ldocslink('agree'); ?>" target="_blank">персональных данных</a></div>
+    <input type="hidden" name="special" value="wait-fashion">
   </form>
 </div>
 

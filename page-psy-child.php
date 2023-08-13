@@ -774,7 +774,7 @@ get_header();
         </div>
       </div>
       <div class="priceblock__greenprice jbm">
-        <span>От</span> <span>9000</span> <span>₽/МЕС</span>
+        <span>От</span> <span class="jsPPSumm">9000</span> <span>₽/МЕС</span>
         <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
       </div>
       <div class="priceblock__mobdescr">

@@ -595,7 +595,7 @@ $pics = imgs() . '/stylist';
 
     <div class="stylistsubprice flexi">
       <div class="stylistsubprice__left jbm">
-        <small>от</small>3750 ₽/мес
+        <small>от</small><span class="jsPPSumm">3750</span> <span>₽/мес</span>
       </div>
       <div class="stylistsubprice__right">
         Беспроцентная рассрочка <br>на&nbsp;24 месяца

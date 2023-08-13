@@ -3,7 +3,7 @@
 ?>
 <article class="blogteaser grid-item js-item">
   <a href="<?= get_permalink($postId); ?>" class="blogteaser__picwrap square">
-    <img src="<?= get_the_post_thumbnail_url($postId, 'large'); ?>" alt="" class="square__img">
+    <img src="<?= get_the_post_thumbnail_url($postId, 'blog-s'); ?>" alt="" class="square__img">
   </a>
   <div class="blogteaser__meta flexi">
     <div class="blogpost__cats flexi">

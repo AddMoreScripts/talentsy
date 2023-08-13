@@ -316,4 +316,4 @@ get_header('blog');
 
 
 <?php
-get_footer('blog');
+get_footer();

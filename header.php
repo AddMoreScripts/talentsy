@@ -12,12 +12,16 @@
   <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollTrigger.min.js"></script>
   <!-- <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollSmoother.min.js"></script> -->
   <?= vite('js/main.js') ?>
+  <link href="<?=get_template_directory_uri(); ?>/dist/sombra.css" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>
-  <script>
-    window.ajaxurl = "<?= admin_url('admin-ajax.php'); ?>";
-  </script>
+<script>
+  window.pageID = "<?= get_the_ID(); ?>";
+  window.ajaxurl = "<?= admin_url('admin-ajax.php'); ?>";
+  
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TLLHK7P');
+</script>
 
 
 <!-- === === === ШАПКА СТАРТ === === === -->

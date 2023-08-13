@@ -8,9 +8,7 @@ $bg = isset($args['bg']) ? $args['bg'] : false;
 
 ?>
 
-
-<form action="#" class="jsGatewayForm" data-success-url="https://psy.talentsy.ru/fpis_ppk_offer_opros">
-
+<form class="ajaxForm" data-target="axFormRequest">
   <div class="programfromlead__prewrap <?=$formClassName; ?>" <?php if($bg) { echo 'style="--bg: ' . $bg . ';"'; } ?> >
     <?php if($isShowTopTxt): ?>
     <div class="programfromlead__toptxt flexi">
@@ -52,22 +50,23 @@ $bg = isset($args['bg']) ? $args['bg'] : false;
           <div class="promobox">
             <a href="#" class="promobox__link js-promolink">У вас есть промокод?</a>
             <div class="promoform flexi">
-              <input type="text" class="promoform__input">
-              <button type="button" class="promoform__button">Активировать промокод</button>
+              <input type="text" class="promoform__input jsPmoField">
+              <button type="button" class="promoform__button jsPPRequest">Активировать промокод</button>
             </div><!-- //promoform -->
           </div>
-          <div class="programfromlead__promoformwrap"></div>
+          <div class="programfromlead__promoformwrap jsPmoError"></div>
         <?php endif; ?>
 
-        <div class="accept">Отправляя данную форму вы соглашаетесь с условиями <a href="<?=get_privacy_policy_url(); ?>" target="_blank">оферты</a> и политикой <a href="<?=personal_link(); ?>" target="_blank">обработки персональных данных</a></div>
+        <div class="accept">Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и политикой <a href="<?= ldocslink('agree'); ?>" target="_blank">обработки персональных данных</a></div>
       </div><!-- //programfromlead__left -->
       <div class="programfromlead__right">
         <button class="programfromlead__submit circlebutton">
           <span><?=$buttonTxt; ?></span>
         </button>
-        <div class="accept accept--mob">Отправляя данную форму вы соглашаетесь с условиями <a href="<?=get_privacy_policy_url(); ?>" target="_blank">оферты</a> и
-          политикой <a href="<?=personal_link(); ?>" target="_blank">обработки персональных данных</a></div>
+        <div class="accept accept--mob">Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и
+          политикой <a href="<?= ldocslink('agree'); ?>" target="_blank">обработки персональных данных</a></div>
       </div>
     </div>
   </div>
+  <input type="hidden" name="jsPmoHiddenFormField">
 </form>

@@ -13,9 +13,6 @@ get_header('blog');
     <?php while (have_posts()) : the_post(); ?>
     <?php get_template_part('inc/post-teaser', null, ['post_id' => get_the_ID()]); ?>
     <?php endwhile; ?>
-    <?php if(!have_posts()): ?>
-      <div class="blogcategory__empty">Результатов не найдено</div>
-    <?php endif; ?>
     </div>
   </div>
 </main>

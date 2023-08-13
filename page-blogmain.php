@@ -78,7 +78,7 @@ $firstPost = $frontPosts[0];
       </div><!-- //bloglead__left -->
       <div class="bloglead__right">
         <a href="<?= get_permalink($firstPost); ?>" class="bloglead__picwrap square">
-          <img src="<?= get_the_post_thumbnail_url($firstPost, 'large'); ?>" alt="" class="square__img">
+          <img src="<?= get_the_post_thumbnail_url($firstPost, 'blog-m'); ?>" alt="" class="square__img">
         </a>
       </div>
     </div>
@@ -226,60 +226,60 @@ $firstPost = $frontPosts[7];
 
 
 
-
-<section class="blogdidjest">
-  <div class="container container--1300">
-    <div class="blogdidjest__box flexi">
-      <div class="blogdidjest__left">
-        <h3 class="blogdidjest__title">Еженедельный дайджест <br>самых интересных материалов</h3>
-        <div class="blogdidjest__formwrap">
-          <form action="#">
-            <div class="blogdidjest__checks flexi">
-              <label>
-                <input type="checkbox" name="theme" value="PRO студентов">
-                <span>PRO студентов</span>
-              </label>
-              <label>
-                <input type="checkbox" name="theme" value="Дизайн интерьера">
-                <span>Дизайн интерьера</span>
-              </label>
-              <label>
-                <input type="checkbox" name="theme" value="Психология">
-                <span>Психология</span>
-              </label>
-              <label>
-                <input type="checkbox" name="theme" value="Мода и стиль">
-                <span>Мода и стиль</span>
-              </label>
-              <label>
-                <input type="checkbox" name="theme" value="Современное искусство">
-                <span>Современное искусство</span>
-              </label>
-              <label>
-                <input type="checkbox" name="theme" value="Beauty">
-                <span>Beauty</span>
-              </label>
-              <label>
-                <input type="checkbox" name="theme" value="Разное">
-                <span>Разное</span>
-              </label>
-            </div>
-            <div class="blogdidjest__actions flexi">
-              <input type="email" name="email" placeholder="Электронная почта" required>
-              <button type="submit" class="button button--blog">Подписаться</button>
-            </div>
-          </form>
-          <p class="accept">Нажимая "Подписаться" вы соглашаетесь на <a href="<?=get_privacy_policy_url(); ?>" target="_blank">обработку персональных данных</a></p>
+<? if( 0 ): // отключил форму подписки, хз куда отправлять данные ?>
+  <section class="blogdidjest">
+    <div class="container container--1300">
+      <div class="blogdidjest__box flexi">
+        <div class="blogdidjest__left">
+          <h3 class="blogdidjest__title">Еженедельный дайджест <br>самых интересных материалов</h3>
+          <div class="blogdidjest__formwrap">
+            <form action="#">
+              <div class="blogdidjest__checks flexi">
+                <label>
+                  <input type="checkbox" name="theme" value="PRO студентов">
+                  <span>PRO студентов</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="theme" value="Дизайн интерьера">
+                  <span>Дизайн интерьера</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="theme" value="Психология">
+                  <span>Психология</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="theme" value="Мода и стиль">
+                  <span>Мода и стиль</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="theme" value="Современное искусство">
+                  <span>Современное искусство</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="theme" value="Beauty">
+                  <span>Beauty</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="theme" value="Разное">
+                  <span>Разное</span>
+                </label>
+              </div>
+              <div class="blogdidjest__actions flexi">
+                <input type="email" name="email" placeholder="Электронная почта" required>
+                <button type="submit" class="button button--blog">Подписаться</button>
+              </div>
+            </form>
+            <p class="accept">Нажимая "Подписаться" вы соглашаетесь на <a href="<?= ldocslink('agree'); ?>" target="_blank">обработку персональных данных</a></p>
+          </div>
         </div>
+        <aside class="blogdidjest__right">
+          <img src="<?=imgs();?>/blog/diget.jpg" alt="">
+        </aside>
       </div>
-      <aside class="blogdidjest__right">
-        <img src="<?=imgs();?>/blog/diget.jpg" alt="">
-      </aside>
     </div>
-  </div>
-</section>
-
+  </section>
+<? endif; ?>
 
 
 <?php
-get_footer('blog');
+get_footer();

@@ -56,10 +56,10 @@ get_header();
       <div class="hrform__sub">
         Мы рады видеть в команде инициативных и вовлеченных сотрудников, готовых решать сложные задачи и реализовывать масштабные проекты.
       </div>
-      <form action="/" class="hrform__form" method="post" enctype="multipart/form-data">
 
+      <form class="hrform__form ajaxForm" data-target="axFormRequest">
         <div class="floatinp">
-          <input type="text" id="inpname" name="name" required class="floatinp__input" placeholder=" ">
+          <input type="text" id="inpname" name="Name" required class="floatinp__input" placeholder=" ">
           <label for="inpname">Имя</label>
         </div>
 
@@ -82,8 +82,9 @@ get_header();
         <div class="hrform__submit">
           <button class="button" type="submit">Отправить</button>
         </div>
-        <div class="hrform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?= personal_link(); ?>" target="_blank">персональных данных</a></div>
+        <div class="hrform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?= ldocslink('agree'); ?>" target="_blank">персональных данных</a></div>
 
+        <input type="hidden" name="special" value="hr">
       </form>
     </div>
   </div>

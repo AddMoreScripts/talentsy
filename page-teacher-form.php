@@ -13,12 +13,12 @@ get_header();
     <div class="comingsoonform__h1 druk js-slide-bot"><?= get_the_title(); ?></div>
     <div class="comingsoonform__sub  js-slide-bot"><?php the_content(); ?></div>
 
-    <form action="/" class="abloutform" method="post" enctype="multipart/form-data">
+    <form class="abloutform ajaxForm" data-target="axFormRequest">
       <img src="<?= imgs(); ?>/about/tab4-leftline.svg" alt="" class="abloutform__abs">
       <img src="<?= imgs(); ?>/about/tab4-rightline.svg" alt="" class="abloutform__abs2">
 
       <div class="floatinp">
-        <input type="text" id="inpname" name="name" required class="floatinp__input" placeholder=" ">
+        <input type="text" id="inpname" name="Name" required class="floatinp__input" placeholder=" ">
         <label for="inpname">Имя</label>
       </div>
 
@@ -33,7 +33,7 @@ get_header();
       </div>
 
       <div class="floatinp">
-        <textarea name="Textarea" id="Textarea"  class="floatinp__textarea" placeholder=" "></textarea>
+        <textarea name="Comment" id="Textarea"  class="floatinp__textarea" placeholder=" "></textarea>
         <label for="Textarea">Комментарий</label>
       </div>
       <div class="fileinput flexi">
@@ -47,8 +47,10 @@ get_header();
         <img src="<?=imgs(); ?>/about/tab4-buttonbg.svg" alt="">
       </div>
 
-      <div class="abloutform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=personal_link(); ?>" target="_blank">персональных данных</a></div>
+      <div class="abloutform__accept">Нажимая "Отправить" вы соглашаетесь на обработку <a href="<?=ldocslink('agree'); ?>" target="_blank">персональных данных</a></div>
 
+
+      <input type="hidden" name="special" value="teacher">
     </form>
   </div>
 </div>

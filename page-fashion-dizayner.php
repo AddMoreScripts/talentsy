@@ -624,7 +624,7 @@ $pics = imgs() . '/fashion-dizayner';
       </div>
     </div>
     <div class="priceblock__greenprice jbm">
-      <span>От</span> <span>6250</span> <span>₽/МЕС</span>
+      <span>От</span> <span class="jsPPSumm">6250</span> <span>₽/МЕС</span>
       <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
     </div>
     <div class="priceblock__mobdescr">
