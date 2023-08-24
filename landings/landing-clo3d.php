@@ -203,7 +203,7 @@ $pics = imgs() . '/clo3d';
 						<input type="email" name="Email" placeholder="Email" required>
 					</div>
 					<div class="cloformbox__subwrap">
-						<button type="submit" class="clobtn">Отправить</button>
+						<button type="submit" class="clobtn">Получить запись урока</button>
 					</div>
 				</div>
 				<p class="cloformbox__accept">
@@ -302,7 +302,7 @@ $pics = imgs() . '/clo3d';
 						<input type="email" name="Email" placeholder="Email" required>
 					</div>
 					<div class="cloformbox__subwrap">
-						<button type="submit" class="clobtn">Отправить</button>
+						<button type="submit" class="clobtn">Получить консультацию</button>
 					</div>
 				</div>
 				<p class="cloformbox__accept">
@@ -643,7 +643,7 @@ $pics = imgs() . '/clo3d';
 						<input type="email" name="Email" placeholder="Email" required>
 					</div>
 					<div class="cloformbox__subwrap">
-						<button type="submit" class="clobtn">Отправить</button>
+						<button type="submit" class="clobtn">Получить программу</button>
 					</div>
 				</div>
 				<p class="cloformbox__accept">
