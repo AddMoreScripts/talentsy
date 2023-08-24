@@ -1,0 +1,38 @@
+.jsPmoError {
+  display: none;
+  margin-top: 15px;
+  color: red;
+}
+
+.jsPmoError.suceesscode {
+  color: green;
+}
+
+.jsVKAuthTopBlock,
+.jsVKAuthBlock iframe {
+  display: none;
+}
+
+.jsVKAuthCustom {
+  cursor: pointer;
+}
+
+.ajaxForm button:disabled {
+  opacity: 0.6;
+  background-image: url(../img/clo3d/loader.svg);
+  background-repeat: no-repeat;
+  background-position: 50% calc(100% - 12px);
+  background-size: 20px;
+}
+
+.promoform.newpromoform {
+  transition: none;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  will-change: auto;
+  height: auto;
+  position: relative;
+  top: auto;
+  left: auto;
+}

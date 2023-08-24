@@ -67,19 +67,25 @@ $(document).ready(function(){
 
 	// обработка промокодов
 	// show
+	$('body').on('click', '.promoform__clearer', function(){
+    $('.jsPmoField').val('');
+	});
+
+  //Очистка по крестику
 	$('body').on('click', '.promoform__btn', function(){
 		$(this).parents('.newpromoform').addClass('state-open')
 	});
+
 	// отправка
 	$('body').on('click', '.jsPPRequest', function(){
 	    var promoCont 		= $(this).parents('.newpromoform'),
 	    promoCodeValue 		= promoCont.find('.jsPmoField').val();
-	    
+
 	    $.get('https://octopus.talentsy.ru/wp-content/themes/clear/inc/rest/promocodes-percent.php',
-	        {"url": window.location.href,"promocode": promoCodeValue}, 
+	        {"url": window.location.href,"promocode": promoCodeValue},
 	        function(a){
 	            j = $.parseJSON(a);
-	            
+
 	            if( j.result ){
 	                $('.jsPPSumm').html( Math.round(parseInt($('.jsPPSumm').html())/100*(100-parseInt(j.percent))) );
 	                promoCont.removeClass('state-open').addClass('state-success')
@@ -89,7 +95,7 @@ $(document).ready(function(){
 	                promoCont.find('.jsPmoField').addClass('is-invalid');
 	            }
 	        }
-	    ); 
+	    );
 	});
 
 	//// VK ID
@@ -101,9 +107,9 @@ $(document).ready(function(){
 	    const oneTapButton = Connect.buttonOneTapAuth({
 	        callback: function(e){
 	            const type = e.type;
-	            
+
 	            if (!type) return false;
-	            
+
 	            switch(type){
 	                case ConnectEvents.OneTapAuthEventsSDK.LOGIN_SUCCESS: // всё ок, пользователь уже авторизован
 	                    getVKUserFormInfo(e.payload.token, e.payload.uuid, oneTapButton);
@@ -113,7 +119,7 @@ $(document).ready(function(){
 	                    // return Connect.redirectAuth({url: window.location.href, state: 'vkafterauth'});
 	                    return false;
 	            }
-	            
+
 	            return false;
 	        },
 	        options: {
@@ -124,14 +130,14 @@ $(document).ready(function(){
 	            }
 	        },
 	    });
-	    
+
 	    // добавляем кнопку
 	    if( oneTapButton ){
 	        oneTapButton.authReadyPromise.then(function(isAuthed){
 	            if( isAuthed != 'VKSDKOneTapAuthDataLoaded' ){
 	                oneTapButton.destroy(); // пользователь не авторизован в вк - не показываем вообще
 	            }else{
-	                $('.jsVKAuthBlock iframe').css('display', 'block'); // чтобы не было видно "подгрузки" - фреймы вк скрыты через css, раз он авторизован - показываем 
+	                $('.jsVKAuthBlock iframe').css('display', 'block'); // чтобы не было видно "подгрузки" - фреймы вк скрыты через css, раз он авторизован - показываем
 	            }
 	        });
 
@@ -142,9 +148,9 @@ $(document).ready(function(){
 	    const oneTapButton = Connect.floatingOneTapAuth({
 	        callback: function(e){
 	            const type = e.type;
-	            
+
 	            if (!type) return false;
-	                
+
 	            switch(type){
 	                case ConnectEvents.OneTapAuthEventsSDK.LOGIN_SUCCESS: // всё ок, пользователь уже авторизован
 	                    getVKUserFormInfo(e.payload.token, e.payload.uuid, oneTapButton);
@@ -157,7 +163,7 @@ $(document).ready(function(){
 	                    // return Connect.redirectAuth({url: window.location.href, state: 'vkafterauth'});
 	                    return false;
 	            }
-	            
+
 	            return false;
 	        },
 	        options: {
@@ -167,7 +173,7 @@ $(document).ready(function(){
 	            skipSuccess: false,
 	        },
 	    });
-	    
+
 	    // добавляем блок
 	    if( oneTapButton ){
 	        oneTapButton.authReadyPromise.then(function(isAuthed){
@@ -188,9 +194,9 @@ $(document).ready(function(){
 	                const oneTapButton = Connect.floatingOneTapAuth({
 	                    callback: function(e){
 	                        const type = e.type;
-	                        
+
 	                        if (!type) return false;
-	                            
+
 	                        switch(type){
 	                            case ConnectEvents.OneTapAuthEventsSDK.LOGIN_SUCCESS: // всё ок, пользователь уже авторизован
 	                                getVKUserFormInfo(e.payload.token, e.payload.uuid, oneTapButton);
@@ -203,7 +209,7 @@ $(document).ready(function(){
 	                                // return Connect.redirectAuth({url: window.location.href, state: 'vkafterauth'});
 	                                return false;
 	                        }
-	                        
+
 	                        return false;
 	                    },
 	                    options: {
@@ -224,7 +230,7 @@ $(document).ready(function(){
 	var urlParams   = new URLSearchParams(document.location.search);
 	if( urlParams.get("state") == "vkafterauth" ){
 	   var authRes = $.parseJSON( urlParams.get("payload") );
-	   
+
 	   getVKUserFormInfo(authRes.token, authRes.uuid, oneTapButton);
 	}
 });
@@ -257,7 +263,7 @@ function getVKUserFormInfo(token, uuid, OTP){
         },
         success: function(answer){
             answer = $.parseJSON(answer);
-            
+
             if( answer.success ){
                 // для форм тильды
                 $('input[name="Name"]').val( answer.name );
@@ -270,13 +276,13 @@ function getVKUserFormInfo(token, uuid, OTP){
                 $( "iframe[src^='https://lk.talentsy.ru']").each(function(e){
                     $(this).attr('src', $(this).attr('src') + gcUrlAddon);
                 });
-                
+
                 // вк айди запоминаем в куку
                 var date = new Date();
                 date.setTime(date.getTime() + (24*60*60*1000));
                 var expires = "; expires=" + date.toUTCString();
                 document.cookie = "vkuserid="+ answer.userid + expires + "; path=/";
-                
+
                 // убираем кнопки авторизации
                 OTP.destroy();
                 $('.jsVKAuthCustom').remove();

@@ -454,7 +454,7 @@
   .clob2__bg{
     border-radius: 16px;
   }
-  .clob2 .container{
+  .clob2 .clocontainer{
     flex-flow: column nowrap;
     align-items: stretch;
   }
@@ -777,6 +777,11 @@
     top: calc(50% - 32px);
     margin-right: 0;
     transform: scale(0.7);
+  }
+  .clob1__saleproc {
+    position: static;
+    margin-right: 10px;
+    transform: none;
   }
   .promoform{
     margin-top: -10px;

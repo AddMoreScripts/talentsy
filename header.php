@@ -6,19 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <?php wp_head(); ?>
 
   <script src="<?=get_template_directory_uri(); ?>/js/custom/gsap.min.js"></script>
   <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollTrigger.min.js"></script>
-  <!-- <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollSmoother.min.js"></script> -->
   <?= vite('js/main.js') ?>
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <script>
   window.pageID = "<?= get_the_ID(); ?>";
   window.ajaxurl = "<?= admin_url('admin-ajax.php'); ?>";
-  
+
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TLLHK7P');
 </script>
 
@@ -32,7 +31,6 @@
 <header class="hdr">
   <div class="hdr__wrap flexi">
 
-    <!-- Стандартный вывод логотипа WordPress ф-ей the_custom_logo() -->
     <?php
       if(isset($args['white']) && $args['white']){
         echo "<a href='/' class='custom-logo-link'><img src='". imgs() . "/logo-white.svg' alt=''></a>";

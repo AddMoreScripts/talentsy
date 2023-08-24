@@ -181,29 +181,20 @@ function disable_enable_scripts(){
 
     // перезадаем jQuery без плагина
     wp_deregister_script('jquery');
-    wp_register_script('jquery', (get_template_directory_uri() .'/dist/jquery-3.5.1.min.js'), false, '3.5.1');
+    wp_register_script('jquery', (get_template_directory_uri() .'/js/custom/jquery-3.6.4.min.js'), false, '3.6.4', false);
     wp_enqueue_script('jquery');
   endif;
 
   // добавляем
-  $theme_ver = '1.0.1';
-  wp_enqueue_style('css-sombra', get_template_directory_uri() . '/dist/sombra.css', [], $theme_ver);
+  $theme_ver = '12';
+  wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
-  if( is_page_template('landings/landing-clo3d.php') ):
-    wp_enqueue_style('css-clo3d-reset', get_template_directory_uri() . '/landings/css/clo3d/reset.css', [], $theme_ver);
-    wp_enqueue_style('css-clo3d-swiper-bundle', get_template_directory_uri() . '/landings/css/clo3d/swiper-bundle.min.css', [], $theme_ver);
-    wp_enqueue_style('css-clo3d-fancybox', get_template_directory_uri() . '/landings/css/clo3d/fancybox.css', [], $theme_ver);
+  if( is_page_template('landings/landing-clo3d.php') ){
     wp_enqueue_style('css-clo3d-site', get_template_directory_uri() . '/landings/css/clo3d/site.css', [], $theme_ver);
     wp_enqueue_style('css-clo3d-media', get_template_directory_uri() . '/landings/css/clo3d/media.css', [], $theme_ver, '(max-width:1330px)');
-
-    wp_enqueue_script('js-clo3d-scrollreveal', (get_template_directory_uri() .'/landings/js/clo3d/scrollreveal.min.js'), [], $theme_ver, true);
-    wp_enqueue_script('js-clo3d-imask', (get_template_directory_uri() .'/landings/js/clo3d/imask.min.js'), [], $theme_ver, true);
-    wp_enqueue_script('js-clo3d-swiper-bundle', (get_template_directory_uri() .'/landings/js/clo3d/swiper-bundle.min.js'), [], $theme_ver, true);
-    wp_enqueue_script('js-clo3d-fancybox', (get_template_directory_uri() .'/landings/js/clo3d/fancybox.umd.js'), [], $theme_ver, true);
-    wp_enqueue_script('js-clo3d-phonemasks', (get_template_directory_uri() .'/landings/js/clo3d/phonemasks.js'), [], $theme_ver, true);
     wp_enqueue_script('js-clo3d-main', (get_template_directory_uri() .'/landings/js/clo3d/main.js'), [], $theme_ver, true);
     wp_enqueue_script('js-clo3d-getreview', 'https://app.getreview.io/tags/mugUGuLoIpZqq1qD/sdk.js', [], $theme_ver, true);
-  endif;
+  }
 }
 add_action('wp_enqueue_scripts', 'disable_enable_scripts', 99);
 

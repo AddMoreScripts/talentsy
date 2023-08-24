@@ -8,14 +8,14 @@ $pics = imgs() . '/clo3d';
 
 <div class="pagewrap">
 <section class="clob1">
-	<div class="container">
+	<div class="clocontainer">
 		<h1 class="clob1__title jbm">
 			Научим создавать реальную
 			<br>и&nbsp;виртуальную одежду в<span style="color:#368048">&nbsp;CLO3D</span>
 			<br>за&nbsp;25&nbsp;уроков
 		</h1>
 		<div class="clob1__line"></div>
-		<div class="clob1__main flexi">
+		<div class="clob1__main cloflexi">
 			<aside class="clob1__side">
 				<img src="<?= $pics; ?>/b1-lead.png" alt="" class="clob1__lead">
 				<img src="<?= $pics; ?>/b1-star.svg" alt="" class="clob1__star">
@@ -27,11 +27,11 @@ $pics = imgs() . '/clo3d';
 					<li>Исключите ошибки лекал <small>еще до раскроя, примеряя их на 3D-аватар</small></li>
 				</ul>
 				<div class="clob1__line clob1__line--mob"></div>
-				<div class="clob1__action flexi">
+				<div class="clob1__action cloflexi">
 					<a href="#orderform" class="clob1__button clobtn" data-scrollto>Записаться на курс</a>
-					<div class="clob1__saleblock flexi">
-						<div class="clob1__saleproc">
-							<img src="<?= $pics; ?>/b1-sale.png" alt="">
+					<div class="clob1__saleblock cloflexi">
+						<div class="clob1__saleproc cloform4__circle jbm">
+              <span>-</span>47<small>%</small>
 						</div>
 						<div class="clob1__saleright">
 							<strong>Скидка до 1 сентября</strong>
@@ -46,7 +46,7 @@ $pics = imgs() . '/clo3d';
 
 <section class="clob2">
 	<div class="clob2__bg">
-		<div class="container flexi">
+		<div class="clocontainer cloflexi">
 			<div class="clob2__left">
 				<h2 class="h2">о профессии</h2>
 				<div class="clob2__vidowrap">
@@ -86,8 +86,8 @@ $pics = imgs() . '/clo3d';
 </section><!-- //clob2 -->
 
 <section class="clocourseslider js-closlider1">
-	<div class="container">
-		<div class="clocourseslider__hdr flexi">
+	<div class="clocontainer">
+		<div class="clocourseslider__hdr cloflexi">
 			<h2 class="h2">Чему научитесь на курсе</h2>
 		</div>
 		<div class="clocourseslider__swiper swiper">
@@ -164,7 +164,7 @@ $pics = imgs() . '/clo3d';
 				</div><!-- //slide7 -->
 			</div>
 		</div><!-- //clocourseslider__swiper -->
-		<div class="closlictrl flexi">
+		<div class="closlictrl cloflexi">
 			<button class="closlictrlbutt closlictrlbutt--prev"><img src="<?= $pics; ?>/b3-arrow.svg" alt=""></button>
 			<div class="closlictrl__pag">1 / 7</div>
 			<button class="closlictrlbutt closlictrlbutt--next"><img src="<?= $pics; ?>/b3-arrow.svg" alt=""></button>
@@ -173,9 +173,9 @@ $pics = imgs() . '/clo3d';
 </section><!-- //clocourseslider -->
 
 <section class="cloform cloform1">
-	<div class="container">
+	<div class="clocontainer">
 		<div class="cloform__bg">
-			<div class="cloform1__top flexi">
+			<div class="cloform1__top cloflexi">
 				<div class="cloform1__left">
 					<h2 class="h2">Получите в&nbsp;<span style="color:#368048">подарок</span> <br>запись урока</h2>
 					<div class="cloform1__sub">И взгляните как создаются 3D-модели</div>
@@ -216,7 +216,7 @@ $pics = imgs() . '/clo3d';
 
 <section class="clob5">
 	<div class="cloblack">
-		<div class="container">
+		<div class="clocontainer">
 			<h2 class="h2">Для кого этот курс</h2>
 			<div class="clob5__wrap">
 				<div class="clob5box clob5box--green">
@@ -283,7 +283,7 @@ $pics = imgs() . '/clo3d';
 </section><!-- //clob5 -->
 
 <section class="cloform cloform2">
-	<div class="container">
+	<div class="clocontainer">
 		<div class="cloform__bg">
 			<h2 class="cloform2__h2 h2">ОСВОЙТЕ <span style="color:#368048;">СОВРЕМЕННУЮ ПРОФЕССИЮ</span> <br>И получайте
 				коммерческие заказы</h2>
@@ -314,55 +314,55 @@ $pics = imgs() . '/clo3d';
 </section><!-- //cloform2 -->
 
 <section class="clob7 js-closlider2">
-	<div class="container">
+	<div class="clocontainer">
 		<h2 class="h2">Сомневаетесь что справитесь?</h2>
 		<div class="clob7__sub">Посмотрите <b>работы наших выпускников</b> с первого потока</div>
 		<div class="clob7__swiper swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<a href="./img/student-works/001.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/001.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/001.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/002.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/002.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/002.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/003.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/003.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/003.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/004.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/004.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/004.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/005.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/005.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/005.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/006.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/006.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/006.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/007.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/007.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/007.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
 				</div>
 				<div class="swiper-slide">
-					<a href="./img/student-works/008.png" class="clob7__picwrap square" data-fancybox="student-work">
+					<a href="<?= $pics; ?>/student-works/008.png" class="clob7__picwrap square" data-fancybox="student-work">
 						<img src="<?= $pics; ?>/student-works/008.png" alt="" class="square__img" loading="lazy">
 						<div class="swiper-lazy-preloader"></div>
 					</a>
@@ -370,7 +370,7 @@ $pics = imgs() . '/clo3d';
 			</div>
 		</div>
 		<div class="clob7__footer">
-			<div class="closlictrl flexi">
+			<div class="closlictrl cloflexi">
 				<button class="closlictrlbutt closlictrlbutt--prev"><img src="<?= $pics; ?>/b3-arrow.svg" alt=""></button>
 				<div class="closlictrl__pag"></div>
 				<button class="closlictrlbutt closlictrlbutt--next"><img src="<?= $pics; ?>/b3-arrow.svg" alt=""></button>
@@ -385,19 +385,19 @@ $pics = imgs() . '/clo3d';
 </section><!-- //clob6 -->
 
 <div class="mobpresummary">
-	<div class="container">
+	<div class="clocontainer">
 		<div class="clob1__line clob1__summline clob1__line--mob"></div>
 	</div>
 </div>
 
 <section class="closummary">
-	<div class="container">
+	<div class="clocontainer">
 		<div class="clob1__line"></div>
 		<h2 class="h2">Содержание курса</h2>
 		<div class="closummary__wrap">
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary1">
-				<label class="closummary__hdr flexi" for="closummary1">
+				<label class="closummary__hdr cloflexi" for="closummary1">
 					<span class="clo3slide__num">01</span>
 					<span class="closummary__title">Сайт Clo - регистрация, тестовая версия</span>
 					<span class="closummary__plus"></span>
@@ -413,7 +413,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary2">
-				<label class="closummary__hdr flexi" for="closummary2">
+				<label class="closummary__hdr cloflexi" for="closummary2">
 					<span class="clo3slide__num">02</span>
 					<span class="closummary__title">Интерфейс программы</span>
 					<span class="closummary__plus"></span>
@@ -429,7 +429,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary3">
-				<label class="closummary__hdr flexi" for="closummary3">
+				<label class="closummary__hdr cloflexi" for="closummary3">
 					<span class="clo3slide__num">03</span>
 					<span class="closummary__title">Аватары – часть 1</span>
 					<span class="closummary__plus"></span>
@@ -445,7 +445,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary4">
-				<label class="closummary__hdr flexi" for="closummary4">
+				<label class="closummary__hdr cloflexi" for="closummary4">
 					<span class="clo3slide__num">04</span>
 					<span class="closummary__title">Аватары – часть 2</span>
 					<span class="closummary__plus"></span>
@@ -461,7 +461,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary5">
-				<label class="closummary__hdr flexi" for="closummary5">
+				<label class="closummary__hdr cloflexi" for="closummary5">
 					<span class="clo3slide__num">05</span>
 					<span class="closummary__title">Инструменты для создания лекал</span>
 					<span class="closummary__plus"></span>
@@ -477,7 +477,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary6">
-				<label class="closummary__hdr flexi" for="closummary6">
+				<label class="closummary__hdr cloflexi" for="closummary6">
 					<span class="clo3slide__num">06</span>
 					<span class="closummary__title">Юбка солнце, прямая юбка, создание лекал через файл pdf</span>
 					<span class="closummary__plus"></span>
@@ -493,7 +493,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary7">
-				<label class="closummary__hdr flexi" for="closummary7">
+				<label class="closummary__hdr cloflexi" for="closummary7">
 					<span class="clo3slide__num">07</span>
 					<span class="closummary__title">Сохранение проекта, утюг, ткани и их свойства, настрочные швы</span>
 					<span class="closummary__plus"></span>
@@ -509,7 +509,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary8">
-				<label class="closummary__hdr flexi" for="closummary8">
+				<label class="closummary__hdr cloflexi" for="closummary8">
 					<span class="clo3slide__num">08</span>
 					<span class="closummary__title">Создание оборок, функция кант, функция подгибки</span>
 					<span class="closummary__plus"></span>
@@ -525,7 +525,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary9">
-				<label class="closummary__hdr flexi" for="closummary9">
+				<label class="closummary__hdr cloflexi" for="closummary9">
 					<span class="clo3slide__num">09</span>
 					<span class="closummary__title">Сайт clo set, принты, свойства тканей.</span>
 					<span class="closummary__plus"></span>
@@ -541,7 +541,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary10">
-				<label class="closummary__hdr flexi" for="closummary10">
+				<label class="closummary__hdr cloflexi" for="closummary10">
 					<span class="clo3slide__num">10</span>
 					<span class="closummary__title">Карты: карты нормалей, карты высот, карта металличности и прозрачности</span>
 					<span class="closummary__plus"></span>
@@ -557,7 +557,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary11">
-				<label class="closummary__hdr flexi" for="closummary11">
+				<label class="closummary__hdr cloflexi" for="closummary11">
 					<span class="clo3slide__num">11</span>
 					<span class="closummary__title">Карта высот, функция эластичного шва, дополнение информации о накладных швах</span>
 					<span class="closummary__plus"></span>
@@ -573,7 +573,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary12">
-				<label class="closummary__hdr flexi" for="closummary12">
+				<label class="closummary__hdr cloflexi" for="closummary12">
 					<span class="clo3slide__num">12</span>
 					<span class="closummary__title">Создание складок</span>
 					<span class="closummary__plus"></span>
@@ -589,7 +589,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary13">
-				<label class="closummary__hdr flexi" for="closummary13">
+				<label class="closummary__hdr cloflexi" for="closummary13">
 					<span class="clo3slide__num">13</span>
 					<span class="closummary__title">Радиальное разведение, функция «Fold»</span>
 					<span class="closummary__plus"></span>
@@ -605,7 +605,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="closummary14">
-				<label class="closummary__hdr flexi" for="closummary14">
+				<label class="closummary__hdr cloflexi" for="closummary14">
 					<span class="clo3slide__num">14</span>
 					<span class="closummary__title">Создание лекал на аватаре, белье, корсеты</span>
 					<span class="closummary__plus"></span>
@@ -625,7 +625,7 @@ $pics = imgs() . '/clo3d';
 </section><!-- //closummary -->
 
 <section class="cloform cloform3">
-	<div class="container">
+	<div class="clocontainer">
 		<div class="cloform__bg">
 			<h2 class="cloform2__h2 h2">ПОЛУЧИТЬ <span style="color:#368048">ПОЛНУЮ <br>ПРОГРАММУ КУРСА</span></h2>
 			<div class="cloform__line"></div>
@@ -656,9 +656,9 @@ $pics = imgs() . '/clo3d';
 
 <section class="clob10">
 	<div class="cloblack">
-		<div class="container">
+		<div class="clocontainer">
 			<h2 class="h2">формат обучения</h2>
-			<div class="clob10__wrap flexi">
+			<div class="clob10__wrap cloflexi">
 				<dl class="clob10dl clob10dl--green">
 					<dt>25</dt>
 					<dd>Подробных <br>видеолекций</dd>
@@ -688,7 +688,7 @@ $pics = imgs() . '/clo3d';
 				</dl>
 			</div>
 			<div class="clob10__hr"></div>
-			<div class="clob10__bot flexi">
+			<div class="clob10__bot cloflexi">
 				<div class="clob10__left">
 					<h2 class="h2">А ещё вы получите доступ в <span style="color: #368048;">закрытый Telegram-чат</span></h2>
 					<div class="clob10__bottxt">C полезным контентом для fashion-дизайнеров, <br>конструкторов и
@@ -703,10 +703,10 @@ $pics = imgs() . '/clo3d';
 </section><!-- //clob10 -->
 
 <section class="clob12">
-	<div class="container">
+	<div class="clocontainer">
 		<h2 class="clob12__h2 h2">Погрузитесь в мир,где <span style="color:#368048;">творчество</span> <br>не знает
 			границ</h2>
-		<div class="clob12__wrap flexi">
+		<div class="clob12__wrap cloflexi">
 			<div class="clob12__left">
 				<video class="clob12__pic" preload="auto" playsinline="" autoplay="" loop="" muted="">
 					<source src="<?= $pics; ?>/b4-video.mp4" type="video/mp4">
@@ -723,7 +723,7 @@ $pics = imgs() . '/clo3d';
 </section><!-- //clob12 -->
 
 <section class="cloform cloform4">
-	<div class="container">
+	<div class="clocontainer">
 		<div class="cloform__bg">
 
 			<div class="cloform4__hdr">
@@ -787,7 +787,7 @@ $pics = imgs() . '/clo3d';
 </section><!-- //cloform4 -->
 
 <section class="cloreviews js-clo-reviews">
-	<div class="container">
+	<div class="clocontainer">
 		<h2 class="h2">ВОТ ЧТО <span style="color:#368048">ГОВОРЯТ СТУДЕНТЫ</span> <br>ОНЛАЙН УНИВЕРСИТЕТА TALENTSY</h2>
 
 		<div class="cloreviews__wrap">
@@ -797,9 +797,9 @@ $pics = imgs() . '/clo3d';
 </section><!-- //cloreviews -->
 
 <section class="cloreasons">
-	<div class="container">
+	<div class="clocontainer">
 		<h2 class="h2">ПОЧЕМУ <span style="color:#368048;">СТОИТ <br>ОБУЧАТЬСЯ</span> В TALENTSY</h2>
-		<div class="cloreasons__wrap flexi">
+		<div class="cloreasons__wrap cloflexi">
 			<div class="cloreasons__col">
 				<div class="cloreasons__picwrap">
 					<img src="<?= $pics; ?>/b15-1.png" alt="">
@@ -826,12 +826,12 @@ $pics = imgs() . '/clo3d';
 
 <section class="cloform cloform5">
 	<div class="cloform__bg" id="orderform">
-		<div class="container">
+		<div class="clocontainer">
 			<div class="cloform5__head">
 				<h2 class="h2">стоимость обучения</h2>
 				<div class="cloform__line cloform5__line"></div>
-				<div class="cloform5__prices flexi">
-					<div class="cloform5__current flexi jbm">
+				<div class="cloform5__prices cloflexi">
+					<div class="cloform5__current cloflexi jbm">
 						<div class="cloform5__char1">От</div>
 						<div class="cloform5__char2 jsPPSumm">1333</div>
 						<div class="cloform5__char3">₽/мес</div>
@@ -903,12 +903,12 @@ $pics = imgs() . '/clo3d';
 </section><!-- //cloform5 -->
 
 <section class="clofaq">
-	<div class="container">
+	<div class="clocontainer">
 		<h2 class="h2">Часто задаваемые <br>вопросы</h2>
 		<div class="clofaq__wrap">
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq1">
-				<label class="closummary__hdr flexi" for="clofaq1">
+				<label class="closummary__hdr cloflexi" for="clofaq1">
 					<span class="closummary__title">Смогу ли я создавать цифровую одежду? Я никогда не занимался этим. </span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -923,7 +923,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq2">
-				<label class="closummary__hdr flexi" for="clofaq2">
+				<label class="closummary__hdr cloflexi" for="clofaq2">
 					<span class="closummary__title">Смогу ли я создавать настоящую одежду с помощью Clo 3D?</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -938,7 +938,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq3">
-				<label class="closummary__hdr flexi" for="clofaq3">
+				<label class="closummary__hdr cloflexi" for="clofaq3">
 					<span class="closummary__title">Смогу ли я пользоваться программой Clo 3D на Apple MacBook</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -953,7 +953,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq4">
-				<label class="closummary__hdr flexi" for="clofaq4">
+				<label class="closummary__hdr cloflexi" for="clofaq4">
 					<span class="closummary__title">“Потянет” ли мой ноутбук программу? Какие у нее системные требования?</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -968,7 +968,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq5">
-				<label class="closummary__hdr flexi" for="clofaq5">
+				<label class="closummary__hdr cloflexi" for="clofaq5">
 					<span class="closummary__title">Я конструктор одежды. Какую пользу я получу от прохождения курса?</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -983,7 +983,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq6">
-				<label class="closummary__hdr flexi" for="clofaq6">
+				<label class="closummary__hdr cloflexi" for="clofaq6">
 					<span class="closummary__title">Получится ли совмещать учебу и работу?</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -998,7 +998,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq7">
-				<label class="closummary__hdr flexi" for="clofaq7">
+				<label class="closummary__hdr cloflexi" for="clofaq7">
 					<span class="closummary__title">Переживаю что не справлюсь. На какую помощь я могу рассчитывать?</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -1013,7 +1013,7 @@ $pics = imgs() . '/clo3d';
 			</article>
 			<article class="closummary__quest">
 				<input type="checkbox" name="questcheck" id="clofaq8">
-				<label class="closummary__hdr flexi" for="clofaq8">
+				<label class="closummary__hdr cloflexi" for="clofaq8">
 					<span class="closummary__title">Есть ли у вас рассрочка?</span>
 					<span class="closummary__plus"></span>
 				</label>
@@ -1032,7 +1032,7 @@ $pics = imgs() . '/clo3d';
 </div><!-- //pagewrap -->
 
 <section class="cloblackblock">
-	<div class="container">
+	<div class="clocontainer">
 		<img src="<?= $pics; ?>/footer-logo-white.svg" alt="" class="cloblack__logo">
 		<div class="cloblack__line2">
 			<div class="cloblack__slogan">Онлайн-обучение <br>гуманитарным <br>профессиям</div>

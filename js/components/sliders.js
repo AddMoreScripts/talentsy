@@ -180,4 +180,8 @@ export const initSliders = () => {
         },
       },
     });
+
+    if(typeof initAddictSwipers === 'function'){
+      initAddictSwipers(Swiper);
+    }
 };

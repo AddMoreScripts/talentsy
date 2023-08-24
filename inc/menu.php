@@ -5,7 +5,9 @@
     'subs'    => []
   ];
 
-  foreach(get_field('mmenu', 'options') as $k => $mainItem):
+  $menuOptsField = get_field('mmenu', 'options') ? get_field('mmenu', 'options') : [];
+
+  foreach($menuOptsField as $k => $mainItem):
     if( $mainItem['isMobile'] ):
       $acfMenu['mobile'][] = $mainItem['link'];
     else:
@@ -36,7 +38,7 @@
           'container_class' => 'menuwindow__nav',
         ]); ?>
 
-        <div class="menuwindow__main flexi" data-tabwrap>
+        <div class="menuwindow__main flexi" data-tabwrap="somemenu">
           <div class="menuwindow__aside">
             <div class="menuwindow__h1">Факультеты</div>
             <ul class="menuwindow__facultet druk">
