@@ -12,7 +12,6 @@
   <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollTrigger.min.js"></script>
   <!-- <script src="<?=get_template_directory_uri(); ?>/js/custom/ScrollSmoother.min.js"></script> -->
   <?= vite('js/main.js') ?>
-  <link href="<?=get_template_directory_uri(); ?>/dist/sombra.css" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

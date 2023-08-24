@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var _this 		= $(this),
 			formData 	= new FormData();
 
-		loadingToggle();
+		_this.find('button').attr('disabled', true);
 
         formData.append('action', _this.data('target'));
         formData.append('form', _this.serialize());
@@ -41,24 +41,24 @@ $(document).ready(function(){
 				if( typeof j.eHtml !== 'undefined' ) $(j.eTarget).html(j.eHtml);
 				if( typeof j.jsData !== 'undefined' ) eval(j.jsData);
 
-				loadingToggle();
+				_this.find('button').attr('disabled', false);
 				$('body').trigger('success_' + _this.data('target'));
 	        },
 	        statusCode: {
 				500: function(){
-					loadingToggle();
+					_this.find('button').attr('disabled', false);
 					notifyMessage('danger', 'Ошибка сервера: 500');
 				},
 				502: function(){
-					loadingToggle();
+					_this.find('button').attr('disabled', false);
 					notifyMessage('danger', 'Ошибка сервера: 502');
 				},
 				504: function(){
-					loadingToggle();
+					_this.find('button').attr('disabled', false);
 					notifyMessage('danger', 'Сервер устал ждать: 504');
 				},
 				400: function(){
-					loadingToggle();
+					_this.find('button').attr('disabled', false);
 					notifyMessage('danger', 'Ошибка получателя: 400');
 				}
 			}
@@ -66,8 +66,14 @@ $(document).ready(function(){
 	});
 
 	// обработка промокодов
+	// show
+	$('body').on('click', '.promoform__btn', function(){
+		$(this).parents('.newpromoform').addClass('state-open')
+	});
+	// отправка
 	$('body').on('click', '.jsPPRequest', function(){
-	    var promoCodeValue = $('.jsPmoField').val();
+	    var promoCont 		= $(this).parents('.newpromoform'),
+	    promoCodeValue 		= promoCont.find('.jsPmoField').val();
 	    
 	    $.get('https://octopus.talentsy.ru/wp-content/themes/clear/inc/rest/promocodes-percent.php',
 	        {"url": window.location.href,"promocode": promoCodeValue}, 
@@ -76,11 +82,11 @@ $(document).ready(function(){
 	            
 	            if( j.result ){
 	                $('.jsPPSumm').html( Math.round(parseInt($('.jsPPSumm').html())/100*(100-parseInt(j.percent))) );
+	                promoCont.removeClass('state-open').addClass('state-success')
 
-	                $('.jsPmoError').addClass('suceesscode').html(j.message).show();
 	                $('[name="jsPmoHiddenFormField"]').val(promoCodeValue);
 	            }else{
-	                $('.jsPmoError').removeClass('suceesscode').html(j.message).show();
+	                promoCont.find('.jsPmoField').addClass('is-invalid');
 	            }
 	        }
 	    ); 
