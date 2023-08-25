@@ -5,6 +5,10 @@
   $current = get_queried_object();
   if ($current instanceof WP_Term) $currentCat = $current->term_id;
 
+  $isTag    = $current->taxonomy == 'post_tag';
+  $axParam  = ['page_num' => 1];
+  $axParam[ ($isTag ? 'tags' : 'cats') ] = [$currentCat];
+
 ?>
 
 
@@ -16,10 +20,11 @@
       <img src="<?= imgs(); ?>/blog/icon-slider-arrow.svg" alt="">
       <span>Назад</span>
     </a>
-    <div class="blogcategory__label">Категория</div>
-    <h1 class="blogcategory__title"><?= get_the_archive_title(); ?></h1>
+
+    <div class="blogcategory__label"><?= $isTag ? 'Тег' : 'Категория'; ?></div>
+    <h1 class="blogcategory__title"><?= $isTag ? '#' : ''; ?><?= get_the_archive_title(); ?></h1>
     <div class="js-catalog" data-actionname="catalog">
-      <?php get_template_part('inc/ajax-blog-posts', null, ['cats' => [$currentCat], 'page_num' => 1]); ?>
+      <?php get_template_part('inc/ajax-blog-posts', null, $axParam); ?>
     </div>
     <nav class="navigation pagination" aria-label="Записи">
       <div class="js-pagination-wrap catalog-pagination">

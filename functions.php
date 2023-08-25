@@ -186,7 +186,7 @@ function disable_enable_scripts(){
   endif;
 
   // добавляем
-  $theme_ver = '12';
+  $theme_ver = '1.0.2';
   wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
   if( is_page_template('landings/landing-clo3d.php') ){
@@ -311,3 +311,21 @@ function axFormRequest(){
 }
 add_action('wp_ajax_axFormRequest', 'axFormRequest');
 add_action('wp_ajax_nopriv_axFormRequest', 'axFormRequest');
+
+// loadmore на главной блога
+function axLoadMoreHome(){
+  $nextPage = $_POST['params'];
+  $result   = ['nextPage' => $nextPage, 'jsData' => [], 'eTarget' => '.jsLoadMoreCont'];
+
+  ob_start();
+    get_template_part('inc/post-teasers-main', null, ['page' => $nextPage, 'showTg' => false]);
+  $result['aHtml'] = ob_get_clean();
+
+  $result['jsData'][] = "$('[data-target=\"axLoadMoreHome\"]').data('params', ". $nextPage+1 .");";
+  
+
+  $result['jsData'] = implode('', $result['jsData']);
+  die(json_encode($result));
+}
+add_action('wp_ajax_axLoadMoreHome', 'axLoadMoreHome');
+add_action('wp_ajax_nopriv_axLoadMoreHome', 'axLoadMoreHome');

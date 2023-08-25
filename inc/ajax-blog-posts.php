@@ -12,7 +12,7 @@ $queryParams = [
   'paged' => $currentPage,
   'post__not_in' => $exclude,
 ];
-if (count($args['cats'])) {
+if ($args['cats'] && count($args['cats'])) {
   $queryParams['tax_query'] = [
     'relation' => 'AND',
     [
@@ -20,6 +20,17 @@ if (count($args['cats'])) {
 		'terms'    => $args['cats'],
 		'field'    => 'id',
 		'operator' => 'AND',
+    ]
+  ];
+}
+if ($args['tags'] && count($args['tags'])) {
+  $queryParams['tax_query'] = [
+    'relation' => 'AND',
+    [
+    'taxonomy' => 'post_tag',
+    'terms'    => $args['tags'],
+    'field'    => 'id',
+    'operator' => 'AND',
     ]
   ];
 }

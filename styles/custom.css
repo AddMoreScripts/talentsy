@@ -36,3 +36,6 @@
   top: auto;
   left: auto;
 }
+.container + .bloglead{
+  margin-top: 30px;
+}

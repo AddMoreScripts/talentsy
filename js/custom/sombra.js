@@ -65,15 +65,65 @@ $(document).ready(function(){
 		});
 	});
 
-	// обработка промокодов
-	// show
-	$('body').on('click', '.promoform__clearer', function(){
-    $('.jsPmoField').val('');
+	// обработка ajaxClick
+	$('body').on('click', '.ajaxClick', function(e){
+		e.preventDefault();
+		var _this 		= $(this),
+			formData 	= new FormData();
+
+		loadingToggle();
+
+        formData.append('action', _this.data('target'));
+        formData.append('params', _this.data('params'));
+        formData.append('json', _this.attr('json'));
+
+		$.ajax({
+			type: 'POST',
+			url: window.ajaxurl,
+            contentType: false,
+            processData: false,
+			data: formData,
+			success: function (j){
+				j = $.parseJSON(j);
+				console.log(j);
+
+				if( typeof j.eHtml !== 'undefined' ) $(j.eTarget).html(j.eHtml);
+				if( typeof j.aHtml !== 'undefined' ) $(j.eTarget).append(j.aHtml);
+				if( typeof j.jsData !== 'undefined' ) eval(j.jsData);
+
+				loadingToggle();
+				$('body').trigger('success_' + _this.data('target'));
+	        },
+	        statusCode: {
+				500: function(){
+					loadingToggle();
+					notifyMessage('danger', 'Ошибка сервера: 500');
+				},
+				502: function(){
+					loadingToggle();
+					notifyMessage('danger', 'Ошибка сервера: 502');
+				},
+				504: function(){
+					loadingToggle();
+					notifyMessage('danger', 'Сервер устал ждать: 504');
+				},
+				400: function(){
+					loadingToggle();
+					notifyMessage('danger', 'Ошибка получателя: 400');
+				}
+			}
+		});
 	});
 
-  //Очистка по крестику
+	//// обработка промокодов
+	// show
 	$('body').on('click', '.promoform__btn', function(){
 		$(this).parents('.newpromoform').addClass('state-open')
+	});
+
+  	// очистка по крестику
+	$('body').on('click', '.promoform__clearer', function(){
+		$('.jsPmoField').val('');
 	});
 
 	// отправка
