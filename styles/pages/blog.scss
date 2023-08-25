@@ -964,3 +964,30 @@
     left: 10px;
   }
 }
+
+
+
+
+.frontcatlink:nth-child(n + 9){
+  display: none;
+}
+.js-load-more-cats{
+  display: none;
+}
+.js-load-more-cats:nth-child(n + 10){
+  display: inline-flex;
+}
+@include media(l){
+  .frontcatlink:nth-child(n + 8){
+    display: none;
+  }
+  .js-load-more-cats:nth-child(n + 9){
+    display: inline-flex;
+  }
+}
+.is-full .frontcatlink{
+  display: inline-flex;
+}
+.is-full .js-load-more-cats{
+  display: none;
+}

@@ -1,7 +1,7 @@
 <?php
 /*
 Template name: Шаблон: Блог стартовая
-*/  
+*/
 $catsList 	= get_terms(['hide_empty' => false, 'taxonomy' => 'category']);
 
 get_header('blog');
@@ -10,9 +10,9 @@ get_header('blog');
 <div class="blogcatheader">
   <div class="container container--1300 flexi">
     <div class="blogcatheader__catlist flexi">
-      <a href="#" class="categoriesbox__tag is-active button button--blog">Все</a>
+      <a href="#" class="categoriesbox__tag frontcatlink is-active button button--blog">Все</a>
       <?php foreach($catsList as $key => $cat) : ?>
-        <a href="<?= get_term_link($cat->term_id); ?>" class="categoriesbox__tag button button--blog">
+        <a href="<?= get_term_link($cat->term_id); ?>" class="categoriesbox__tag frontcatlink button button--blog">
           <?= $cat->name; ?>
         </a>
       <?php endforeach; ?>
@@ -25,6 +25,12 @@ get_header('blog');
     </div>
   </div>
 </div>
+
+<script>
+  $('.js-load-more-cats').on('click', (e) => {
+    $(e.target).closest('.blogcatheader__catlist').addClass('is-full');
+  });
+</script>
 
 <div class="jsLoadMoreCont">
 	<? get_template_part('inc/post-teasers-main', null, ['page' => 1, 'showTg' => true]); ?>
