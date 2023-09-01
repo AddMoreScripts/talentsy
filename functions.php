@@ -195,6 +195,13 @@ function disable_enable_scripts(){
     wp_enqueue_script('js-clo3d-main', (get_template_directory_uri() .'/landings/js/clo3d/main.js'), [], $theme_ver, true);
     wp_enqueue_script('js-clo3d-getreview', 'https://app.getreview.io/tags/mugUGuLoIpZqq1qD/sdk.js', [], $theme_ver, true);
   }
+
+  if( is_page_template('landings/landing-kids.php') ){
+    wp_enqueue_style('css-kids-site', get_template_directory_uri() . '/landings/css/kids/main.css', [], $theme_ver);
+    wp_enqueue_style('css-kids-media', get_template_directory_uri() . '/landings/css/kids/media.css', [], $theme_ver, '(max-width:1200px)');
+    wp_enqueue_script('js-kids-typed', (get_template_directory_uri() .'/landings/js/kids/typed.umd.js'), [], $theme_ver, true);
+    wp_enqueue_script('js-kids-main', (get_template_directory_uri() .'/landings/js/kids/main.js'), [], $theme_ver, true);
+  }
 }
 add_action('wp_enqueue_scripts', 'disable_enable_scripts', 99);
 
@@ -322,7 +329,7 @@ function axLoadMoreHome(){
   $result['aHtml'] = ob_get_clean();
 
   $result['jsData'][] = "$('[data-target=\"axLoadMoreHome\"]').data('params', ". $nextPage+1 .");";
-  
+
 
   $result['jsData'] = implode('', $result['jsData']);
   die(json_encode($result));

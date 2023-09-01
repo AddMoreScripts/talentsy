@@ -16,9 +16,13 @@ export default function initScrollTo() {
     if (scrollButt.dataset.offset) {
       offset = parseInt(scrollButt.dataset.offset)
     }
-    window.scrollTo({
-      top: needEl.getBoundingClientRect().top + window.scrollY - offset,
+    needEl.scrollIntoView({
       behavior: scrollButt.dataset.hard ? 'auto' : 'smooth',
-    });
+      block: 'center',
+    })
+    // window.scrollTo({
+    //   top: needEl.getBoundingClientRect().top + window.scrollY - offset,
+    //   behavior: scrollButt.dataset.hard ? 'auto' : 'smooth',
+    // });
   });
 }

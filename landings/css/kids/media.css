@@ -1,0 +1,893 @@
+.page-template-landing-kids{
+  --blkrythm: 80px;
+}
+
+.landkids1__wrap{
+  grid-template-columns: 5fr 4fr;
+}
+.landkids1__right{
+  height: 540px;
+}
+.landkids1__pic{
+  height: 100%;
+  left: -60px;
+}
+.landkids1__h1{
+  font-size: 45px;
+  line-height: 45px;
+}
+.landkids1__markwrap{
+  min-height: calc(3 * 45px);
+}
+.landkids1__h2{
+  font-size: 18px;
+  line-height: 1.4;
+}
+.landkids2item__paper{
+  width: calc(50% - 14px);
+}
+.kidspre{
+  font-size: 18px;
+  line-height: 1.5;
+}
+.landkids3__iconbox img{
+  width: 28px;
+  height: 28px;
+}
+.kidscontainer__train{
+  max-width: none;
+}
+.landkids3__scroll{
+  overflow-x: auto;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 20px 0 30px;
+}
+.landkids3__scroll::-webkit-scrollbar{
+  display: none;
+}
+.landkids3__train{
+  margin-left: 30px;
+}
+.kidsh1{
+  font-size: 35px;
+  line-height: 1.1;
+}
+.kidsform__accept{
+  font-size: 13px;
+}
+
+.landkids3__left{
+  width: 500px;
+}
+.landkids3__h3{
+  font-size: 40px;
+  line-height: 1.2;
+}
+.landkids3__mark {
+  transform: scale(0.7) rotate(-7deg);
+}
+.landkids6__over{
+  padding-bottom: 40px;
+}
+.landkids6__right .landkids6__item:nth-child(2){
+  transform: translate(-7px, -20px) rotate(2deg);
+}
+.landkids7__grid{
+  z-index: 250;
+}
+.landkids7__left{
+  padding-bottom: 0;
+}
+.landkids7__right{
+  padding-right: 0;
+  padding-bottom: 10px;
+}
+.landkids6__item, .landkids7__item{
+  width: 170px;
+  height: auto;
+  padding: 10px;
+  font-size: 14px;
+}
+.landkids7 .kidsform{
+  z-index: 300;
+}
+.landkids8__sliderwrap{
+  width: 530px;
+  transform: translateX(20px);
+}
+.landkids8__abs2{
+  display: none;
+}
+.landkidsteachers__wrap{
+  grid-template-columns: 1fr 1fr;
+}
+.landkidsteacher__picwrap{
+  margin-bottom: 10px;
+}
+.landkidsteacher{
+  padding: 20px 20px 20px;
+}
+.landkidsmonth__grid{
+  grid-gap: 10px;
+}
+.landkidsmonth{
+  padding: 60px 15px;
+}
+.landkidslesson{
+  padding: 15px 10px;
+}
+.landkidslesson__title{
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.landkidslesson__text{
+  font-size: 14px;
+  line-height: 1.3;
+}
+.landkidsstats__progress{
+  max-width: 65%;
+}
+.landkidsvideoblock__text{
+  font-size: 17px;
+  line-height: 1.4;
+}
+.landkidsvideoblock__picwrap{
+  width: 250px;
+}
+.landkidsvideoblock__lead{
+  width: 180px;
+  height: auto;
+}
+.landkids14 .kidscontainer{
+  height: auto;
+}
+.landkids14__left{
+  width: 500px;
+  padding: 50px 0;
+}
+.landkids14__left .kidsh1{
+  font-size: 40px;
+}
+.landkids14__right img{
+  width: 530px;
+  bottom: -20px;
+}
+.closummary__textpad{
+  font-size: 20px;
+  line-height: 1.3;
+}
+.closummary__plus i{
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .page-template-landing-kids{
+    --blkrythm: 60px;
+  }
+  .landkids1__wrap{
+    grid-template-columns: 1fr;
+  }
+  .landkids1__left{
+    align-items: center;
+    text-align: center;
+  }
+  .landkids1__h1{
+    font-size: 30px;
+    line-height: 1;
+  }
+  .landkids1__markwrap{
+    min-height: 60px;
+  }
+  .landkids1__h1 br{
+    display: none;
+  }
+  .landkids1__h2{
+    margin-top: 12px;
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .landkids1__action{
+    width: 100%;
+    justify-content: center;
+    margin-top: 24px;
+    max-width: 300px;
+  }
+  .landkids1__action::before{
+    display: none;
+  }
+  .landkids1__actleft{
+    display: none;
+  }
+  .landkids1__actright{
+    font-size: 16px;
+    margin-left: 0;
+  }
+  .landkids1__mobile{
+    display: block;
+  }
+  .landkids1__right{
+    height: auto;
+    margin-top: 24px;
+  }
+  .landkids1__pic{
+    position: relative;
+    height: auto;
+    width: 400px;
+    transform: translateX(5%);
+    display: block;
+    margin: 0 auto;
+    left: auto;
+  }
+  .landkids1__sep i:nth-child(2){
+    margin-right: 20px;
+  }
+  .kidspre{
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .kidsh1{
+    font-size: 30px;
+    line-height: 1;
+  }
+  .landkids2 .kidsh1 em::after{
+    width: 172px;
+    height: 49px;
+    bottom: -10px;
+  }
+  .landkids2 .kidsh1{
+    margin-top: 8px;
+  }
+  .landkids2__grid{
+    margin-top: 28px;
+    grid-template-columns: 1fr;
+  }
+  .landkids2item{
+    border-radius: 12px;
+    padding: 48px 15px 25px;
+  }
+  .kidswindow::before{
+    top: 10px;
+    left: 10px;
+    width: 31px;
+    height: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .landkids2item__title{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .landkids2item__h2{
+    font-size: 15px;
+    line-height: 21px;
+    margin-top: 4px;
+  }
+  .landkids2item__paper{
+    padding: 16px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    min-height: auto;
+  }
+  .landkids3__iconbox{
+    margin-left: 9px;
+  }
+  .landkids3__iconbox img{
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+  .landkids3 .kidsh1{
+    margin-top: 18px;
+  }
+  .landkids3__scroll{
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  .landkids3__left{
+    width: auto;
+    margin-bottom: 40px;
+  }
+  .landkids3__block{
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+  .landkids3__h3{
+    font-size: 30px;
+    line-height: 1;
+  }
+  .landkids3__train::-webkit-scrollbar{
+    display: none;
+  }
+  .landkids3__train{
+    margin-left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 0 20px;
+  }
+  .landkids3__mark{
+    transform: rotate(-7deg);
+    font-size: 21px;
+    padding: 0 13px;
+    line-height: 36px;
+    right: -87px;
+    bottom: -4px;
+  }
+  .landkids3__markpic1,
+  .landkids3__markpic2{
+    width: 23px;
+    height: auto;
+  }
+  .landkids3__markpic2{
+    top: -20px;
+  }
+  .landkids3__markpic1{
+    left: 0;
+  }
+  .kidswagen{
+    width: 274px;
+    height: 193px;
+    padding: 15px 14px;
+    margin-bottom: 16px;
+  }
+  .kidswagen__title{
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .kidswagen__title img{
+    width: 23px;
+    height: 23px;
+    margin-right: 7px;
+  }
+  .kidswagen__feats{
+    margin-top: 14px;
+  }
+  .kidswagen__feats p{
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 11px;
+    border-radius: 11px;
+    margin-bottom: 2.8px
+  }
+  .kidswagen::before{
+    width: 34px;
+    height: 27px;
+    left: 10px;
+    bottom: -18px;
+  }
+  .kidswagen::after{
+    width: 29px;
+    height: 28px;
+    right: 12px;
+    bottom: -18px;
+  }
+  .landkids3x__sep i:nth-child(1){
+    opacity: 1;
+  }
+  .landkids5__cube{
+    display: none;
+  }
+  .kidsform{
+    padding: 48px 20px 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+    border-radius: 12px;
+  }
+  .kidsform::before{
+    display: none !important;
+  }
+  .landkids5 .kidsform{
+    padding-top: 48px;
+  }
+  .kidsform__h1{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .kidsform__h2{
+    font-size: 15px;
+    line-height: 21px;
+    margin-top: 4px;
+  }
+  .kidsform__wrap{
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    margin-top: 20px;
+  }
+  .kidsform__button{
+    width: 100%;
+  }
+  .kidsform__item input{
+    height: 55px;
+    font-size: 16px;
+  }
+  .kidsform__accept{
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+
+
+  .landkids6{
+    margin-bottom: var(--blkrythm);
+  }
+  .landkids6 .kidsh1{
+    text-align: left;
+  }
+  .landkids6__wrap{
+    height: auto;
+  }
+  .landkids6__bg{
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    left: 50%;
+    max-width: 100%;
+    transform: translateX(-50%);
+    margin-bottom: -50px;
+  }
+  .landkids6__over,
+  .landkids7__overscroll{
+    align-items: stretch;
+    overflow-x: auto;
+    padding-bottom: 0;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+  }
+  .landkids6__over::-webkit-scrollbar,
+  .landkids7__overscroll::-webkit-scrollbar{
+    display: none;
+  }
+  .landkids6__left,
+  .landkids6__right,
+  .landkids7__left,
+  .landkids7__right{
+    display: contents;
+  }
+  .landkids6__left .landkids6__item,
+  .landkids6__right .landkids6__item,
+  .landkids7__left .landkids7__item,
+  .landkids7__right .landkids7__item{
+    transform: none !important;
+    height: auto;
+    width: 132px;
+    padding: 16px 12px;
+    font-size: 12px;
+    line-height: 14px;
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+  .landkids7__left .landkids7__item,
+  .landkids7__right .landkids7__item{
+    width: 142px;
+  }
+  .landkids6__right .landkids6__item:last-child{
+    margin-right: 0;
+  }
+
+  .landkids7{
+    padding: 0 10px;
+  }
+  .landkids7__bg{
+    border-radius: 12px;
+  }
+  .kidscontainer__bg{
+    display: none;
+  }
+  .kidscontainer__girl{
+    left: 47%;
+    width: 100%;
+    margin-top: 30px;
+    max-width: 400px;
+    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: -100px;
+  }
+  .landkids7__grid{
+    display: contents;
+  }
+  .landkids7__overscroll{
+    display: flex;
+    z-index: 10;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .landkids7 .kidsform{
+    padding-top: 48px;
+    margin-top: 40px;
+  }
+  .landkids8{
+    padding-top: var(--blkrythm);
+  }
+  .landkids8__block{
+    margin-top: 40px;
+    margin-bottom: var(--blkrythm);
+  }
+  .landkids8__abs1{
+    transform: scale(0.7);
+  }
+  .landkids8__sliderwrap{
+    width: 100%;
+    transform: none;
+  }
+  .landkids8__propsover{
+    position: relative;
+  }
+  .landkids8__prop img{
+    display: none;
+  }
+  .landkids8__prop dt{
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 8px;
+  }
+  .landkids8__prop{
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .prop1{
+    margin-bottom: 40px;
+  }
+  .prop3{
+    margin-bottom: 24px;
+  }
+  .landkids8__right{
+    margin-top: 30px;
+    width: calc(50% - 6px);
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-width: 0;
+    margin-left: auto;
+  }
+  .landkids8__left{
+    margin-top: 30px;
+    width: calc(50% - 6px);
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-width: 0;
+  }
+  .landkids8__right br,
+  .landkids8__left br{
+    display: none;
+  }
+
+  .landkids8 .kidsform{
+    padding-top: 48px;
+  }
+  .landkidsteachers__wrap{
+    margin-top: 28px;
+  }
+  .landkidsteacher{
+    font-size: 12px;
+    line-height: 17px;
+    padding: 23px 16px;
+    border-radius: 10px;
+  }
+  .landkidsteacher__picwrap{
+    margin-bottom: 30px;
+  }
+
+  .landkidsprog .kidspre{
+    margin-top: 12px;
+  }
+  .landkidsprog__hdr{
+    margin-top: 24px;
+  }
+  .landkidsprog__tablinks{
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .landkidsprog__tablinks::-webkit-scrollbar{
+    display: none;
+  }
+  .landkidsprog__button, .landkidsprog__right{
+    width: 94px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+  .landkidsprog__button{
+    margin-right: 12px;
+  }
+  .landkidsprog__right{
+    display: none;
+  }
+  .landkidsprog__tab{
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .landkidsmonth{
+    border-radius: 12px;
+    padding: 45px 12px 12px;
+  }
+  .landkidsmonth__h1{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .landkidsmonth__grid{
+    margin-top: 18px;
+  }
+  .landkidslesson:nth-child(3), .landkidslesson:nth-child(4){
+    align-self: stretch;
+  }
+  .landkidslesson{
+    padding: 16px 12px;
+    border-radius: 10px;
+    min-height: 130px;
+    min-width: 0;
+  }
+  .landkidslesson__title{
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .landkidslesson__text{
+    display: none;
+  }
+
+  .landkids13__grid{
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+  }
+  .landkidsstats{
+    padding: 16px;
+    min-width: 0;
+  }
+  .landkidsstats__title{
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .landkidsstats__lines{
+    margin-top: 12px;
+  }
+  .landkidsstats__legend{
+    width: auto;
+    font-size: 10px;
+    padding-right: 7px;
+    width: 90px;
+  }
+  .landkidsstats__progress{
+    height: 15px;
+    border-radius: 4px;
+  }
+  .landkidsstats__progress i{
+    border-radius: 0 4px 4px 0;
+  }
+  .landkidsstats__stat{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .landkidsscreen{
+    grid-row: auto;
+    padding: 16px 16px 0;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .landkidsscreen img{
+    max-width: 180px;
+  }
+  .landkidsvideoblock__text{
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .landkids14{
+    padding: 0 10px;
+    margin-top: var(--blkrythm);
+  }
+  .landkids14__bg{
+    border-radius: 12px;
+  }
+  .landkids14 .kidscontainer{
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+  .landkids14__left{
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .landkids14__left .kidsh1{
+    font-size: 30px;
+    line-height: 1;
+  }
+  .landkids14form{
+    margin-top: 28px;
+  }
+  .landkids14form__button{
+    margin-top: 0;
+  }
+  .landkids14__right{
+    width: 100%;
+  }
+  .landkids14__right img{
+    max-width: 100%;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 400px;
+    margin: 0 auto -20px;
+  }
+  .landkidsfaq__title{
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .landkidsfaq__wrap{
+    margin-top: 20px;
+  }
+  .closummary__hdr{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .closummary__title{
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .closummary__plus{
+    box-shadow: none;
+  }
+  .closummary__plus i{
+    width: 36px;
+    height: 36px;
+    background-size: 18px;
+  }
+  .closummary__textpad{
+    padding-top: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
+  .landkids7 .kidsform__h1{
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+  .kidsh1 br,
+  .landkids3__h3 br,
+  .kidsform__h2 br,
+  .kidspre br{
+    display: none;
+  }
+  .landkids1{
+    padding-top: 40px;
+  }
+  .landkids1__markwrap{
+    min-height: 90px;
+  }
+  .landkids1__left{
+    align-items: flex-start;
+    text-align: left;
+  }
+  .landkids1__action{
+    max-width: none;
+  }
+  .landkids1__pic{
+    width: 100%;
+  }
+  .landkids3__h3{
+    max-width: 270px;
+  }
+  .landkids3__mark{
+    right: auto;
+    left: 150px;
+    bottom: -10px;
+    white-space: nowrap;
+  }
+  .landkids6 .kidsh1,
+  .landkids7 .kidsh1{
+    font-size: 28px;
+    text-align: left;
+  }
+  .landkids6__bg{
+    max-width: calc(100% + 40px);
+    left: 52%;
+  }
+  .landkids7__bg{
+    padding-bottom: 0;
+  }
+
+  .prop1, .prop3{
+    margin-bottom: 24px;
+  }
+
+  .landkidsteachers__wrap,
+  .landkidsprog__tablinks{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow-x: auto;
+    grid-gap: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 0 20px;
+    width: calc(100% + 40px);
+  }
+  .landkidsprog__tablinks{
+    padding-bottom: 3px;
+  }
+  .landkidsprog__tabwrap{
+    margin-top: 24px;
+  }
+  .landkidsteachers__wrap::-webkit-scrollbar,
+  .landkidsprog__tablinks::-webkit-scrollbar{
+    display: none;
+  }
+  .landkidsteacher{
+    flex-shrink: 0;
+    margin-right: 12px;
+    width: 240px;
+  }
+  .landkidsteacher:last-child{
+    margin-right: 0;
+  }
+
+  .landkidsstats__progress{
+    max-width: 53%;
+  }
+  .landkidsvideoblock{
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: left;
+    padding: 16px;
+    min-width: 0;
+  }
+  .landkidsvideoblock__picwrap{
+    width: 220px;
+    margin-top: 15px;
+  }
+  .landkidsvideoblock__lead{
+    width: 160px;
+  }
+  .landkids14form{
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+  .landkids14form__2col{
+    grid-column: auto;
+  }
+  .landkids14form__accept{
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
