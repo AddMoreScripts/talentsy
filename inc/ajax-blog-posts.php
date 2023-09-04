@@ -23,7 +23,8 @@ if ($args['cats'] && count($args['cats'])) {
     ]
   ];
 }
-if ($args['tags'] && count($args['tags'])) {
+$isTagTaxonomy = isset($args['tags']) && count($args['tags']);
+if ($isTagTaxonomy) {
   $queryParams['tax_query'] = [
     'relation' => 'AND',
     [
@@ -64,6 +65,7 @@ $query = new WP_Query($queryParams);
         data-needpage="<?=($currentPage + 1); ?>"
         data-perpage="<?=$postPerPage; ?>"
         data-exclude="<?=json_encode($exclude); ?>"
+        data-taxonomytype="<?=$isTagTaxonomy ? 'tag' : 'cat'; ?>"
       >Eщё</button>
     <?php endif; ?>
     <div class="nav-links">

@@ -111,18 +111,21 @@ add_action('wp_ajax_nopriv_catalog', 'cat_load_func');
 
 function cat_load_func()
 {
+  $isTagTaxonomy = (isset($_POST['taxonomyType']) && $_POST['taxonomyType'] == 'tag');
   $catIds = json_decode($_POST['catlist']);
   $pageNum = intval($_POST['page_num']);
   $perPage = intval($_POST['per_page']) ? intval($_POST['per_page']) : 12;
   $exclude = $_POST['exclude'] ? json_decode($_POST['exclude'], true) : [];
   get_template_part('inc/ajax-blog-posts', null, [
-    'cats' => $catIds,
+    'cats' => $isTagTaxonomy ? null : $catIds,
     'page_num' => $pageNum,
     'per_page' => $perPage,
     'exclude' => $exclude,
+    'tags' => $isTagTaxonomy ? $catIds : null,
   ]);
   die;
 }
+
 
 
 
@@ -270,7 +273,7 @@ function axFormRequest(){
   $cookies  = $_POST['cookies'];
   $urlfull  = $_POST['urlfull'];
   $pageID   = (int)$_POST['pageID'];
-  $result   = ['form' => $form, 'urlfull' => $urlfull, 'pageID' => $pageID, 'cookies' => $cookies, 'jsData' => []];
+  $result   = ['jsData' => []];
 
   $sendData = [
     'cookies' => getJSCookiesAsArray($cookies),
@@ -279,28 +282,112 @@ function axFormRequest(){
   ];
 
   if( isset($form['special']) ):
+    // если на странице "о нас" выбрали тему обращения "другое" - отправляем как подвал
+    if( $form['special'] == 'about' && $form['Theme'] == 'Другое' ) $form['special'] = 'footer';
+
+    // форма в подвале уходит в шлюз, там если есть такой url - идет по матрице, если нет - в общую воронку
     if( $form['special'] == 'footer' ):
-
+      $sendData['formName'] = 'Форма в подвале';
+      $sendData['other']['specialForm'] = 'footerForm';
+      $sendData['uData']    = [
+        'name'    => $form['Name'],
+        'email'   => $form['Email'],
+        'phone'   => $form['Phone'],
+      ];
+      if( $form['Comment'] ) $sendData['uData']['other']['Comment'] = $form['Comment'];
+      $result['gleadid']  = rest_gateway_create_lead($sendData);
+      $result['gtm']      = true;
     endif;
 
-    if( $form['special'] == 'about' ):
 
-    endif;
+    // формы с файлом, уходят на email
+    if( in_array($form['special'], ['partner', 'hr', 'teacher', 'about']) ):
+      switch($form['special']){
+        case 'partner':
+          $targetEM = 'nosko.a@talentsy.ru';
+          $subject  = 'Заявка с сайта: Стать партнером';
+          break;
+        case 'teacher':
+          $targetEM = 'pilkova.o@talentsy.ru';
+          $subject  = 'Заявка с сайта: Стать преподавателем';
+          break;
+        case 'hr':
+          $targetEM = 'pilkova.o@talentsy.ru';
+          $subject  = 'Заявка с сайта: Стать сотрудником';
+          break;
 
-    if( $form['special'] == 'wait-fashion' ):
+        default:
+          $targetEM = 'it-sombra@ya.ru';
+          $subject  = 'Неопознанная форма на талентси WP';
+          break;
+      }
 
-    endif;
+      // у страницы о нас еще свои условия
+      if( $form['special'] == 'about' ):
+        switch($form['Theme']){
+          case 'Ваш клиент':
+            $targetEM = 'support@talentsy.ru';
+            $subject  = 'Заявка с сайта: Ваш клиент';
+            break;
+          case 'Хочу быть вашим преподавателем':
+            $targetEM = 'pilkova.o@talentsy.ru';
+            $subject  = 'Заявка с сайта: Стать преподавателем';
+            break;
+          case 'Инвестор':
+            $targetEM = 'ceo@talentsy.ru';
+            $subject  = 'Заявка с сайта: Стать инвестором';
+            break;
+          case 'Представитель СМИ':
+            $targetEM = 'nosko.a@talentsy.ru';
+            $subject  = 'Заявка с сайта: Представитель СМИ';
+            break;
+          case 'Хочу у вас работать':
+            $targetEM = 'pilkova.o@talentsy.ru';
+            $subject  = 'Заявка с сайта: Стать сотрудником';
+            break;
+          case 'Возврат денежных средств':
+            $targetEM = 'finance@talentsy.ru';
+            $subject  = 'Заявка с сайта: Возврат денежных средств';
+            break;
+          default:
+            $targetEM = 'it-sombra@ya.ru';
+            $subject  = 'Неопознанная форма на талентси WP about';
+            break;
+        }
+      endif;
 
-    if( $form['special'] == 'hr' ):
+      $message  = [
+        '<b>Имя</b>: '. $form['Name'],
+        '<b>Телефон</b>: '. $form['Phone'],
+        '<b>Email</b>: '. $form['Email'],
+        '<b>Комментарий</b>: '. $form['Comment'],
+      ];
+      if( $form['rezume'] ) $message[] = '<b>Резюме:</b>: '. $form['rezume'];
+      $files    = [];
 
-    endif;
+      if( !empty($_FILES) ):
+        if( !function_exists('wp_handle_upload') ) require_once(ABSPATH . 'wp-admin/includes/file.php');
 
-    if( $form['special'] == 'partner' ):
+        foreach($_FILES as $key => $data):
+          $movefile = wp_handle_upload($_FILES[$key], array('test_form' => false));
 
-    endif;
+          if( $movefile && !isset($movefile['error']) ):
+            $attachment = [
+              'post_mime_type'  => $movefile['type'],
+              'guid'            => $movefile['url'],
+              'post_title'      => '',
+              'post_content'    => '',
+            ];
+            $id = wp_insert_attachment($attachment, $movefile['file']);
 
-    if( $form['special'] == 'teacher' ):
+            if( !is_wp_error($id) ):
+              $files[] = get_attached_file($id);
+            endif;
+          endif;
+        endforeach;
+      endif;
 
+      $result['mail'] = wp_mail($targetEM, $subject, implode('<br>', $message), ['From: Talentsy WP <wp-tech@talentsy.ru>', 'content-type: text/html'], $files);
     endif;
   else:
     $sendData['formName'] = get_field('amo_form_name', $pageID) ?? 'Неизвестная форма';
@@ -310,8 +397,11 @@ function axFormRequest(){
       'phone'   => $form['Phone'],
     ];
     $result['gleadid']  = rest_gateway_create_lead($sendData);
-    $result['jsData'][] = 'location = "'. (get_field('redirect_form_link', $pageID) && get_field('redirect_form_link', $pageID) != '' ? get_field('redirect_form_link', $pageID) : get_permalink(990)) .'";';
+    $result['gtm']      = true;
   endif;
+
+  // редирект после отправки
+  $result['jsData'][] = 'location = "'. (get_field('redirect_form_link', $pageID) && get_field('redirect_form_link', $pageID) != '' ? get_field('redirect_form_link', $pageID) : get_permalink(990)) .'";';
 
   $result['jsData'] = implode('', $result['jsData']);
   die(json_encode($result));

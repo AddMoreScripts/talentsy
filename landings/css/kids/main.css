@@ -26,11 +26,17 @@ body {
 
 .kidscontainer {
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
+}
+@media (min-width:350px) {
+  .kidscontainer{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 @media (min-width:400px) {
   .kidscontainer{
@@ -56,7 +62,7 @@ body {
 
 
 .landkids1 {
-  padding-top: 30px;
+  padding-top: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -763,7 +769,7 @@ body {
   left: 50%;
   transform: translateX(calc(-50% - 10px));
   margin: -90px auto 0;
-  z-index: 200;
+  z-index: 30;
   pointer-events: none;
 }
 .landkids7__grid {
@@ -1097,6 +1103,9 @@ body {
 }
 .landkidsprog__tab.is-active{
   display: grid;
+}
+.landkidsmob{
+  display: none;
 }
 .landkidsmonth {
   min-width: 0;

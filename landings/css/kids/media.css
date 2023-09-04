@@ -2,6 +2,9 @@
   --blkrythm: 80px;
 }
 
+.landkids1{
+  padding-top: 40px;
+}
 .landkids1__wrap{
   grid-template-columns: 5fr 4fr;
 }
@@ -90,7 +93,7 @@
   font-size: 14px;
 }
 .landkids7 .kidsform{
-  z-index: 300;
+  z-index: 38;
 }
 .landkids8__sliderwrap{
   width: 530px;
@@ -197,11 +200,11 @@
     text-align: center;
   }
   .landkids1__h1{
-    font-size: 30px;
+    font-size: 35px;
     line-height: 1;
   }
   .landkids1__markwrap{
-    min-height: 60px;
+    min-height: calc(35px * 3);
   }
   .landkids1__h1 br{
     display: none;
@@ -617,15 +620,30 @@
     flex-shrink: 0;
     font-size: 16px;
   }
-  .landkidsprog__button{
-    margin-right: 12px;
-  }
   .landkidsprog__right{
     display: none;
+  }
+  .landkidsmob{
+    display: block;
+    padding-bottom: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .landkidsmob .landkidsprog__right{
+    display: flex;
+  }
+  .landkidsprog__button{
+    margin-right: 12px;
   }
   .landkidsprog__tab{
     grid-template-columns: 1fr;
     grid-gap: 10px;
+  }
+  .landkidsprog__right{
+    width: auto;
   }
   .landkidsmonth{
     border-radius: 12px;
@@ -781,6 +799,8 @@
 
 
 
+
+
 @media (max-width: 500px) {
   .kidsh1 br,
   .landkids3__h3 br,
@@ -790,9 +810,6 @@
   }
   .landkids1{
     padding-top: 40px;
-  }
-  .landkids1__markwrap{
-    min-height: 90px;
   }
   .landkids1__left{
     align-items: flex-start;
@@ -889,5 +906,19 @@
   .landkids14form__accept{
     margin-top: 5px;
     font-size: 12px;
+  }
+}
+
+
+
+@media (max-width: 358px) {
+  .landkids1__h1{
+    font-size: 30px;
+  }
+  .landkids1__markwrap{
+    min-height: 90px;
+  }
+  .page-template-landing-kids .hdr__burger{
+    left: 10px;
   }
 }

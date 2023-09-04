@@ -233,6 +233,7 @@ get_header('blog');
         $catlist = get_terms([
           'hide_empty' => false,
           'taxonomy' => 'category',
+          'exclude' => 1,
         ]);
         ?>
         <div class="categoriesbox">

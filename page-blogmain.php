@@ -2,7 +2,7 @@
 /*
 Template name: Шаблон: Блог стартовая
 */
-$catsList 	= get_terms(['hide_empty' => false, 'taxonomy' => 'category']);
+$catsList 	= get_terms(['hide_empty' => false, 'taxonomy' => 'category', 'exclude' => 1]);
 
 get_header('blog');
 ?>

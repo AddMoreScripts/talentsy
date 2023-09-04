@@ -66,6 +66,7 @@ export function initBlogPagination() {
       const ajaxBody = new FormData();
       ajaxBody.append("action", actionName);
       ajaxBody.append("catlist", JSON.stringify(Array.from(activeCats.values())));
+      ajaxBody.append('taxonomyType', loadMoreLink.dataset.taxonomytype || 'cat');
       ajaxBody.append('page_num', parseInt(loadMoreLink.dataset.needpage));
       if(loadMoreLink.dataset.perpage) ajaxBody.append('per_page', loadMoreLink.dataset.perpage);
       if(loadMoreLink.dataset.exclude) ajaxBody.append('exclude', loadMoreLink.dataset.exclude);
