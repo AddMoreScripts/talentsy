@@ -26,7 +26,7 @@
   endforeach;
 ?>
 
-<div class="hystmodal" id="menuModal" aria-hidden="false">
+<div class="hystmodal" id="menuModal" aria-hidden="false" data-needscroll="menumodal">
   <div class="hystmodal__window menuwindow__wrap" role="dialog" aria-modal="true">
     <section class="menuwindow">
       <button class="menuwindow__closer" data-hystclose><img src="<?=imgs();?>/menu/icon-close.svg" alt=""></button>
@@ -68,7 +68,7 @@
 
           <div class="menuwindow__tabs">
               <? foreach($acfMenu['main'] as $k => $linkInfo): if( !$linkInfo['subs'] ) continue; ?>
-                <div class="menuwindow__tab <?= $k == 0 ? 'is-active' : ''; ?>" data-tab="<?= $linkInfo['subs']['id']; ?>">
+                <div class="menuwindow__tab <?= $k == 0 ? 'is-active' : ''; ?>" data-tab="<?= $linkInfo['subs']['id']; ?>" data-needscroll="menuscroll">
                   <button class="menuwindow__tabclose" data-tablink="none"><img src="<?=imgs();?>/menu/icon-arrow.svg" alt=""></button>
 
                   <div class="menuwindow__tabgrid">

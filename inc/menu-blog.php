@@ -1,4 +1,4 @@
-<div class="hystmodal" id="menuBlogModal" aria-hidden="false">
+<div class="hystmodal" id="menuBlogModal" aria-hidden="false" data-needscroll="menumodal">
   <div class="hystmodal__window menublog" role="dialog" aria-modal="true">
 
     <?php

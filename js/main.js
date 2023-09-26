@@ -60,6 +60,7 @@ window.modalInstance = new HystModal({
   linkAttributeName: "data-hystmodal",
   waitTransitions: true,
   catchFocus:false,
+  backscroll: true,
 
   beforeOpen: (instance) => {
     if(instance.element.id === 'menuSearchModal'){
