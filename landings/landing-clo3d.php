@@ -396,218 +396,25 @@ $saleDate = 'до ' . getTomorow();
       <div class="clob1__line"></div>
       <h2 class="h2">Содержание курса</h2>
       <div class="closummary__wrap">
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary1">
-          <label class="closummary__hdr cloflexi" for="closummary1">
-            <span class="clo3slide__num">01</span>
-            <span class="closummary__title">Сайт Clo - регистрация, тестовая версия</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы узнаете, как скачать пробную версию CLO3D и зарегистрироваться на сайте https://www.clo3d.com/en/.
+        <? foreach(get_field('prog_list') as $k => $progStep): ?>
+          <article class="closummary__quest">
+            <input type="checkbox" name="questcheck" id="closummary<?=$k;?>">
+            <label class="closummary__hdr cloflexi" for="closummary<?=$k;?>">
+              <span class="clo3slide__num"><?= ($k+1) > 9 ? ($k+1) : '0'.($k+1); ?></span>
+              <span class="closummary__title"><?= $progStep['step']; ?></span>
+              <span class="closummary__plus"></span>
+            </label>
+            <div class="closummary__content">
+              <div class="closummary__text">
+                <div class="closummary__textpad"><?= $progStep['desc']; ?></div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary2">
-          <label class="closummary__hdr cloflexi" for="closummary2">
-            <span class="clo3slide__num">02</span>
-            <span class="closummary__title">Интерфейс программы</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы познакомитесь с основными инструментами программы, библиотекой тканей, научитесь
-                вызывать аватара в сцену и поработаете с навигацией в 3D окне.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary3">
-          <label class="closummary__hdr cloflexi" for="closummary3">
-            <span class="clo3slide__num">03</span>
-            <span class="closummary__title">Аватары – часть 1</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь кастомизировать аватаров, познакомитесь с их позами. Вы сможете менять внешний вид аватара под определенную задачу.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary4">
-          <label class="closummary__hdr cloflexi" for="closummary4">
-            <span class="clo3slide__num">04</span>
-            <span class="closummary__title">Аватары – часть 2</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы узнаете о размерах аватара, как снимать мерки и как можно изменять его размеры.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary5">
-          <label class="closummary__hdr cloflexi" for="closummary5">
-            <span class="clo3slide__num">05</span>
-            <span class="closummary__title">Инструменты для создания лекал</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы изучите инструменты программы, которые необходимы для построения лекал любой формы и сложности.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary6">
-          <label class="closummary__hdr cloflexi" for="closummary6">
-            <span class="clo3slide__num">06</span>
-            <span class="closummary__title">Юбка солнце, прямая юбка, создание лекал через файл pdf</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы построите юбку солнце, научитесь делать лекала прямой юбки по готовой выкройке, сможете менять ткань и ее цвет по своему желанию.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary7">
-          <label class="closummary__hdr cloflexi" for="closummary7">
-            <span class="clo3slide__num">07</span>
-            <span class="closummary__title">Сохранение проекта, утюг, ткани и их свойства, настрочные швы</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь правильно сохранять проекты, познакомитесь с функцией утюга и сможете ее использовать. Познакомитесь с тканями и их свойствами, научитесь делать отделочные швы.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary8">
-          <label class="closummary__hdr cloflexi" for="closummary8">
-            <span class="clo3slide__num">08</span>
-            <span class="closummary__title">Молнии и пуговицы</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь делать молнии и пуговицы на ваших изделиях, сможете менять их дизайн по вашему желанию.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary9">
-          <label class="closummary__hdr cloflexi" for="closummary9">
-            <span class="clo3slide__num">09</span>
-            <span class="closummary__title">Создание оборок, функция кант, функция подгибки</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь делать оборки, сможете делать канты и имитировать подгибку по низу ваших изделий.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary10">
-          <label class="closummary__hdr cloflexi" for="closummary10">
-            <span class="clo3slide__num">10</span>
-            <span class="closummary__title">Сайт clo set, принты, свойства тканей</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь скачивать материалы (аватары, прически, обувь, ткани, фурнитуру и т.д.) со стока для программы CLO3D. Поработаете с тканями, изучите все их настройки, сможете делать любые принтованные ткани.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary11">
-          <label class="closummary__hdr cloflexi" for="closummary11">
-            <span class="clo3slide__num">11</span>
-            <span class="closummary__title">Карты: карты нормалей, карты высот, карта металличности и прозрачности</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы изучите все текстурные карты для того, чтобы все ваши ткани выглядели максимально реалистичными на рендере, то есть на финальном изображении вашего проекта.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary12">
-          <label class="closummary__hdr cloflexi" for="closummary12">
-            <span class="clo3slide__num">12</span>
-            <span class="closummary__title">Карта высот, функция эластичного шва, дополнение информации о накладных швах</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь пользоваться картой высоты, для максимальной рельефности ваших тканей, научитесь делать резинки в изделиях, разберетесь в настройках декоративных швов.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary13">
-          <label class="closummary__hdr cloflexi" for="closummary13">
-            <span class="clo3slide__num">13</span>
-            <span class="closummary__title">Создание складок</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы научитесь делать все виды складок, в том числе гофре и плиссе.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary14">
-          <label class="closummary__hdr cloflexi" for="closummary14">
-            <span class="clo3slide__num">14</span>
-            <span class="closummary__title">Радиальное разведение, функция «Fold»</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В этом уроке вы узнаете о дополнительных инструментах, предназначенных для моделирования лекал любой сложности. Научитесь делать разведение деталей, а также изучите функцию «Fold» - то есть сгибание деталей.
-              </div>
-            </div>
-          </div>
-        </article>
-        <button class="closummary__more"></button>
+          </article>
+        <? endforeach; ?>
+        
+        <? if( get_field('is_closed') ): ?>
+          <button class="closummary__more"></button>
+        <? endif; ?>
       </div>
     </div>
   </section><!-- //closummary -->
@@ -894,118 +701,20 @@ $saleDate = 'до ' . getTomorow();
     <div class="clocontainer">
       <h2 class="h2">Часто задаваемые <br>вопросы</h2>
       <div class="clofaq__wrap">
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq1">
-          <label class="closummary__hdr cloflexi" for="clofaq1">
-            <span class="closummary__title">Смогу ли я создавать цифровую одежду? Я никогда не занимался этим. </span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Вы добьетесь успеха даже если вы ранее не сталкивались с данной профессией - просто отдавайте предпочтение практическому опыту. Главное быть что от вас требуется это любопытство и любознательность. Кроме того, наши кураторы и поддержка, дадут ценные рекомендации и ответят на все вопросы.
+        <? foreach(get_field('faq_list') as $k => $faqData): ?>
+          <article class="closummary__quest">
+            <input type="checkbox" name="questcheck" id="clofaq<?= $k; ?>">
+            <label class="closummary__hdr cloflexi" for="clofaq<?= $k; ?>">
+              <span class="closummary__title"><?= $faqData['q']; ?></span>
+              <span class="closummary__plus"></span>
+            </label>
+            <div class="closummary__content">
+              <div class="closummary__text">
+                <div class="closummary__textpad"><?= $faqData['a']; ?></div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq2">
-          <label class="closummary__hdr cloflexi" for="clofaq2">
-            <span class="closummary__title">Смогу ли я создавать настоящую одежду с помощью Clo 3D?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Конечно, после прохождения курса вы сможете создавать прототипы одежды, обуви и аксессуаров, а затем использовать свои лекала. Экспортируйте их передавайте в производство.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq3">
-          <label class="closummary__hdr cloflexi" for="clofaq3">
-            <span class="closummary__title">Смогу ли я пользоваться программой Clo 3D на Apple MacBook</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Да, конечно. Программа доступна и для владельцев Apple MacBook.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq4">
-          <label class="closummary__hdr cloflexi" for="clofaq4">
-            <span class="closummary__title">“Потянет” ли мой ноутбук программу? Какие у нее системные требования?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Вы можете ознакомиться с системными требованиями на этой странице https://clck.ru/35Wx9i.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq5">
-          <label class="closummary__hdr cloflexi" for="clofaq5">
-            <span class="closummary__title">Я конструктор одежды. Какую пользу я получу от прохождения курса?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Clo 3D “заточен” под конструкторов одежды и портных. Выявляйте и исключайте ошибки до раскроя. Достаточно примерить ваши лекала на аватар и в пару кликов скорректировать их. Вы удвоите свою производительность, сэкономите драгоценное время и метры ткани.   Clo 3D взаимодействует с САПР, что позволит вам например, выгрузить лекала из Grafis и преобразовать их в виртуальную одежду.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq6">
-          <label class="closummary__hdr cloflexi" for="clofaq6">
-            <span class="closummary__title">Получится ли совмещать учебу и работу?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Не стесняйтесь обучаться востребованной профессии в удобное для вас время, совмещайте обучение на платформе с вашими профессиональными и личными обязанностями. Более того, все обучающие видеоматериалы останутся доступными даже после завершения курса, что позволит вам вернуться к ним и закрепить полученные знания, когда вы этого захотите.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq7">
-          <label class="closummary__hdr cloflexi" for="clofaq7">
-            <span class="closummary__title">Переживаю что не справлюсь. На какую помощь я могу рассчитывать?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                В тесном контакте 12/7 с вами будут куратор и проверяющие эксперты в мини чат-группах до 20 человек. А домашние задания, которые предусмотрены в рамках курса тщательно проверяются, чтобы подсветить неточности и вы могли провести работу над ошибками. Наши специалисты дадут полезные советы и ответят на ваши вопросы.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq8">
-          <label class="closummary__hdr cloflexi" for="clofaq8">
-            <span class="closummary__title">Есть ли у вас рассрочка?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Да, у нас действует программа рассрочки с несколькими банками: Тинькофф, СберБанк, Почта Банк, Альфа Банк.
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>

@@ -93,11 +93,18 @@ get_header('blog');
           </div>
         <?php endif; ?>
 
-        <?php if(get_field('top-banner')): $bannerTopId = get_field('top-banner'); ?>
+        <?php if(get_field('top-banner')): 
+          $bannerTopId = get_field('top-banner');
+          // ставим utm_source=blog для ссылки
+          $bnrLink = get_field('banner-link', $bannerTopId);
+          if( str_allowed($bnrLink, ['?utm_source']) ) $bnrLink = explode('?', $bnrLink)[0];
+          $bnrLink = $bnrLink.'?utm_source=blog&utm_term='. $post->post_name;
+
+          ?>
         <div class="postprofbanner flexi">
           <img src="<?=get_field('banner-pic', $bannerTopId); ?>" alt="" class="postprofbanner__img">
           <div class="postprofbanner__text"><?=get_field('banner-title', $bannerTopId); ?></div>
-          <a href="<?=get_field('banner-link', $bannerTopId); ?>" class="postprofbanner__link button button--blog">
+          <a href="<?= $bnrLink; ?>" class="postprofbanner__link button button--blog">
             <?=get_field('banner-button', $bannerTopId); ?>
           </a>
         </div>
@@ -204,12 +211,19 @@ get_header('blog');
           <?php endif; ?>
         </footer>
 
-        <?php if(get_field('bottom-banner')): $bannerBotId = get_field('bottom-banner'); ?>
+        <?php if(get_field('bottom-banner')):
+          $bannerBotId = get_field('bottom-banner');
+
+          // ставим utm_source=blog для ссылки
+          $bnrLink = get_field('banner-link', $bannerBotId);
+          if( str_allowed($bnrLink, ['?utm_source']) ) $bnrLink = explode('?', $bnrLink)[0];
+          $bnrLink = $bnrLink.'?utm_source=blog&utm_term='. $post->post_name;
+          ?>
         <aside class="relateproffbanner flexi">
           <div class="relateproffbanner__left">
             <div class="relateproffbanner__title"><?=get_field('banner-title', $bannerBotId); ?></div>
             <p><?=get_field('banner-text', $bannerBotId); ?></p>
-            <a href="<?=get_field('banner-link', $bannerBotId); ?>" class="button relateproffbanner__button">
+            <a href="<?= $bnrLink; ?>" class="button relateproffbanner__button">
               <?=get_field('banner-button', $bannerBotId); ?>
             </a>
           </div>

@@ -251,22 +251,23 @@ $pics = imgs() . '/landing-kids';
           <img src="<?= $pics; ?>/b5-cube.png" alt="" class="landkids5__cube">
           <div class="kidsform__h1">Попробуйте бесплатно</div>
           <div class="kidsform__h2">Запишите своего ребенка на бесплатное занятие</div>
-          <form class="kidsform__wrap">
+
+          <form class="kidsform__wrap ajaxForm" data-target="axFormRequest">
             <div class="kidsform__item">
-              <input type="text" name="username" placeholder="Ваше имя" required>
+              <input type="text" name="Name" placeholder="Ваше имя" required>
             </div>
             <div class="kidsform__item">
-              <input type="tel" name="userphone" placeholder="Номер телефона" required>
+              <input type="tel" name="Phone" placeholder="Номер телефона" required>
             </div>
             <div class="kidsform__item">
-              <input type="email" name="useremail" placeholder="Адрес электронной почты" required>
+              <input type="email" name="Email" placeholder="Адрес электронной почты" required>
             </div>
             <div class="kidsform__submit">
               <button type="submit" class="kidsform__button">Записаться</button>
             </div>
           </form>
           <p class="kidsform__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </div>
@@ -391,22 +392,23 @@ $pics = imgs() . '/landing-kids';
           <div class="kidsform__h1">Возникли вопросы?</div>
           <div class="kidsform__h2">Заполните форму и нажмите кнопку "Задать вопрос", <br>чтобы связаться с нашим
             специалистом</div>
-          <form class="kidsform__wrap">
+
+          <form class="kidsform__wrap ajaxForm" data-target="axFormRequest">
             <div class="kidsform__item">
-              <input type="text" name="username" placeholder="Ваше имя" required>
+              <input type="text" name="Name" placeholder="Ваше имя" required>
             </div>
             <div class="kidsform__item">
-              <input type="tel" name="userphone" placeholder="Номер телефона" required>
+              <input type="tel" name="Phone" placeholder="Номер телефона" required>
             </div>
             <div class="kidsform__item">
-              <input type="email" name="useremail" placeholder="Адрес электронной почты" required>
+              <input type="email" name="Email" placeholder="Адрес электронной почты" required>
             </div>
             <div class="kidsform__submit">
-              <button type="submit" class="kidsform__button">Задать вопрос</button>
+              <button type="submit" class="kidsform__button">Записаться</button>
             </div>
           </form>
           <p class="kidsform__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </div><!-- //kidsform -->
@@ -494,24 +496,24 @@ $pics = imgs() . '/landing-kids';
       <div class="kidsform kidswindow">
         <div class="kidsform__h1">Попробуйте бесплатно</div>
         <div class="kidsform__h2">Запишите своего ребенка на бесплатное занятие</div>
-        <form class="kidsform__wrap">
-          <div class="kidsform__item">
-            <input type="text" name="username" placeholder="Ваше имя" required>
-          </div>
-          <div class="kidsform__item">
-            <input type="tel" name="userphone" placeholder="Номер телефона" required>
-          </div>
-          <div class="kidsform__item">
-            <input type="email" name="useremail" placeholder="Адрес электронной почты" required>
-          </div>
-          <div class="kidsform__submit">
-            <button type="submit" class="kidsform__button">Записаться</button>
-          </div>
-        </form>
-        <p class="kidsform__accept">
-          Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
-            персональных данных</a>
-        </p>
+        <form class="kidsform__wrap ajaxForm" data-target="axFormRequest">
+            <div class="kidsform__item">
+              <input type="text" name="Name" placeholder="Ваше имя" required>
+            </div>
+            <div class="kidsform__item">
+              <input type="tel" name="Phone" placeholder="Номер телефона" required>
+            </div>
+            <div class="kidsform__item">
+              <input type="email" name="Email" placeholder="Адрес электронной почты" required>
+            </div>
+            <div class="kidsform__submit">
+              <button type="submit" class="kidsform__button">Записаться</button>
+            </div>
+          </form>
+          <p class="kidsform__accept">
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
+              персональных данных</a>
+          </p>
       </div><!-- //kidsform -->
     </div>
   </section><!-- //landkids8 -->
@@ -780,22 +782,22 @@ $pics = imgs() . '/landing-kids';
             ребенка на бесплатное<br>
             пробное занятие
           </h2>
-          <form class="landkids14form">
+          <form class="landkids14form ajaxForm" data-target="axFormRequest">
             <div class="kidsform__item">
-              <input type="text" name="username" placeholder="Ваше имя" required>
+              <input type="text" name="Name" placeholder="Ваше имя" required>
             </div>
             <div class="kidsform__item">
-              <input type="tel" name="userphone" placeholder="Номер телефона" required>
+              <input type="tel" name="Phone" placeholder="Номер телефона" required>
             </div>
             <div class="kidsform__item landkids14form__2col">
-              <input type="email" name="useremail" placeholder="Адрес электронной почты" required>
+              <input type="email" name="Email" placeholder="Адрес электронной почты" required>
             </div>
             <div class="kidsform__submit">
               <button type="submit" class="kidsform__button landkids14form__button">Записаться</button>
             </div>
             <p class="kidsform__accept landkids14form__2col landkids14form__accept">
-              Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a>
-              и&nbsp;<a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой
+              Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a>
+              и&nbsp;<a href="<?= ldocslink('agree'); ?>" target="_blank">политикой
                 обработки
                 персональных данных</a>
             </p>

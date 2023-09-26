@@ -54,8 +54,8 @@
             <ul class="menuwindow__mobbot">
               <? foreach($acfMenu['mobile'] as $k => $linkInfo): ?>
                 <li>
-                  <a href="<?= $linkInfo['linkData']['url']; ?>" <?= $linkInfo['subs'] ? 'data-tablink="'. $linkInfo['subs']['id'] .'"' : ''; ?> <?= $k == 0 ? 'class="is-active"' : ''; ?>>
-                    <?= str_replace('&lt;br&gt;', '<br>', $linkInfo['linkData']['title']); ?>
+                  <a href="<?= $linkInfo['url']; ?>" >
+                    <?= str_replace('&lt;br&gt;', '<br>', $linkInfo['title']); ?>
                   </a>
                 </li>
               <? endforeach; ?>
@@ -85,7 +85,7 @@
 
                         <? if( !empty($subLinkInfo['subitems']) ): ?>
                           <ul class="menuwindow__submenu">
-                            <? foreach($subLinkInfo['subitems'] as $ssk => $subInfo): ?>
+                            <? foreach($subLinkInfo['subitems'] as $ssk => $subInfo): if( !is_array($subInfo) ) continue; ?>
                               <li><a href="<?= $subInfo['sublink']['url']; ?>"><?= $subInfo['sublink']['title']; ?></a></li>
                             <? endforeach; ?>
                           </ul>

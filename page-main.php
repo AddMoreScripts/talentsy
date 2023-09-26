@@ -337,174 +337,24 @@ get_header();
         </div>
         <div class="frontcatalog__slider swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(136); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/001.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
+            <?php while (have_rows('proff-slider-main')) : the_row(); ?>
+              <div class="swiper-slide">
+                <div class="frontfacultet">
+                  <a href="<?=get_sub_field('link');?>" class="frontfacultet__picwrap" style="display: block;">
+                    <img src="<?=get_sub_field('img');?>" alt="" class="frontfacultet__pic" loading="lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="<?= get_sub_field('facult_link');?>" class="frontfacultet__tag" style="background-color: <?=get_sub_field('color');?>; color: #fff;"><?=get_sub_field('facult');?></a>
+                  <a href="<?=get_sub_field('link');?>">
+                    <div class="frontfacultet__title"><?=get_sub_field('title');?></div>
+                    <div class="frontfacultet__time"><?=get_sub_field('descr');?></div>
+                    <div class="frontfacultet__arrow">
+                      <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
+                    </div>
+                  </a>
                 </div>
-                <div class="frontfacultet__tag">Факультет дизайна</div>
-                <div class="frontfacultet__title">Профессия «Дизайнер интерьера»</div>
-                <div class="frontfacultet__time">12 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(132); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/002.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет психологии</div>
-                <div class="frontfacultet__title">Профессия «Психолог консультант»</div>
-                <div class="frontfacultet__time">12 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(133); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/003.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет психологии</div>
-                <div class="frontfacultet__title">Профессия «Консультант в сфере сексуальных отношений»</div>
-                <div class="frontfacultet__time">6 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(134); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/004.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет психологии</div>
-                <div class="frontfacultet__title">Профессия «Детский психолог-консультант»</div>
-                <div class="frontfacultet__time">18 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(138); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/005.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет психологии</div>
-                <div class="frontfacultet__title">Профессия «Семейный психолог-консультант»</div>
-                <div class="frontfacultet__time">18 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(143); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/006.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет моды и стиля</div>
-                <div class="frontfacultet__title">Профессия «Дизайнер одежды»</div>
-                <div class="frontfacultet__time">12 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(148); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/007.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет астрологии</div>
-                <div class="frontfacultet__title">Профессия <br>«Астролог»</div>
-                <div class="frontfacultet__time">10 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(144); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/008.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет моды и стиля</div>
-                <div class="frontfacultet__title">Профессия «Стилист-имиджмейкер»</div>
-                <div class="frontfacultet__time">6 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(140); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/009.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет дизайна</div>
-                <div class="frontfacultet__title">Профессия «Дизайнер-декоратор»</div>
-                <div class="frontfacultet__time">6 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="https://talentsy.ru/dizayner-ukrasheniy" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/010.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет современного искусства</div>
-                <div class="frontfacultet__title">Профессия «Дизайнер украшений»</div>
-                <div class="frontfacultet__time">6 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="https://talentsy.ru/professiya-florist" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/011.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет современного искусства</div>
-                <div class="frontfacultet__title">Профессия <br>«Флорист»</div>
-                <div class="frontfacultet__time">6 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="<?=get_permalink(149); ?>" class="frontfacultet">
-                <div class="frontfacultet__picwrap">
-                  <img src="<?= imgs(); ?>/frontpage/proff/012.png" alt="" class="frontfacultet__pic" loading="lazy">
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-                <div class="frontfacultet__tag">Факультет нутрициологии</div>
-                <div class="frontfacultet__title">Профессия <br>«Интегративный нутрициолог»</div>
-                <div class="frontfacultet__time">8 месяцев обучения</div>
-                <div class="frontfacultet__arrow">
-                  <img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt="">
-                </div>
-              </a>
-            </div>
+              </div>
+            <?php endwhile; ?>
           </div>
         </div>
       </div>

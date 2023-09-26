@@ -13,6 +13,15 @@ $(document).ready(function(){
         formData.append('urlfull', window.location.href);
         formData.append('pageID', window.pageID);
 
+        _this.find('input[name="file"]').each(function () {
+	        var files_val = $(this)[0].files,
+	        	name 	  = $(this).attr('name');
+
+	        for( var i = 0; i < files_val.length; i++ ){
+		        formData.append('file---' + name + '---' + i, files_val[i]);
+			}
+        });
+
 		$.ajax({
 			type: 'POST',
 			url: window.ajaxurl,
@@ -21,22 +30,23 @@ $(document).ready(function(){
 			data: formData,
 			success: function (j){
 				j = $.parseJSON(j);
-				console.log(j);
-
+				
 	            // отправка события в GTM
-				var obj = {};
-	            var dataLayer = window.dataLayer || (window.dataLayer = []);
-	            $.each(_this.serializeArray(), function(i, v){
-	              obj[ v.name ] = v.value;
-	            });
-	            dataLayer.push({
-	              'event': 'leadReceived',
-	              'postMessageData': {
-	                'formType': 'htmlWP',
-	                'formData': obj,
-	                'gLeadID': j.gleadid
-	              }
-	            });
+				if( typeof j.gtm !== 'undefined' ){
+					var obj = {};
+		            var dataLayer = window.dataLayer || (window.dataLayer = []);
+		            $.each(_this.serializeArray(), function(i, v){
+		              obj[ v.name ] = v.value;
+		            });
+		            dataLayer.push({
+		              'event': 'leadReceived',
+		              'postMessageData': {
+		                'formType': 'htmlWP',
+		                'formData': obj,
+		                'gLeadID': j.gleadid
+		              }
+		            });
+				}
 
 				if( typeof j.eHtml !== 'undefined' ) $(j.eTarget).html(j.eHtml);
 				if( typeof j.jsData !== 'undefined' ) eval(j.jsData);

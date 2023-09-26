@@ -44,7 +44,6 @@
           'container_class' => 'blogheader__links',
         ]); ?>
         <a href="https://lk.talentsy.ru/" class="blogheader__login">Вход</a>
-        <a href="https://lk.talentsy.ru/" class="blogheader__login">Вход</a>
       </footer>
     </div>
 

@@ -136,24 +136,8 @@ add_filter('custom_permalinks_path_info', '__return_true');
 
 
 
-function getTomorow()
-{
-  $now = new \DateTimeImmutable();
-  $month = [
-    '1' => 'января',
-    '2' => 'февраля',
-    "3" => 'марта',
-    '4' => 'апреля',
-    '5' => 'мая',
-    '6' => 'июня',
-    '7' => 'июля',
-    '8' => 'августа',
-    '9' => 'сенября',
-    '10' => 'октября',
-    '11' => 'ноября',
-    '12' => 'декабря'
-  ];
-  return (intval($now->format('d')) + 1) . ' ' . $month[$now->format('n')];
+function getTomorow(){
+  return date_i18n('d F', strtotime('tomorrow'));
 }
 
 
@@ -437,3 +421,15 @@ function axLoadMoreHome(){
 }
 add_action('wp_ajax_axLoadMoreHome', 'axLoadMoreHome');
 add_action('wp_ajax_nopriv_axLoadMoreHome', 'axLoadMoreHome');
+
+// проверяет есть ли в строке какие-то символы/слова из массива
+function str_allowed($str, $arr){ // ГДЕ ищем и [ЧТО] ищем
+  if( !is_array($arr) ) $arr = [$arr];
+  if( !$str ) return false;
+
+    foreach($arr as $bad_string){
+        if( $bad_string && strpos($str, $bad_string) !== false)
+            return true; // есть говно
+    }
+    return false; // нет говна
+}

@@ -70,8 +70,8 @@ get_header();
   </svg>
 </a>
 
-<script src="<?= get_template_directory_uri(); ?>/js/custom/vk-superappkit.js"></script>
-<script src="<?= get_template_directory_uri(); ?>/js/custom/vkscript.js"></script>
+<script src="<?=get_template_directory_uri(); ?>/js/custom/vk-superappkit.js"></script>
+<script src="<?=get_template_directory_uri(); ?>/js/custom/sombra.js"></script>
 <?php
 wp_footer(); ?>
 </body>

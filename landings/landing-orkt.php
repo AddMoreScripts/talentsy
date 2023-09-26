@@ -213,44 +213,44 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <div class="cloform__line"></div>
 
-        <form action="#" class="cloformbox js-ajaxform" method="post">
+        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
           <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="name" placeholder="Имя" required>
+              <input type="text" name="Name" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="email" placeholder="Email" required>
+              <input type="email" name="Email" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
             </div>
           </div>
-          <div class="promoform">
+          <div class="promoform newpromoform">
             <div class="promoform__openbutton promoform__btn">
               <span>У меня есть промокод</span>
-              <img src="<?=$clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+              <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
             </div>
             <div class="promoform__inpwrap">
               <div class="promoform__inpbox">
-                <input type="text" name="promocode" placeholder="Введите промокод" class="">
+                <input type="text" name="promocode" placeholder="Введите промокод" class="jsPmoField">
                 <button class="promoform__clearer" type="button"></button>
               </div>
-              <button class="promoform__btn js-promo-submit" type="button">
+              <button class="promoform__btn jsPPRequest" type="button">
                 <span>Активировать</span>
-                <img src="<?=$clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+                <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
               </button>
             </div>
             <div class="promoform__success promoform__btn">
               <span>Промокод активирован</span>
-              <img src="<?=$clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
+              <img src="<?= $clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
             </div>
           </div><!-- //promoform -->
           <p class="cloformbox__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </form>
@@ -258,6 +258,93 @@ $saleDate = 'до ' . getTomorow();
       </div>
     </div>
   </section><!-- //orktform1 -->
+
+  <? if( current_user_can('administrator') || isset($_GET['isadmintest']) ): ?>
+    <section class="cloform orktform1">
+      <div class="clocontainer">
+        <img src="<?=$clopics; ?>/b6-star.svg" alt="" class="orktform1__star">
+        <div class="cloform__bg">
+          <div class="orktform1__hdr">
+            <h2 class="h2">
+              <mark>ФОРМА GETCOURSE</mark><br>
+              ВИДИТ ТОЛЬКО АДМИН<br>
+              ИДЕТ ТЕСТИРОВАНИЕ
+            </h2>
+            <div class="orktform1__time">Осталось: <b>6 мест</b></div>
+          </div>
+          <div class="cloform__line"></div>
+
+          <form id="ltForm5878338" class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=1745510931" method="post" data-open-new-window="0">
+            <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
+            <div class="cloformbox__grid">
+              <div class="cloformbox__inpwrap">
+                <input type="text" name="formParams[first_name]" maxlength="60" placeholder="Имя" required>
+              </div>
+              <div class="cloformbox__inpwrap">
+                <input type="tel" name="formParams[phone]" maxlength="60" placeholder="+7 (999) 999-99-99" required>
+              </div>
+              <div class="cloformbox__inpwrap">
+                <input type="email" name="formParams[email]" maxlength="60" placeholder="Email" required>
+              </div>
+              <div class="cloformbox__subwrap">
+                <button type="submit" class="clobtn" id="button7416064" onclick="if(window['btnprs65118b96d34f4']){return false;}window['btnprs65118b96d34f4']=true;setTimeout(function(){window['btnprs65118b96d34f4']=false},6000);return true;">Перейти к оплате</button>
+              </div>
+            </div>
+            <div class="promoform newpromoform">
+              <div class="promoform__openbutton promoform__btn">
+                <span>У меня есть промокод</span>
+                <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+              </div>
+              <div class="promoform__inpwrap">
+                <div class="promoform__inpbox">
+                  <input type="text" name="formParams[dealCustomFields][1367090]" placeholder="Введите промокод" class="jsPmoField">
+                  <button class="promoform__clearer" type="button"></button>
+                </div>
+                <button class="promoform__btn jsPPRequest" type="button">
+                  <span>Активировать</span>
+                  <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+                </button>
+              </div>
+              <div class="promoform__success promoform__btn">
+                <span>Промокод активирован</span>
+                <img src="<?= $clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
+              </div>
+            </div><!-- //promoform -->
+            <p class="cloformbox__accept">
+              Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
+                персональных данных</a>
+            </p>
+
+            <input name="formParams[dealCustomFields][1265453]" type="hidden"><br>
+            <input name="formParams[dealCustomFields][1291877]" type="hidden"><br>
+            <input type="hidden" id="91101665118b96cc43f" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
+            <input type="hidden" id="91101665118b96cc43fref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value="">
+            <input type="hidden" name="requestTime" value="1695648662">
+            <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
+            <input type="hidden" name="isHtmlWidget" value="1"/>
+          </form>
+        </div>
+      </div>
+    </section><!-- //orktform1 -->
+
+
+    <span id="gccounterImgContainer"></span><script>
+      window.addEventListener('load', function(){
+        let loc = document.getElementById("91101665118b96cc43f");
+        loc.value = window.location.href;
+        let ref = document.getElementById("91101665118b96cc43fref");
+        ref.value = document.referrer;
+
+        let statUrl = "https://lk.talentsy.ru/stat/counter?ref=" + encodeURIComponent(document.referrer)
+          + "&loc=" + encodeURIComponent(document.location.href);
+        document.getElementById('gccounterImgContainer').innerHTML
+          = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+
+        $('[name="formParams[dealCustomFields][1291877]"]').val( document.cookie +"|w|h|"+ window.location.href );
+        $('[name="formParams[dealCustomFields][1810276]"]').val( $('[name="formParams[dealCustomFields][1810276]"]').attr('placeholder') ).hide();
+      });
+    </script>
+  <? endif; ?>
 
 
   <section class="orkt5for">
@@ -416,24 +503,24 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <div class="cloform__line"></div>
 
-        <form action="#" class="cloformbox js-ajaxform" method="post">
+        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
           <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="name" placeholder="Имя" required>
+              <input type="text" name="Name" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="email" placeholder="Email" required>
+              <input type="email" name="Email" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
             </div>
           </div>
           <p class="cloformbox__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </form>
@@ -484,212 +571,25 @@ $saleDate = 'до ' . getTomorow();
     <div class="clocontainer">
       <h2 class="h2">Программа обучения</h2>
       <div class="closummary__wrap">
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary1">
-          <label class="closummary__hdr flexi" for="closummary1">
-            <span class="clo3slide__num">01</span>
-            <span class="closummary__title">Знакомство с подходом</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Знакомимся с подходом ОРКТ, разбираем сферы его применения и результаты, которые вы получите после прохождения курса.
+        <? foreach(get_field('prog_list') as $k => $progStep): ?>
+          <article class="closummary__quest">
+            <input type="checkbox" name="questcheck" id="closummary<?=$k;?>">
+            <label class="closummary__hdr cloflexi" for="closummary<?=$k;?>">
+              <span class="clo3slide__num"><?= ($k+1) > 9 ? ($k+1) : '0'.($k+1); ?></span>
+              <span class="closummary__title"><?= $progStep['step']; ?></span>
+              <span class="closummary__plus"></span>
+            </label>
+            <div class="closummary__content">
+              <div class="closummary__text">
+                <div class="closummary__textpad"><?= $progStep['desc']; ?></div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary2">
-          <label class="closummary__hdr flexi" for="closummary2">
-            <span class="clo3slide__num">02</span>
-            <span class="closummary__title">История ОРКТ и её развитие в русскоязычном пространстве</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Определяем роль подхода ОРКТ в семействе терапий. Разбираем модель краткосрочной терапии института MRI в Пало-Альто и другие направления развития подхода.</p>
-                <p>Разбираем, как ОРКТ связана с другими подходами. Знакомимся с Ассоциацией ориентированных на решение психологов и психотерапевтов.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary3">
-          <label class="closummary__hdr flexi" for="closummary3">
-            <span class="clo3slide__num">03</span>
-            <span class="closummary__title">Принципы и ключевые идеи ОРКТ</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Разбираем, на каких основах базируется подход ОРКТ, для каких клиентов он будет работать и в чём его основная ценность в отличие от других подходов.</p>
-                <ul>
-                  <li>Принцип сотрудничества</li>
-                  <li>Принцип незнания</li>
-                  <li>Не сломано, не чини</li>
-                  <li>Следование за клиентом</li>
-                  <li>Ориентированность на ресурсы</li>
-                  <li>Ориентированность на решение / на будущее</li>
-                  <li>Ценность маленьких шагов</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary4">
-          <label class="closummary__hdr flexi" for="closummary4">
-            <span class="clo3slide__num">04</span>
-            <span class="closummary__title">Установление альянса и определение целей терапии</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Создаем терапевтический альянс и определяем главные мотивации клиента к изменениям. Учимся различать типы клиентов (визитер, жалобщик, покупатель) и особенности работы с ними.</p>
-                <p>Разбираем, как определить досессионные изменения, правильно ставить цели на время ОРКТ-терапии и проверять их динамику.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary5">
-          <label class="closummary__hdr flexi" for="closummary5">
-            <span class="clo3slide__num">05</span>
-            <span class="closummary__title">Установление альянса и определение целей терапии</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Учимся правильно заключать терапевтический альянс с клиентом, различать и работать с разными типами клиентов (визитер, жалобщик, покупатель). Определяем досессионные изменения, цели, лучшие надежды клиента и следим за динамикой целей в терапии. Изучаем, что такое исключения из проблемы и как их искать.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary6">
-          <label class="closummary__hdr flexi" for="closummary6">
-            <span class="clo3slide__num">06</span>
-            <span class="closummary__title">Базовые навыки ОР-практика Ч.1 - Фокусирование на решении и обнаружение ресурсов</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Работаем с фокусированием на решении и обнаружении ресурсов, на ресурсах и позитивных элементах, на исключениях и будущем, на решении и возможностях.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary7">
-          <label class="closummary__hdr flexi" for="closummary7">
-            <span class="clo3slide__num">07</span>
-            <span class="closummary__title">Базовые навыки ОР-практика Ч.2 - Следование за клиентом и поддержка изменений</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Учимся грамотно использовать язык клиента, молчание и комплименты.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary8">
-          <label class="closummary__hdr flexi" for="closummary8">
-            <span class="clo3slide__num">08</span>
-            <span class="closummary__title">Вопросы и вопросные техники</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Изучаем особенности вопросных техник в ОР-подходе. Что такое чудесный вопрос? Каковы условия его эффективности и ошибки в использовании? Какие вопросы могут возникнуть при вопросах клиента?</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary9">
-          <label class="closummary__hdr flexi" for="closummary9">
-            <span class="clo3slide__num">09</span>
-            <span class="closummary__title">Обратная связь и домашние задания</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Практикуемся в полученных знаниях и получаем обратную связь от кураторов. Учимся формулировать задания, обратную связь и ставить эксперименты в работе с клиентами в ОР-подходе.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary10">
-          <label class="closummary__hdr flexi" for="closummary10">
-            <span class="clo3slide__num">10</span>
-            <span class="closummary__title">Структура и задачи первой консультации</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Заполняем протокол первой сессии.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary11">
-          <label class="closummary__hdr flexi" for="closummary11">
-            <span class="clo3slide__num">11</span>
-            <span class="closummary__title">Структура и задачи последующих консультаций</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Учимся составлять цели, задачи и вопросы на последующие сессии. Выбираем стратегии работы в зависимости от прогресса клиента или его отсутствия.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary12">
-          <label class="closummary__hdr flexi" for="closummary12">
-            <span class="clo3slide__num">12</span>
-            <span class="closummary__title">Кризисное консультирование в ОРКТ</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Разбираем особенности работы с клиентами в ситуации кризиса. Исследуем копинговые стратегии, ресурсы и комплименты.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="closummary13">
-          <label class="closummary__hdr flexi" for="closummary13">
-            <span class="clo3slide__num">13</span>
-            <span class="closummary__title">Самооценка эффективности и завершение работы с клиентом</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <p>Практикуем способы оценки эффективности через обратную связь и определяем основания для завершения работы с клиентом.</p>
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+        <? endforeach; ?>
+        
+        <? if( get_field('is_closed') ): ?>
+          <button class="closummary__more"></button>
+        <? endif; ?>
       </div>
     </div>
   </section><!-- //closummary -->
@@ -708,24 +608,24 @@ $saleDate = 'до ' . getTomorow();
           <div class="orktform1__time">Осталось: <b>6 мест</b></div>
         </div>
         <div class="cloform__line"></div>
-        <form action="#" class="cloformbox js-ajaxform" method="post">
+        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
           <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="name" placeholder="Имя" required>
+              <input type="text" name="Name" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="email" placeholder="Email" required>
+              <input type="email" name="Email" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Получить консультацию</button>
             </div>
           </div>
           <p class="cloformbox__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </form>
@@ -821,45 +721,45 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <div class="cloform__line"></div>
 
-        <form action="#" class="cloformbox js-ajaxform" method="post">
+        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
           <div class="cloformbox__title">Отправьте заявку, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="name" placeholder="Имя" required>
+              <input type="text" name="Name" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="email" placeholder="Email" required>
+              <input type="email" name="Email" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
             </div>
           </div>
-          <div class="promoform">
+          <div class="promoform newpromoform">
             <div class="promoform__openbutton promoform__btn">
               <span>У меня есть промокод</span>
-              <img src="<?=$clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+              <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
             </div>
             <div class="promoform__inpwrap">
               <div class="promoform__inpbox">
-                <input type="text" name="promocode" placeholder="Введите промокод" class="">
+                <input type="text" name="promocode" placeholder="Введите промокод" class="jsPmoField">
                 <button class="promoform__clearer" type="button"></button>
               </div>
-              <button class="promoform__btn js-promo-submit" type="button">
+              <button class="promoform__btn jsPPRequest" type="button">
                 <span>Активировать</span>
-                <img src="<?=$clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+                <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
               </button>
             </div>
             <div class="promoform__success promoform__btn">
               <span>Промокод активирован</span>
-              <img src="<?=$clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
+              <img src="<?= $clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
             </div>
           </div><!-- //promoform -->
 
           <p class="cloformbox__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </form>
@@ -932,7 +832,7 @@ $saleDate = 'до ' . getTomorow();
           <div class="cloform5__prices flexi">
             <div class="cloform5__current flexi jbm">
               <div class="cloform5__char1">От</div>
-              <div class="cloform5__char2">1375</div>
+              <div class="cloform5__char2 jsPPSumm">1375</div>
               <div class="cloform5__char3">₽/мес</div>
             </div>
             <div class="cloform5__old jbm">2083 ₽/мес</div>
@@ -954,44 +854,44 @@ $saleDate = 'до ' . getTomorow();
 
         </div>
 
-        <form action="#" class="cloformbox js-ajaxform" method="post">
+        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
           <div class="cloformbox__title">Отправьте заявку, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="name" placeholder="Имя" required>
+              <input type="text" name="Name" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="email" placeholder="Email" required>
+              <input type="email" name="Email" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
             </div>
           </div>
-          <div class="promoform">
+          <div class="promoform newpromoform">
             <div class="promoform__openbutton promoform__btn">
               <span>У меня есть промокод</span>
-              <img src="<?=$clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+              <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
             </div>
             <div class="promoform__inpwrap">
               <div class="promoform__inpbox">
-                <input type="text" name="promocode" placeholder="Введите промокод" class="">
+                <input type="text" name="promocode" placeholder="Введите промокод" class="jsPmoField">
                 <button class="promoform__clearer" type="button"></button>
               </div>
-              <button class="promoform__btn js-promo-submit" type="button">
+              <button class="promoform__btn jsPPRequest" type="button">
                 <span>Активировать</span>
-                <img src="<?=$clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
+                <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
               </button>
             </div>
             <div class="promoform__success promoform__btn">
               <span>Промокод активирован</span>
-              <img src="<?=$clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
+              <img src="<?= $clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
             </div>
           </div><!-- //promoform -->
           <p class="cloformbox__accept">
-            Отправляя данную форму вы соглашаетесь с условиями <a href="https://talentsy.ru/publichnaya-oferta-na-zaklyucheniye-dogovora" target="_blank">оферты</a> и <a href="https://host.talentsy.ru/legal/privacy_policy_15.03.23.pdf" target="_blank">политикой обработки
+            Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
         </form>
@@ -1005,93 +905,20 @@ $saleDate = 'до ' . getTomorow();
     <div class="clocontainer">
       <h2 class="h2">Часто задаваемые <br>вопросы</h2>
       <div class="clofaq__wrap">
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq1">
-          <label class="closummary__hdr flexi" for="clofaq1">
-            <span class="closummary__title">Получится ли совмещать учебу и работу?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Мы организовали обучение таким образом, чтобы вам было максимально удобно и просто. Если вы не сможете присутствовать на живых онлайн-занятиях, все обучающие видеоматериалы останутся доступными даже после завершения курса, что позволит вам вернуться к ним и закрепить полученные знания, когда вы этого захотите.
+        <? foreach(get_field('faq_list') as $k => $faqData): ?>
+          <article class="closummary__quest">
+            <input type="checkbox" name="questcheck" id="clofaq<?= $k; ?>">
+            <label class="closummary__hdr cloflexi" for="clofaq<?= $k; ?>">
+              <span class="closummary__title"><?= $faqData['q']; ?></span>
+              <span class="closummary__plus"></span>
+            </label>
+            <div class="closummary__content">
+              <div class="closummary__text">
+                <div class="closummary__textpad"><?= $faqData['a']; ?></div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq2">
-          <label class="closummary__hdr flexi" for="clofaq2">
-            <span class="closummary__title">Смогу ли я получить все нужные знания онлайн?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Да, сможете – на курсе вы будете максимально вовлечены в учебный процесс через вебинары, домашние задания и работу с кураторами.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq3">
-          <label class="closummary__hdr flexi" for="clofaq3">
-            <span class="closummary__title">Какое программное обеспечение мне понадобится для обучения? </span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                <ul>
-                  <li>Zoom – приложение для вебинаров и групповых мастермайндов;</li>
-                  <li>Telegram – мессенджер для общения куратора и студентов.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq4">
-          <label class="closummary__hdr flexi" for="clofaq4">
-            <span class="closummary__title">Смогу ли я подключаться с планшета или телефона? </span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Да. Для этого на нем должны быть установлены Zoom и Telegram.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq5">
-          <label class="closummary__hdr flexi" for="clofaq5">
-            <span class="closummary__title">Кому я смогу задавать вопросы в процессе обучения? </span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                За каждой группой наших студентов закреплен куратор, который сможет оперативно ответить на все вопросы. На все вопросы по содержанию лекций будет отвечать преподаватель.
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="closummary__quest">
-          <input type="checkbox" name="questcheck" id="clofaq6">
-          <label class="closummary__hdr flexi" for="clofaq6">
-            <span class="closummary__title">Есть ли у вас рассрочка?</span>
-            <span class="closummary__plus"></span>
-          </label>
-          <div class="closummary__content">
-            <div class="closummary__text">
-              <div class="closummary__textpad">
-                Да, у нас действует программа рассрочки с несколькими банками: Тинькофф, СберБанк, Почта Банк, АльфаБанк.
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
