@@ -834,7 +834,7 @@ get_header();
 
 
 
-
+<?php if(0): ?>
 <section class="talentsyabout talentsyabout--disint">
   <div class="talentsyabout__topbg">
     <div class="container">
@@ -878,7 +878,7 @@ get_header();
       <a href="<?=get_permalink();?>" class="talentsyabout__tag">Декорирование <br>интерьера</a>
   </div>
 </section><!-- //talentsyabout -->
-
+<?php endif; ?>
 
 <?php
-get_footer();
+get_footer('new');

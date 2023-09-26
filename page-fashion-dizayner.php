@@ -922,7 +922,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 
-
+<?php if(0): ?>
 <section class="talentsyabout talentsyabout--black">
   <div class="talentsyabout__topbg">
     <div class="container">
@@ -1007,8 +1007,8 @@ $pics = imgs() . '/fashion-dizayner';
 
 
 </section><!-- //talentsyabout -->
-
+<?php endif; ?>
 
 
 <?php
-get_footer();
+get_footer('new');

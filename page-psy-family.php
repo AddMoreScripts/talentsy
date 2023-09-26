@@ -1019,7 +1019,7 @@ get_header();
 
 
 
-
+  <?php if(0): ?>
   <section class="talentsyabout">
     <div class="container">
       <img src="<?=imgs(); ?>/footer/logo-white.svg" alt="" class="talentsyabout__logo js-slide-opac">
@@ -1088,7 +1088,7 @@ get_header();
       </div>
     </div>
   </section><!-- //talentsyabout -->
-
+  <?php endif; ?>
 
 <?php
-get_footer();
+get_footer('new');

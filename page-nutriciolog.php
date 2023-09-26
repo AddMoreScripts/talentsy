@@ -1016,21 +1016,5 @@ $pics = imgs() . '/nutriciolog';
 
 
 
-
-<section class="talentsyabout talentsyabout--black talentsyabout--astro">
-  <div class="talentsyabout__topbg">
-    <div class="container">
-      <div class="talentsyabout__tags" data-hidewrap="tags">
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Профессиональная <br>переподготовка</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Повышение <br>квалификации</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Специальность <br>диетология</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Клиническая <br>нутрициология</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Основы нутрициологии <br>обучение онлайн</a>
-      </div>
-    </div>
-  </div>
-</section><!-- //talentsyabout -->
-
-
 <?php
-get_footer();
+get_footer('new');
