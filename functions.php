@@ -189,10 +189,10 @@ function disable_enable_scripts(){
   endif;
 
   // добавляем
-  $theme_ver = '1.0.2';
+  $theme_ver = '1.0.3';
   wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
-  if( is_page_template('landings/landing-clo3d.php') ){
+  if( is_page_template('landings/landing-clo3d.php') || is_page_template('landings/landing-orkt.php') ){
     wp_enqueue_style('css-clo3d-site', get_template_directory_uri() . '/landings/css/clo3d/site.css', [], $theme_ver);
     wp_enqueue_style('css-clo3d-media', get_template_directory_uri() . '/landings/css/clo3d/media.css', [], $theme_ver, '(max-width:1330px)');
     wp_enqueue_script('js-clo3d-main', (get_template_directory_uri() .'/landings/js/clo3d/main.js'), [], $theme_ver, true);
@@ -205,6 +205,12 @@ function disable_enable_scripts(){
     wp_enqueue_script('js-kids-typed', (get_template_directory_uri() .'/landings/js/kids/typed.umd.js'), [], $theme_ver, true);
     wp_enqueue_script('js-kids-main', (get_template_directory_uri() .'/landings/js/kids/main.js'), [], $theme_ver, true);
   }
+
+  if( is_page_template('landings/landing-orkt.php') ){
+    wp_enqueue_style('css-kids-site', get_template_directory_uri() . '/landings/css/orkt/main.css', [], $theme_ver);
+    wp_enqueue_style('css-kids-media', get_template_directory_uri() . '/landings/css/orkt/media.css', [], $theme_ver, '(max-width:1200px)');
+  }
+
 }
 add_action('wp_enqueue_scripts', 'disable_enable_scripts', 99);
 
@@ -280,6 +286,8 @@ function axFormRequest(){
     'url'     => $urlfull,
     'other'   => []
   ];
+
+
 
   if( isset($form['special']) ):
     // если на странице "о нас" выбрали тему обращения "другое" - отправляем как подвал
@@ -396,6 +404,9 @@ function axFormRequest(){
       'email'   => $form['Email'],
       'phone'   => $form['Phone'],
     ];
+    if( get_field('elly_alias', $pageID) ) $sendData['other']['ellyalias'] = get_field('elly_alias', $pageID);
+    if( $form['ellyalias'] ) $sendData['other']['ellyalias'] = $form['ellyalias'];
+
     $result['gleadid']  = rest_gateway_create_lead($sendData);
     $result['gtm']      = true;
   endif;

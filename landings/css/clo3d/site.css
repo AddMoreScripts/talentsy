@@ -339,7 +339,7 @@ body.page-template-landing-clo3d {
 .h2 {
   font-size: 60px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.2;
   font-family: 'JetBrains Mono', monospace;
   text-transform: uppercase;
 }
@@ -935,6 +935,17 @@ body.page-template-landing-clo3d {
   display: block;
   font-size: 20px;
   color:#8D8D8D;
+}
+.closummary__textpad p:not(:last-child),
+.closummary__textpad ul:not(:last-child){
+  margin-bottom: 10px;
+}
+.closummary__textpad li{
+  list-style-type: disc;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  list-style-position: outside;
+  margin-left: 24px;
 }
 .closummary__more{
   position: absolute;

@@ -203,14 +203,56 @@
     }
 
     .ya-share2__link_more-button-type_long{
-      height: 36px;
-      padding: 0 16px !important;
+      height: 56px !important;
+      padding: 0 18px !important;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       border:none !important;
       background: #f4f2f0 !important;
       border-radius: 8px !important;
+      flex-direction: row-reverse;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+    }
+    .ya-share2__link_more-button-type_long:hover{
+      background: #f0f0f0 !important;
+    }
+    .ya-share2__title{
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+    }
+    .ya-share2__link_more-button-type_long .ya-share2__title{
+      margin-left: 0;
+      margin-right: 7px;
+      font-size: 16px;
+      line-height: 1;
+    }
+    .ya-share2__container_size_m.ya-share2__container_alone .ya-share2__popup_direction_bottom, .ya-share2__container_size_m .ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__popup_direction_bottom{
+      top: 62px;
+
+    }
+    .ya-share2__list.ya-share2__list_direction_vertical{
+      padding: 0 !important;
+    }
+    .ya-share2__popup .ya-share2__item{
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .ya-share2__popup .ya-share2__item .ya-share2__link{
+      height: 48px;
+      font-size: 14px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;;
+    }
+    .ya-share2__popup .ya-share2__icon{
+      width: 32px !important;
+      height: 32px !important;
+    }
+    .ya-share2__popup .ya-share2__item .ya-share2__link .ya-share2__title{
+      line-height: 18px;
     }
   }
 
