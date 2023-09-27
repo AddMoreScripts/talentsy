@@ -726,23 +726,5 @@ $pics = imgs() . '/astrolog';
 </section>
 
 
-
-
-
-<section class="talentsyabout talentsyabout--black talentsyabout--astro">
-  <div class="talentsyabout__topbg">
-    <div class="container">
-      <div class="talentsyabout__tags" data-hidewrap="tags">
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Обучение <br>астрологии</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курсы по <br>астрологии с нуля</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Школа астрологии</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Курсы астрологии <br>для начинающих</a>
-        <a href="<?= get_permalink(); ?>" class="talentsyabout__tag">Астролог <br>профессионал</a>
-      </div>
-    </div>
-  </div>
-</section><!-- //talentsyabout -->
-
-
 <?php
 get_footer();

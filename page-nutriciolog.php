@@ -1017,4 +1017,4 @@ $pics = imgs() . '/nutriciolog';
 
 
 <?php
-get_footer('new');
+get_footer();

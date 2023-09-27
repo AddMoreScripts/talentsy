@@ -411,7 +411,7 @@ $saleDate = 'до ' . getTomorow();
             </div>
           </article>
         <? endforeach; ?>
-        
+
         <? if( get_field('is_closed') ): ?>
           <button class="closummary__more"></button>
         <? endif; ?>
@@ -720,39 +720,6 @@ $saleDate = 'до ' . getTomorow();
   </section>
 </div><!-- //pagewrap -->
 
-<section class="cloblackblock">
-  <div class="clocontainer">
-    <img src="<?= $pics; ?>/footer-logo-white.svg" alt="" class="cloblack__logo">
-    <div class="cloblack__line2">
-      <div class="cloblack__slogan">Онлайн-обучение <br>гуманитарным <br>профессиям</div>
-      <div class="cloblack__about">Мы помогаем развивать талант, чтобы вы могли начать заниматься любимым делом и
-        превратили свое увлечение в профессию. Вас ждут самые актуальные подходы к обучению и топ-преподаватели на
-        каждой программе. Мы создаем современный университет, в котором интересно учиться, и заботимся о каждом
-        студенте. </div>
-    </div>
-    <div class="cloblack__grid">
-      <dl class="cloblack__dl">
-        <dt class="jbm">6</dt>
-        <dd>Факультетов</dd>
-      </dl>
-      <dl class="cloblack__dl">
-        <dt class="jbm">20</dt>
-        <dd>Образователь-<br>ных программ</dd>
-      </dl>
-      <dl class="cloblack__dl">
-        <dt class="jbm">70+</dt>
-        <dd>Выдающихся <br>преподавателей</dd>
-      </dl>
-      <dl class="cloblack__dl cloblack__dl--green">
-        <dt class="jbm">
-          <span>13k</span>
-          <img src="<?= $pics; ?>/b18-heart.svg" alt="" class="cloblack__heart">
-        </dt>
-        <dd>Любимых <br>студентов</dd>
-      </dl>
-    </div>
-  </div>
-</section>
 </div>
 <?php
 get_footer();

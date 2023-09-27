@@ -2,41 +2,26 @@
   <div class="container">
     <img src="<?=imgs(); ?>/footer/footer-logo.svg" alt="" class="footblack__logo">
     <div class="footblack__line2">
-      <div class="footblack__slogan">Онлайн-обучение <br>гуманитарным <br>профессиям</div>
-      <div class="footblack__about">Мы помогаем развивать талант, чтобы вы могли начать заниматься любимым делом и
-        превратили свое увлечение в профессию. Вас ждут самые актуальные подходы к обучению и топ-преподаватели на
-        каждой программе. Мы создаем современный университет, в котором интересно учиться, и заботимся о каждом
-        студенте. </div>
+      <div class="footblack__slogan"><?=get_field('footer-h1', 'options'); ?></div>
+      <div class="footblack__about"><?=get_field('footer-h2', 'options'); ?></div>
     </div>
     <div class="footblack__grid">
-      <dl class="footblack__dl">
-        <dt class="jbm">6</dt>
-        <dd>Факультетов</dd>
-      </dl>
-      <dl class="footblack__dl">
-        <dt class="jbm">20</dt>
-        <dd>Образователь-<br>ных программ</dd>
-      </dl>
-      <dl class="footblack__dl">
-        <dt class="jbm">70+</dt>
-        <dd>Выдающихся <br>преподавателей</dd>
-      </dl>
-      <dl class="footblack__dl footblack__dl--green">
+      <?php while (have_rows('footer-cards', 'options')) : the_row(); ?>
+      <dl class="footblack__dl <?=get_sub_field('is-heart') ? 'footblack__dl--green' : ''; ?>">
         <dt class="jbm">
-          <span>13k</span>
-          <img src="<?=imgs(); ?>/footer/heart-white.svg" alt="" class="footblack__heart">
+          <span><?=get_sub_field('num'); ?></span>
+          <?php if(get_sub_field('is-heart')): ?>
+            <img src="<?=imgs(); ?>/footer/heart-white.svg" alt="" class="footblack__heart">
+          <?php endif; ?>
         </dt>
-        <dd>Любимых <br>студентов</dd>
+        <dd><?=get_sub_field('descr'); ?></dd>
       </dl>
+      <?php endwhile; ?>
     </div>
 
     <div class="footblack__formwrap">
-      <h2 class="footblack__h2 jbm">Поможем в&nbsp;выборе!</h2>
-      <div class="footblack__formdescr">
-        Если у вас есть вопросы или вы не знаете что
-        <br>выбрать, оставьте свой номер: мы позвоним, чтобы
-        <br>ответить на все ваши вопросы
-      </div>
+      <h2 class="footblack__h2 jbm"><?=get_field('footer-form1', 'options'); ?></h2>
+      <div class="footblack__formdescr"><?=get_field('footer-form2', 'options'); ?></div>
       <form action="#" class="fooformbox fooformbox--black ajaxForm" data-target="axFormRequest">
         <div class="fooformbox__grid">
           <div class="fooformbox__inpwrap">
@@ -73,7 +58,7 @@
       </a>
     </aside>
     <aside class="newfooter2">
-      <div class="footmenutitle">Факультеты</div>
+      <div class="newfootmenutitle">Факультеты</div>
       <?php wp_nav_menu([
         'menu' => 'Подвал - факультеты',
         'menu_class' => 'newfootermenu',
@@ -82,7 +67,7 @@
       ]); ?>
     </aside>
     <aside class="newfooter3">
-      <div class="footmenutitle">О Talentsy</div>
+      <div class="newfootmenutitle">О Talentsy</div>
       <?php wp_nav_menu([
         'menu' => 'Подвал - о Talentsy',
         'menu_class' => 'newfootermenu',
