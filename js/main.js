@@ -1,4 +1,5 @@
 import 'hystmodal/css';
+import "swiper/css/bundle";
 import '@fancyapps/ui/dist/fancybox.css';
 import HystModal from 'hystmodal';
 import LazyLoad from 'vanilla-lazyload';

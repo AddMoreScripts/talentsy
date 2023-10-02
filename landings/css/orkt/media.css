@@ -91,7 +91,12 @@
 
 
 
-
+@media (max-width: 1199px){
+  .orkt17sertblock__right p{
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
 
 
 

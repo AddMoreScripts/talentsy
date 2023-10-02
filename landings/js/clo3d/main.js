@@ -13,7 +13,7 @@ function initAddictSwipers(Swiper) {
       type: "fraction",
     },
     breakpoints: {
-      1300: {
+      1250: {
         spaceBetween: 40,
         slidesPerView: 3,
       },

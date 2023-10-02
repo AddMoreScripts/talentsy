@@ -176,7 +176,11 @@ function disable_enable_scripts(){
   $theme_ver = '1.0.3';
   wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
-  if( is_page_template('landings/landing-clo3d.php') || is_page_template('landings/landing-orkt.php') ){
+  if(
+    is_page_template('landings/landing-clo3d.php') ||
+    is_page_template('landings/landing-orkt.php') ||
+    is_page_template('landings/landing-difficult-clients.php')
+  ) {
     wp_enqueue_style('css-clo3d-site', get_template_directory_uri() . '/landings/css/clo3d/site.css', [], $theme_ver);
     wp_enqueue_style('css-clo3d-media', get_template_directory_uri() . '/landings/css/clo3d/media.css', [], $theme_ver, '(max-width:1330px)');
     wp_enqueue_script('js-clo3d-main', (get_template_directory_uri() .'/landings/js/clo3d/main.js'), [], $theme_ver, true);
@@ -190,9 +194,17 @@ function disable_enable_scripts(){
     wp_enqueue_script('js-kids-main', (get_template_directory_uri() .'/landings/js/kids/main.js'), [], $theme_ver, true);
   }
 
-  if( is_page_template('landings/landing-orkt.php') ){
-    wp_enqueue_style('css-kids-site', get_template_directory_uri() . '/landings/css/orkt/main.css', [], $theme_ver);
-    wp_enqueue_style('css-kids-media', get_template_directory_uri() . '/landings/css/orkt/media.css', [], $theme_ver, '(max-width:1200px)');
+  if(
+    is_page_template('landings/landing-orkt.php') ||
+    is_page_template('landings/landing-difficult-clients.php')
+  ){
+    wp_enqueue_style('css-orkt-site', get_template_directory_uri() . '/landings/css/orkt/main.css', [], $theme_ver);
+    wp_enqueue_style('css-orkt-media', get_template_directory_uri() . '/landings/css/orkt/media.css', [], $theme_ver, '(max-width:1200px)');
+  }
+
+  if( is_page_template('landings/landing-difficult-clients.php') ){
+    wp_enqueue_style('css-difficult-site', get_template_directory_uri() . '/landings/css/difficult/main.css', [], $theme_ver);
+    wp_enqueue_style('css-difficult-media', get_template_directory_uri() . '/landings/css/difficult/media.css', [], $theme_ver, '(max-width:1300px)');
   }
 
 }
