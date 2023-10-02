@@ -74,6 +74,20 @@ $(document).ready(function(){
 			}
 		});
 	});
+	// подстановка параметров для GC форм
+	$('[name="formParams[dealCustomFields][1291877]"]').val( document.cookie +"|w|h|"+ window.location.href );
+	$('[name="__gc__internal__form__helper"]').val( window.location.href );
+	$('[name="__gc__internal__form__helper_ref"]').val( document.referrer );
+	$('body').on('click', 'form.lt-form button[type="submit"]', function(){
+		if(window['stpbtngc2709']){return false;}
+		
+		window['stpbtngc2709']=true;
+		setTimeout(function(){
+			window['stpbtngc2709']=false
+		},6000);
+
+		return true;
+	});
 
 	// обработка ajaxClick
 	$('body').on('click', '.ajaxClick', function(e){
@@ -130,12 +144,10 @@ $(document).ready(function(){
 	$('body').on('click', '.promoform__btn', function(){
 		$(this).parents('.newpromoform').addClass('state-open')
 	});
-
   	// очистка по крестику
 	$('body').on('click', '.promoform__clearer', function(){
 		$('.jsPmoField').val('');
 	});
-
 	// отправка
 	$('body').on('click', '.jsPPRequest', function(){
 	    var promoCont 		= $(this).parents('.newpromoform'),
@@ -151,6 +163,7 @@ $(document).ready(function(){
 	                promoCont.removeClass('state-open').addClass('state-success')
 
 	                $('[name="jsPmoHiddenFormField"]').val(promoCodeValue);
+	                sombraSetCookie('lastUsedPromocode', promoCodeValue);
 	            }else{
 	                promoCont.find('.jsPmoField').addClass('is-invalid');
 	            }
@@ -351,4 +364,15 @@ function getVKUserFormInfo(token, uuid, OTP){
             }
         }
     });
+}
+
+// cookies set
+function sombraSetCookie(name, data){
+  var d  = new URL(document.location.href),
+	  dA = d.host.split("."),
+      domain = d.host.split(".").length > 2 ? '.'+ dA[1] +'.'+ dA[2] : '.'+ d.host;
+  var nDate = new Date();
+      nDate.setTime(nDate.getTime() + (24*60*60*1000));
+
+  	document.cookie = name +"="+ data +"; expires=" + nDate.toUTCString() + "; path=/; domain="+ domain;
 }

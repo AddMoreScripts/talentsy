@@ -17,7 +17,7 @@ $pics = imgs() . '/nutriciolog';
         <ul class="nutrihero__list">
           <li>освойте новую востребованную профессию онлайн <br>за 8 месяцев</li>
           <li>научитесь восстанавливать и поддерживать здоровье <br>через <b>коррекцию питания</b> и <b>образа жизни</b></li>
-          <li>получите диплом установленного образца РФ, а так же два <br>международных диплома с правом консультирования <br>в сфере нутрициологии</li>
+          <li>получите сертификат установленного образца РФ,<br>а также два международных сертификата с правом консультирования в сфере нутрициологии</li>
         </ul>
         <button class="nutrihero__button button" data-scrollto="#offer">
           <img src="<?=$pics; ?>/b1-button-arrow.svg" alt="">
@@ -866,14 +866,14 @@ $pics = imgs() . '/nutriciolog';
   <div class="container">
     <h2 class="title">Стоимость обучения</h2>
     <div class="priceblock__row flexi">
-      <div class="priceblock__price jbm js-slide-left"><span>8300</span><span>₽/МЕС</span></div>
+      <div class="priceblock__price jbm js-slide-left"><span>9375</span><span>₽/МЕС</span></div>
       <div class="priceblock__descr js-slide-right">
         <p>Беспроцентная рассрочка на 24 месяца.</p>
         <p>Первый платеж через 2 месяца.</p>
       </div>
     </div>
     <div class="priceblock__greenprice jbm js-slide-bot">
-      <span>От</span> <span class="jsPPSumm">5000</span> <span>₽/МЕС</span>
+      <span>От</span> <span class="jsPPSumm">5625</span> <span>₽/МЕС</span>
       <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
     </div>
     <div class="priceblock__mobdescr">

@@ -698,7 +698,7 @@ get_header();
   <div class="container">
     <h2 class="title">Стоимость обучения</h2>
     <div class="priceblock__row flexi">
-      <div class="priceblock__price jbm"><span>8300</span><span>₽/МЕС</span></div>
+      <div class="priceblock__price jbm"><span>8333</span><span>₽/МЕС</span></div>
       <div class="priceblock__descr">
         <p>Беспроцентная рассрочка на 24 месяца.</p>
         <p>Первый платеж через 2 месяца.</p>

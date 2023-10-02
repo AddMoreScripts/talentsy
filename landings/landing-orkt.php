@@ -213,17 +213,17 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <div class="cloform__line"></div>
 
-        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
+        <form class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=<?= get_field('getcourse_wid'); ?>" method="post" data-open-new-window="0">
           <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="Name" placeholder="Имя" required>
+              <input type="text" name="formParams[first_name]" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="formParams[phone]" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="Email" placeholder="Email" required>
+              <input type="email" name="formParams[email]" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
@@ -236,7 +236,7 @@ $saleDate = 'до ' . getTomorow();
             </div>
             <div class="promoform__inpwrap">
               <div class="promoform__inpbox">
-                <input type="text" name="promocode" placeholder="Введите промокод" class="jsPmoField">
+                <input type="text" name="formParams[dealCustomFields][1367090]" placeholder="Введите промокод" class="jsPmoField">
                 <button class="promoform__clearer" type="button"></button>
               </div>
               <button class="promoform__btn jsPPRequest" type="button">
@@ -253,98 +253,20 @@ $saleDate = 'до ' . getTomorow();
             Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
+
+          <input name="formParams[dealCustomFields][1265453]" type="hidden" value="<?= $_GET['utm_info'] ?? ''; ?>">
+          <input name="formParams[dealCustomFields][1810276]" type="hidden" value="<?= get_field('elly_alias'); ?>">
+          <input name="formParams[dealCustomFields][1291877]" type="hidden">
+          <input type="hidden" name="__gc__internal__form__helper" class="__gc__internal__form__helper">
+          <input type="hidden" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref">
+          <input type="hidden" name="requestTime" value="1695648662">
+          <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
+          <input type="hidden" name="isHtmlWidget" value="1"/>
         </form>
 
       </div>
     </div>
   </section><!-- //orktform1 -->
-
-  <? if( current_user_can('administrator') || isset($_GET['isadmintest']) ): ?>
-    <section class="cloform orktform1">
-      <div class="clocontainer">
-        <img src="<?=$clopics; ?>/b6-star.svg" alt="" class="orktform1__star">
-        <div class="cloform__bg">
-          <div class="orktform1__hdr">
-            <h2 class="h2">
-              <mark>ФОРМА GETCOURSE</mark><br>
-              ВИДИТ ТОЛЬКО АДМИН<br>
-              ИДЕТ ТЕСТИРОВАНИЕ
-            </h2>
-            <div class="orktform1__time">Осталось: <b>6 мест</b></div>
-          </div>
-          <div class="cloform__line"></div>
-
-          <form id="ltForm5878338" class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=1745510931" method="post" data-open-new-window="0">
-            <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
-            <div class="cloformbox__grid">
-              <div class="cloformbox__inpwrap">
-                <input type="text" name="formParams[first_name]" maxlength="60" placeholder="Имя" required>
-              </div>
-              <div class="cloformbox__inpwrap">
-                <input type="tel" name="formParams[phone]" maxlength="60" placeholder="+7 (999) 999-99-99" required>
-              </div>
-              <div class="cloformbox__inpwrap">
-                <input type="email" name="formParams[email]" maxlength="60" placeholder="Email" required>
-              </div>
-              <div class="cloformbox__subwrap">
-                <button type="submit" class="clobtn" id="button7416064" onclick="if(window['btnprs65118b96d34f4']){return false;}window['btnprs65118b96d34f4']=true;setTimeout(function(){window['btnprs65118b96d34f4']=false},6000);return true;">Перейти к оплате</button>
-              </div>
-            </div>
-            <div class="promoform newpromoform">
-              <div class="promoform__openbutton promoform__btn">
-                <span>У меня есть промокод</span>
-                <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
-              </div>
-              <div class="promoform__inpwrap">
-                <div class="promoform__inpbox">
-                  <input type="text" name="formParams[dealCustomFields][1367090]" placeholder="Введите промокод" class="jsPmoField">
-                  <button class="promoform__clearer" type="button"></button>
-                </div>
-                <button class="promoform__btn jsPPRequest" type="button">
-                  <span>Активировать</span>
-                  <img src="<?= $clopics; ?>/promo-arrow.svg" alt="" class="promoform__arrow">
-                </button>
-              </div>
-              <div class="promoform__success promoform__btn">
-                <span>Промокод активирован</span>
-                <img src="<?= $clopics; ?>/promo-check.svg" alt="" class="promoform__arrow">
-              </div>
-            </div><!-- //promoform -->
-            <p class="cloformbox__accept">
-              Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
-                персональных данных</a>
-            </p>
-
-            <input name="formParams[dealCustomFields][1265453]" type="hidden"><br>
-            <input name="formParams[dealCustomFields][1291877]" type="hidden"><br>
-            <input type="hidden" id="91101665118b96cc43f" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
-            <input type="hidden" id="91101665118b96cc43fref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value="">
-            <input type="hidden" name="requestTime" value="1695648662">
-            <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
-            <input type="hidden" name="isHtmlWidget" value="1"/>
-          </form>
-        </div>
-      </div>
-    </section><!-- //orktform1 -->
-
-
-    <span id="gccounterImgContainer"></span><script>
-      window.addEventListener('load', function(){
-        let loc = document.getElementById("91101665118b96cc43f");
-        loc.value = window.location.href;
-        let ref = document.getElementById("91101665118b96cc43fref");
-        ref.value = document.referrer;
-
-        let statUrl = "https://lk.talentsy.ru/stat/counter?ref=" + encodeURIComponent(document.referrer)
-          + "&loc=" + encodeURIComponent(document.location.href);
-        document.getElementById('gccounterImgContainer').innerHTML
-          = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
-
-        $('[name="formParams[dealCustomFields][1291877]"]').val( document.cookie +"|w|h|"+ window.location.href );
-        $('[name="formParams[dealCustomFields][1810276]"]').val( $('[name="formParams[dealCustomFields][1810276]"]').attr('placeholder') ).hide();
-      });
-    </script>
-  <? endif; ?>
 
 
   <section class="orkt5for">
@@ -460,28 +382,27 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <dl class="orkt8situation__item is-gray">
           <dt class="jbm">01</dt>
-          <dd>Проблемы самооценки, самозванца, самореализации</dd>
+          <dd>Низкая самооценка и отсутствие уверенности в себе</dd>
         </dl>
         <dl class="orkt8situation__item">
           <dt class="jbm">02</dt>
-          <dd>Поддержка в проживании серьезных изменений в жизни</dd>
+          <dd>Достижение конкретных перемен в жизни: сменить работу или создать семью</dd>
         </dl>
         <dl class="orkt8situation__item is-gray">
           <dt class="jbm">03</dt>
-          <dd>Проработка и изменение поведения, внедрение новых привычек и навыков</dd>
+          <dd>Конфликты в паре или с детьми и родителями</dd>
         </dl>
         <dl class="orkt8situation__item">
           <dt class="jbm">04</dt>
-          <dd>Cемейные конфликты, отношения
-            в паре и детско-родительские отношения</dd>
+          <dd>Избавление от вредных привычек и улучшение качества жизни</dd>
         </dl>
         <dl class="orkt8situation__item is-gray">
           <dt class="jbm">05</dt>
-          <dd>Депрессивные расстройства</dd>
+          <dd>Кризисные ситуации</dd>
         </dl>
         <dl class="orkt8situation__item">
           <dt class="jbm">06</dt>
-          <dd>Расстройства пищевого поведения </dd>
+          <dd>Понимание своих жизненных целей и самореализация</dd>
         </dl>
       </div>
     </div>
@@ -503,17 +424,17 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <div class="cloform__line"></div>
 
-        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
+        <form class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=<?= get_field('getcourse_wid'); ?>" method="post" data-open-new-window="0">
           <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="Name" placeholder="Имя" required>
+              <input type="text" name="formParams[first_name]" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="formParams[phone]" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="Email" placeholder="Email" required>
+              <input type="email" name="formParams[email]" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
@@ -523,6 +444,15 @@ $saleDate = 'до ' . getTomorow();
             Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
+
+          <input name="formParams[dealCustomFields][1265453]" type="hidden" value="<?= $_GET['utm_info'] ?? ''; ?>">
+          <input name="formParams[dealCustomFields][1810276]" type="hidden" value="<?= get_field('elly_alias'); ?>">
+          <input name="formParams[dealCustomFields][1291877]" type="hidden">
+          <input type="hidden" name="__gc__internal__form__helper" class="__gc__internal__form__helper">
+          <input type="hidden" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref">
+          <input type="hidden" name="requestTime" value="1695648662">
+          <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
+          <input type="hidden" name="isHtmlWidget" value="1"/>
         </form>
 
       </div>
@@ -608,17 +538,17 @@ $saleDate = 'до ' . getTomorow();
           <div class="orktform1__time">Осталось: <b>6 мест</b></div>
         </div>
         <div class="cloform__line"></div>
-        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
+        <form class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=<?= get_field('getcourse_wid'); ?>" method="post" data-open-new-window="0">
           <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="Name" placeholder="Имя" required>
+              <input type="text" name="formParams[first_name]" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="formParams[phone]" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="Email" placeholder="Email" required>
+              <input type="email" name="formParams[email]" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Получить консультацию</button>
@@ -628,6 +558,15 @@ $saleDate = 'до ' . getTomorow();
             Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
+
+          <input name="formParams[dealCustomFields][1265453]" type="hidden" value="<?= $_GET['utm_info'] ?? ''; ?>">
+          <input name="formParams[dealCustomFields][1810276]" type="hidden" value="<?= get_field('elly_alias'); ?>">
+          <input name="formParams[dealCustomFields][1291877]" type="hidden">
+          <input type="hidden" name="__gc__internal__form__helper" class="__gc__internal__form__helper">
+          <input type="hidden" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref">
+          <input type="hidden" name="requestTime" value="1695648662">
+          <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
+          <input type="hidden" name="isHtmlWidget" value="1"/>
         </form>
 
       </div>
@@ -721,17 +660,17 @@ $saleDate = 'до ' . getTomorow();
         </div>
         <div class="cloform__line"></div>
 
-        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
+        <form class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=<?= get_field('getcourse_wid'); ?>" method="post" data-open-new-window="0">
           <div class="cloformbox__title">Отправьте заявку, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="Name" placeholder="Имя" required>
+              <input type="text" name="formParams[first_name]" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="formParams[phone]" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="Email" placeholder="Email" required>
+              <input type="email" name="formParams[email]" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
@@ -744,7 +683,7 @@ $saleDate = 'до ' . getTomorow();
             </div>
             <div class="promoform__inpwrap">
               <div class="promoform__inpbox">
-                <input type="text" name="promocode" placeholder="Введите промокод" class="jsPmoField">
+                <input type="text" name="formParams[dealCustomFields][1367090]" placeholder="Введите промокод" class="jsPmoField">
                 <button class="promoform__clearer" type="button"></button>
               </div>
               <button class="promoform__btn jsPPRequest" type="button">
@@ -762,6 +701,15 @@ $saleDate = 'до ' . getTomorow();
             Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
+
+          <input name="formParams[dealCustomFields][1265453]" type="hidden" value="<?= $_GET['utm_info'] ?? ''; ?>">
+          <input name="formParams[dealCustomFields][1810276]" type="hidden" value="<?= get_field('elly_alias'); ?>">
+          <input name="formParams[dealCustomFields][1291877]" type="hidden">
+          <input type="hidden" name="__gc__internal__form__helper" class="__gc__internal__form__helper">
+          <input type="hidden" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref">
+          <input type="hidden" name="requestTime" value="1695648662">
+          <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
+          <input type="hidden" name="isHtmlWidget" value="1"/>
         </form>
       </div>
     </div>
@@ -854,17 +802,17 @@ $saleDate = 'до ' . getTomorow();
 
         </div>
 
-        <form action="#" class="cloformbox ajaxForm" data-target="axFormRequest">
+        <form class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=<?= get_field('getcourse_wid'); ?>" method="post" data-open-new-window="0">
           <div class="cloformbox__title">Отправьте заявку, <b>чтобы забронировать место</b></div>
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
-              <input type="text" name="Name" placeholder="Имя" required>
+              <input type="text" name="formParams[first_name]" placeholder="Имя" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
+              <input type="tel" name="formParams[phone]" placeholder="+7 (999) 999-99-99" required>
             </div>
             <div class="cloformbox__inpwrap">
-              <input type="email" name="Email" placeholder="Email" required>
+              <input type="email" name="formParams[email]" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
               <button type="submit" class="clobtn">Забронировать место</button>
@@ -877,7 +825,7 @@ $saleDate = 'до ' . getTomorow();
             </div>
             <div class="promoform__inpwrap">
               <div class="promoform__inpbox">
-                <input type="text" name="promocode" placeholder="Введите промокод" class="jsPmoField">
+                <input type="text" name="formParams[dealCustomFields][1367090]" placeholder="Введите промокод" class="jsPmoField">
                 <button class="promoform__clearer" type="button"></button>
               </div>
               <button class="promoform__btn jsPPRequest" type="button">
@@ -894,6 +842,15 @@ $saleDate = 'до ' . getTomorow();
             Отправляя данную форму вы соглашаетесь с условиями <a href="<?= get_permalink(342); ?>" target="_blank">оферты</a> и <a href="<?= ldocslink('agree'); ?>" target="_blank">политикой обработки
               персональных данных</a>
           </p>
+
+          <input name="formParams[dealCustomFields][1265453]" type="hidden" value="<?= $_GET['utm_info'] ?? ''; ?>">
+          <input name="formParams[dealCustomFields][1810276]" type="hidden" value="<?= get_field('elly_alias'); ?>">
+          <input name="formParams[dealCustomFields][1291877]" type="hidden">
+          <input type="hidden" name="__gc__internal__form__helper" class="__gc__internal__form__helper">
+          <input type="hidden" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref">
+          <input type="hidden" name="requestTime" value="1695648662">
+          <input type="hidden" name="requestSimpleSign" value="de53721676f9b6aa19bb539ad254923d">
+          <input type="hidden" name="isHtmlWidget" value="1"/>
         </form>
       </div>
     </div>

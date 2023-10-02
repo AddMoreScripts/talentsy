@@ -767,14 +767,14 @@ get_header();
     <div class="container">
       <h2 class="title">Стоимость обучения</h2>
       <div class="priceblock__row flexi">
-        <div class="priceblock__price jbm"><span>15000</span><span>₽/МЕС</span></div>
+        <div class="priceblock__price jbm"><span>16667</span><span>₽/МЕС</span></div>
         <div class="priceblock__descr">
           <p>Беспроцентная рассрочка на 24 месяца.</p>
           <p>Первый платеж через 2 месяца.</p>
         </div>
       </div>
       <div class="priceblock__greenprice jbm">
-        <span>От</span> <span class="jsPPSumm">9000</span> <span>₽/МЕС</span>
+        <span>От</span> <span class="jsPPSumm">10000</span> <span>₽/МЕС</span>
         <small>Скидка 40% &nbsp;<b>до <?=getTomorow(); ?></b></small>
       </div>
       <div class="priceblock__mobdescr">

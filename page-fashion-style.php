@@ -751,12 +751,12 @@ $pics = imgs() . '/fashion-style';
   <div class="container">
     <h2 class="title">Стоимость обучения</h2>
     <div class="priceblock__row flexi">
-      <div class="priceblock__price jbm"><span>6250</span><span>₽/МЕС</span></div>
+      <div class="priceblock__price jbm"><span>9375</span><span>₽/МЕС</span></div>
     </div>
 
     <div class="stylistsubprice flexi">
       <div class="stylistsubprice__left jbm">
-        <small>от</small><span class="jsPPSumm">3750</span> <span>₽/мес</span>
+        <small>от</small><span class="jsPPSumm">5625</span> <span>₽/мес</span>
       </div>
       <div class="stylistsubprice__right">
         Беспроцентная рассрочка <br>на&nbsp;24 месяца
