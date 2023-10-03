@@ -39,3 +39,8 @@
 .container + .bloglead{
   margin-top: 30px;
 }
+
+
+.fancybox__content :focus{
+  outline: none !important;
+}
