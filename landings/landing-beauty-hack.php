@@ -18,7 +18,7 @@ $saleProc = 54;
       <h1 class="orkt1__h1 jbm">
         За 9 лекций научим составлять<br>
         <mark>индивидуальный рацион</mark> питания<br>
-        для красоты и здоровья
+        для красоты и&nbsp;здоровья
       </h1>
 
       <div class="orkt1sale beayhack1sale">
@@ -216,7 +216,7 @@ $saleProc = 54;
           <div class="beayhackform1__top">
             <h2 class="h2">
               <mark>РАСШИРЬТЕ СПЕКТР<br>
-                ЗНАНИЙ</mark> И ПОВЫСЬТЕ<br>
+                ЗНАНИЙ</mark> И&nbsp;ПОВЫСЬТЕ<br>
               СВОЮ ВОСТРЕБОВАННОСТЬ
             </h2>
             <img src="<?= $pics; ?>/b4-icon.png" alt="" class="beayhackform1__pic">
@@ -442,7 +442,7 @@ $saleProc = 54;
         <div class="clob10__hr"></div>
         <div class="clob10__bot flexi">
           <div class="clob10__left">
-            <h2 class="h2">А ещё вы получите доступ в <span style="color: #0C9F6A;">закрытый Telegram-чат</span></h2>
+            <h2 class="h2">А ещё вы получите доступ в <span style="color: #779C34;">закрытый Telegram-чат</span></h2>
             <div class="clob10__bottxt">C полезным контентом для нутрициологов</div>
           </div>
           <aside class="clob10__right">
@@ -482,11 +482,11 @@ $saleProc = 54;
           <h2 class="h2">
             НАУЧИМ СОСТАВЛЯТЬ<br>
             <mark>ИНДИВИДУАЛЬНЫЙ РАЦИОН</mark> ПИТАНИЯ<br>
-            ДЛЯ КРАСОТЫ И ЗДОРОВЬЯ
+            ДЛЯ КРАСОТЫ И&nbsp;ЗДОРОВЬЯ
           </h2>
           <div class="cloform4__sales">
             <div class="cloform4__circle jbm">
-              <span>-</span>50<small>%</small>
+              <span>-</span><?=$saleProc; ?><small>%</small>
             </div>
             <div class="cloform4__line">Скидка <?= $saleDate; ?></div>
             <div class="cloform4__line"><b>Осталось</b> 6 мест</div>
@@ -572,7 +572,7 @@ $saleProc = 54;
               У нас есть лицензия от Департамента<br>
               образования и науки города Москвы
             </div>
-            <a href="" target="_blank" class="beayhackwhycard__link">Посмотреть лицензию</a>
+            <a href="https://islod.obrnadzor.gov.ru/rlic/details/6fe5bf26-59b9-9ba3-c6bb-1c51f27dacd7/" target="_blank" class="beayhackwhycard__link">Посмотреть лицензию</a>
           </div>
           <div class="beayhackwhycard">
             <img src="<?=$pics; ?>/b12-diplom.jpg" alt="" class="beayhackwhycard__pic">

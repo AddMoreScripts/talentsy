@@ -210,8 +210,8 @@ function disable_enable_scripts(){
   }
 
   if( is_page_template('landings/landing-beauty-hack.php') ){
-    wp_enqueue_style('css-difficult-beauty-hack', get_template_directory_uri() . '/landings/css/beautyhack/main.css', [], $theme_ver);
-    wp_enqueue_style('css-difficult-beauty-hack', get_template_directory_uri() . '/landings/css/beautyhack/media.css', [], $theme_ver, '(max-width:1300px)');
+    wp_enqueue_style('css-beauty-hack', get_template_directory_uri() . '/landings/css/beautyhack/main.css', [], $theme_ver);
+    wp_enqueue_style('css-beauty-hack-media', get_template_directory_uri() . '/landings/css/beautyhack/media.css', [], $theme_ver, '(max-width:1300px)');
   }
 
 }

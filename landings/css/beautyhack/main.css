@@ -20,7 +20,7 @@
 
 
 .beayhack1{
-  padding-top: 85px;
+  padding-top: 55px;
 }
 .beayhack1 .orkt1bot__text{
   font-size: 20px;
@@ -214,6 +214,7 @@
 
 
 .beayhackslider {
+  overflow: hidden;
   margin-bottom: var(--space-xl);
 }
 .beayhackslider .clo3slide {
@@ -364,6 +365,7 @@
   width: 100%;
   border-radius: 24px;
   z-index: 1;
+  object-fit: cover;
 }
 .verphotobg .beayhackwho__picwrap::after{
   content:"";
@@ -401,7 +403,7 @@
 .beayhackprepod__wrap {
   display: flex;
   flex-flow: row nowrap;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
   color:#fff;
 }
@@ -423,6 +425,7 @@
   flex-grow: 1;
   flex-shrink: 1;
   padding-left: 40px;
+  padding-bottom: 30px;
   padding-top: var(--space-l);
 }
 .beayhackprepod__line1 {
