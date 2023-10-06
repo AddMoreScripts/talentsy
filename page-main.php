@@ -277,47 +277,35 @@ get_header();
     </div>
 
 
+    <?php
+    $lastBlogPosts = get_posts([
+      'numberposts' => 4,
+      'post_type' => 'post',
+      'post_status' => 'publish',
+      'order' => 'DESC',
+      'orderby' => 'date',
+      'paged' => $args['page'],
+      'tag__not_in' => [28], // не выводит тег "Выпускники"
+    ]);
+    ?>
     <section class="frontblog">
       <div class="container">
         <div class="grid-mob-scroll">
           <div class="frontblog__grid">
-            <a href="https://talentsy.ru/tpost/miity74ex1-regina-listopad-11-oshibok-pri-sozdanii" class="frontblog__item js-slide-opac">
+            <?php foreach ($lastBlogPosts as $postItem): ?>
+            <a href="<?=get_permalink($postItem); ?>" class="frontblog__item js-slide-opac">
               <div class="frontblog__picwrap square">
-                <img data-src="<?= imgs(); ?>/frontpage/blog/001.jpg" alt="" class="frontblog__pic square__img lazy">
+                <img data-src="<?= get_the_post_thumbnail_url($postItem, 'large'); ?>" alt="" class="frontblog__pic square__img lazy">
               </div>
               <ul class="frontblog__tags flexi">
-                <li>Карьера и бизнес</li>
+                <?php
+                foreach (get_the_category($postItem) as $postCat): ?>
+                  <li><?=$postCat->name; ?></li>
+                <?php endforeach; ?>
               </ul>
-              <div class="frontblog__title">Регина Листопад: 11 ошибок при создании бренда одежды</div>
+              <div class="frontblog__title"><?=get_the_title($postItem); ?></div>
             </a>
-            <a href="https://talentsy.ru/tpost/f5hvx9ex71-rossiiskaya-moda-est-li-v-nei-estetika-i" class="frontblog__item js-slide-opac">
-              <div class="frontblog__picwrap square">
-                <img data-src="<?= imgs(); ?>/frontpage/blog/002.jpg" alt="" class="frontblog__pic square__img lazy">
-              </div>
-              <ul class="frontblog__tags flexi">
-                <li>Карьера и бизнес</li>
-                <li>Мода</li>
-              </ul>
-              <div class="frontblog__title">Российская мода: есть ли в ней эстетика или это просто экономика?</div>
-            </a>
-            <a href="https://talentsy.ru/tpost/vpz6fmmb61-kak-zarabativat-millioni-v-fashion-bizne" class="frontblog__item js-slide-opac">
-              <div class="frontblog__picwrap square">
-                <img data-src="<?= imgs(); ?>/frontpage/blog/003.jpg" alt="" class="frontblog__pic square__img lazy">
-              </div>
-              <ul class="frontblog__tags flexi">
-                <li>Карьера и бизнес</li>
-              </ul>
-              <div class="frontblog__title">Как зарабатывать миллионы в Fashion-бизнесе. Личная история Регины Листопад</div>
-            </a>
-            <a href="https://talentsy.ru/tpost/j3c6acvrm1-natalya-ruchkina-master-po-arhitekture-b" class="frontblog__item js-slide-opac">
-              <div class="frontblog__picwrap square">
-                <img data-src="<?= imgs(); ?>/frontpage/blog/004.jpg" alt="" class="frontblog__pic square__img lazy">
-              </div>
-              <ul class="frontblog__tags flexi">
-                <li>Карьера и бизнес</li>
-              </ul>
-              <div class="frontblog__title">Наталья Ручкина, мастер по архитектуре бровей: главное — самореализация, а близкие поймут</div>
-            </a>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>

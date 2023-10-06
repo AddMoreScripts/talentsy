@@ -859,7 +859,7 @@
 
 
 .frontblog {
-  margin-bottom: 310px;
+  margin-bottom: 240px;
 
   @include media(l){
     margin-bottom: 200px;
@@ -873,7 +873,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(4 ,1fr);
-    grid-gap: 40px;
+    grid-gap: 30px;
 
     @include media(l){
       grid-gap: 20px;
@@ -962,12 +962,12 @@
 
   &__title {
     padding-top: 5px;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.35;
     font-weight: 700;
 
     @include media(l){
-      font-size: 20px;
+      font-size: 16px;
     }
     @include media(m){
       padding-top: 0;
