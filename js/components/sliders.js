@@ -78,7 +78,6 @@ export const initSliders = () => {
     loop: false,
     spaceBetween: 20,
     slidesPerView: "auto",
-    navigation: false,
     pagination: false,
     autoHeight: false,
     navigation: {
@@ -88,6 +87,27 @@ export const initSliders = () => {
     breakpoints: {
       1200: {
         slidesPerView: 3,
+      },
+    },
+    lazy: true,
+    lazyPreloadPrevNext: 2,
+  });
+
+  //Главная - виджет блога
+  new Swiper(".js-frontblog .swiper", {
+    loop: false,
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    pagination: false,
+    autoHeight: false,
+    navigation: {
+      prevEl: ".js-frontblog .ctrl--prev",
+      nextEl: ".js-frontblog .ctrl--next",
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
     },
     lazy: true,

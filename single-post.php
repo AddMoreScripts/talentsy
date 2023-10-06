@@ -18,9 +18,7 @@ get_header('blog');
         <div class="blogpost__meta flexi">
           <div class="blogpost__cats flexi">
             <?php foreach (get_the_category() as $category) : ?>
-              <a href="<?= get_term_link($category->term_id); ?>"
-              style="--bgcolor:<?=get_field('color', $category); ?>; color: <?=get_field('textcolor', $category) ? get_field('textcolor', $category) : 'white'; ?>"
-              >
+              <a href="<?= get_term_link($category->term_id); ?>" style="--bgcolor:<?= get_field('color', $category); ?>; color: <?= get_field('textcolor', $category) ? get_field('textcolor', $category) : 'white'; ?>">
                 <span><?= $category->name; ?></span>
               </a>
             <?php endforeach; ?>
@@ -38,52 +36,11 @@ get_header('blog');
           <i class="idot"></i>
           <!-- <div class="blogpost__comments">11</div> -->
           <!-- <i class="idot"></i> -->
-          <div class="blogpost__viewed"><?=function_exists('pvc_get_post_views') ? pvc_get_post_views(get_the_ID()) : '666'; ?></div>
+          <div class="blogpost__viewed"><?= function_exists('pvc_get_post_views') ? pvc_get_post_views(get_the_ID()) : '666'; ?></div>
 
           <script src="https://yastatic.net/share2/share.js"></script>
-          <div class="ya-share2 blogpost__share"
-            data-curtain
-            data-size="m"
-            data-shape="round"
-            data-limit="0"
-            data-image="<?=get_the_post_thumbnail_url(); ?>"
-            data-more-button-type="long"
-            data-services="vkontakte,telegram,twitter">
+          <div class="ya-share2 blogpost__share" data-curtain data-size="m" data-shape="round" data-limit="0" data-image="<?= get_the_post_thumbnail_url(); ?>" data-more-button-type="long" data-services="vkontakte,telegram,twitter">
           </div>
-            <?php if(0): ?>
-          <div class="blogpost__share" data-hidewrap="sharebutton" data-hideclick="yes">
-            <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebutton">
-              <span>Поделиться</span>
-              <img src="<?= imgs(); ?>/blog/article/icon-share.svg" alt="">
-            </button>
-            <ul class="blogpost__sharepop" data-hidebox="sharebutton">
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-vk.svg" alt="">
-                  <span>ВКонтакте</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-tg.svg" alt="">
-                  <span>Телеграм</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-tw.svg" alt="">
-                  <span>Твиттер</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-link.svg" alt="">
-                  <span>Копировать ссылку</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <?php endif; ?>
         </div><!-- //blogpost__meta -->
 
 
@@ -93,38 +50,80 @@ get_header('blog');
           </div>
         <?php endif; ?>
 
-        <?php if(get_field('top-banner')): 
-          $bannerTopId = get_field('top-banner');
-          // ставим utm_source=blog для ссылки
-          $bnrLink = get_field('banner-link', $bannerTopId);
-          if( str_allowed($bnrLink, ['?utm_source']) ) $bnrLink = explode('?', $bnrLink)[0];
-          $bnrLink = $bnrLink.'?utm_source=blog&utm_term='. $post->post_name;
 
+        <?php
+        if (get_field('top-banner')) {
+          $bannerTopId = get_field('top-banner');
+          $bnrLink = get_field('banner-link', $bannerTopId);
+          if (str_allowed($bnrLink, ['?utm_source'])) $bnrLink = explode('?', $bnrLink)[0];
+          $bnrLink = $bnrLink . '?utm_source=blog&utm_term=' . $post->post_name;
           ?>
-        <div class="postprofbanner flexi">
-          <img src="<?=get_field('banner-pic', $bannerTopId); ?>" alt="" class="postprofbanner__img">
-          <div class="postprofbanner__text"><?=get_field('banner-title', $bannerTopId); ?></div>
-          <a href="<?= $bnrLink; ?>" class="postprofbanner__link button button--blog">
-            <?=get_field('banner-button', $bannerTopId); ?>
-          </a>
-        </div>
-        <?php endif; ?>
+            <div class="postprofbanner flexi">
+              <img src="<?= get_field('banner-pic', $bannerTopId); ?>" alt="" class="postprofbanner__img">
+              <div class="postprofbanner__text"><?= get_field('banner-title', $bannerTopId); ?></div>
+              <a href="<?= $bnrLink; ?>" class="postprofbanner__link button button--blog">
+                <?= get_field('banner-button', $bannerTopId); ?>
+              </a>
+            </div>
+          <?php
+        } else {
+          /**
+           * Если баннер не выбран то получаем посты-баннеры с типом
+           * "Баннер вверху статьи" с той-же категорией что и пост и выводим их
+           */
+          if (count((array) get_the_category())) :
+            $bannersTopIds = get_posts([
+              'numberposts' => 10,
+              'post_type'   => 'banner',
+              'post_status' => 'publish',
+              'tax_query' => [
+                'relation' => 'AND',
+                [
+                  'taxonomy' => 'category',
+                  'field' => 'id',
+                  'terms' => get_the_category()[0]->term_id,
+                ],
+                [
+                  'taxonomy' => 'bannertype',
+                  'field' => 'id',
+                  'terms' => 18,
+                ],
+              ],
+            ]);
+            foreach ($bannersTopIds as $key => $bannerTopId) :
+              $bnrLink = get_field('banner-link', $bannerTopId);
+              if (str_allowed($bnrLink, ['?utm_source'])) $bnrLink = explode('?', $bnrLink)[0];
+              $bnrLink = $bnrLink . '?utm_source=blog&utm_term=' . $post->post_name;
+          ?>
+              <div class="postprofbanner flexi">
+                <img src="<?= get_field('banner-pic', $bannerTopId); ?>" alt="" class="postprofbanner__img">
+                <div class="postprofbanner__text"><?= get_field('banner-title', $bannerTopId); ?></div>
+                <a href="<?= $bnrLink; ?>" class="postprofbanner__link button button--blog">
+                  <?= get_field('banner-button', $bannerTopId); ?>
+                </a>
+              </div>
+        <?php
+            endforeach;
+          endif;
+        }
+
+        ?>
 
 
         <?php
-          $headingCount = count((new ezTOC_Post( get_post() ))->getHeadings());
-          if($headingCount > 5):
+        $headingCount = count((new ezTOC_Post(get_post()))->getHeadings());
+        if ($headingCount > 5) :
         ?>
-        <div class="tableofcontent is-open js-toc">
-          <div class="tableofcontent__title js-toggler">Читайте в статье</div>
-          <div class="tableofcontent__box tableofcontent__minimum js-togbox">
-            <div class="tableofcontent__boxwrap">
-              <?php echo do_shortcode('[ez-toc]'); ?>
-              <button class="tableofcontent__button tableofcontent__close js-short">Скрыть</button>
+          <div class="tableofcontent is-open js-toc">
+            <div class="tableofcontent__title js-toggler">Читайте в статье</div>
+            <div class="tableofcontent__box tableofcontent__minimum js-togbox">
+              <div class="tableofcontent__boxwrap">
+                <?php echo do_shortcode('[ez-toc]'); ?>
+                <button class="tableofcontent__button tableofcontent__close js-short">Скрыть</button>
+              </div>
+              <button class="tableofcontent__button tableofcontent__open js-longer">Показать ещё</button>
             </div>
-            <button class="tableofcontent__button tableofcontent__open js-longer">Показать ещё</button>
           </div>
-        </div>
         <?php else : ?>
           <div class="tableofcontent is-open js-toc">
             <div class="tableofcontent__title js-toggler">Содержание статьи</div>
@@ -142,95 +141,88 @@ get_header('blog');
 
           <?php while (have_posts()) : the_post(); ?>
 
-          <div class="blogpost__mobprepost">
-            <div class="articleauthor flexi">
-              <img src="<?= imgs(); ?>/blog/article/user-ava.svg" alt="" class="articleauthor__ava">
-              <div class="articleauthor__right">
-                <div class="articleauthor__name"><?= get_the_author_meta('display_name'); ?></div>
-                <?= get_the_author_meta('description'); ?>
+            <div class="blogpost__mobprepost">
+              <div class="articleauthor flexi">
+                <img src="<?= imgs(); ?>/blog/article/user-ava.svg" alt="" class="articleauthor__ava">
+                <div class="articleauthor__right">
+                  <div class="articleauthor__name"><?= get_the_author_meta('display_name'); ?></div>
+                  <?= get_the_author_meta('description'); ?>
+                </div>
               </div>
             </div>
-          </div>
 
           <?php
-          the_content();
+            the_content();
           endwhile;
           ?>
         </div>
         <script>
-          window.postId = <?=get_the_ID(); ?>;
+          window.postId = <?= get_the_ID(); ?>;
         </script>
         <footer class="postfooter flexi">
           <div class="js-postfooter-wrap" style="display: contents;">
             <?php get_template_part('inc/blog-post-rating', null, ['postId' => get_the_ID()]); ?>
           </div>
 
-          <div class="ya-share2 blogpost__share"
-            data-curtain
-            data-size="m"
-            data-shape="round"
-            data-limit="0"
-            data-image="<?=get_the_post_thumbnail_url(); ?>"
-            data-more-button-type="long"
-            data-services="vkontakte,telegram,twitter">
+          <div class="ya-share2 blogpost__share" data-curtain data-size="m" data-shape="round" data-limit="0" data-image="<?= get_the_post_thumbnail_url(); ?>" data-more-button-type="long" data-services="vkontakte,telegram,twitter">
           </div>
 
-          <?php if(0): ?>
-          <div class="blogpost__share" data-hidewrap="sharebuttonbot" data-hideclick="yes">
-            <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebuttonbot">
-              <span>Поделиться</span>
-              <img src="<?= imgs(); ?>/blog/article/icon-share.svg" alt="">
-            </button>
-            <ul class="blogpost__sharepop" data-hidebox="sharebuttonbot">
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-vk.svg" alt="">
-                  <span>ВКонтакте</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-tg.svg" alt="">
-                  <span>Телеграм</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-tw.svg" alt="">
-                  <span>Твиттер</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flexi">
-                  <img src="<?= imgs(); ?>/blog/article/icon-share-link.svg" alt="">
-                  <span>Копировать ссылку</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <?php if (0) : ?>
+            <div class="blogpost__share" data-hidewrap="sharebuttonbot" data-hideclick="yes">
+              <button class="blogpost__sharebutton button button--blog" data-hideopen="sharebuttonbot">
+                <span>Поделиться</span>
+                <img src="<?= imgs(); ?>/blog/article/icon-share.svg" alt="">
+              </button>
+              <ul class="blogpost__sharepop" data-hidebox="sharebuttonbot">
+                <li>
+                  <a href="#" class="flexi">
+                    <img src="<?= imgs(); ?>/blog/article/icon-share-vk.svg" alt="">
+                    <span>ВКонтакте</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flexi">
+                    <img src="<?= imgs(); ?>/blog/article/icon-share-tg.svg" alt="">
+                    <span>Телеграм</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flexi">
+                    <img src="<?= imgs(); ?>/blog/article/icon-share-tw.svg" alt="">
+                    <span>Твиттер</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flexi">
+                    <img src="<?= imgs(); ?>/blog/article/icon-share-link.svg" alt="">
+                    <span>Копировать ссылку</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           <?php endif; ?>
         </footer>
 
-        <?php if(get_field('bottom-banner')):
+        <?php if (get_field('bottom-banner')) :
           $bannerBotId = get_field('bottom-banner');
 
           // ставим utm_source=blog для ссылки
           $bnrLink = get_field('banner-link', $bannerBotId);
-          if( str_allowed($bnrLink, ['?utm_source']) ) $bnrLink = explode('?', $bnrLink)[0];
-          $bnrLink = $bnrLink.'?utm_source=blog&utm_term='. $post->post_name;
-          ?>
-        <aside class="relateproffbanner flexi">
-          <div class="relateproffbanner__left">
-            <div class="relateproffbanner__title"><?=get_field('banner-title', $bannerBotId); ?></div>
-            <p><?=get_field('banner-text', $bannerBotId); ?></p>
-            <a href="<?= $bnrLink; ?>" class="button relateproffbanner__button">
-              <?=get_field('banner-button', $bannerBotId); ?>
-            </a>
-          </div>
-          <div class="relateproffbanner__right">
-            <img src="<?=get_field('banner-pic', $bannerBotId); ?>" alt="" class="relateproffbanner__pic">
-          </div>
-        </aside>
+          if (str_allowed($bnrLink, ['?utm_source'])) $bnrLink = explode('?', $bnrLink)[0];
+          $bnrLink = $bnrLink . '?utm_source=blog&utm_term=' . $post->post_name;
+        ?>
+          <aside class="relateproffbanner flexi">
+            <div class="relateproffbanner__left">
+              <div class="relateproffbanner__title"><?= get_field('banner-title', $bannerBotId); ?></div>
+              <p><?= get_field('banner-text', $bannerBotId); ?></p>
+              <a href="<?= $bnrLink; ?>" class="button relateproffbanner__button">
+                <?= get_field('banner-button', $bannerBotId); ?>
+              </a>
+            </div>
+            <div class="relateproffbanner__right">
+              <img src="<?= get_field('banner-pic', $bannerBotId); ?>" alt="" class="relateproffbanner__pic">
+            </div>
+          </aside>
         <?php endif; ?>
 
       </div>
@@ -265,28 +257,28 @@ get_header('blog');
 
 
     <?php
-      $postCats = array_map(fn($cat) => $cat->term_id, get_the_category());
-      $postsRelations = get_posts([
-        'numberposts' => 9,
-        'post_type' => 'post',
-        'category' => $postCats,
-        'exclude' => get_the_ID(),
-      ]);
+    $postCats = array_map(fn ($cat) => $cat->term_id, get_the_category());
+    $postsRelations = get_posts([
+      'numberposts' => 9,
+      'post_type' => 'post',
+      'category' => $postCats,
+      'exclude' => get_the_ID(),
+    ]);
     ?>
     <aside class="blogrelations js-relations-posts">
       <div class="blogrelations__head flexi">
         <div class="blogrelations__title">Читайте также</div>
         <div class="blogrelations__ctrl flexi">
-          <button class="ctrl ctrl--prev"><img src="<?=imgs();?>/blog/icon-slider-arrow.svg" alt=""></button>
-          <button class="ctrl ctrl--next"><img src="<?=imgs();?>/blog/icon-slider-arrow.svg" alt=""></button>
+          <button class="ctrl ctrl--prev"><img src="<?= imgs(); ?>/blog/icon-slider-arrow.svg" alt=""></button>
+          <button class="ctrl ctrl--next"><img src="<?= imgs(); ?>/blog/icon-slider-arrow.svg" alt=""></button>
         </div>
       </div>
       <div class="blogrelations__swiper swiper">
         <div class="swiper-wrapper">
           <?php foreach ($postsRelations as $key => $relPostId) : ?>
-          <div class="swiper-slide">
-            <?php get_template_part('inc/post-teaser', null, ['post_id' => $relPostId]); ?>
-          </div>
+            <div class="swiper-slide">
+              <?php get_template_part('inc/post-teaser', null, ['post_id' => $relPostId]); ?>
+            </div>
           <?php endforeach; ?>
         </div>
       </div>

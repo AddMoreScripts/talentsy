@@ -266,48 +266,47 @@ get_header();
     </div>
 
     <div class="front6">
-      <div class="front6__anims flexi">
+      <!-- <div class="front6__anims flexi">
         <img src="<?= imgs(); ?>/frontpage/b6-marquiee.svg" alt="">
         <img src="<?= imgs(); ?>/frontpage/b6-marquiee.svg" alt="">
         <img src="<?= imgs(); ?>/frontpage/b6-marquiee.svg" alt="">
         <img src="<?= imgs(); ?>/frontpage/b6-marquiee.svg" alt="">
         <img src="<?= imgs(); ?>/frontpage/b6-marquiee.svg" alt="">
         <img src="<?= imgs(); ?>/frontpage/b6-marquiee.svg" alt="">
-      </div>
+      </div> -->
     </div>
 
 
     <?php
     $lastBlogPosts = get_posts([
-      'numberposts' => 4,
+      'numberposts' => 12,
       'post_type' => 'post',
       'post_status' => 'publish',
       'order' => 'DESC',
       'orderby' => 'date',
-      'paged' => $args['page'],
       'tag__not_in' => [28], // не выводит тег "Выпускники"
     ]);
     ?>
-    <section class="frontblog">
+    <section class="frontblog js-frontblog">
       <div class="container">
-        <div class="grid-mob-scroll">
-          <div class="frontblog__grid">
-            <?php foreach ($lastBlogPosts as $postItem): ?>
-            <a href="<?=get_permalink($postItem); ?>" class="frontblog__item js-slide-opac">
-              <div class="frontblog__picwrap square">
-                <img data-src="<?= get_the_post_thumbnail_url($postItem, 'large'); ?>" alt="" class="frontblog__pic square__img lazy">
-              </div>
-              <ul class="frontblog__tags flexi">
-                <?php
-                foreach (get_the_category($postItem) as $postCat): ?>
-                  <li><?=$postCat->name; ?></li>
-                <?php endforeach; ?>
-              </ul>
-              <div class="frontblog__title"><?=get_the_title($postItem); ?></div>
-            </a>
-            <?php endforeach; ?>
+        <div class="frontcatalog__hdr flexi">
+          <h2 class="frontcatalog__title druk">Журнал</h2>
+          <div class="frontcatalog__ctrls flexi">
+            <button class="ctrl ctrl--prev"><img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt=""></button>
+            <button class="ctrl ctrl--next"><img src="<?= imgs(); ?>/frontpage/b8-arrow.svg" alt=""></button>
           </div>
         </div>
+
+        <div class="frontblog__slider swiper">
+          <div class="swiper-wrapper">
+          <?php foreach ($lastBlogPosts as $postItem): ?>
+            <div class="swiper-slide">
+              <?php get_template_part('inc/post-teaser', null, ['post_id' => $postItem]); ?>
+            </div>
+          <?php endforeach; ?>
+          </div>
+        </div>
+
       </div>
     </section>
 
