@@ -70,4 +70,63 @@ function initAddictSwipers(Swiper) {
       },
     },
   });
+
+
+
+  document.querySelectorAll('.js-sketch-journal-slider').forEach((el) => {
+    new Swiper(el.querySelector('.swiper'), {
+      autoHeight: false,
+      loop: false,
+      spaceBetween: 20,
+      slidesPerView: 'auto',
+      navigation: {
+        prevEl: el.querySelector('.closlictrlbutt--prev'),
+        nextEl: el.querySelector('.closlictrlbutt--next'),
+      },
+      pagination: {
+        el: el.querySelector('.closlictrl__pag'),
+        type: "fraction",
+      },
+      breakpoints: {
+        992: {
+          spaceBetween: 20,
+          slidesPerView: 4,
+        },
+        1199: {
+          spaceBetween: 40,
+          slidesPerView: 4,
+        },
+      },
+    });
+  });
+
+
+
+  document.querySelectorAll('.js-sketch-work-slider').forEach((el) => {
+    new Swiper(el.querySelector('.swiper'), {
+      autoHeight: false,
+      loop: false,
+      spaceBetween: 20,
+      slidesPerView: 'auto',
+      navigation: {
+        prevEl: el.querySelector('.closlictrlbutt--prev'),
+        nextEl: el.querySelector('.closlictrlbutt--next'),
+      },
+      pagination: {
+        el: el.querySelector('.closlictrl__pag'),
+        type: "fraction",
+      },
+      breakpoints: {
+        992: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        1199: {
+          spaceBetween: 40,
+          slidesPerView: 3,
+        },
+      },
+    });
+  });
+
 }

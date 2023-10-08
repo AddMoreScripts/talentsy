@@ -1,5 +1,8 @@
 :root{
   --clospace: 140px;
+  --space-xl: 140px;
+  --space-l: 120px;
+  --space-m: 60px;
 }
 
 .cloflexi{
