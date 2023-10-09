@@ -8,8 +8,9 @@ $clopics = imgs() . '/clo3d';
 
 $saleDate = 'до ' . getTomorow();
 $saleProc = 96;
-?>
 
+$countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'));
+?>
 
 <div class="sketching">
 
@@ -17,7 +18,7 @@ $saleProc = 96;
     <div class="clocontainer">
       <div class="sketching1__h1 jbm">
         ОСВОЙ <mark>ИНТЕРЬЕРНЫЙ СКЕТЧИНГ</mark><br>
-        НЕ ВЫХОДЯ ИЗ ДОМА ЗА 21 ДЕНЬ<br>
+        НЕ ВЫХОДЯ ИЗ&nbsp;ДОМА ЗА 21&nbsp;ДЕНЬ<br>
         ПОД РУКОВОДСТВОМ<br>
         ТОП-ПРЕПОДАВАТЕЛЯ
       </div>
@@ -62,7 +63,7 @@ $saleProc = 96;
     <div class="clob2__bg">
       <div class="clocontainer sketching2__cont">
 
-        <h2 class="h2">И совершенно не важно</h2>
+        <h2 class="h2">И совершенно не&nbsp;важно</h2>
         <div class="clob5__botgrid">
           <div class="clob5botitem">
             <div class="clob5botitem__picwrap"><img src="<?= $pics; ?>/b2-1.png" alt=""></div>
@@ -93,7 +94,7 @@ $saleProc = 96;
 
   <section class="sketchingresults">
     <div class="clocontainer">
-      <h2 class="h2">ВОТ ЧЕМУ ТЫ НАУЧИШЬСЯ <br><mark>ПО ИТОГАМ ОБУЧЕНИЯ</mark></h2>
+      <h2 class="h2">ВОТ ЧЕМУ ТЫ НАУЧИШЬСЯ <br><mark>ПО&nbsp;ИТОГАМ ОБУЧЕНИЯ</mark></h2>
       <div class="sketchingresults__grid">
         <div class="sketchingresults__line1">
           <div class="sketchingresults__item verbg">
@@ -159,7 +160,7 @@ $saleProc = 96;
         <div class="sketchingform1__hdr">
           <div class="sketchingform1__top">
             <h2 class="h2">
-              ЗАПИШИСЬ НА КУРС <br>И <mark>НАЧНИ ОБУЧЕНИЕ</mark> <br>УЖЕ СЕГОДНЯ
+              ЗАПИШИСЬ НА КУРС <br>И&nbsp;<mark>НАЧНИ ОБУЧЕНИЕ</mark> <br>УЖЕ СЕГОДНЯ
             </h2>
             <img src="<?= $pics; ?>/b4-1.png" alt="" class="beayhackform1__pic">
           </div>
@@ -397,7 +398,7 @@ $saleProc = 96;
             </div>
             <p>Скидка будет действовать еще</p>
             <span class="sketchingform2__brake"></span>
-            <div class="sketchingform2__timer jbm">12:30:00</div>
+            <div class="sketchingform2__timer jbm js-cout-down"></div>
           </div>
         </div>
         <div class="cloform__line"></div>
@@ -612,7 +613,7 @@ $saleProc = 96;
       <div class="clocontainer">
         <div class="orkt17about__wrap">
           <div class="orkt17about__left">
-            <h2 class="h2">ПОЧЕМУ <mark>СТОИТ <br>ОБУЧАТЬСЯ</mark> <br>В TALENTSY</h2>
+            <h2 class="h2">ПОЧЕМУ <mark>СТОИТ <br>ОБУЧАТЬСЯ</mark> <br>В&nbsp;TALENTSY</h2>
             <a href="https://islod.obrnadzor.gov.ru/rlic/details/6fe5bf26-59b9-9ba3-c6bb-1c51f27dacd7/" class="orkt17about__licence" target="_blank"><span>Посмотреть лицензию</span></a>
           </div>
           <div class="orkt17about__right">
@@ -664,7 +665,7 @@ $saleProc = 96;
             </div>
             <p>Скидка будет действовать еще</p>
             <span class="sketchingform2__brake"></span>
-            <div class="sketchingform2__timer jbm">12:30:00</div>
+            <div class="sketchingform2__timer jbm js-cout-down"></div>
           </div>
           <div class="cloform5__right">
             <p>И кстати</p>
@@ -710,6 +711,37 @@ $saleProc = 96;
     </div>
   </section><!-- //cloform5 -->
 
+
+
+
+  <script>
+    function iniCountDown() {
+      const countDownDate = new Date("<?= $countDownTime->format('c'); ?>").getTime();
+
+      const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.querySelectorAll(".js-cout-down").forEach((el) => {
+          el.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        });
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.querySelectorAll(".js-cout-down").forEach((el) => {
+            el.innerHTML = "Акция завершена";
+          });
+        }
+      }, 1000);
+    }
+    iniCountDown();
+  </script>
 
 
 

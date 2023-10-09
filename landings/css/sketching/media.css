@@ -1,0 +1,557 @@
+:root {
+  --space-xl: 100px;
+  --space-l: 80px;
+  --space-m: 50px;
+}
+.sketching1__h1{
+  font-size: 50px;
+  padding-right: 160px;
+}
+.sketching1__h1 br {
+  display: none;
+}
+.sketching1sale{
+  right: 15px;
+}
+.sketching1__bot{
+  min-height: auto;
+  padding-bottom: 40px;
+}
+.sketching1__left{
+  max-width: 450px;
+}
+.sketching1__pic{
+  width: 550px;
+}
+.sketching1__action{
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.sketching1__counter{
+  margin-left: 0;
+  margin-top: 15px;
+  font-size: 18px;
+}
+.sketching1__reload{
+  height: 50px;
+}
+
+.sketching1__dl{
+  font-size: 18px;
+  line-height: 1.2;
+}
+.sketching1__dl dt{
+  font-size: 22px;
+}
+.sketchingresults__line2, .sketchingresults__line1{
+  gap: 15px;
+}
+.sketchingresults__line2{
+  margin-top: 15px;
+}
+.sketchingresults__item{
+  padding: 20px;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+
+
+.sketching5__left{
+  width: 50%;
+}
+.sketching5__prop{
+  font-size: 18px;
+  line-height: 1.2;
+}
+.sketching5__prop img{
+  height: 120px;
+}
+.sketching10__grid{
+  grid-gap: 15px;
+}
+.sketching10__item{
+  padding: 30px 20px;
+}
+.sketching11__left{
+  width: 50%;
+}
+.sketching11__notebook{
+  height: auto;
+}
+.sketching11__prop{
+  padding: 20px;
+}
+.sketching11__picwrap{
+  height: 80px;
+  width: 80px;
+}
+.sketchingabout .orkt17sertblock__pic{
+  margin-right: 30px;
+}
+.sketchingpriceform .cloform5__underprice{
+  margin-top: 0;
+}
+.sketchingpriceform .sketchingform2__line2{
+  margin-bottom: 20px;
+  font-size: 20px;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  :root{
+    --space-xl: 80px;
+    --space-l: 60px;
+    --space-m: 30px;
+  }
+  .sketching1__h1{
+    font-size: 36px;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .sketching1sale{
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 20px auto 0;
+    width: 120px;
+    height: 120px;
+    display: none;
+  }
+  .sketching1sale span{
+    font-size: 40px;
+  }
+  .sketching1sale small{
+    font-size: 60%;
+  }
+  .sketching1sale em{
+    font-size: 13px;
+  }
+  .sketching1__pic{
+    width: 260px;
+  }
+  .sketching1__left{
+    padding-top: 10px;
+    max-width: none;
+    width: 100%;
+  }
+  .sketching1 .orkt1__star{
+    margin-top: 0;
+  }
+  .sketching1__dl{
+    font-size: 16px;
+  }
+  .sketching1__dl dt{
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .sketching1__action{
+    margin-top: 40px;
+  }
+  .sketching1__button{
+    width: 250px;
+  }
+  .sketching1__counter{
+    width: 250px;
+    font-size: 16px;
+  }
+  .sketching1__reload{
+    margin-right: 16px;
+  }
+
+
+  .sketching2 .clob5__botgrid{
+    margin-top: 40px;
+  }
+  .sketching2__pic{
+    border-radius: 12px;
+  }
+
+
+
+
+  .sketchingresults__grid{
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    overflow-x: auto;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    gap: 15px;
+  }
+  .sketchingresults__grid::-webkit-scrollbar{
+    display: none;
+  }
+  .sketchingresults__line1,
+  .sketchingresults__line2{
+    display: contents;
+  }
+  .sketchingresults__item{
+    flex-basis: auto !important;
+    width: 250px;
+    flex-shrink: 0;
+    min-width: 0;
+    flex-grow: 0;
+    font-size: 18px;
+    line-height: 1.15;
+  }
+  .sketchingresults__picwrap{
+    height: 100px;
+  }
+  .sketchingform1__top{
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  .beayhackform1__pic{
+    width: 200px;
+    margin: 0 auto 30px;
+    height: auto;
+  }
+
+  .sketching5__left{
+    width: 100%;
+    padding-right: 0;
+    border:none;
+  }
+  .sketching5__prepod{
+    margin-top: 30px;
+    border-radius: 12px;
+  }
+  .sketching5__right{
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .sketching5__prop{
+    font-size: 16px;
+  }
+  .sketching5__prop img{
+    width: 100%;
+    height: auto;
+  }
+  .sketching5__accentblock{
+    font-size: 20px;
+  }
+  .sketching5__accentblock small{
+    font-size: 15px;
+  }
+  .sketching5__accentsvg{
+    height: 90px;
+    margin-bottom: 15px;
+  }
+
+  .sketching5works,
+  .sketching8__slider{
+    overflow: visible;
+  }
+  .sketching5works .swiper-slide,
+  .sketching8__slider .swiper-slide{
+    width: 200px;
+  }
+  .sketching7 .clob10__wrap{
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sketching7 .clob10__wrap::-webkit-scrollbar{
+    display: none;
+  }
+  .clob10dl dd{
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .sketching7 .clob10dl dt{
+    margin-bottom: auto;
+  }
+
+  .sketching8__hdr{
+    flex-flow: column nowrap;
+  }
+  .sketching8__sub{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .sketchingform2__hdr{
+    padding-top: 20px;
+  }
+  .sketchingform2__price{
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .sketchingform2__price s{
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 26px;
+  }
+  .sketchingform2__line2{
+    gap:10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .sketchingform2__line2 .cloform4__circle{
+    position: static;
+    transform: none;
+  }
+  .sketchingform2__line2 .cloform4__circle{
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+  .cloform4__circle span{
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .cloform4__circle small{
+    font-size: 10px;
+    transform: translateY(3px);
+  }
+  .sketching9{
+    margin-bottom: 50px;
+  }
+  .sketching8__under{
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 20px auto 0;
+    max-width: 280px;
+  }
+  .sketching9 .swiper-slide{
+    width: 280px;
+  }
+  .sketching8__label{
+    left: 10px;
+    bottom: 10px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .sketching10{
+    margin-top: 60px;
+  }
+  .sketching10__grid{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .sketching10__item{
+    font-size: 20px;
+    border-radius: 12px;
+  }
+  .sketching10__picwrap{
+    width: 80px;
+    height: 80px;
+  }
+  .sketching10__item p{
+    margin-top: 20px;
+  }
+  .sketching10__item small{
+    font-size: 16px;
+  }
+
+
+  .sketching11__left{
+    width: 100%;
+    padding-right: 0;
+    border:none;
+  }
+  .sketching11__leftbot{
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+  .sketching11__notebook{
+    width: 300px;
+  }
+  .sketching11__right{
+    gap:15px;
+    padding-left: 0;
+  }
+  .sketching11__prop{
+    font-size: 20px;
+    line-height: 1.15;
+    border-radius: 12px;
+  }
+  .sketching11__prop small{
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .sketchingreviews__slider{
+    overflow: visible;
+  }
+  .sketchingreviews__slider .swiper-slide{
+    width: 200px;
+  }
+
+  .sketchingabout .orkt17sertblock{
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 0px;
+  }
+  .sketchingpriceform .sketchingform2__line2{
+    font-size: 16px;
+    margin-top: -10px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .sketching1{
+    margin-top: 30px;
+  }
+  .sketching1__h1{
+    font-size: 29px;
+    margin-bottom: 20px;
+  }
+  .sketching1__dl{
+    font-size: 15px;
+  }
+  .sketching1__dl dt{
+    font-size: 16px;
+  }
+  .sketchingresults__item{
+    --radius: 12px;
+  }
+  .sketching1 .orkt1__star{
+    margin-top: 4px;
+  }
+  .sketching5__props{
+    gap: 20px;
+  }
+  .sketching1__left{
+    padding-top: 0;
+  }
+  .sketching1__dl{
+    padding-left: 30px;
+    background-size: 20px;
+    font-size: 14px;
+  }
+  .sketching1__dl dt{
+    margin-bottom: 5px;
+  }
+  .sketching1__action{
+    margin-top: 20px;
+  }
+  .sketching1__button{
+    width: 100%;
+  }
+  .sketching1__counter{
+    font-size: 14px;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    max-width: 120px;
+    margin-top: 80px;
+  }
+  .sketching1__reload{
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  .sketching1__bot{
+    min-height: 460px;
+  }
+  .sketchingform1{
+    top: auto;
+    padding-top: 0;
+  }
+  .sketching5__props{
+    grid-template-columns: 1fr;
+  }
+  .sketching5__prop{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .sketching5__prop img{
+    width: 120px;
+    height: auto;
+    margin-bottom: 0;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  .sketching5__accentblock{
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .sketchingform2{
+    padding-top: 0;
+    top:0;
+  }
+  .sketchingform2  .h2 mark{
+    display: block;
+  }
+  .sketchingform2__hdr{
+    padding-top: 0;
+  }
+  .sketchingform2__price s{
+    font-size: 20px;
+  }
+  .sketchingform2__line2{
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .sketching5works, .sketching8__slider{
+    margin-bottom: 0;
+  }
+  .sketching8__sub{
+    font-size: 18px;
+  }
+  .sketching8__under{
+    font-size: 16px;
+  }
+  .sketching10 .cloform__line{
+    margin-bottom: 50px;
+  }
+  .sketching10__item{
+    padding: 15px;
+    font-size: 17px;
+    line-height: 1.15;
+  }
+  .sketching10__item p{
+    margin-top: 15px;
+  }
+  .sketching10__item small{
+    font-size: 14px;
+  }
+  .sketching11__prop{
+    font-size: 18px;
+  }
+  .sketchingabout{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

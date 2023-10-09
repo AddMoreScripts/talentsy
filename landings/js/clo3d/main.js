@@ -1,9 +1,9 @@
 function initAddictSwipers(Swiper) {
-  new Swiper('.js-closlider1 .swiper', {
+  new Swiper(".js-closlider1 .swiper", {
     autoHeight: false,
     loop: false,
     spaceBetween: 20,
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     navigation: {
       prevEl: ".js-closlider1 .closlictrlbutt--prev",
       nextEl: ".js-closlider1 .closlictrlbutt--next",
@@ -20,11 +20,11 @@ function initAddictSwipers(Swiper) {
     },
   });
 
-  new Swiper('.js-closlider2 .swiper', {
+  new Swiper(".js-closlider2 .swiper", {
     autoHeight: false,
     loop: false,
     spaceBetween: 20,
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     lazyPreloadPrevNext: 1,
     navigation: {
       prevEl: ".js-closlider2 .closlictrlbutt--prev",
@@ -46,11 +46,11 @@ function initAddictSwipers(Swiper) {
     },
   });
 
-  new Swiper('.js-clo-reviews .swiper', {
+  new Swiper(".js-clo-reviews .swiper", {
     autoHeight: false,
     loop: false,
     spaceBetween: 20,
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     navigation: {
       prevEl: ".js-clo-reviews .closlictrlbutt--prev",
       nextEl: ".js-clo-reviews .closlictrlbutt--next",
@@ -71,20 +71,18 @@ function initAddictSwipers(Swiper) {
     },
   });
 
-
-
-  document.querySelectorAll('.js-sketch-journal-slider').forEach((el) => {
-    new Swiper(el.querySelector('.swiper'), {
+  document.querySelectorAll(".js-sketch-journal-slider").forEach((el) => {
+    new Swiper(el.querySelector(".swiper"), {
       autoHeight: false,
       loop: false,
       spaceBetween: 20,
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       navigation: {
-        prevEl: el.querySelector('.closlictrlbutt--prev'),
-        nextEl: el.querySelector('.closlictrlbutt--next'),
+        prevEl: el.querySelector(".closlictrlbutt--prev"),
+        nextEl: el.querySelector(".closlictrlbutt--next"),
       },
       pagination: {
-        el: el.querySelector('.closlictrl__pag'),
+        el: el.querySelector(".closlictrl__pag"),
         type: "fraction",
       },
       breakpoints: {
@@ -100,20 +98,18 @@ function initAddictSwipers(Swiper) {
     });
   });
 
-
-
-  document.querySelectorAll('.js-sketch-work-slider').forEach((el) => {
-    new Swiper(el.querySelector('.swiper'), {
+  document.querySelectorAll(".js-sketch-work-slider").forEach((el) => {
+    new Swiper(el.querySelector(".swiper"), {
       autoHeight: false,
       loop: false,
       spaceBetween: 20,
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       navigation: {
-        prevEl: el.querySelector('.closlictrlbutt--prev'),
-        nextEl: el.querySelector('.closlictrlbutt--next'),
+        prevEl: el.querySelector(".closlictrlbutt--prev"),
+        nextEl: el.querySelector(".closlictrlbutt--next"),
       },
       pagination: {
-        el: el.querySelector('.closlictrl__pag'),
+        el: el.querySelector(".closlictrl__pag"),
         type: "fraction",
       },
       breakpoints: {
@@ -128,5 +124,4 @@ function initAddictSwipers(Swiper) {
       },
     });
   });
-
 }

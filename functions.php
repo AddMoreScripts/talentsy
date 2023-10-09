@@ -218,7 +218,7 @@ function disable_enable_scripts(){
 
   if( is_page_template('landings/landing-sketching.php') ){
     wp_enqueue_style('css-sketching', get_template_directory_uri() . '/landings/css/sketching/main.css', [], $theme_ver);
-    wp_enqueue_style('css-sketching-media', get_template_directory_uri() . '/landings/css/sketching/media.css', [], $theme_ver, '(max-width:1300px)');
+    wp_enqueue_style('css-sketching-media', get_template_directory_uri() . '/landings/css/sketching/media.css', [], $theme_ver, '(max-width:1199px)');
   }
 
 }
