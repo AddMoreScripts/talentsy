@@ -12,7 +12,7 @@ $pics = imgs() . '/about';
 
 <div class="about js-need-gsap">
   <div class="aboutloader">
-    <img src="<?= $pics; ?>/loader-2.svg" alt="" class="aboutloader__pre">
+    <img src="<?= $pics; ?>/loader-3.svg" alt="" class="aboutloader__pre">
   </div>
   <div class="aboutloader__opacitystart"></div>
 

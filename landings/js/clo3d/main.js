@@ -77,6 +77,8 @@ function initAddictSwipers(Swiper) {
       loop: false,
       spaceBetween: 20,
       slidesPerView: "auto",
+      lazyPreloadPrevNext: 1,
+      lazy: true,
       navigation: {
         prevEl: el.querySelector(".closlictrlbutt--prev"),
         nextEl: el.querySelector(".closlictrlbutt--next"),
@@ -104,6 +106,8 @@ function initAddictSwipers(Swiper) {
       loop: false,
       spaceBetween: 20,
       slidesPerView: "auto",
+      lazyPreloadPrevNext: 1,
+      lazy: true,
       navigation: {
         prevEl: el.querySelector(".closlictrlbutt--prev"),
         nextEl: el.querySelector(".closlictrlbutt--next"),

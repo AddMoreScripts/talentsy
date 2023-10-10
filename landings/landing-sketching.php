@@ -83,7 +83,9 @@ $countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'))
         </div>
 
         <div class="sketching2__picwrap">
-          <img src="<?= $pics; ?>/b2-bottom.jpg" alt="" class="sketching2__pic">
+          <video class="sketching2__pic" poster="<?= $pics; ?>/b2-bottom.jpg" preload="auto" playsinline="" autoplay="" loop="" muted="">
+            <source src="<?=$pics; ?>/tripwire_sketch.mp4">
+          </video>
         </div>
 
       </div>
@@ -168,7 +170,6 @@ $countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'))
         <div class="cloform__line"></div>
 
         <form class="lt-normal-form lt-form-inner lt-form cloformbox" action="https://lk.talentsy.ru/pl/lite/block-public/process-html?id=<?= get_field('getcourse_wid'); ?>" method="post" data-open-new-window="0">
-          <!-- <div class="cloformbox__title">Заполните форму, <b>чтобы забронировать место</b></div> -->
           <div class="cloformbox__grid">
             <div class="cloformbox__inpwrap">
               <input type="text" name="formParams[first_name]" placeholder="Имя" required>
@@ -180,7 +181,7 @@ $countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'))
               <input type="email" name="formParams[email]" placeholder="Email" required>
             </div>
             <div class="cloformbox__subwrap">
-              <button type="submit" class="clobtn">Забронировать место</button>
+              <button type="submit" class="clobtn">Записаться на курс</button>
             </div>
           </div>
           <p class="cloformbox__accept">
@@ -237,28 +238,43 @@ $countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'))
         <div class="sketching5works swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="<?= $pics; ?>/work/001.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
-                <img src="<?= $pics; ?>/work/001.jpg" alt="" class="square__img">
+              <a href="<?= $pics; ?>/work/01.webp" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/01.webp" alt="" class="square__img">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="<?= $pics; ?>/work/002.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
-                <img src="<?= $pics; ?>/work/002.jpg" alt="" class="square__img">
+              <a href="<?= $pics; ?>/work/02.webp" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/02.webp" alt="" class="square__img">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="<?= $pics; ?>/work/003.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
-                <img src="<?= $pics; ?>/work/003.jpg" alt="" class="square__img">
+              <a href="<?= $pics; ?>/work/03.webp" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/03.webp" alt="" class="square__img">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="<?= $pics; ?>/work/004.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
-                <img src="<?= $pics; ?>/work/004.jpg" alt="" class="square__img">
+              <a href="<?= $pics; ?>/work/04.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/04.jpg" alt="" class="square__img">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="<?= $pics; ?>/work/001.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
-                <img src="<?= $pics; ?>/work/001.jpg" alt="" class="square__img">
+              <a href="<?= $pics; ?>/work/05.webp" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/05.webp" alt="" class="square__img">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="<?= $pics; ?>/work/06.webp" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/06.webp" alt="" class="square__img">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="<?= $pics; ?>/work/07.jpg" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/07.jpg" alt="" class="square__img">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="<?= $pics; ?>/work/08.webp" data-fancybox="prepodwork" class="sketching5works__link square">
+                <img src="<?= $pics; ?>/work/08.webp" alt="" class="square__img">
               </a>
             </div>
           </div>
@@ -322,7 +338,7 @@ $countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'))
           </dl>
           <dl class="clob10dl">
             <dt>1000+</dt>
-            <dd>человек уже <br>прошли курс</dd>
+            <dd>студентов уже <br>прошли курс</dd>
           </dl>
           <dl class="clob10dl clob10dl__withbg">
             <img src="<?= $pics; ?>/b10-bg.jpg" alt="" class="clob10dl__bg">
@@ -456,27 +472,69 @@ $countDownTime = DateTimeImmutable::createFromFormat('U', strtotime('tomorrow'))
       <div class="sketching8__slider sketching9__slider swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href="<?= $pics; ?>/studworks/01.jpg" class="sketching8__link square" data-fancybox="studwork">
-              <img src="<?= $pics; ?>/studworks/01.jpg" alt="" class="square__img">
-              <div class="sketching8__label">Квентин Тарантино</div>
+            <a href="<?= $pics; ?>/studworks/ilinyh-tatyana.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/ilinyh-tatyana.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Ильиных Татьяна</div>
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="<?= $pics; ?>/studworks/02.jpg" class="sketching8__link square" data-fancybox="studwork">
-              <img src="<?= $pics; ?>/studworks/02.jpg" alt="" class="square__img">
-              <div class="sketching8__label">Леонардо Ди Каприо</div>
+            <a href="<?= $pics; ?>/studworks/kuzina-natalya.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/kuzina-natalya.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Кузина Наталья</div>
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="<?= $pics; ?>/studworks/03.jpg" class="sketching8__link square" data-fancybox="studwork">
-              <img src="<?= $pics; ?>/studworks/03.jpg" alt="" class="square__img">
-              <div class="sketching8__label">Колин Фаррел</div>
+            <a href="<?= $pics; ?>/studworks/markina-evgeniya.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/markina-evgeniya.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Маркина Евгения</div>
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="<?= $pics; ?>/studworks/01.jpg" class="sketching8__link square" data-fancybox="studwork">
-              <img src="<?= $pics; ?>/studworks/01.jpg" alt="" class="square__img">
-              <div class="sketching8__label">Квентин Тарантино</div>
+            <a href="<?= $pics; ?>/studworks/maslovskaya-anastasiya.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/maslovskaya-anastasiya.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Масловская Анастасия</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/minaeva-alisa.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/minaeva-alisa.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Минаева Алиса</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/petrova-elizaveta.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/petrova-elizaveta.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Петрова Елизавета</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/popov-arseniy.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/popov-arseniy.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Попов Арсений</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/smirnova-alla.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/smirnova-alla.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Смирнова Алла</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/tihomirova-irina.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/tihomirova-irina.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Тихомирова Ирина</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/cvetkov-dmitriy.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/cvetkov-dmitriy.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Цветков Дмитрий</div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="<?= $pics; ?>/studworks/yakshina-anna.jpg" class="sketching8__link square" data-fancybox="studwork">
+              <img src="<?= $pics; ?>/studworks/yakshina-anna.jpg" alt="" class="square__img" loading="lazy">
+              <div class="sketching8__label">Якшина Анна</div>
             </a>
           </div>
         </div>
