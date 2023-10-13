@@ -330,6 +330,7 @@ body.page-template-landing-clo3d {
   background-color: #000;
   border-radius: 24px;
   color:#fff;
+  overflow: hidden;
 }
 .clob2__left {
   width: calc(50% + 20px);

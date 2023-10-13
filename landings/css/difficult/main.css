@@ -2,6 +2,7 @@
   --space-xl: 140px;
   --space-l: 120px;
   --space-m: 60px;
+  --clorad: 24px;
 }
 
 
@@ -62,6 +63,8 @@
   overflow: hidden;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
+  padding-top: 7px;
+  top: -7px;
 }
 
 .difficul4__grid {

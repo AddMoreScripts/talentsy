@@ -173,7 +173,7 @@ function disable_enable_scripts(){
   endif;
 
   // добавляем
-  $theme_ver = '1.0.4';
+  $theme_ver = '1.0.6';
   wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
   if(
@@ -181,7 +181,8 @@ function disable_enable_scripts(){
     is_page_template('landings/landing-orkt.php') ||
     is_page_template('landings/landing-difficult-clients.php') ||
     is_page_template('landings/landing-beauty-hack.php') ||
-    is_page_template('landings/landing-sketching.php')
+    is_page_template('landings/landing-sketching.php') ||
+    is_page_template('landings/landing-crisis-situations.php')
   ) {
     wp_enqueue_style('css-clo3d-site', get_template_directory_uri() . '/landings/css/clo3d/site.css', [], $theme_ver);
     wp_enqueue_style('css-clo3d-media', get_template_directory_uri() . '/landings/css/clo3d/media.css', [], $theme_ver, '(max-width:1330px)');
@@ -200,13 +201,17 @@ function disable_enable_scripts(){
     is_page_template('landings/landing-orkt.php') ||
     is_page_template('landings/landing-difficult-clients.php') ||
     is_page_template('landings/landing-beauty-hack.php') ||
-    is_page_template('landings/landing-sketching.php')
+    is_page_template('landings/landing-sketching.php') ||
+    is_page_template('landings/landing-crisis-situations.php')
   ){
     wp_enqueue_style('css-orkt-site', get_template_directory_uri() . '/landings/css/orkt/main.css', [], $theme_ver);
     wp_enqueue_style('css-orkt-media', get_template_directory_uri() . '/landings/css/orkt/media.css', [], $theme_ver, '(max-width:1200px)');
   }
 
-  if( is_page_template('landings/landing-difficult-clients.php') ){
+  if(
+    is_page_template('landings/landing-difficult-clients.php') ||
+    is_page_template('landings/landing-crisis-situations.php')
+  ){
     wp_enqueue_style('css-difficult-site', get_template_directory_uri() . '/landings/css/difficult/main.css', [], $theme_ver);
     wp_enqueue_style('css-difficult-media', get_template_directory_uri() . '/landings/css/difficult/media.css', [], $theme_ver, '(max-width:1300px)');
   }
@@ -219,6 +224,11 @@ function disable_enable_scripts(){
   if( is_page_template('landings/landing-sketching.php') ){
     wp_enqueue_style('css-sketching', get_template_directory_uri() . '/landings/css/sketching/main.css', [], $theme_ver);
     wp_enqueue_style('css-sketching-media', get_template_directory_uri() . '/landings/css/sketching/media.css', [], $theme_ver, '(max-width:1199px)');
+  }
+
+  if( is_page_template('landings/landing-crisis-situations.php') ){
+    wp_enqueue_style('css-crisis', get_template_directory_uri() . '/landings/css/crisis-situations/main.css', [], $theme_ver);
+    wp_enqueue_style('css-crisis-media', get_template_directory_uri() . '/landings/css/crisis-situations/media.css', [], $theme_ver, '(max-width:1199px)');
   }
 
 }
