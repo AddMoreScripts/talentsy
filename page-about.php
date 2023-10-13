@@ -72,7 +72,7 @@ $pics = imgs() . '/about';
             <img src="<?= $pics; ?>/tab1-line-left.svg" alt="" class="abouttab1__abs js-slide-left">
             <img src="<?= $pics; ?>/tab1-line-right.svg" alt="" class="abouttab1__ab2 js-slide-right">
             <dl class="abouttab1__num js-slide-opac">
-              <dt class="druk">7</dt>
+              <dt class="druk">5</dt>
               <dd>Факультетов</dd>
             </dl>
             <dl class="abouttab1__num js-slide-opac">

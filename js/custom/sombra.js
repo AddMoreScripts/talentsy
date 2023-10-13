@@ -150,7 +150,7 @@ $(document).ready(function(){
 	});
 	// отправка
 	$('body').on('click', '.jsPPRequest', function(){
-	    var promoCont 		= $(this).parents('.newpromoform'),
+	    var promoCont 		= $(this).parents('form'),
 	    promoCodeValue 		= promoCont.find('.jsPmoField').val();
 
 	    $.get('https://octopus.talentsy.ru/wp-content/themes/clear/inc/rest/promocodes-percent.php',
@@ -164,8 +164,13 @@ $(document).ready(function(){
 
 	                $('[name="jsPmoHiddenFormField"]').val(promoCodeValue);
 	                sombraSetCookie('lastUsedPromocode', promoCodeValue);
+	                // чтобы на старых лендингах работало
+          			$(".jsPmoError").addClass("suceesscode").html(j.message).show();
+          			$(".jsPPRequest").removeClass("jsPPRequest");
 	            }else{
 	                promoCont.find('.jsPmoField').addClass('is-invalid');
+	                // чтобы на старых лендингах работало
+          			$(".jsPmoError").removeClass("suceesscode").html(j.message).show();
 	            }
 	        }
 	    );
