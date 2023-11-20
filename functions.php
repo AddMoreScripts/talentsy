@@ -173,7 +173,7 @@ function disable_enable_scripts(){
   endif;
 
   // добавляем
-  $theme_ver = '1.0.6';
+  $theme_ver = '1.0.7';
   wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
   if(

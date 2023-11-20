@@ -106,7 +106,6 @@ get_header('blog');
             endforeach;
           endif;
         }
-
         ?>
 
 
@@ -203,6 +202,7 @@ get_header('blog');
           <?php endif; ?>
         </footer>
 
+
         <?php if (get_field('bottom-banner')) :
           $bannerBotId = get_field('bottom-banner');
 
@@ -223,7 +223,51 @@ get_header('blog');
               <img src="<?= get_field('banner-pic', $bannerBotId); ?>" alt="" class="relateproffbanner__pic">
             </div>
           </aside>
-        <?php endif; ?>
+        <?php else:
+          /**
+           * Если нижний баннер не выбран то получаем посты-баннеры с типом
+           * "Баннер внизу статьи" с той-же категорией что и пост и выводим их
+           */
+          if (count((array) get_the_category())) :
+            $bannersBotIds = get_posts([
+              'numberposts' => 10,
+              'post_type'   => 'banner',
+              'post_status' => 'publish',
+              'tax_query' => [
+                'relation' => 'AND',
+                [
+                  'taxonomy' => 'category',
+                  'field' => 'id',
+                  'terms' => get_the_category()[0]->term_id,
+                ],
+                [
+                  'taxonomy' => 'bannertype',
+                  'field' => 'id',
+                  'terms' => 19,
+                ],
+              ],
+            ]);
+            foreach ($bannersBotIds as $key => $bannerBotId) :
+              $bnrLink = get_field('banner-link', $bannerBotId);
+              if (str_allowed($bnrLink, ['?utm_source'])) $bnrLink = explode('?', $bnrLink)[0];
+              $bnrLink = $bnrLink . '?utm_source=blog&utm_term=' . $post->post_name;
+            ?>
+            <aside class="relateproffbanner flexi">
+              <div class="relateproffbanner__left">
+                <div class="relateproffbanner__title"><?= get_field('banner-title', $bannerBotId); ?></div>
+                <p><?= get_field('banner-text', $bannerBotId); ?></p>
+                <a href="<?= $bnrLink; ?>" class="button relateproffbanner__button">
+                  <?= get_field('banner-button', $bannerBotId); ?>
+                </a>
+              </div>
+              <div class="relateproffbanner__right">
+                <img src="<?= get_field('banner-pic', $bannerBotId); ?>" alt="" class="relateproffbanner__pic">
+              </div>
+            </aside>
+        <?php
+          endforeach;
+        endif;
+      endif; ?>
 
       </div>
       <aside class="blogpost__sider">

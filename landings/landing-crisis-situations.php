@@ -15,8 +15,8 @@ $saleProc = 50;
       <div class="orkt1__sub jbm">Повышение квалификации для&nbsp;психологов </div>
       <h1 class="orkt1__h1 jbm">
         Освойте навыки <mark>кризисного<br>
-        консультирования</mark> за 6 недель<br>
-        и будьте готовы к сложным<br>
+        консультирования</mark> за&nbsp;6&nbsp;недель<br>
+        и&nbsp;будьте готовы к&nbsp;сложным<br>
         клиентским ситуациям
       </h1>
 
@@ -36,7 +36,7 @@ $saleProc = 50;
           <div class="orkt1bot__main">
             <div class="orkt1bot__text">
               Узнайте как <b>экологично помочь</b> тому,<br>
-              кто сломлен, и <b>восстановиться</b> самому<br>
+              кто сломлен, и&nbsp;<b>восстановиться</b> самому<br>
               после <b>сложной консультации</b>
             </div>
             <a href="#orderform" class="orkt1bot__button clobtn" data-scrollto>Записаться на курс</a>
@@ -58,8 +58,8 @@ $saleProc = 50;
         <div class="crysis2__line1">
           <h2 class="h2">
             Работать с клиентом<br>
-            <mark>в остром кризисе</mark> —<br>
-            всё равно что<br>
+            <mark>в&nbsp;остром кризисе</mark> —<br>
+            всё&nbsp;равно что<br>
             разминировать бомбу
           </h2>
           <div class="crysis2__badge jbm"><span>Ошибка <br>может <br>дорого <br>стоить</span></div>
@@ -88,7 +88,7 @@ $saleProc = 50;
         </div>
         <div class="crysis2__bottom">
           <picture class="crysis2__divider">
-            <source media="(min-width: 768px)" srcset="<?=$pics; ?>/b3-divider.svg">
+            <source media="(min-width: 1000px)" srcset="<?=$pics; ?>/b3-divider.svg">
             <img src="<?=$pics; ?>/b3-divider-mob.svg" alt="">
           </picture>
           <h2 class="h2">C этим можно и<br>нужно научиться <br>работать </h2>
