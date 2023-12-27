@@ -215,9 +215,7 @@
 // Блоки контента: Блоки внимания
 .alrt {
   align-items: flex-end;
-  padding-top: 24px;
   margin: var(--rythm) 0;
-  border-top: 1px solid #e5e5e5;
 
   @include media(m){
     align-items: flex-start;
@@ -226,8 +224,8 @@
   }
 
   &__imgwrap {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     border-radius: 100px;
     flex-shrink: 0;
     background: #7835ff;
@@ -243,11 +241,14 @@
   &__content {
     background: #f4f2f0;
     flex-grow: 1;
-    padding: 12px;
-    border-radius: 6px;
-
+    padding: 15px;
+    border-left: 4px solid hsl(30, 15%, 55%);
     a {
       font-weight: 600;
+    }
+
+    @include media(s){
+      border-left-width: 3px;
     }
   }
 
@@ -257,6 +258,7 @@
     }
     .alrt__content {
       background: #fff8e7;
+      border-left-color: hsl(42, 100%, 55%);
     }
   }
   &--info {
@@ -265,6 +267,7 @@
     }
     .alrt__content {
       background: #e9f2ff;
+      border-left-color: hsl(216, 52%, 55%);
     }
   }
   &--check {
@@ -273,6 +276,7 @@
     }
     .alrt__content {
       background: #eef6ee;
+      border-left-color: hsl(120, 31%, 55%);
     }
   }
   &--error {
@@ -281,6 +285,7 @@
     }
     .alrt__content {
       background: #ffece6;
+      border-left-color: #b23e2e;
     }
   }
   &--happy {
@@ -288,6 +293,7 @@
       background-color: #38783a;
     }
     .alrt__content {
+      border-left-color: #38783a;
       background: #e7ffe6;
     }
   }
@@ -296,6 +302,7 @@
       background-color: #000000;
     }
     .alrt__content {
+      border-left-color: #555;
       background: #f4f2f0;
     }
   }
