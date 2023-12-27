@@ -28,7 +28,9 @@
             <input type="text" name="Name" placeholder="Имя" required>
           </div>
           <div class="fooformbox__inpwrap">
-            <input type="tel" name="Phone" placeholder="+7 (999) 999-99-99" required>
+              <span style="display: none"></span>
+            <input type="tel" name="Phone" id="phone" placeholder="+7 999 999-99-99" required>
+              
           </div>
           <div class="fooformbox__inpwrap">
             <input type="email" name="Email" placeholder="Email" required>
@@ -143,9 +145,6 @@
   </svg>
 </a>
 
-
-<script src="<?= get_template_directory_uri(); ?>/js/custom/vk-superappkit.js"></script>
-<script src="<?= get_template_directory_uri(); ?>/js/custom/sombra.js"></script>
 
 <? wp_footer(); ?>
 </body>

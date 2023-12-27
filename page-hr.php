@@ -73,6 +73,11 @@ get_header();
           <label for="Email">e-mail</label>
         </div>
 
+          <div class="floatinp">
+              <input type="text" id="Vacancy" name="Vacancy" required class="floatinp__input" placeholder=" ">
+              <label for="Email">Желаемая позиция/должность</label>
+          </div>
+
         <div class="hrform__prelabel">Добавьте ссылку на ваше резюме <br>(любой файлообменник)</div>
         <div class="floatinp">
           <input type="text" id="Link" name="rezume" required class="floatinp__input" placeholder=" ">

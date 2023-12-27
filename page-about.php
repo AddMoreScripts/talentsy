@@ -53,10 +53,12 @@ $pics = imgs() . '/about';
           <button class="about3__tablink" data-tablink="about2">Отзывы</button>
           <img src="<?= $pics; ?>/b1-tablink2-bg.svg" alt="" class="about3__tablinkbg">
         </div>
+      <? if( 0 ): ?>
         <div class="about3__tablinkwrap">
           <button class="about3__tablink" data-tablink="about3">Вакансии</button>
           <img src="<?= $pics; ?>/b1-tablink3-bg.svg" alt="" class="about3__tablinkbg">
         </div>
+      <? endif; ?>
         <div class="about3__tablinkwrap">
           <button class="about3__tablink" data-tablink="about4">Контакты</button>
           <img src="<?= $pics; ?>/b1-tablink4-bg.svg" alt="" class="about3__tablinkbg">
@@ -166,27 +168,28 @@ $pics = imgs() . '/about';
         </div>
       </div><!-- //abouttab2 -->
 
-      <div class="about3__tab abouttab3" data-tab="about3">
-        <div class="container">
-          <div class="front3__list druk">
-            <div class="front3__item">
-              <a href="https://talentsy.ru/vacancies" class="front3__link js-front3-link">Head of Online Marketing</a>
-              <picture class="front3__linepic">
-                <source srcset="<?= $pics; ?>/tab3-line1.svg" media="(min-width:992px)">
-                <img src="<?= $pics; ?>/tab3-line1.svg" alt="" class="front3__line front3__line--1">
-              </picture>
-            </div>
-            <div class="front3__item">
-              <a href="https://talentsy.ru/vacancies" class="front3__link js-front3-link">Менеджер по обучению</a>
-              <picture class="front3__linepic">
-                <source srcset="<?= $pics; ?>/tab3-line2.svg" media="(min-width:992px)">
-                <img src="<?= $pics; ?>/tab3-line2.svg" style="bottom:-2px;" alt="" class="front3__line front3__line--1">
-              </picture>
+      <? if( 0 ): ?>
+        <div class="about3__tab abouttab3" data-tab="about3">
+          <div class="container">
+            <div class="front3__list druk">
+              <div class="front3__item">
+                <a href="https://talentsy.ru/vacancies" class="front3__link js-front3-link">Head of Online Marketing</a>
+                <picture class="front3__linepic">
+                  <source srcset="<?= $pics; ?>/tab3-line1.svg" media="(min-width:992px)">
+                  <img src="<?= $pics; ?>/tab3-line1.svg" alt="" class="front3__line front3__line--1">
+                </picture>
+              </div>
+              <div class="front3__item">
+                <a href="https://talentsy.ru/vacancies" class="front3__link js-front3-link">Менеджер по обучению</a>
+                <picture class="front3__linepic">
+                  <source srcset="<?= $pics; ?>/tab3-line2.svg" media="(min-width:992px)">
+                  <img src="<?= $pics; ?>/tab3-line2.svg" style="bottom:-2px;" alt="" class="front3__line front3__line--1">
+                </picture>
+              </div>
             </div>
           </div>
-        </div>
-      </div><!-- //abouttab2 -->
-
+        </div><!-- //abouttab2 -->
+      <? endif; ?>
       <div class="about3__tab abouttab4" data-tab="about4">
         <div class="container">
           <div class="abouttab2__title druk">Свяжитесь с нами</div>

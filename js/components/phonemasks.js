@@ -1,11 +1,11 @@
-import IMask from 'imask';
+//import IMask from 'imask';
 
 /**
  * Маска ввода номера телефона
  * см. https://imask.js.org/
  */
 
-const SELECTOR = 'input[type="tel"]';
+/*const SELECTOR = 'input[type="tel"]';
 
 export default () => {
   function applyInputMasks(elem) {
@@ -46,4 +46,4 @@ export default () => {
 
   iMaskUpdate();
   window.inputMask = iMaskUpdate;
-};
+};*/

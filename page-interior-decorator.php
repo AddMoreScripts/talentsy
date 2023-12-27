@@ -106,11 +106,19 @@ get_header();
         </video>
       </aside>
       <div class="iphone__grid">
-        <div class="iphone__prop">
-          <img data-src="<?= imgs(); ?>/dizayner-interyera/b3-1.webp" alt="" class="iphone__propicon lazy js-slide-opac">
-          <div class="iphone__proptitle">Диплом о проф. переподготовке</div>
-          <p>Получите специализацию в сфере декора интерьера и диплом о профессиональной переподготовке</p>
-        </div>
+          <div class="iphone__prop">
+              <img data-src="<?= imgs(); ?>/psychology/stack_diploma_retina.png" alt=""
+                   class="iphone__propicon lazy js-slide-opac">
+              <div class="iphone__proptitle">Вы получите дипломы</div>
+              <div>
+                  <ul class="landing__list">
+                      <li>Диплом о проф. переподготовке</li>
+                      <li>Международный <b>MBA</b> диплом</li>
+                      <li>Международный сертификат <a class="landing__link"
+                                                      href="https://cpduk.co.uk/"><b>CPD</b></a></li>
+                  </ul>
+              </div>
+          </div>
         <div class="iphone__prop">
           <img data-src="<?= imgs(); ?>/dizayner-interyera/b3-2.webp" alt="" class="iphone__propicon lazy js-slide-opac">
           <div class="iphone__proptitle">Занятия в мини-группах</div>
@@ -478,22 +486,45 @@ get_header();
 
 
 <section class="diplomblock diplomblock--disint">
-  <div class="container">
-    <h2 class="title">
-      <b>Ты получишь диплом <br>установленного образца</b> <br>
-      о профессиональной переподготовке
-    </h2>
-    <img src="<?= imgs(); ?>/interior-decorator/b17-diplom.webp" alt="" class="diplomblock__pic">
-    <div class="diplomblock__footer flexi">
-      <p>
-        Сможете <b>подтвердить <br>
-          свою квалификацию</b><br>
-        перед заказчиками<br>
-        и / или работодателями
-      </p>
-      <a href="#offer" class="circlebutton" data-scrollto="#offer">Задать вопрос <br>специалисту</a>
+    <div class="container diploma__container">
+        <h2 class="diploma__header"><b class="diploma__decorator">Каждый выпускник</b> <br> курса получает</h2>
+        <div class="diploma__block diploma__layout--grey">
+            <div class="diploma__info"><p class="diploma__num diploma__black--back">01</p>
+                <h3 class="diploma__subheader diploma__decorator">Диплом о <br> профессиональной переподготовке <br>
+                    <span
+                            class="diploma__black">установленного <br> образца РФ</span></h3>
+                <div class="diploma__text">Это официальный документ, <span class="diploma__grey">который <br> дает вам право осуществлять <br> профессиональную деятельность</span>
+                </div>
+            </div>
+            <div class="diploma__pic"><img
+                        src="<?= imgs(); ?>/interior-decorator/dip-decor.jpg" alt="diploma" class="diploma__img"
+                        width="540" height="380"></div>
+
+        </div>
+        <div class="diploma__block diploma__layout--black">
+            <div class="diploma__info"><p class="diploma__decorator--back diploma__num ">02</p>
+                <h3 class="diploma__subheader diploma__white">MBA Диплом</h3>
+                <div class="diploma__text diploma__grey">Open European Academy (г. Прага) в <br> сотрудничестве с
+                    Европейской Ассоциацией ВУЗов
+                    <br> и преподавателей высшей школы HiSTES, <span class="diploma__white">дающий <br> право ведения деятельности в Евросоюзе и <br> признаваемый во всем мире.</span>
+                </div>
+
+                <div class="diploma__subtext">
+                    <span class="diploma__white diploma__mark ">А также 2 международных сертификата:</span>
+                    <ul class="diploma__list">
+                        <li class="diploma__item diploma__grey">от аккредитующего центра Великобритании <a
+                                    href="https://cpduk.co.uk/"
+                                    class="diploma__white diploma__link">CPD</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="diploma__pic"><img
+                        src="<?= imgs(); ?>/psychology/mba.png"
+                        alt="mba" class="diploma__img"
+                        width="540" height="380"></div>
+        </div>
     </div>
-  </div>
+
 </section><!-- //diplomblock -->
 
 

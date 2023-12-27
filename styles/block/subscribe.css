@@ -1,0 +1,58 @@
+.subscribe__body {
+  padding: 24px;
+  border-radius: 12px;
+  background: #e9f2ff;
+}
+
+.subscribe__main {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.subscribe__text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.subscribe__header {
+  font-family: Manrope, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.subscribe__subheader {
+  font-family: Manrope, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.subscribe__link {
+  border-radius: 8px;
+  background: #000;
+  text-decoration: none;
+  text-align: center;
+  padding: 16px;
+  width: fit-content;
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+
+  @media (max-width: 767px) {
+    width: auto;
+  }
+}
+.subscribe__link:hover {
+  background: #7835ff;
+  color: #fff;
+}

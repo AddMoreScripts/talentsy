@@ -1,0 +1,90 @@
+.faq__section {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.faq__wrapper {
+    position: relative;
+}
+
+.faq__question {
+    margin-bottom: 4px;
+    background-color: #F5F5F5;
+    border-radius: 16px;
+    position: relative;
+}
+
+.faq__question input {
+    display: none;
+}
+
+.faq__hdr {
+    position: relative;
+    padding: 30px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.faq__title {
+    font-size: 22px;
+    line-height: 36px;
+    margin-right: 20px;
+    flex-grow: 1;
+    display: block;
+}
+
+.faq__plus {
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 36 36'%3E%3Cpath stroke='%23000' stroke-linecap='round' d='M23.333 18.5H12.667M18 13.167v10.667'/%3E%3Crect width='35' height='35' x='.5' y='.5' stroke='%23000' rx='17.5'/%3E%3C/svg%3E");
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: auto;
+    transform-origin: 50% 50%;
+    transition: transform 0.4s ease;
+}
+
+.faq__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+}
+
+.faq__question input:checked ~ .faq__content {
+    grid-template-rows: 1fr;
+}
+
+.faq__question input:checked ~ .faq__hdr .faq__plus {
+    transform: rotate(45deg);
+}
+
+.faq__text {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.faq__textpad {
+  padding: 10px 20px 30px 20px;
+  display: block;
+    font-size: 20px;
+    color: #8D8D8D;
+}
+
+.faq__textpad p:not(:last-child),
+.faq__textpad ul:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.faq__textpad li {
+    list-style-type: disc;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    list-style-position: outside;
+    margin-left: 24px;
+}
