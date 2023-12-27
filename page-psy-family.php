@@ -7,11 +7,10 @@ get_header();
 
 
 <section class="hero hero--family">
-    <h2 class="hero__small">Курсы семейная психология</h2>
     <div class="hero__h1 jbm">
-      За 1,5 года <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt="" class="hero-mob-img"> сделаем <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt=""> из вас <br>
-      <b>успешного семейного психолога-<br>
-        консультанта</b> и&nbsp;поможем запустить<br>
+      За 1,5 года <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt="" class="hero-mob-img"> поможем <img src="<?=imgs(); ?>/psychology-family/b1-sm.webp" alt=""> вам стать <br>
+      <b>успешным семейным психологом-<br>
+        консультантом</b> и&nbsp;запустить<br>
       свою частную практику
     </div>
     <div class="hero__videowrap ">
@@ -62,7 +61,7 @@ get_header();
           </div>
           <div class="iphone__prop">
             <img data-src="<?=imgs(); ?>/psychology-family/b2-4.webp" alt="" class="iphone__propicon lazy js-slide-opac">
-            <div class="iphone__proptitle">Лучшие преподаватели</div>
+            <div class="iphone__proptitle">ТОП-преподаватели</div>
             <p>Востребованные и практикующие психологи, доктора и кандидаты наук — наши преподаватели</p>
           </div>
         </div>
@@ -260,7 +259,7 @@ get_header();
 
   <section class="mentors">
     <div class="container">
-      <h2 class="title">вы будете учиться <span>у&nbsp;</span><b>15 лучших <br class="mobbr">специалистов</b> <span>со
+      <h2 class="title">вы будете учиться <span>у&nbsp;</span><b>15 ТОП-<br class="mobbr">специалистов</b> <span>со
           всей страны</span></h2>
       <div class="mentorsfeat">
         <div class="mentorsfeat__item">
@@ -281,7 +280,7 @@ get_header();
           <img src="<?=imgs(); ?>/psychology/b9-3.svg" alt="" class="mentorsfeat__icon js-slide-opac">
           <div class="mentorsfeat__title">Мы записали с ними <br>видео уроки в высоком качестве</div>
           <div class="mentorsfeat__text">
-            чтобы ты мог учиться у лучших <br>из лучших
+            чтобы ты мог учиться у авторитетных <br>специалистов
           </div>
         </div>
       </div>
@@ -434,7 +433,7 @@ get_header();
 
   <section class="features psy15">
     <div class="container">
-      <h2 class="title">Вас ждут практические <br>занятия, в <b>мини-группах</b></h2>
+      <h2 class="title">Вас ждут практические <br>занятия в <b>мини-группах</b></h2>
       <div class="features__wrap">
         <div class="features__left js-slide-bot">
           <video preload="auto" playsinline autoplay loop muted class="lazy">
@@ -624,7 +623,7 @@ get_header();
 
   <section class="dreams psy21">
     <div class="container">
-      <h2 class="title">В результате обучения <br><b>вы сможете</b></h2>
+      <h2 class="title">Это обучение <b>поможет вам</b></h2>
       <div class="grid-mob-scroll">
         <div class="dreams__grid">
           <div class="dreams__item dreams__item--border">

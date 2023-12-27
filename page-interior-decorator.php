@@ -7,10 +7,10 @@ get_header();
 
 <section class="hero hero-interior">
   <div class="hero__h1 jbm js-slide-bot">
-    За 6 месяцев сделаем из тебя <br>
-    <b>успешного декоратора <br>
-      интерьера</b> и изменим твою <br>
-    жизнь до неузнаваемости
+    За 6 месяцев поможем тебе стать <br>
+    <b>успешным декоратором интерьера <br>
+      </b> и&nbsp;изменить свою жизнь <br>
+     до&nbsp;неузнаваемости
   </div>
   <div class="hero__videowrap js-slide-bot">
     <div class="hero__videobox square">
@@ -123,7 +123,7 @@ get_header();
         </div>
         <div class="iphone__prop">
           <img data-src="<?= imgs(); ?>/interior-decorator/b3-4.webp" alt="" class="iphone__propicon lazy js-slide-opac">
-          <div class="iphone__proptitle">Лучшие преподаватели</div>
+          <div class="iphone__proptitle">ТОП-преподаватели</div>
           <p>Мы собрали звезд индустрии, чтобы вы могли учиться у лучших: владельцев студий, арт-директоров, архитекторов, победителей российских и международных конкурсов</p>
         </div>
       </div>
@@ -268,7 +268,7 @@ get_header();
 
 <section class="mentors disint-mentors">
   <div class="container">
-    <h2 class="title">Ты будешь учиться <span>у&nbsp;</span><b>10+ лучших <br class="mobbr">специалистов</b> <span>со
+    <h2 class="title">Ты будешь учиться <span>у&nbsp;</span><b>10+ ТОП-<br class="mobbr">специалистов</b> <span>со
         всей страны</span></h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
@@ -289,7 +289,7 @@ get_header();
         <img src="<?= imgs(); ?>/dizayner-interyera/b7-3.svg" alt="" class="mentorsfeat__icon js-slide-opac">
         <div class="mentorsfeat__title">Мы записали с ними <br>видео уроки в высоком качестве</div>
         <div class="mentorsfeat__text">
-          чтобы ты мог учиться у лучших <br>из лучших
+          чтобы ты мог учиться у авторитетных <br>специалистов
         </div>
       </div>
     </div>

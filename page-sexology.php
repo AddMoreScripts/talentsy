@@ -56,7 +56,7 @@ get_header();
           <div class="sex1__imgwrap">
             <img src="<?= imgs(); ?>/sexolog/b2-4.png" alt="">
           </div>
-          <div class="sex1__title">Лучшие специалисты</div>
+          <div class="sex1__title">ТОП-специалисты</div>
           <div class="sex1__descr">Наши преподаватели – доктора и кандидаты наук, востребованные практикующие психологи и
             сексологи</div>
         </div>
@@ -289,7 +289,7 @@ get_header();
 
 <section class="mentors">
   <div class="container">
-    <h2 class="title">вы будете учиться <span>у&nbsp;</span><b>10 лучших <br class="mobbr">специалистов</b> <span>со
+    <h2 class="title">вы будете учиться <span>у&nbsp;</span><b>10 ТОП-<br class="mobbr">специалистов</b> <span>со
         всей страны</span></h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
@@ -310,7 +310,7 @@ get_header();
         <img src="<?= imgs(); ?>/sexolog/b9-3.svg" alt="" class="mentorsfeat__icon js-slide-opac">
         <div class="mentorsfeat__title">Мы записали с ними <br>видео уроки в высоком качестве</div>
         <div class="mentorsfeat__text">
-          чтобы ты мог учиться у лучших <br>из лучших
+          чтобы ты мог учиться у авторитетных <br>специалистов
         </div>
       </div>
     </div>
@@ -428,7 +428,7 @@ get_header();
 
 <section class="features sex15">
   <div class="container">
-    <h2 class="title">Вас ждут практические <br>занятия, в <b>мини-группах</b></h2>
+    <h2 class="title">Вас ждут практические <br>занятия в <b>мини-группах</b></h2>
     <div class="features__wrap">
       <div class="features__left js-slide-bot">
         <video preload="auto" playsinline autoplay loop muted class="lazy">
@@ -880,7 +880,7 @@ get_header();
 
 <section class="dreams sex23">
   <div class="container">
-    <h2 class="title">В результате обучения <br><b>вы сможете</b></h2>
+    <h2 class="title">Это обучение <b>поможет вам</b></h2>
     <div class="grid-mob-scroll">
       <div class="dreams__grid">
         <div class="dreams__item">

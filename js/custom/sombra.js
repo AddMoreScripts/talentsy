@@ -89,6 +89,13 @@ $(document).ready(function(){
 		return true;
 	});
 
+	// для форм в блоге предустановка utm в url
+	if( $('body').hasClass('single-post') ){
+		var formlocation = window.location.protocol +'//'+ window.location.host + window.location.pathname + '?utm_source=blog&utm_term='+window.location.pathname.replace('/blog/','').replace('/','');
+		$('.course-form [name="formParams[dealCustomFields][1291877]"]').val( document.cookie +"|w|h|"+ formlocation );
+		$('[name="__gc__internal__form__helper"]').val( formlocation );
+	}
+
 	// обработка ajaxClick
 	$('body').on('click', '.ajaxClick', function(e){
 		e.preventDefault();
@@ -174,6 +181,15 @@ $(document).ready(function(){
 	            }
 	        }
 	    );
+	});
+
+
+	// оглавление блога
+	$('body').on('click', '.ez-toc-link', function(e){
+	    e.preventDefault();
+		$([document.documentElement, document.body]).animate({
+			scrollTop: ($(".wp-block-heading:contains('"+ $(this).attr("title") +"')").offset().top - 20)
+		}, 1200);
 	});
 
 	//// VK ID

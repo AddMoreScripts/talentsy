@@ -319,7 +319,7 @@ $pics = imgs() . '/nutriciolog';
             <img src="<?=$pics; ?>/b8-ava3.webp" alt="" class="iphone__avatar">
             <div class="iphone__avanum jbm">+10</div>
           </div>
-          <div class="iphone__proptitle">Лучшие преподаватели</div>
+          <div class="iphone__proptitle">ТОП-преподаватели</div>
           <p>Более 10 звезд индустрии: доктора наук, профессоры университетов, лидеры мнений, врачи, практикующие специалисты</p>
         </div>
       </div>
@@ -377,7 +377,7 @@ $pics = imgs() . '/nutriciolog';
 
 <section class="mentors mentors--nutri">
   <div class="container">
-    <h2 class="title">Вы будете учиться у&nbsp;<b>лучших <br class="mobbr">специалистов</b> со всей страны</h2>
+    <h2 class="title">Вы будете учиться у&nbsp;<b>ТОП-<br class="mobbr">специалистов</b> со всей страны</h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
         <img src="<?= $pics; ?>/b9-1.svg" alt="" class="mentorsfeat__icon js-slide-opac">
@@ -397,7 +397,7 @@ $pics = imgs() . '/nutriciolog';
         <img src="<?= $pics; ?>/b9-3.svg" alt="" class="mentorsfeat__icon js-slide-opac">
         <div class="mentorsfeat__title">Мы записали с ними <br>видео уроки в высоком качестве</div>
         <div class="mentorsfeat__text">
-          чтобы ты мог учиться у лучших <br>из лучших
+          чтобы ты мог учиться у авторитетных <br>специалистов
         </div>
       </div>
     </div>

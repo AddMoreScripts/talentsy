@@ -151,7 +151,26 @@ get_header('blog');
             </div>
 
           <?php
-            the_content();
+            $curpostcat = get_the_category()[0];
+            if( current_user_can('administrator') || get_field('bif-onoff', $curpostcat) ):
+              // вывод формы после +/- первой трети контента
+              $allPostContent = get_the_content();
+              $asFourParts    = mb_str_split($allPostContent, (mb_strlen($allPostContent)/4));
+              list($firstP, $other) = explode('<h', $asFourParts[1], 2);
+
+              ob_start();
+                echo $firstP;
+                get_template_part('inc/blog-inline-form', null, ['taxID' => $curpostcat->term_id]);
+                echo '<h';
+                echo $other;
+              $asFourParts[1] = ob_get_clean();
+
+
+              echo implode('', $asFourParts);
+            else:
+              the_content();
+            endif;
+
           endwhile;
           ?>
         </div>

@@ -52,7 +52,7 @@ $pics = imgs() . '/astrolog';
           <img src="<?= $pics; ?>/b2-icon1.svg" alt="" class="astro2__pic" height="126">
         </div>
         <div class="astro2__title">Комплексная <br>образовательная <br>программа</div>
-        <div class="astro2__descr">Вы получите необходимый и достаточный объем знаний, чтобы эффективно работать с любыми запросами ваших будущих клиентов</div>
+        <div class="astro2__descr">Вы получите необходимый и достаточный объем знаний, чтобы эффективно работать с широким спектром запросов ваших будущих клиентов</div>
       </div>
       <div class="astro2__item js-slide-opac">
         <div class="astro2__picwrap">
@@ -240,7 +240,7 @@ $pics = imgs() . '/astrolog';
             <img src="<?=$pics; ?>/b8-ava3.webp" alt="" class="iphone__avatar">
             <div class="iphone__avanum jbm">+10</div>
           </div>
-          <div class="iphone__proptitle">Лучшие преподаватели</div>
+          <div class="iphone__proptitle">ТОП-преподаватели</div>
           <p>Вы будете учиться у звезд индустрии: лучших преподавателей и лидеров мнений</p>
         </div>
       </div>
@@ -277,7 +277,7 @@ $pics = imgs() . '/astrolog';
 
 <section class="mentors mentors--astro" style="background-image: url(<?=$pics; ?>/b9-bg.webp);">
   <div class="container">
-    <h2 class="title">Вы будете учиться <span>у&nbsp;</span><b>лучших <br class="mobbr">специалистов</b> <span>со всей страны</span></h2>
+    <h2 class="title">Вы будете учиться <span>у&nbsp;</span><b>ТОП-<br class="mobbr">специалистов</b> <span>со всей страны</span></h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
         <img src="<?= $pics; ?>/b9-1.svg" alt="" class="mentorsfeat__icon js-slide-opac">
@@ -297,7 +297,7 @@ $pics = imgs() . '/astrolog';
         <img src="<?= $pics; ?>/b9-3.svg" alt="" class="mentorsfeat__icon js-slide-opac">
         <div class="mentorsfeat__title">Мы записали с ними <br>видео уроки в высоком качестве</div>
         <div class="mentorsfeat__text">
-          чтобы ты мог учиться у лучших <br>из лучших
+          чтобы ты мог учиться у авторитетных <br>специалистов
         </div>
       </div>
     </div>

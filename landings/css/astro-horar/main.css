@@ -1,0 +1,719 @@
+.hdr__leftmenu ul a:hover, .hdr__right a:hover{
+    color: #7835FF !important;
+}
+
+.hdr__leftmenu ul a, .hdr__right a{
+    transition: .25s;
+}
+
+.page-template .hdr__login.flexi:hover{
+    background: #7835FF;
+    color: white !important;
+}
+
+.page-template .hdr__burger:hover{
+    background: #7835FF;
+    color: white !important;
+}
+
+.page-template .hdr__burger:hover svg path{
+    stroke: white;
+}
+
+.page-template {
+    background: rgba(17, 6, 41, 0.99);
+    color: #fff
+}
+
+.closummary__textpad{
+    color: white;
+}
+
+.closummary__more{
+    background: linear-gradient(rgba(255,255,255,0), rgba(17, 6, 41, 0.99));
+}
+
+.page-template .hdr__leftmenu ul a, .page-template .hdr__right a {
+    color: #fff
+}
+
+.page-template .hdr__login.flexi {
+    background: #fff;
+    color: #000 !important
+}
+
+.page-template .hdr__burger {
+    background: #fff;
+    color: #000
+}
+
+.page-template .hdr__burger svg path {
+    stroke: #000
+}
+
+.page-template .clob1__line, .page-template .cloform__line {
+    background: #fff
+}
+
+.page-template .orkt1bot__text {
+    color: #8d8d8d
+}
+
+.page-template .orkt1bot__text span {
+    color: #fff
+}
+
+.page-template section .orkt1bot__main .clobtn, .page-template section .clob1__action .clobtn {
+    background: #e7ad68;
+    color: #000;
+    transition: .25s;
+}
+
+.page-template section .orkt1bot__main .clobtn:hover, .page-template section .clob1__action .clobtn:hover{
+    background: #FFAA46;
+}
+
+.page-template .orkt1places {
+    color: rgba(255, 255, 255, .6)
+}
+
+.page-template .orkt1places b {
+    color: #fff
+}
+
+.text-uppercase {
+    text-transform: uppercase
+}
+
+.page-template-land .hdr {
+    background: 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: auto
+}
+
+.page-template-land .hdr__wrap {
+    width: 100%
+}
+
+.page-template-land .orkt1places {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    text-align: right
+}
+
+.page-template .closummary__quest {
+    border: 1px solid #797386;
+    background: 0 0
+}
+
+.sketching5__bot{
+    padding-bottom: 0;
+}
+
+.page-template .orkt1 {
+    background: url('https://talentsy.ru/wp-content/themes/talentsy/img/Astro-Horar/bg-top.png');
+    background-size: cover;
+    padding-top: 20px;
+}
+
+.cloform5__old{
+    text-decoration-color: #FFFFFF;
+}
+
+.cloreviews__sub b{
+    color: white;
+}
+
+.page-template .clob2__bg {
+    background: #fff;
+    color: #000
+}
+
+.page-template .clob2__left .h2 {
+    color: #000
+}
+
+.page-template .clob2__left .h2 span {
+    color: #865ad0
+}
+
+.page-template .clob2__vidowrap {
+    margin-top: 60px
+}
+
+.page-template .clob2__left {
+    border-right: 1px solid #d8d8d8
+}
+
+.page-template .clob2__bot {
+    border-top: 1px solid #d8d8d8
+}
+
+.page-template .clob2__line2 span {
+    color: #000
+}
+
+.page-template .beayhack2greencard {
+    background: #865ad0
+}
+
+.page-template .beayhack2greencard__text {
+    color: #c3ade8
+}
+
+.page-template .beayhack2greencard__text span {
+    color: #fff
+}
+
+.page-template .clo3slide__title {
+    color: #000
+}
+
+.page-template .cloform__bg {
+    background: #865ad0
+}
+
+.page-template .beayhackform1__time, .page-template .cloformbox__title {
+    color: rgba(255, 255, 255, .5)
+}
+
+.page-template .beayhackform1__time b, .page-template .cloformbox__title b {
+    color: #fff
+}
+
+.page-template .cloformbox__accept, .page-template .cloformbox__accept a {
+    color: #c3ade8
+}
+
+.page-template .cloformbox__inpwrap input {
+    background: white;
+    color: black
+}
+
+.page-template .cloformbox__inpwrap input::-webkit-input-placeholder {
+    color: #c3ade8
+}
+
+.page-template .cloformbox__inpwrap input::-moz-placeholder {
+    color: #c3ade8
+}
+
+.page-template .cloformbox__inpwrap input:-ms-input-placeholder {
+    color: #c3ade8
+}
+
+.page-template .cloformbox__inpwrap input::-ms-input-placeholder {
+    color: #c3ade8
+}
+
+.page-template .cloformbox__inpwrap input::placeholder {
+    color: #c3ade8
+}
+
+.page-template .cloformbox__inpwrap input:focus {
+    border-color: #fff
+}
+
+.page-template section .clobtn {
+    background: #000;
+    color: #fff
+}
+
+.page-template .promoform__btn {
+    background: #c3ade8
+}
+
+.page-template .orkt5for__picwrap {
+    padding-bottom: 0
+}
+
+.page-template .orkt5for__picwrap img {
+    position: relative;
+    width: auto;
+    max-width: 210px;
+    height: auto
+}
+
+.page-template .orkt5for__picwrap-144 img{
+    max-width: 144px;
+}
+
+.page-template .h2 span {
+    color: #865ad0
+}
+
+.page-template .beayhackprepod {
+    margin-top: 0
+}
+
+.page-template .beayhackprepod__bg {
+    background: #fff;
+    color: #000
+}
+
+.page-template .beayhackprepod__bg .h2 {
+    color: #000
+}
+
+.page-template .beayhackprepodcard {
+    background: #865ad0
+}
+
+.page-template .beayhackprepod__line2 {
+    color: #000
+}
+
+.page-template .beayhackprepod__line1.h2 {
+    color: #865ad0;
+    background: 0 0
+}
+
+.page-template .beayhackprepod__list {
+    margin-top: 0;
+    margin-bottom: 40px
+}
+
+.page-template .difficultform2__hdr {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.page-template .cloblack {
+    background: #fff;
+    color: #000
+}
+
+.page-template .clob10dl {
+    background: #f5f5f5;
+    color: #000
+}
+
+.page-template .clob10dl dt {
+    color: #865ad0
+}
+
+.page-template .clob10dl--green {
+    color: #fff;
+    background: #865ad0
+}
+
+.page-template .clob10dl--green dt {
+    color: #fff
+}
+
+.page-template .clob10dl--bord {
+    background: #110629;
+    color: #fff
+}
+
+.page-template .clob10dl__bg {
+    opacity: 1
+}
+
+.page-template .clob10dl__withbg {
+    color: #fff
+}
+
+.page-template .clob10__hr {
+    background: #000
+}
+
+.page-template .clob10__bottxt {
+    color: #8d8d8d
+}
+
+.page-template .orkt14teams h2 span {
+    color: #e7ad68
+}
+
+.page-template .orkt14teams__line {
+    border-bottom: 1px solid #2d2d2d
+}
+
+.page-template .orkt14teams__line:last-child{
+    border-bottom: none;
+}
+
+.page-template .orkt14teams__line b {
+    color: #fff
+}
+
+.page-template .cloform4 .difficultform2__hdr {
+    padding-top: 0
+}
+
+.page-template .orkt17about__left mark {
+    background: 0 0;
+    color: #865ad0
+}
+
+.page-template .orkt17about__licence {
+    color: #000;
+    background: url('https://talentsy.ru/wp-content/themes/talentsy/img/Astro-Horar/bg-arrow-1.svg') 100% 5px no-repeat
+}
+
+.page-template .orkt17aboutbox.is-green {
+    background: #865ad0;
+    color: #fff;
+    border: 1px solid transparent
+}
+
+.page-template .orkt17sertblock__right h3 mark {
+    color: #865ad0
+}
+
+.page-template .cloform5__current, .page-template .cloform5__green {
+    color: #e7ad68
+}
+
+.page-template .cloform5 .cloformbox {
+    background: #865ad0
+}
+
+.page-template .closummary__plus {
+    background: url('https://talentsy.ru/wp-content/themes/talentsy/img/Astro-Horar/slider-control.svg')
+}
+
+.cloform5__circle {
+    width: 64px;
+    height: 64px;
+    background-image: url('https://talentsy.ru/wp-content/themes/talentsy/img/Astro-Horar/bg-5-sale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 26px;
+    letter-spacing: -3px;
+    text-align: center;
+    margin-right: 20px
+}
+
+.cloform5__circle small {
+    width: 13px;
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+    font-size: 10px
+}
+
+@media (max-width: 1180px) {
+    .pic-program-auto {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 auto 40px
+    }
+}
+
+.target {
+    overflow: hidden;
+    position: relative;
+    background: url('https://talentsy.ru/wp-content/themes/talentsy/img/Astro-Horar/target-bg.png') no-repeat right
+}
+
+.target .h2 {
+    padding-top: 80px
+}
+
+.clo3slide__num{
+    background: #E7AD68;
+    color: black;
+}
+
+.target-content {
+    min-height: 642px;
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    margin-top: 60px;
+}
+
+.target-content .jbm {
+    background: #e7ad68;
+    color: #000
+}
+
+.target-pic {
+    position: absolute;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 0
+}
+
+.clob1__dl li{
+    color: #8D8D8D;
+    background: none;
+    position: relative;
+}
+
+.beayhack1__list-white li b, .clob1__dl li span{
+    color: white;
+}
+
+.beayhack1__list-white li:before, .clob1__dl li:before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('https://talentsy.ru/wp-content/themes/talentsy/img/Astro-Fictitious/check.svg');
+   background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+}
+
+.beayhack1__title{
+    margin-bottom: 28px;
+}
+
+.clob1__dl li{
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.sketching1__counter b{
+    color: white;
+}
+
+.beayhack2__line1{
+    font-weight: 700;
+}
+
+.sketching5__prop-flex{
+    color: black;
+}
+
+.sketching5__prop-flex span{
+    color: #8D8D8D;
+}
+
+.orktform1__star-big{
+    width: 162px;
+    right: 0;
+    height: 150px;
+}
+
+.clob5box__title{
+    margin: 30px 0 20px;
+    color: white;
+    position: relative;
+}
+
+.clob5box__descr{
+    position: relative;
+}
+
+.difficult6item--normal{
+    background: #E7AD68;
+}
+
+.difficult6item--black{
+    background: white;
+}
+
+.difficult6item--normal .clob5box__title, .difficult6item--black .clob5box__title{
+    color: black;
+}
+
+.difficult6item--normal .clob5box__descr, .difficult6item--black .clob5box__descr{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.beayhackprepod__line1.h3{
+    color: #865AD0;
+    margin: 30px 0 16px;
+}
+
+.mt-0{
+    margin-top: 0;
+}
+
+.cloform4__hdr .beayhackform1__time{
+    margin-bottom: 40px;
+}
+
+.cloform__bg .beayhackform1__time{
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.clob1__main.cloflexi{
+    margin-top: 40px;
+}
+
+
+@media (min-width: 1200px) {
+    .clob1__lead{
+        width: auto;
+
+    }
+    .sketching5__prop-flex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sketching5__prop-flex img{
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .clob1__main.cloflexi{
+        margin-top: 118px;
+        padding-right: 178px;
+    }
+    .clob1__action{
+        padding-right: 0;
+        width: 580px;
+    }
+    .clob1__action img{
+        margin-right: 20px;
+    }
+    .page-template .orkt17sertblock__right h3 {
+        font-size: 44px
+    }
+
+    .page-template .cloform4 .pic-program-auto {
+        margin-right: -70px;
+        margin-top: -50px
+    }
+
+    .page-template .cloform2__h2 {
+        margin-bottom: 44px
+    }
+
+    .page-template .beayhackprepod__list {
+        font-size: 26px
+    }
+
+    .page-template .orkt5for__item {
+        margin-right: 20px;
+        padding-right: 20px;
+        border-right: 1px solid #fff
+    }
+
+    .page-template .orkt5for__item:nth-child(2) {
+        padding-left: 20px
+    }
+
+    .page-template .orkt5for__item:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+        padding-left: 20px
+    }
+
+    .page-template .orkt5for__grid {
+        grid-template-columns:repeat(3, 1fr);
+        gap: 0
+    }
+
+    .page-template .orkt1bot {
+        min-height: 462px
+    }
+
+    .page-template .difficult1sale {
+        margin-top: 10px;
+        z-index: 1
+    }
+
+    .page-template .orkt1places {
+        margin-top: 180px
+    }
+
+    .page-template .orkt1bot__bg {
+        top: -77px;
+        -webkit-transform: translateX(calc(113px - 50%));
+        -ms-transform: translateX(calc(113px - 50%));
+        transform: translateX(calc(113px - 50%))
+    }
+
+    .page-template .h2 {
+        font-size: 60px;
+        margin-top: 0;
+        letter-spacing: -.8px;
+    }
+
+    .page-template .clob2__line2 {
+        font-size: 26px
+    }
+
+    .page-template .clob2__bot h3 {
+        font-size: 44px
+    }
+    .page-template .orkt1sale-top{
+        margin-top: 140px;
+    }
+    .page-template .cloform2__h2{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 992px){
+    .cloform5__head{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px){
+    .target-content{
+        min-height: auto;
+    }
+    .target-pic{
+        position: relative;
+    }
+    .target-pic img{
+        max-width: 100%;
+    }
+    .clob1__action .sketching1__counter{
+        margin-top: 20px;
+        max-width: 100%;
+        flex-flow: row;
+        width: 100%;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .clob1__action .sketching1__counter span{
+        width: 113px;
+        margin-left: 20px;
+    }
+    .clob1__left{
+        padding-bottom: 40px;
+    }
+    .clob1__left .clob1__line{
+        margin-bottom: 40px;
+    }
+    .clob1__side{
+        margin-top: 30px;
+    }
+    .clob1__dl li{
+        font-size: 16px;
+    }
+}

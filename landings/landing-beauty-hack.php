@@ -144,7 +144,7 @@ $saleProc = 54;
             <div class="clo3slide__num">03</div>
             <div class="clo3slide__title">Узнаете всё о наиболее частых проблемах</div>
             <div class="clo3slide__descr">
-              Узнаете всё о проблемах с состоянием кожи, волос, ногтей, их связи с дефицитами. Научитесь определять дефициты витаминов и минеральных веществ
+              Узнаете всё о проблемах с состоянием кожи, волос, ногтей, их связи с дефицитами
             </div>
             <div class="clo3slide__picwrap">
               <img src="<?= $pics; ?>/b3slider/003.jpg" alt="" class="clo3slide__pic">

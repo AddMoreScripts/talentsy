@@ -173,7 +173,7 @@ function disable_enable_scripts(){
   endif;
 
   // добавляем
-  $theme_ver = '1.0.7';
+  $theme_ver = '1.2.8';
   wp_enqueue_style('css-sombra', get_template_directory_uri() . '/styles/custom.css', [], $theme_ver);
 
   if(
@@ -182,7 +182,9 @@ function disable_enable_scripts(){
     is_page_template('landings/landing-difficult-clients.php') ||
     is_page_template('landings/landing-beauty-hack.php') ||
     is_page_template('landings/landing-sketching.php') ||
-    is_page_template('landings/landing-crisis-situations.php')
+    is_page_template('landings/landing-crisis-situations.php') ||
+    is_page_template('landings/landing-astro-horar.php') ||
+    is_page_template('landings/landing-astro-fictitious.php')
   ) {
     wp_enqueue_style('css-clo3d-site', get_template_directory_uri() . '/landings/css/clo3d/site.css', [], $theme_ver);
     wp_enqueue_style('css-clo3d-media', get_template_directory_uri() . '/landings/css/clo3d/media.css', [], $theme_ver, '(max-width:1330px)');
@@ -202,7 +204,9 @@ function disable_enable_scripts(){
     is_page_template('landings/landing-difficult-clients.php') ||
     is_page_template('landings/landing-beauty-hack.php') ||
     is_page_template('landings/landing-sketching.php') ||
-    is_page_template('landings/landing-crisis-situations.php')
+    is_page_template('landings/landing-crisis-situations.php') ||
+    is_page_template('landings/landing-astro-horar.php') ||
+    is_page_template('landings/landing-astro-fictitious.php')
   ){
     wp_enqueue_style('css-orkt-site', get_template_directory_uri() . '/landings/css/orkt/main.css', [], $theme_ver);
     wp_enqueue_style('css-orkt-media', get_template_directory_uri() . '/landings/css/orkt/media.css', [], $theme_ver, '(max-width:1200px)');
@@ -210,18 +214,26 @@ function disable_enable_scripts(){
 
   if(
     is_page_template('landings/landing-difficult-clients.php') ||
-    is_page_template('landings/landing-crisis-situations.php')
+    is_page_template('landings/landing-crisis-situations.php') ||
+    is_page_template('landings/landing-astro-horar.php') ||
+    is_page_template('landings/landing-astro-fictitious.php')
   ){
     wp_enqueue_style('css-difficult-site', get_template_directory_uri() . '/landings/css/difficult/main.css', [], $theme_ver);
     wp_enqueue_style('css-difficult-media', get_template_directory_uri() . '/landings/css/difficult/media.css', [], $theme_ver, '(max-width:1300px)');
   }
 
-  if( is_page_template('landings/landing-beauty-hack.php') ){
+  if( is_page_template('landings/landing-beauty-hack.php') ||
+      is_page_template('landings/landing-astro-horar.php') ||
+      is_page_template('landings/landing-astro-fictitious.php')
+  ){
     wp_enqueue_style('css-beauty-hack', get_template_directory_uri() . '/landings/css/beautyhack/main.css', [], $theme_ver);
     wp_enqueue_style('css-beauty-hack-media', get_template_directory_uri() . '/landings/css/beautyhack/media.css', [], $theme_ver, '(max-width:1300px)');
   }
 
-  if( is_page_template('landings/landing-sketching.php') ){
+  if( is_page_template('landings/landing-sketching.php') ||
+      is_page_template('landings/landing-astro-horar.php') ||
+      is_page_template('landings/landing-astro-fictitious.php')
+  ){
     wp_enqueue_style('css-sketching', get_template_directory_uri() . '/landings/css/sketching/main.css', [], $theme_ver);
     wp_enqueue_style('css-sketching-media', get_template_directory_uri() . '/landings/css/sketching/media.css', [], $theme_ver, '(max-width:1199px)');
   }
@@ -231,6 +243,16 @@ function disable_enable_scripts(){
     wp_enqueue_style('css-crisis-media', get_template_directory_uri() . '/landings/css/crisis-situations/media.css', [], $theme_ver, '(max-width:1199px)');
   }
 
+
+  if( is_page_template('landings/landing-astro-horar.php') ||
+      is_page_template('landings/landing-astro-fictitious.php')
+  ){
+      wp_enqueue_style('css-crisis', get_template_directory_uri() . '/landings/css/astro-horar/main.css', [], $theme_ver);
+  }
+    if( is_page_template('landings/landing-astro-fictitious.php')
+    ){
+        wp_enqueue_style('css-crisis', get_template_directory_uri() . '/landings/css/astro-fictitious/main.css', [], $theme_ver);
+    }
 }
 add_action('wp_enqueue_scripts', 'disable_enable_scripts', 99);
 
@@ -418,14 +440,28 @@ function axFormRequest(){
       $result['mail'] = wp_mail($targetEM, $subject, implode('<br>', $message), ['From: Talentsy WP <wp-tech@talentsy.ru>', 'content-type: text/html'], $files);
     endif;
   else:
-    $sendData['formName'] = get_field('amo_form_name', $pageID) ?? 'Неизвестная форма';
     $sendData['uData']    = [
       'name'    => $form['Name'],
       'email'   => $form['Email'],
       'phone'   => $form['Phone'],
     ];
+
+    if( isset($form['blogtaxform']) ):
+      $sendData['formName'] = get_field('amo_form_name', 'category_'. $form['blogtaxform']) ?? 'Неизвестная форма в блоге';
+      $sendData['utmData'] = [
+        'source'    => 'blog',
+        'medium'    => '',
+        'campaign'  => '',
+        'content'   => '',
+        'term'      => $form['blogtermpost'],
+      ];
+    else:
+      $sendData['formName'] = get_field('amo_form_name', $pageID) ?? 'Неизвестная форма';
+    endif;
+
     if( get_field('elly_alias', $pageID) ) $sendData['other']['ellyalias'] = get_field('elly_alias', $pageID);
     if( $form['ellyalias'] ) $sendData['other']['ellyalias'] = $form['ellyalias'];
+
 
     $result['gleadid']  = rest_gateway_create_lead($sendData);
     $result['gtm']      = true;

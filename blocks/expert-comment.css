@@ -1,0 +1,56 @@
+.alrt__imgwrap svg{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.exp-block-avatar{
+  border-radius: 100px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.exp-block-right{
+  flex-grow: 1;
+}
+.exp-block-name{
+  display: block;
+  font-size: 20px;
+  color:#000;
+  line-height: 30px;
+  font-weight: 600;
+}
+.exp-block-info{
+  margin-top: 4px;
+  color:#7A7978;
+  font-size: 18px;
+  line-height: 27px;
+}
+.exp-block-info:first-child{
+  margin-top: 0;
+}
+.exp-block-right .alrt__content:not(:first-child){
+  margin-top: 12px;
+}
+
+.alrt--expert{
+  padding-top: 24px;
+  margin: var(--rythm) 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+
+
+
+@media (max-width: 992px){
+  .exp-block-name{
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .exp-block-info{
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

@@ -8,9 +8,9 @@ get_header();
 <section class="hero">
   <!-- <h2 class="hero__small">Курсы по психологии</h2> -->
   <div class="hero__h1 jbm">
-    За 1 год сделаем <img src="<?=imgs(); ?>/psychology/b1-sm.png" alt=""> из вас <br>
-    <b>успешного психолога-консультанта</b><br>
-    и&nbsp;поможем запустить свою частную <br>практику
+    За 1 год поможем <img src="<?=imgs(); ?>/psychology/b1-sm.png" alt=""> вам стать<br>
+    <b>успешным психологом-консультантом</b><br>
+    и&nbsp;запустить свою частную <br>практику
   </div>
   <div class="hero__videowrap ">
     <div class="hero__videobox square">
@@ -60,7 +60,7 @@ get_header();
         </div>
         <div class="iphone__prop">
           <img data-src="<?=imgs(); ?>/psychology/b2-4.png" alt="" class="iphone__propicon lazy js-slide-opac">
-          <div class="iphone__proptitle">Лучшие преподаватели</div>
+          <div class="iphone__proptitle">ТОП-преподаватели</div>
           <p>Востребованные и практикующие психологи, доктора и кандидаты наук — наши преподаватели</p>
         </div>
       </div>
@@ -255,7 +255,7 @@ get_header();
 
 <section class="mentors">
   <div class="container">
-    <h2 class="title">вы будете учиться <span>у&nbsp;</span><b>15 лучших <br class="mobbr">специалистов</b> <span>со
+    <h2 class="title">вы будете учиться <span>у&nbsp;</span><b>15 ТОП-<br class="mobbr">специалистов</b> <span>со
         всей страны</span></h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
@@ -760,7 +760,7 @@ get_header();
 
 <section class="features psy15">
   <div class="container">
-    <h2 class="title">Вас ждут практические <br>занятия, в <b>мини-группах</b></h2>
+    <h2 class="title">Вас ждут практические <br>занятия в <b>мини-группах</b></h2>
     <div class="features__wrap">
       <div class="features__left js-slide-bot">
         <video preload="auto" playsinline autoplay loop muted class="lazy">
@@ -938,7 +938,7 @@ get_header();
 
 <section class="dreams psy21">
   <div class="container">
-    <h2 class="title">В результате обучения <br><b>вы сможете</b></h2>
+    <h2 class="title">Это обучение <b>поможет вам</b></h2>
     <div class="grid-mob-scroll">
       <div class="dreams__grid">
         <div class="dreams__item dreams__item--border">

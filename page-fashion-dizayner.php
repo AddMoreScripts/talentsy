@@ -8,9 +8,9 @@ $pics = imgs() . '/fashion-dizayner';
 
 <section class="hero hero-fashion">
   <div class="hero__h1 jbm js-slide-bot">
-    За 12 месяцев <img src="<?= $pics; ?>/b1-sm.webp" alt=""> сделаем из
-    <br>тебя <b>успешного дизайнера
-      <br>одежды</b> и изменим твою жизнь
+    За 12 месяцев <img src="<?= $pics; ?>/b1-sm.webp" alt=""> поможем вам
+    <br>стать <b>успешным дизайнером
+      <br>одежды</b> и изменить свою жизнь
     <br>до неузнаваемости
   </div>
   <div class="hero__videowrap js-slide-bot">
@@ -107,7 +107,7 @@ $pics = imgs() . '/fashion-dizayner';
         </div>
         <div class="iphone__prop">
           <img data-src="<?= $pics; ?>/b3-4.png" alt="" class="iphone__propicon lazy js-slide-opac">
-          <div class="iphone__proptitle">Лучшие преподаватели</div>
+          <div class="iphone__proptitle">ТОП-преподаватели</div>
           <p>Мы собрали звезд индустрии, чтобы вы могли учиться у лучших: владельцев модных брендов, востребованных дизайнеров, победителей российских и международных конкурсов</p>
         </div>
       </div>
@@ -196,7 +196,7 @@ $pics = imgs() . '/fashion-dizayner';
 
 <section class="mentors mentors--fashion">
   <div class="container">
-    <h2 class="title">Ты будешь учиться <span>у&nbsp;</span><b>11 лучших <br class="mobbr">специалистов</b> <span>со
+    <h2 class="title">Ты будешь учиться <span>у&nbsp;</span><b>11 ТОП-<br class="mobbr">специалистов</b> <span>со
         всей страны</span></h2>
     <div class="mentorsfeat">
       <div class="mentorsfeat__item">
@@ -217,7 +217,7 @@ $pics = imgs() . '/fashion-dizayner';
         <img src="<?= $pics; ?>/b6-3.svg" alt="" class="mentorsfeat__icon js-slide-opac">
         <div class="mentorsfeat__title">Мы записали с ними <br>видео уроки в высоком качестве</div>
         <div class="mentorsfeat__text">
-          чтобы ты мог учиться у лучших <br>из лучших
+          чтобы ты мог учиться у авторитетных <br>специалистов
         </div>
       </div>
     </div>

@@ -768,7 +768,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(calc(-50% - 10px));
-  margin: -90px auto 0;
+  margin: -70px auto 0;
   z-index: 30;
   pointer-events: none;
 }
@@ -1098,7 +1098,7 @@ body {
 }
 .landkidsprog__tab {
   display: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 .landkidsprog__tab.is-active{
@@ -1111,7 +1111,7 @@ body {
   min-width: 0;
   background-color: #fff;
   border-radius: 20px;
-  padding: 84px 28px 60px;
+  padding: 44px 28px 60px;
 }
 .landkidsmonth__h1 {
   font-size: 28px;
@@ -1121,7 +1121,7 @@ body {
 .landkidsmonth__grid {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 .landkidslesson {

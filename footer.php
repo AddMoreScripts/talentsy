@@ -127,10 +127,10 @@
         <a href="<?= get_permalink(396); ?>">Документы образовательной организации</a>
       </li>
       <li>
-        <a href="<?= ldocslink('agree'); ?>">Согласие на рассылку</a>
+        <a href="<?= ldocslink('email'); ?>">Согласие на рассылку</a>
       </li>
       <li>
-        <a href="<?= ldocslink('email'); ?>">Согласие на обработку персональных данных</a>
+        <a href="<?= ldocslink('agree'); ?>">Согласие на обработку персональных данных</a>
       </li>
     </ul>
     <div class="newfooterbot__copy"><?= date('Y'); ?> © Talentsy</div>
